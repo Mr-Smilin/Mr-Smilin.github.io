@@ -1,21 +1,21 @@
 ---
-thumbnail: https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2020/20201030170457.png
-date: 2019-09-09 18:52:09
+thumbnail: /img/banner2.jpg
+date: 2022-01-03 15:00:00
 ---
-<div class="friend-title-item"><br>申请友链须知<br><br><hr></div>
+<div class="friend-title-item"><br>申請友鏈需知<br><br><hr></div>
 
-- 原则上只和技术类博客交换，但不包括含有和色情、暴力、政治敏感的网站。
-- 不和剽窃、侵权、无诚信的网站交换，优先和具有原创作品的网站交换。
-- 申请请提供：站点名称、站点链接、站点描述、**logo或头像**（`不要设置防盗链`）。
-- 排名不分先后，刷新后重排，更新信息后请留言告知。
-- 会定期清理很久很久不更新的、不符合要求的友链，不再另行通知。
-- 本站不存储友链图片，如果友链图片换了无法更新。图片裂了的会替换成默认图，需要更换的请留言告知。
-- 本站友链信息如下，申请友链前请先添加本站信息：
-    网站图标：https://removeif.github.io/images/avatar.jpg
-    网站名称：辣椒の酱
-    网站地址：https://removeif.github.io
-    网站简介：后端开发，技术分享
+- 原則上只和技術類博客交換，但不包括含有和色情、暴力、政治敏感的網站。
+- 不和剽竊、侵權、無誠信的網站交換，優先和具有原創作品的網站交換。
+- 申請請提供：站點名稱、站點鏈接、站點描述、**logo或頭像**（`不要設置防盜鏈`）。
+- 排名不分先後，刷新後重排，更新信息後請留言告知。
+- 會定期清理很久很久不更新的、不符合要求的友鏈，不再另行通知。
+- 本站不存儲友鏈圖片，如果友鏈圖片換了無法更新。圖片裂了的會替換成默認圖，需要更換的請留言告知。
+- 本站友鏈信息如下，申請友鏈前請先添加本站信息：
+    網站圖標：https://avatars.githubusercontent.com/u/62000156
+    網站名稱：微笑の家
+    網站地址：https://nalocal.github.io
+    網站簡介：後端開發，日常瑣記
 
 
 <script type="text/javascript" defer src="/js/friend.js"></script>
-<div class="links-content">加载中，稍等几秒...</div>
+<div class="links-content">加載中，稍等幾秒...</div>

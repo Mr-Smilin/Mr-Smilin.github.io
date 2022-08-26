@@ -5,7 +5,7 @@ module.exports = class extends Component {
     render() {
         const { site, config, helper, page } = this.props;
         const { url_for, cdn, my_cdn } = helper;
-        const { external_link, article, comment, has_banner } = config;
+        const { external_link, article, comment, has_banner, live2DCanMove } = config;
         const language = page.lang || page.language || config.language || 'en';
         const hasComment = comment != undefined && comment.type != undefined && (comment.type == 'gitalk' || comment.type == 'valine');
         var hasHotRecommend = false;
@@ -71,6 +71,7 @@ module.exports = class extends Component {
             <script src={my_cdn(url_for('/js/main.js'))} defer></script>
             {(hasHotRecommend || !hasBanner) ? null : <script src={my_cdn(url_for('/js/banner.js'))}></script>}
             {hasComment ? <script dangerouslySetInnerHTML={{ __html: js }}></script> : null}
+			{live2DCanMove ? <script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> :null}
         </Fragment>;
     }
 };

@@ -1,4 +1,5 @@
 ---
+toc: true
 title: Day11 - 音樂系統(2)
 date: 2020-09-11 09:05:34
 tags: [node.js,bot,discord,discord.js,教學,12th鐵人賽]

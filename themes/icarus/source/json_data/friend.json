@@ -1,46 +1,16 @@
 [
   {
-    "date": "2019.09.09",
-    "src": "/img/avatar.png",
-    "name": "@辣椒の酱",
-    "desc": "后端开发，技术分享。",
-    "url": "https://removeif.github.io/"
+    "date": "2021.09.25",
+    "src": "https://avatars.githubusercontent.com/u/62000156",
+    "name": "@微笑の家",
+    "desc": "後端開發，日常瑣記。",
+    "url": "https://nalocal.github.io/"
   },
   {
-    "date": "2019.09.09",
-    "src1": "/img/avatar.png",
+    "date": "2022.01.04",
+    "src": "https://removeif.github.io/images/avatar.jpg",
     "name": "@辣椒の酱",
-    "desc": "后端开发，技术分享。",
+    "desc": "blog主題來源",
     "url": "https://removeif.github.io/"
-  },
-  {
-    "date": "2019.09.09",
-    "src": "/img/avatar.png",
-    "name": "@辣椒の酱",
-    "desc": "后端开发，技术分享。",
-    "url": "https://removeif.github.io/"
-  },
-  {
-    "date": "2019.09.09",
-    "src": "/img/avatar.png",
-    "name": "@辣椒の酱",
-    "desc": "后端开发，技术分享。",
-    "url": "https://removeif.github.io/"
-  },
-  {
-    "date": "2019.09.09",
-    "src": "/img/avatar.png",
-    "name": "@辣椒の酱",
-    "desc": "后端开发，技术分享。",
-    "url": "https://removeif.github.io/"
-  },
-  {
-    "date": "2019.09.09",
-    "stopTime": "2019.11.01",
-    "src": "/img/avatar.png",
-    "name": "@辣椒の酱",
-    "desc": "后端开发，技术分享。",
-    "url": "https://removeif.github.io/",
-    "valid":0
   }
 ]

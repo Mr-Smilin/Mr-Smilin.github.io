@@ -1,4 +1,5 @@
 ---
+toc: false
 title: Day2 - DiscordBot - 小愛麗絲
 date: 2020-09-02 10:12:28
 tags: [node.js,bot,discord,discord.js,教學,12th鐵人賽]

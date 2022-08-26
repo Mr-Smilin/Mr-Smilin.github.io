@@ -75,14 +75,11 @@ navbar:
     menu:
         首頁: /
         歸檔: /archives
-        Friend: /friend
-        留言: /self-talking
+        友鏈: /friend
+        留言: /message
         關於我: /about
     # Links to be shown on the right of the navigation bar
     links:
-        Join Gitter:
-            icon: fab fa-gitter
-            url: 'https://gitter.im/hexo-theme-amazing/community'
         Download on GitHub:
             icon: fab fa-github
             url: 'https://github.com/NALocal/NALocal.github.io'
@@ -143,7 +140,6 @@ comment:
     client_id: 9a33a548232178c23121     # (required) OAuth application client id
     client_secret: bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6 # (required) OAuth application client secret
     admin: ['NALocal']
-    per_page: 50
     create_issue_manually: true
     distraction_free_mode: false
     has_hot_recommend: true # 是否有热门推荐
@@ -176,16 +172,16 @@ comment:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
   # Alipay donate button configurations
-    -
+#    -
         # Donation entry name
-        type: alipay
+#        type: alipay
         # Qrcode image URL
-        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png'
-    -
+#        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png'
+#    -
         # Donation entry name
-        type: wechat
+#        type: wechat
         # Qrcode image URL
-        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png'
+#        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png'
     # "Buy me a coffee" donate button configurations
 #    -
 #        type: buymeacoffee
@@ -241,9 +237,9 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: 微笑の家
+        author: 微笑
         # Author title
-        author_title: 請給予我拯救他人的力量
+        author_title: java is fucking shit ❤️
         # Author's current location
         location: 台灣
         # URL or path to the avatar image
@@ -304,14 +300,20 @@ widgets:
         position: right
         type: tags
     # Google FeedBurner email subscription widget configurations
-    -
+#    -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: subscribe_email
+#        position: right
+#        type: subscribe_email
         # Hint text under the email input
-        description: 
+#        description: 
         # Feedburner ID
-        feedburner_id: ''
+#        feedburner_id: ''
+#    -
+#        position: right
+#        type: followit
+#        description: testMail
+#        action_url: https://api.follow.it/subscription-form/RG84a0lqeFdDemViVGJzVUJic3NEWEwxVWNzclhYd1lBL3I4aUpFR0ZaRjUwQXJlR0M0L2NPYTdEa0FiakZHY1FEOXZhYlFXMHRaaUNRNjJXOG4rcVZKT1N0RWZFZFhjMEpFbllrT0hzOTl4RGpMczFxL0o2QzVSVHpNWndvL2Z8VktiU3dGeVhkeFQwRnBOZmZSbkZNUUN4ZTByenhON0taYkQ2dGZuL2Nraz0=/8
+#        verification_code: Da1P26rBj5SXcgh5CDpX
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -393,4 +395,6 @@ website_start_time: 2021/09/15 18:00:00 #网站运行开始时间,不填不显�
 side_music_netease_id: 2364053447 #侧边栏网易云歌单id
 busuanzi_only_count: false #当上面plugins中busuanzi: true时，此配置busuanzi_only_count为true时，网站不显示不蒜子统计数据，但是会每次统计。false时显示统计数据。
 has_live_2D_switch: true #live2D开关 true-开 false-关
+live2DCanMove: true #live2D是否可移動
 use_pjax: true #是否pjax
+use_canvas_nest: true #啟用背景粒子特效

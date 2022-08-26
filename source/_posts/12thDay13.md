@@ -1,4 +1,5 @@
 ---
+toc: false
 title: Day13 - 嵌入式訊息embed與 bot 的指令表(額外)
 date: 2020-09-13 21:37:08
 tags: [node.js,bot,discord,discord.js,教學,12th鐵人賽]

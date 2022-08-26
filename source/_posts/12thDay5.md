@@ -1,4 +1,5 @@
 ---
+toc: false
 title: Day5 - 函式庫文檔與基本範例講解
 date: 2020-09-05 16:23:35
 tags: [node.js,bot,discord,discord.js,教學,12th鐵人賽]

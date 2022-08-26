@@ -1,4 +1,5 @@
 ---
+toc: false
 title: Day6 - 防呆觀念
 date: 2020-09-06 20:57:08
 tags: [node.js,bot,discord,discord.js,教學,12th鐵人賽]

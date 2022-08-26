@@ -4,7 +4,7 @@ date: 2021-09-16 14:15:47
 layout: about
 ---
 一名 Back End ，當前任務: 深入學習JAVA
-
+<br>
 ---
   
 # fun project
@@ -17,7 +17,7 @@ layout: about
   * [git](https://github.com/NALocal/BaseDiscordBot)
     * [discord.js 12.5.3](https://github.com/NALocal/BaseDiscordBot/tree/v12.5.3)
 * and more..
-  
+<br>
 ---
   
 # 擅長技術
@@ -53,15 +53,18 @@ layout: about
 .  
 .  
 其餘族繁不及備載
+<br>
+
+# 時間軸紀錄
 
 ---
-
-# 經歷
-
-> 20170701 ~ 20200630 混畢業
-> 20190902 ~ 20200630 PR實習(ERP)
-> 20200701 ~ 20210813 SA正職(PDA)
-> 20210816 ~ ???????? BE正職
+<br>
+<div class="time-axis-main">
+	<ul class="time-axis"></ul>
+</div>
+<script src="/js/about-me.js"></script>
+<br>
+<br>
 
 ---
 
@@ -70,7 +73,8 @@ layout: about
 請透過上方fb私訊，或是寄信至以下
 `lion31lion31@gmail.com`
 
----
+<br>
+<br>
 
 > 如果哪一天，有人看到一個網站，界面很樸素，內容也不多，但是無一不是用心去完成
 > 每一個細節都經過了精心雕刻，蘊含的思想經歷

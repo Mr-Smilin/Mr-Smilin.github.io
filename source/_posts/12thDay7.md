@@ -1,4 +1,5 @@
 ---
+toc: true
 title: Day7 - 你的Bot需要一個前綴字
 date: 2020-09-07 09:22:24
 tags: [node.js,bot,discord,discord.js,教學,12th鐵人賽]

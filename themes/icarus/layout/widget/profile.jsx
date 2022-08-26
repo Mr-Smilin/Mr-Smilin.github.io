@@ -91,7 +91,7 @@ class Profile extends Component {
                 {socialLinks ? this.renderSocialLinks(socialLinks) : null}
                 {hasHitokoto == undefined || hasHitokoto ? <div>
                     <hr />
-                    <p id="hitokoto">:D 一言句子获取中...</p>
+                    <p id="hitokoto">:D 一言句子獲取中...</p>
                     <script type="text/javascript" dangerouslySetInnerHTML={{ __html: hitokotoJs }} defer={true}></script>
                 </div> : null}
 

@@ -6,8 +6,11 @@ try {
             /* 可直接修改部分参数 */
             live2d_settings['hitokotoAPI'] = "hitokoto.cn";  // 一言 API
             live2d_settings['modelId'] = 6;                  // 默认模型 ID 1,6
-            live2d_settings['modelTexturesId'] = 3;          // 默认材质 ID 6-3,7,2,1-87,1-42,1-2兔子，1-81，1-30羊
+            live2d_settings['modelTexturesId'] = 4;          // 默认材质 ID 6-3,7,2,1-87,1-42,1-2兔子，1-81，1-30羊
             live2d_settings['modelStorage'] = false;         // 不储存模型 ID
+			live2d_settings['waifuFontSize'] = '16px';       // 提示框字体，例如 '12px', '30px'
+			live2d_settings['waifuToolTop'] = '-60px'         // 工具栏顶部边距，例如 '0px', '-60px'
+			live2d_settings['waifuDraggable'] = 'unlimited'; // 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
             /* 在 initModel 前添加 */
             initModel("/live2d/waifu-tips.json");
         }});

@@ -106,7 +106,7 @@ function fillComments(result, authorizationToken) {
 
 function dealWtihContentStr(contentStr) {
     if (contentStr == undefined || contentStr == "") {
-        contentStr = "内容为空！";
+        contentStr = "內容為空！";
     }
 
     // 替换图片
@@ -188,7 +188,7 @@ function renderCommentData(COMMENT_ARR) {
         $(".body_hot_comment").html(htmlContentWidget);
         loadPjax();
     } else {
-        $(".body_hot_comment").html("无数据记录！");
+        $(".body_hot_comment").html("無數據紀錄！");
     }
 }
 
@@ -201,21 +201,23 @@ function loadIndexHotData(authorizationToken) {
         ajaxReqForGitHub(repoIssuesUrl + "?per_page=10&sort=comments", authorizationToken, function (result) {
 
             $.each(result, function (i, item) {
-                // 标签配色
-                if (i >= 0 & i < 4) {
-                    classDiv = "class=\"item level3\"";
-                } else if (i >= 4 & i < 7) {
-                    classDiv = "class=\"item level2\"";
-                } else if (i >= 7 & i < 9) {
-                    classDiv = "class=\"item level1\"";
-                } else {
-                    classDiv = "class=\"item level0\"";
-                }
-                hotContent += "<a href =\"" + item.body.substr(0, item.body.indexOf("\n") - 1) + '\" ' + classDiv + ">" + item.title.substr(0, item.title.indexOf("-") - 1) + "&nbsp;🔥" + (item.comments * 101) + "</a>&nbsp;&nbsp;"
-            })
+				if(item.body != null){
+					// 标签配色
+					if (i >= 0 & i < 4) {
+						classDiv = "class=\"item level3\"";
+					} else if (i >= 4 & i < 7) {
+						classDiv = "class=\"item level2\"";
+					} else if (i >= 7 & i < 9) {
+						classDiv = "class=\"item level1\"";
+					} else {
+						classDiv = "class=\"item level0\"";
+					}
+					hotContent += "<a href =\"" + item.body.substr(0, item.body.indexOf("\n") - 1) + '\" ' + classDiv + ">" + item.title.substr(0, item.title.indexOf("-") - 1) + "&nbsp;🔥" + (item.comments * 101) + "</a>&nbsp;&nbsp;"
+				}
+			})
             hotDiv.html("");
             if (hotContent == "") {
-                hotDiv.append("无数据记录！");
+                hotDiv.append("無數據紀錄！");
             } else {
                 hotDiv.append(hotContent);
                 loadPjax();
@@ -334,7 +336,7 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
             }
         }
         // console.clear();
-        console.log("~~~~欢迎光临！记得有时间多来看看哦，https://removeif.github.io/ ~~~~")
+        console.log("~~~~歡迎光臨！記得有時間多來看看喔，https://nalocal.github.io/ ~~~~")
     }
         ,
         500

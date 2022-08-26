@@ -23,6 +23,7 @@ widget:
     catalogue: '目錄'
     subscribe_email: '訂閱更新'
     subscribe: '訂閱'
+    followit: '訂閱更新'
     adsense: '廣告'
     recommend_posts: '推薦文章'
     related_posts: '相關文章'

@@ -21,6 +21,7 @@ window.live2d_settings = Array(); /*
 
 // 后端接口
 live2d_settings['modelAPI']             = '//live2d.fghrsh.net/api/';   // 自建 API 修改这里
+live2d_settings['cdnAPI']             = 'https://cdn.jsdelivr.net/gh/nalocal/live2d_api@1.0.2/';   // 自建 API 修改这里
 live2d_settings['tipsMessage']          = 'waifu-tips.json';            // 同目录下可省略路径
 live2d_settings['hitokotoAPI']          = 'lwl12.com';                  // 一言 API，可选 'lwl12.com', 'hitokoto.cn', 'jinrishici.com'(古诗词)
 
@@ -30,7 +31,7 @@ live2d_settings['modelTexturesId']      = 87;           // 默认材质 ID，可
 
 // 工具栏设置
 live2d_settings['showToolMenu']         = true;         // 显示 工具栏          ，可选 true(真), false(假)
-live2d_settings['canCloseLive2d']       = true;         // 显示 关闭看板娘  按钮，可选 true(真), false(假)
+live2d_settings['canCloseLive2d']       = false;        // 显示 关闭看板娘  按钮，可选 true(真), false(假)
 live2d_settings['canSwitchModel']       = true;         // 显示 模型切换    按钮，可选 true(真), false(假)
 live2d_settings['canSwitchTextures']    = true;         // 显示 材质切换    按钮，可选 true(真), false(假)
 live2d_settings['canSwitchHitokoto']    = true;         // 显示 一言切换    按钮，可选 true(真), false(假)
@@ -39,7 +40,7 @@ live2d_settings['canTurnToHomePage']    = true;         // 显示 返回首页  
 live2d_settings['canTurnToAboutPage']   = true;         // 显示 跳转关于页  按钮，可选 true(真), false(假)
 
 // 模型切换模式
-live2d_settings['modelStorage']         = false;         // 记录 ID (刷新后恢复)，可选 true(真), false(假)
+live2d_settings['modelStorage']         = false;        // 记录 ID (刷新后恢复)，可选 true(真), false(假)
 live2d_settings['modelRandMode']        = 'switch';     // 模型切换，可选 'rand'(随机), 'switch'(顺序)
 live2d_settings['modelTexturesRandMode']= 'rand';       // 材质切换，可选 'rand'(随机), 'switch'(顺序)
 
@@ -66,11 +67,19 @@ live2d_settings['waifuDraggableRevert'] = true;         // 松开鼠标还原拖
 // 其他杂项设置
 live2d_settings['l2dVersion']           = '1.4.2';        // 当前版本
 live2d_settings['l2dVerDate']           = '2018.11.12'; // 版本更新日期
-live2d_settings['homePageUrl']          = 'https://removeif.github.io';       // 主页地址，可选 'auto'(自动), '{URL 网址}'
-live2d_settings['aboutPageUrl']         = 'https://removeif.github.io/about/';   // 关于页地址, '{URL 网址}'
+live2d_settings['homePageUrl']          = 'https://nalocal.github.io';       // 主页地址，可选 'auto'(自动), '{URL 网址}'
+live2d_settings['aboutPageUrl']         = 'https://nalocal.github.io/about/';   // 关于页地址, '{URL 网址}'
 live2d_settings['screenshotCaptureName']= 'live2d.png'; // 看板娘截图文件名，例如 'live2d.png'
 
 /****************************************************************************************************/
+
+function loadWidget() {
+	let useCDN = false;
+	if (typeof live2d_settings.cdnPath === "string") {
+		useCDN = true;
+		if (!cdnPath.endsWith("/")) cdnPath += "/";
+	}
+}
 
 String.prototype.render = function(context) {
     var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
@@ -284,6 +293,8 @@ function loadTipsMessage(result) {
                     text = referrer_message.so[0] + referrer.search.split('&q=')[1].split('&')[0] + referrer_message.so[1];
                 else if (domain == 'google')
                     text = referrer_message.google[0] + document.title.split(referrer_message.google[2])[0] + referrer_message.google[1];
+				else if (domain == 'ithome')
+					text = referrer_message.ithome[0] + referrer_message.ithome[2] + referrer_message.ithome[1];
                 else {
                     $.each(result.waifu.referrer_hostname, function(i,val) {if (i==referrer.hostname) referrer.hostname = getRandText(val)});
                     text = referrer_message.default[0] + referrer.hostname + referrer_message.default[1];

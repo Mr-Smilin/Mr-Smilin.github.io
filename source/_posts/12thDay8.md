@@ -1,4 +1,5 @@
 ---
+toc: false
 title: Day8 - 呃...他會需要更多前綴字
 date: 2020-09-08 09:07:55
 tags: [node.js,bot,discord,discord.js,教學,12th鐵人賽]

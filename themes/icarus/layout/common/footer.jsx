@@ -19,7 +19,8 @@ class Footer extends Component {
             websiteStartTime,
             footerCopyrightDsec,
             registeredNo,
-            footerWebsiteTime
+            footerWebsiteTime,
+			use_canvas_nest
         } = this.props;
 
         let footerLogo = '';
@@ -85,13 +86,17 @@ class Footer extends Component {
                                 </p>;
                             })}
                         </div> : null}
-						{side_music_netease_id ? 
+                        {side_music_netease_id ?
 							<div class="sideMusic">
-                            	<link rel="stylesheet" href="/dist/APlayer.min.css" />
+								<link rel="stylesheet" href="/dist/APlayer.min.css" />
 								<div id="aplayer"></div>
 								<script type="text/javascript" src="/dist/APlayer.min.js"></script>
 								<script type="text/javascript" src="/dist/music.js"></script>
-                            </div> : null}
+							</div> : null}
+						{use_canvas_nest ? 
+							<script type="text/javascript" color="0,205,205" opacity='0.7' zIndex="-2" count="99" 
+							src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">
+							</script> : null }
                     </div>
                 </div>
             </div>
@@ -102,7 +107,7 @@ class Footer extends Component {
 module.exports = cacheComponent(Footer, 'common.footer', props => {
     const { config, helper } = props;
     const { url_for, _p, date, my_cdn,__ } = helper;
-    const { logo, title, author, footer, plugins, side_music_netease_id, website_start_time, footer_copyright_dsec, footer_registered_no, busuanzi_only_count, footer_website_time } = config;
+    const { logo, title, author, footer, plugins, side_music_netease_id, website_start_time, footer_copyright_dsec, footer_registered_no, busuanzi_only_count, footer_website_time,use_canvas_nest } = config;
 
     const links = {};
     if (footer && footer.links) {
@@ -131,6 +136,7 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         side_music_netease_id,
         showVisitorCounter: plugins && plugins.busuanzi === true && (busuanzi_only_count != undefined && !busuanzi_only_count),
         visitorCounterTitle: _p('plugin.footer_visitor', '<span id="busuanzi_value_site_uv">99+</span>', '<span id="busuanzi_value_site_pv">99+</span>'),
-        footerWebsiteTime: __('plugin.footer_website_time')
+        footerWebsiteTime: __('plugin.footer_website_time'),
+		use_canvas_nest
     };
 });
