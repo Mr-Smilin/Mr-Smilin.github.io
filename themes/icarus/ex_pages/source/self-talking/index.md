@@ -18,7 +18,8 @@ tips：github登入後按時間可正序查看、可點讚❤️、本插件[地
             owner: 'NALocal',
             admin: "NALocal",
             createIssueManually: true,
-            distractionFreeMode: false
+            distractionFreeMode: false,
+			proxy: 'https://netnr-proxy.cloudno.de/https://github.com/login/oauth/access_token',
         });
         gitalk.render('comment-container1');
     });
