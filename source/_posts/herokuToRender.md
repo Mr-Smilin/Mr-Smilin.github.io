@@ -17,7 +17,7 @@ categories:
 
 疫情期間，遇到了不少事情，最近才終於有一點調整回正軌的感覺
 
-剛好 heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 ~~水一點文章~~
+剛好 Heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 ~~水一點文章~~
 
 <br>
 
@@ -25,17 +25,17 @@ categories:
 
 ---
 
-### 關於發生在 heroku 上的一些問題
+### 關於發生在 Heroku 上的一些問題
 
-heroku 在10月初時，寄送給了開發者一封信
+Heroku 在10月初時，寄送給了開發者一封信
 
-裡面提到，heroku 將於2022年11月28號以後，全面關閉免費方案的主機
+裡面提到，Heroku 將於2022年11月28號以後，全面關閉免費方案的主機
 
-如果繼續使用 heroku 的話，根據目前定價方案，一台託管主機需要負擔一個月 7 美元的成本
+如果繼續使用 Heroku 的話，根據目前定價方案，一台託管主機需要負擔一個月 7 美元的成本
 
 對於單純在學習的學生，又或是我這種程序用愛發電沒有利益的行為，顯然是十足的噩耗
 
-也因此，原本在 heroku 上使用免費方案的使用者，開始到處尋找可以繼續使用的平台。
+也因此，原本在 Heroku 上使用免費方案的使用者，開始到處尋找可以繼續使用的平台。
 
 ![heroku將於2022年11月28號以後，全面關閉免費方案的主機](https://i.imgur.com/K3Pngg8.png)
 
@@ -45,13 +45,11 @@ heroku 在10月初時，寄送給了開發者一封信
 
 ### 多樣化的選擇
 
-因應 heroku 收費化的開始，有許多平台陸續浮現到開發者的眼前，其中甚至有網站的標題是「Migrate from Heroku to Railway」
+因應 Heroku 收費化的開始，有許多平台陸續浮現到開發者的眼前，其中甚至有網站的標題是「Migrate from Heroku to Railway」
 
-可以看到，除了 heroku 以外仍有許多平台等待著開發者發掘(fly.io/railway.app/googleCloudPlatform - CloudRun等..)
+可以看到，除了 Heroku 以外仍有許多平台等待著開發者發掘(Fly.io/Railway.app/GoogleCloudPlatform - CloudRun等..)
 
-雖然根據專案不同，沒有所謂最好的選擇，不過筆者在多次嘗試後，最後決定將程式搬遷到 render 上
-
-紀錄搬遷到 render 的相關問題。
+雖然根據專案不同，沒有所謂最好的選擇，不過筆者在多次嘗試後，最後決定將程式搬遷到 Render 上
 
 <br>
 
@@ -61,15 +59,17 @@ heroku 在10月初時，寄送給了開發者一封信
 
 ![render.com](https://i.imgur.com/JqcraLM.png)
 
-當初搬遷主機時，最看中的點就是希望能盡量不用改動原本的架構，然後免費額度足夠
+<br>
 
-render 目前有著每月 750 小時的免費額度，只開一台機器的話等同免費
+當初搬遷主機時，最看中的點就是希望能盡量不用改動原本的架構，免費額度足夠
 
-並且他僅支援從 GitHub / GitLab 等開源平台專案部署的方式，功能單一也才讓流程容易簡化
+Render 目前有著每月 750 小時的免費額度，只開一台機器的話等同免費
 
-支援許多語言外也支援 docker 映像檔部署，這幾乎是現在主流平台都有的功能了。
+並且他支援從 GitHub / GitLab 等開源平台專案部署的方式，功能單一讓流程簡化
 
-那因為筆者的專案使用 Node.js，剛好在 render 支援的語言列表內，所以設定好之後，直接將專案推到 github，他就會自動做部署行為了
+除了支援許多語言直接部署，也支援 Docker 映像檔部署，這幾乎是現在主流平台都有的功能了。
+
+那因為筆者的專案使用 Node.js，剛好在 Render 支援的語言列表內，所以設定好之後，將專案推到 Github，他就會自動做部署行為了
 
 
 <br>
@@ -78,15 +78,19 @@ render 目前有著每月 750 小時的免費額度，只開一台機器的話�
 
 ### 部署流程
 
+<br>
+
 第一次部署肯定會比較麻煩的
 
-首先我們要先用 github 帳號登入 render 註冊帳號，進來後他就會先告訴你，我們免費提供的方案如以下
+首先我們要先用 Github 帳號登入 Render 註冊帳號，進來後他會先告訴你，免費方案如以下
 
 ![免費方案](https://i.imgur.com/TFqJqEB.png)
 
 <br>
 
-render 提供許多方案，這邊我們要找到 web services 才能使用免費主機
+Render 提供許多方案，這邊我們要找到 web services 才能使用免費主機
+
+<br>
 
 ![Overview](https://i.imgur.com/JgEO1dE.png)
 
@@ -94,11 +98,11 @@ render 提供許多方案，這邊我們要找到 web services 才能使用免�
 
 之後取得 Github 授權 repository，就可以載入專案，選擇主機地區，語言等設置
 
-比較需要注意的是，因為 render 的 web 每個半小時無人訪問，會進入休眠(記得 heroku 也有這類設定)
+比較需要注意的是，因為 Render 的 web 每個半小時無人訪問，會進入休眠(記得 Heroku 也有這類設定)
 
 需要再次訪問網站才能讓他喚醒
 
-以 node 來說，我們可以使用 request 跟 node-schedule ，呼叫自己防止進入睡眠的方式，來讓真正需要的程序能不間斷運行
+以 Node 來說，我們可以使用 request 跟 node-schedule ，呼叫自己防止進入睡眠的方式，來讓真正需要的程序能不間斷運行
 
 <br>
 
@@ -106,13 +110,15 @@ render 提供許多方案，這邊我們要找到 web services 才能使用免�
 
 ### env
 
-以前在 heroku ，如果不透過 github 自動部署，而是用 Heroku Git 的話，是可以直接將較為私密的 key 等資料，直接明碼上傳上去的
+<br>
 
-雖然不是很好的做法，但是對於私人專案來說，這的確是個很方便的做法，只上傳在 heroku 也有效的保障了程序的安全性
+以前在 Heroku ，如果不透過 Github 自動部署，而是用 Heroku Git 的話，是可以直接將較為私密的 key 等資料，直接明碼上傳上去的
 
-但是 render 只接受 github 鏡像部署，私密的 key 是無論如何都不會放在 github 上的
+雖然不是很好的做法，但是對於私人專案來說，這的確是個很方便的做法，只上傳在 Heroku 也有效的保障了程序的安全性
 
-render 在 env 的設定上也是十分方便，[官方流程可參考這篇文檔](https://render.com/docs/configure-environment-variables)
+但是 Render 只接受 Github 鏡像部署，私密的 key 是無論如何都不會放在 Github 上的
+
+Render 在 env 的設定上也是十分方便，[官方流程可參考這篇文檔](https://render.com/docs/configure-environment-variables)
 
 ![env](https://i.imgur.com/dvzYkqs.png)
 
@@ -132,6 +138,8 @@ render 在 env 有個好處是，一般平台設置 env 後，基於安全性，
 
 ### 結語
 
+<br>
+
 筆者當初使用 heroku，是因為接觸了 discord bot，為此還寫了鐵人賽
 
 說長不長說短不短的兩年，heroku 宣告收費化，對於筆者這樣的使用者來說，就像是一個平台的關閉一般
@@ -140,4 +148,4 @@ render 在 env 有個好處是，一般平台設置 env 後，基於安全性，
 
 不過在搬遷的過程中，重新拾起 Node，摸索對筆者最好的平台時，感受到許多愉快，有一種 原來我還是能快樂寫 code 阿，的感想
 
-我想 SideProject 就像是開發者們心靈的綠洲吧，能因為這次機會，重新澆灌他，我也收穫頗豐。
+我想 sideProject 就像是開發者們心靈的綠洲吧，能因為這次機會，重新澆灌他，我也收穫頗豐。
