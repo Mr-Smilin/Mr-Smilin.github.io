@@ -1,6 +1,6 @@
 ---
 toc: true
-title: 將程序從heroku轉到render過程記錄
+title: 將專案從heroku轉到render過程思路
 date: 2022-10-25 18:00
 tags: [discord.js,discord,node.js,bot,heroku,render,render.com,教學]
 categories:
