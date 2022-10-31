@@ -295,6 +295,10 @@ function loadTipsMessage(result) {
                     text = referrer_message.google[0] + document.title.split(referrer_message.google[2])[0] + referrer_message.google[1];
 				else if (domain == 'ithome')
 					text = referrer_message.ithome[0] + referrer_message.ithome[2] + referrer_message.ithome[1];
+				else if (domain == 'gamer')
+                    text = referrer_message.gamer[0] + document.title.split(referrer_message.gamer[2])[0] + referrer_message.gamer[1];
+				else if (domain == 'kater')
+                    text = referrer_message.kater[0] + document.title.split(referrer_message.kater[2])[0] + referrer_message.kater[1];
                 else {
                     $.each(result.waifu.referrer_hostname, function(i,val) {if (i==referrer.hostname) referrer.hostname = getRandText(val)});
                     text = referrer_message.default[0] + referrer.hostname + referrer_message.default[1];
