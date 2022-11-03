@@ -297,7 +297,7 @@ function loadTipsMessage(result) {
 					text = referrer_message.ithome[0] + referrer_message.ithome[2] + referrer_message.ithome[1];
 				else if (domain == 'gamer')
                     text = referrer_message.gamer[0] + document.title.split(referrer_message.gamer[2])[0] + referrer_message.gamer[1];
-				else if (domain == 'kater')
+				else if (referrer.hostname.split('.')[0] == 'kater')
                     text = referrer_message.kater[0] + document.title.split(referrer_message.kater[2])[0] + referrer_message.kater[1];
                 else {
                     $.each(result.waifu.referrer_hostname, function(i,val) {if (i==referrer.hostname) referrer.hostname = getRandText(val)});
