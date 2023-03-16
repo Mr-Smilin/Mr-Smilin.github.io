@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://nalocal.github.io/blog/
+url: https://smilin.net
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -105,7 +105,7 @@ theme: icarus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/NALocal/NALocal.github.io.git
+  repo: https://github.com/Mr-Smilin/Mr-Smilin.github.io.git
   branch: main #目前最新的預設 branch 是 main，若原本的 branch 為 master，則輸入 master
 
 feed:

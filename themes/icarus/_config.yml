@@ -19,7 +19,7 @@ head:
         type: blog
         # Page URL (og:url) (optional)
         # You should leave this blank for most of the time
-        url: https://nalocal.github.io/
+        url: https://Mr-Smilin.github.io/
         # Page cover (og:image) (optional)
         # You should leave this blank for most of the time
         image: https://avatars.githubusercontent.com/u/62000156
@@ -28,7 +28,7 @@ head:
         site_name: 微笑の家
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        author: NALocal
+        author: Mr.S
         # Page description (og:description) (optional)
         # You should leave this blank for most of the time
         description: 
@@ -82,7 +82,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/NALocal/NALocal.github.io'
+            url: 'https://github.com/Mr-Smilin/Mr-Smilin.github.io'
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
@@ -95,7 +95,7 @@ footer:
             url: 'https://creativecommons.org/licenses/by/4.0/'
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/NALocal/NALocal.github.io'
+            url: 'https://github.com/Mr-Smilin/Mr-Smilin.github.io'
 # Article related configurations
 article:
     # Code highlight settings
@@ -135,11 +135,11 @@ search:
 comment:
     type: gitalk
     language: zh-TW #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
-    owner: NALocal         # (required) GitHub user name
-    repo: nalocal.github.io          # (required) GitHub repository name
+    owner: Mr-Smilin         # (required) GitHub user name
+    repo: Mr-Smilin.github.io          # (required) GitHub repository name
     client_id: 9a33a548232178c23121     # (required) OAuth application client id
     client_secret: bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6 # (required) OAuth application client secret
-    admin: ['NALocal']
+    admin: ['Mr-Smilin']
     create_issue_manually: true
     distraction_free_mode: false
     has_hot_recommend: true # 是否有热门推荐
@@ -249,12 +249,12 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/NALocal'
+        follow_link: 'https://github.com/Mr-Smilin'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/NALocal'
+                url: 'https://github.com/Mr-Smilin'
             Weibo:
                 icon: fab fa-facebook
                 url: 'https://www.facebook.com/profile.php?id=100003120783130'
