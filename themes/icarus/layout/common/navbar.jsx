@@ -51,7 +51,7 @@ class Navbar extends Component {
                         {Object.keys(menu).map(name => {
                             const item = menu[name];
                             /*return <a class={classname({ 'navbar-item': true, 'is-active': item.active })} href={item.url}>{name}</a>;*/
-							return <a class={classname({ 'navbar-item': true, 'is-active': false })} href={item.url}>{name}</a>;
+                            return <a class={classname({ 'navbar-item': true, 'is-active': false })} href={item.url}>{name}</a>;
                         })}
                     </div> : null}
                     <div class="navbar-end">

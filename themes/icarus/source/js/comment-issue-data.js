@@ -127,7 +127,7 @@ function addCommentInfo(result, resultArr, item, endIndex, i, contentStr) {
     // 放入
     let userName = item["user"].login;
     if (userName != undefined && userName != '' && userName == ADMIN_NAME) {
-        userName += '[博主]';
+        userName += '[筆者]';
     }
     resultArr.push({
         "content": contentStr,
@@ -178,10 +178,10 @@ function renderCommentData(COMMENT_ARR) {
             var item = COMMENT_ARR[i];
             var contentStr = item.content;
             htmlContentWidget +=
-                "<div class='card-comment-item'>" + 
-                    "<a href=\"" + item.userUrl + "\"target=\"_blank\">" + 
-                        "<img class='ava' src='" + item.userAvatar + "'  onerror='this.onerror = null;this.src=\"https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg\";' /></a>" +
-                    "<div class='item-header-text'><a href='" + item.userUrl + "' target='_blank'>" + item.userName + "</a>&nbsp;发表于" + getDateDiff(new Date(item.date).getTime()) + "</div>" + "<div class=\"item-text\"><a href =\"" + item.url + '#comment-container\">' + contentStr + "</a></div>" +
+                "<div class='card-comment-item'>" +
+                "<a href=\"" + item.userUrl + "\"target=\"_blank\">" +
+                "<img class='ava' src='" + item.userAvatar + "'  onerror='this.onerror = null;this.src=\"https://cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg\";' /></a>" +
+                "<div class='item-header-text'><a href='" + item.userUrl + "' target='_blank'>" + item.userName + "</a>&nbsp;發表於" + getDateDiff(new Date(item.date).getTime()) + "</div>" + "<div class=\"item-text\"><a href =\"" + item.url + '#comment-container\">' + contentStr + "</a></div>" +
                 "</div>";
         }
         htmlContentWidget += "</div>"
@@ -201,20 +201,20 @@ function loadIndexHotData(authorizationToken) {
         ajaxReqForGitHub(repoIssuesUrl + "?per_page=10&sort=comments", authorizationToken, function (result) {
 
             $.each(result, function (i, item) {
-				if(item.body != null){
-					// 标签配色
-					if (i >= 0 & i < 4) {
-						classDiv = "class=\"item level3\"";
-					} else if (i >= 4 & i < 7) {
-						classDiv = "class=\"item level2\"";
-					} else if (i >= 7 & i < 9) {
-						classDiv = "class=\"item level1\"";
-					} else {
-						classDiv = "class=\"item level0\"";
-					}
-					hotContent += "<a href =\"" + item.body.substr(0, item.body.indexOf("\n") - 1) + '\" ' + classDiv + ">" + item.title.substr(0, item.title.indexOf("-") - 1) + "&nbsp;🔥" + (item.comments * 101) + "</a>&nbsp;&nbsp;"
-				}
-			})
+                if (item.body != null) {
+                    // 标签配色
+                    if (i >= 0 & i < 4) {
+                        classDiv = "class=\"item level3\"";
+                    } else if (i >= 4 & i < 7) {
+                        classDiv = "class=\"item level2\"";
+                    } else if (i >= 7 & i < 9) {
+                        classDiv = "class=\"item level1\"";
+                    } else {
+                        classDiv = "class=\"item level0\"";
+                    }
+                    hotContent += "<a href =\"" + item.body.substr(0, item.body.indexOf("\n") - 1) + '\" ' + classDiv + ">" + item.title.substr(0, item.title.indexOf("-") - 1) + "&nbsp;🔥" + (item.comments * 1) + "</a>&nbsp;&nbsp;"
+                }
+            })
             hotDiv.html("");
             if (hotContent == "") {
                 hotDiv.append("無數據紀錄！");
@@ -234,7 +234,7 @@ function renderValineComment(valine, ADMIN_NAME) {
             for (var i = 0; i < comments.length; i++) {
                 var nick = comments[i]._serverData.nick;
                 if (nick == ADMIN_NAME) {
-                    nick += '[博主]';
+                    nick += '[筆者]';
                 }
                 var content = comments[i]._serverData.comment;
                 var url = comments[i]._serverData.url;
@@ -289,7 +289,7 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
                         verify: false,
                         appId: appId,
                         appKey: appKey,
-                        placeholder: '留下您的高见！',
+                        placeholder: '留下您的足跡吧！',
                         avatar: 'mp',
                         avatarForce: false,
                         meta: ["nick", "mail", "link"],
@@ -336,7 +336,7 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
             }
         }
         // console.clear();
-        console.log("~~~~歡迎光臨！記得有時間多來看看喔，https://nalocal.github.io/ ~~~~")
+        console.log("~~~~歡迎光臨！記得有時間多來看看喔，https://smilin.net/ ~~~~")
     }
         ,
         500

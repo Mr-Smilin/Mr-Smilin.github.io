@@ -1,8 +1,8 @@
 
 以下文章已於 2021/09/16 轉移至blog
 對於discord.js更新，或是有其他問題，都歡迎到以下網址查看喔
-[本站](https://nalocal.github.io)
-[本主題](https://nalocal.github.io/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/)
-[本文章](https://nalocal.github.io/2020/09/01/12thDay/)
+[本站](https://smilin.net)
+[本主題](https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/)
+[本文章](https://smilin.net/2020/09/01/12thDay/)
 
 -----

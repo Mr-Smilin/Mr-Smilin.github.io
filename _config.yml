@@ -6,14 +6,14 @@
 title: 微笑家
 subtitle: 教學，日常
 description: 程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記
-keywords: 程式,教學,程式教學,C,C#,JAVA,HTML,HTML5,NODE,NODE.JS,JAVASCRIPT,CSS,SCSS,SASS,DISCORD,BOT,BLOG,心得,SMILE,NALOCAL,NA,IT,BACK,END,BackEnd,後端,後端開發,hexo,fluid,icarus,amazing,pjax,微笑,微笑之家,微笑家
-author: NALocal
+keywords: 程式,教學,程式教學,C,C#,JAVA,HTML,HTML5,NODE,NODE.JS,JAVASCRIPT,CSS,SCSS,SASS,DISCORD,BOT,BLOG,心得,SMILE,NA,IT,BACK,END,BackEnd,後端,後端開發,hexo,fluid,icarus,amazing,pjax,微笑,微笑之家,微笑家
+author: Smilin
 language: zh-TW
 timezone: 
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://smilin.net
+url: https://smilin.net/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -78,7 +78,7 @@ meta_generator: true
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
+## https://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'

@@ -20,7 +20,7 @@ categories:
 
 ### github
 
-[github 頁面](https://github.com/NALocal/BaseDiscordBot/tree/v14.6.0)
+[github 頁面](https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0)
 
 <!-- more -->
 

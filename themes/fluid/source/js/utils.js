@@ -4,28 +4,28 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequ
 
 Fluid.utils = {
 
-  listenScroll: function(callback) {
+  listenScroll: function (callback) {
     var dbc = new Debouncer(callback);
     window.addEventListener('scroll', dbc, false);
     dbc.handleEvent();
     return dbc;
   },
 
-  unlistenScroll: function(callback) {
+  unlistenScroll: function (callback) {
     window.removeEventListener('scroll', callback);
   },
 
-  scrollToElement: function(target, offset) {
+  scrollToElement: function (target, offset) {
     var of = jQuery(target).offset();
     if (of) {
       jQuery('html,body').animate({
         scrollTop: of.top + (offset || 0),
-        easing   : 'swing'
+        easing: 'swing'
       });
     }
   },
 
-  elementInViewport: function(element, heightFactor) {
+  elementInViewport: function (element, heightFactor) {
     heightFactor = heightFactor || 1;
     var rect = element.getBoundingClientRect();
     var height = window.innerHeight || document.documentElement.clientHeight;
@@ -34,10 +34,10 @@ Fluid.utils = {
       || (top <= 0 && top >= -(height * heightFactor) - rect.height);
   },
 
-  waitElementVisible: function(selectorsOrElement, callback, heightFactor) {
+  waitElementVisible: function (selectorsOrElement, callback, heightFactor) {
     var runningOnBrowser = typeof window !== 'undefined';
     var isBot = (runningOnBrowser && !('onscroll' in window)) || (typeof navigator !== 'undefined'
-        && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
+      && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
     var supportsIntersectionObserver = 'IntersectionObserver' in window;
 
     if (!runningOnBrowser || isBot) {
@@ -60,18 +60,18 @@ Fluid.utils = {
     }
 
     if (supportsIntersectionObserver) {
-      var io = new IntersectionObserver(function(entries, ob) {
+      var io = new IntersectionObserver(function (entries, ob) {
         if (entries[0].isIntersecting) {
           callback();
           ob.disconnect();
         }
       }, {
-        threshold : [0],
+        threshold: [0],
         rootMargin: (window.innerHeight || document.documentElement.clientHeight) + 'px'
       });
       io.observe(target);
     } else {
-      var warpCallback = Fluid.utils.listenScroll(function() {
+      var warpCallback = Fluid.utils.listenScroll(function () {
         if (Fluid.utils.elementInViewport(target, _heightFactor)) {
           Fluid.utils.unlistenScroll(warpCallback);
           callback();
@@ -80,10 +80,10 @@ Fluid.utils = {
     }
   },
 
-  waitElementLoaded: function(targetId, callback) {
+  waitElementLoaded: function (targetId, callback) {
     var runningOnBrowser = typeof window !== 'undefined';
     var isBot = (runningOnBrowser && !('onscroll' in window)) || (typeof navigator !== 'undefined'
-    && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
+      && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
 
     if (!runningOnBrowser || isBot) {
       callback();
@@ -91,7 +91,7 @@ Fluid.utils = {
     }
 
     if ('MutationObserver' in window) {
-      var mo = new MutationObserver(function(records, ob) {
+      var mo = new MutationObserver(function (records, ob) {
         var ele = document.getElementById(targetId);
         if (ele) {
           callback();
@@ -100,13 +100,13 @@ Fluid.utils = {
       });
       mo.observe(document, { childList: true, subtree: true });
     } else {
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         callback();
       });
     }
   },
 
-  createScript: function(url, onload) {
+  createScript: function (url, onload) {
     var s = document.createElement('script');
     s.setAttribute('src', url);
     s.setAttribute('type', 'text/javascript');
@@ -114,7 +114,7 @@ Fluid.utils = {
     s.async = false;
     if (typeof onload === 'function') {
       if (window.attachEvent) {
-        s.onreadystatechange = function() {
+        s.onreadystatechange = function () {
           var e = s.readyState;
           if (e === 'loaded' || e === 'complete') {
             s.onreadystatechange = null;
@@ -126,26 +126,26 @@ Fluid.utils = {
       }
     }
     var e = document.getElementsByTagName('script')[0]
-    || document.getElementsByTagName('head')[0]
-    || document.head || document.documentElement;
+      || document.getElementsByTagName('head')[0]
+      || document.head || document.documentElement;
     e.parentNode.insertBefore(s, e);
   },
 
-  createCssLink: function(url) {
+  createCssLink: function (url) {
     var l = document.createElement('link');
     l.setAttribute('rel', 'stylesheet');
     l.setAttribute('type', 'text/css');
     l.setAttribute('href', url);
     var e = document.getElementsByTagName('link')[0]
-    || document.getElementsByTagName('head')[0]
-    || document.head || document.documentElement;
+      || document.getElementsByTagName('head')[0]
+      || document.head || document.documentElement;
     e.parentNode.insertBefore(l, e);
   },
 
-  loadComments: function(selectors, loadFunc) {
+  loadComments: function (selectors, loadFunc) {
     var ele = document.querySelector('#comments[lazyload]');
     if (ele) {
-      var callback = function() {
+      var callback = function () {
         loadFunc();
         ele.removeAttribute('lazyload');
       };
@@ -159,7 +159,7 @@ Fluid.utils = {
 
 /**
  * Handles debouncing of events via requestAnimationFrame
- * @see http://www.html5rocks.com/en/tutorials/speed/animations/
+ * @see https://www.html5rocks.com/en/tutorials/speed/animations/
  * @param {Function} callback The callback to handle whichever event
  */
 function Debouncer(callback) {
@@ -173,7 +173,7 @@ Debouncer.prototype = {
    * dispatches the event to the supplied callback
    * @private
    */
-  update: function() {
+  update: function () {
     this.callback && this.callback();
     this.ticking = false;
   },
@@ -182,7 +182,7 @@ Debouncer.prototype = {
    * ensures events don't get stacked
    * @private
    */
-  requestTick: function() {
+  requestTick: function () {
     if (!this.ticking) {
       requestAnimationFrame(this.rafCallback || (this.rafCallback = this.update.bind(this)));
       this.ticking = true;
@@ -192,7 +192,7 @@ Debouncer.prototype = {
   /**
    * Attach this as the event listeners
    */
-  handleEvent: function() {
+  handleEvent: function () {
     this.requestTick();
   }
 };

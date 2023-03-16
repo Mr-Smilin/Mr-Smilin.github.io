@@ -513,7 +513,7 @@ post:
       enable: true
       # 格式参照 ISO-8601 日期格式化
       # ISO-8601 date format
-      # See: http://momentjs.cn/docs/#/parsing/string-format/
+      # See: https://momentjs.cn/docs/#/parsing/string-format/
       format: "LL a"
 
     # 字数统计
@@ -625,7 +625,7 @@ post:
     # If true, only set `mermaid: true` in Front-matter will enable mermaid, to load faster when the page does not contain mermaid
     specific: false
 
-    # See: http://mermaid-js.github.io/mermaid/
+    # See: https://mermaid-js.github.io/mermaid/
     options: { theme: 'default' }
 
   # 评论插件
@@ -678,9 +678,9 @@ disqus:
 gitalk:
   clientID: 9a33a548232178c23121
   clientSecret: bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6
-  repo: nalocal.github.io
-  owner: NALocal
-  admin: ['NALocal']
+  repo: smilin.net
+  owner: Mr-Smilin
+  admin: ['Mr-Smilin']
   language: zh-TW
   perPage: 50
   pagerDirection: last
@@ -736,7 +736,7 @@ waline:
 # 畅言 Changyan
 # 基于第三方的服务
 # Based on third-party service, insufficient support for regions outside China
-# http://changyan.kuaizhan.com
+# https://changyan.kuaizhan.com
 changyan:
   appid: ''
   appkey: ''
@@ -852,7 +852,7 @@ about:
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com/NALocal", tip: "GitHub" }
+    - { class: "iconfont icon-github-fill", link: "https://github.com/Mr-Smilin", tip: "GitHub" }
     - { class: "iconfont icon-facebook-fill", link: "https://www.facebook.com/profile.php?id=100003120783130", tip: "facebook" }
 
 
