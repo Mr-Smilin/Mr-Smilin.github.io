@@ -74,8 +74,9 @@ navbar:
     # Naviagtion menu items
     menu:
         首頁: /
-        歸檔: /archives/
-        友鏈: /friend/
+        文章: /archives/
+        # 友鏈: /friend/
+        分類: /categories/
         留言: /message/
         關於我: /about/
     # Links to be shown on the right of the navigation bar

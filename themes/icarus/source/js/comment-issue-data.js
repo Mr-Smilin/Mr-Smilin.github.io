@@ -234,7 +234,7 @@ function renderValineComment(valine, ADMIN_NAME) {
             for (var i = 0; i < comments.length; i++) {
                 var nick = comments[i]._serverData.nick;
                 if (nick == ADMIN_NAME) {
-                    nick += '[筆者]';
+                    nick += '[Admin]';
                 }
                 var content = comments[i]._serverData.comment;
                 var url = comments[i]._serverData.url;
