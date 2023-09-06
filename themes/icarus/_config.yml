@@ -6,125 +6,125 @@ variant: default
 logo: /img/logo.png #/img/logo.svg
 # Page metadata configurations
 head:
-    # URL or path to the website's icon
-    favicon: /img/favicon.png #/img/favicon.svg
-    # Open Graph metadata
-    # https://hexo.io/docs/helpers.html#open-graph
-    open_graph:
-        # Page title (og:title) (optional)
-        # You should leave this blank for most of the time
-        title: 微笑の家
-        # Page type (og:type) (optional)
-        # You should leave this blank for most of the time
-        type: blog
-        # Page URL (og:url) (optional)
-        # You should leave this blank for most of the time
-        url: https://smilin.net/
-        # Page cover (og:image) (optional)
-        # You should leave this blank for most of the time
-        image: https://avatars.githubusercontent.com/u/62000156
-        # Site name (og:site_name) (optional)
-        # You should leave this blank for most of the time
-        site_name: 微笑の家
-        # Page author (article:author) (optional)
-        # You should leave this blank for most of the time
-        author: Mr.S
-        # Page description (og:description) (optional)
-        # You should leave this blank for most of the time
-        description: 
-        # Twitter card type (twitter:card)
-        twitter_card: 
-        # Twitter ID (twitter:creator)
-        twitter_id: 
-        # Twitter Site (twitter:site)
-        twitter_site: 
-        # Google+ profile link (deprecated)
-        google_plus: 
-        # Facebook admin ID
-        fb_admins: 
-        # Facebook App ID
-        fb_app_id: 
-    # Structured data of the page
-    # https://developers.google.com/search/docs/guides/intro-structured-data
-    structured_data:
-        # Page title (optional)
-        # You should leave this blank for most of the time
-        title: 
-        # Page description (optional)
-        # You should leave this blank for most of the time
-        description: 
-        # Page URL (optional)
-        # You should leave this blank for most of the time
-        url: 
-        # Page author (article:author) (optional)
-        # You should leave this blank for most of the time
-        author: 
-        # Page images (optional)
-        # You should leave this blank for most of the time
-        image: 
-    # Additional HTML meta tags in an array
-    meta:
-        # Meta tag specified in <attribute>=<value> style
-        # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
-        - ''
-    # URL or path to the website's RSS atom.xml
-    rss: 
+  # URL or path to the website's icon
+  favicon: /img/favicon.png #/img/favicon.svg
+  # Open Graph metadata
+  # https://hexo.io/docs/helpers.html#open-graph
+  open_graph:
+    # Page title (og:title) (optional)
+    # You should leave this blank for most of the time
+    title: 微笑の家
+    # Page type (og:type) (optional)
+    # You should leave this blank for most of the time
+    type: blog
+    # Page URL (og:url) (optional)
+    # You should leave this blank for most of the time
+    url: https://smilin.net/
+    # Page cover (og:image) (optional)
+    # You should leave this blank for most of the time
+    image: https://avatars.githubusercontent.com/u/62000156
+    # Site name (og:site_name) (optional)
+    # You should leave this blank for most of the time
+    site_name: 微笑の家
+    # Page author (article:author) (optional)
+    # You should leave this blank for most of the time
+    author: Mr.S
+    # Page description (og:description) (optional)
+    # You should leave this blank for most of the time
+    description:
+    # Twitter card type (twitter:card)
+    twitter_card:
+    # Twitter ID (twitter:creator)
+    twitter_id:
+    # Twitter Site (twitter:site)
+    twitter_site:
+    # Google+ profile link (deprecated)
+    google_plus:
+    # Facebook admin ID
+    fb_admins:
+    # Facebook App ID
+    fb_app_id:
+  # Structured data of the page
+  # https://developers.google.com/search/docs/guides/intro-structured-data
+  structured_data:
+    # Page title (optional)
+    # You should leave this blank for most of the time
+    title:
+    # Page description (optional)
+    # You should leave this blank for most of the time
+    description:
+    # Page URL (optional)
+    # You should leave this blank for most of the time
+    url:
+    # Page author (article:author) (optional)
+    # You should leave this blank for most of the time
+    author:
+    # Page images (optional)
+    # You should leave this blank for most of the time
+    image:
+  # Additional HTML meta tags in an array
+  meta:
+    # Meta tag specified in <attribute>=<value> style
+    # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
+    - ""
+  # URL or path to the website's RSS atom.xml
+  rss:
 # Page top navigation bar configurations
 navbar:
-    # Naviagtion menu items
-    menu:
-        首頁: /
-        文章: /archives/
-        # 友鏈: /friend/
-        分類: /categories/
-        留言: /message/
-        關於我: /about/
-    # Links to be shown on the right of the navigation bar
-    links:
-        Download on GitHub:
-            icon: fab fa-github
-            url: 'https://github.com/Mr-Smilin/Mr-Smilin.github.io'
+  # Naviagtion menu items
+  menu:
+    首頁: /
+    文章: /archives/
+    # 友鏈: /friend/
+    分類: /categories/
+    留言: /message/
+    關於我: /about/
+  # Links to be shown on the right of the navigation bar
+  links:
+    Download on GitHub:
+      icon: fab fa-github
+      url: "https://github.com/Mr-Smilin/Mr-Smilin.github.io"
 # Page footer configurations
 footer:
-    # Links to be shown on the right of the footer section
-    links:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: 'https://creativecommons.org/'
-        Attribution 4.0 International:
-            icon: fab fa-creative-commons-by
-            url: 'https://creativecommons.org/licenses/by/4.0/'
-        Download on GitHub:
-            icon: fab fa-github
-            url: 'https://github.com/Mr-Smilin/Mr-Smilin.github.io'
+  # Links to be shown on the right of the footer section
+  links:
+    Creative Commons:
+      icon: fab fa-creative-commons
+      url: "https://creativecommons.org/"
+    Attribution 4.0 International:
+      icon: fab fa-creative-commons-by
+      url: "https://creativecommons.org/licenses/by/4.0/"
+    Download on GitHub:
+      icon: fab fa-github
+      url: "https://github.com/Mr-Smilin/Mr-Smilin.github.io"
 # Article related configurations
 article:
-    # Code highlight settings
-    highlight:
-        # Code highlight themes
-        # https://github.com/highlightjs/highlight.js/tree/master/src/styles
-        theme: atom-one-light
-        # Show copy code button
-        clipboard: true
-        # Default folding status of the code blocks. Can be "", "folded", "unfolded"
-        fold: unfolded
-    # Whether to show estimated article reading time
-    readtime: true
-    # Article licensing block
-    licenses:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: 'https://creativecommons.org/'
-        Attribution:
-            icon: fab fa-creative-commons-by
-            url: 'https://creativecommons.org/licenses/by/4.0/'
-        Noncommercial:
-            icon: fab fa-creative-commons-nc
-            url: 'https://creativecommons.org/licenses/by-nc/4.0/'
+  # Code highlight settings
+  highlight:
+    # Code highlight themes
+    # https://github.com/highlightjs/highlight.js/tree/master/src/styles
+    theme: atom-one-light
+    # Show copy code button
+    clipboard: true
+    # Default folding status of the code blocks. Can be "", "folded", "unfolded"
+    fold: unfolded
+  # Whether to show estimated article reading time
+  readtime: true
+  # Article licensing block
+  licenses:
+    Creative Commons:
+      icon: fab fa-creative-commons
+      url: "https://creativecommons.org/"
+    Attribution:
+      icon: fab fa-creative-commons-by
+      url: "https://creativecommons.org/licenses/by/4.0/"
+    Noncommercial:
+      icon: fab fa-creative-commons-nc
+      url: "https://creativecommons.org/licenses/by-nc/4.0/"
 # Search plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
 search:
-    type: insight
+  type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 #comment:
@@ -134,18 +134,18 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: gitalk
-    language: zh-TW #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
-    owner: Mr-Smilin         # (required) GitHub user name
-    repo: Mr-Smilin.github.io          # (required) GitHub repository name
-    client_id: 9a33a548232178c23121     # (required) OAuth application client id
-    client_secret: bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6 # (required) OAuth application client secret
-    admin: ['Mr-Smilin']
-    create_issue_manually: true
-    distraction_free_mode: false
-    has_hot_recommend: true # 是否有热门推荐
-    has_latest_comment: true #是否有最新评论
-    proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token #解决登录后403问题
+  type: gitalk
+  language: zh-TW #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
+  owner: Mr-Smilin # (required) GitHub user name
+  repo: Mr-Smilin.github.io # (required) GitHub repository name
+  client_id: 9a33a548232178c23121 # (required) OAuth application client id
+  client_secret: bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6 # (required) OAuth application client secret
+  admin: ["Mr-Smilin"]
+  create_issue_manually: true
+  distraction_free_mode: false
+  has_hot_recommend: true # 是否有热门推荐
+  has_latest_comment: true #是否有最新评论
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token #解决登录后403问题
 # comment:
 #     type: valine
 #     app_id: rOtVIhvG3kd7QkMKe3naSU9R-gzGzoHsz
@@ -159,14 +159,13 @@ comment:
 #     required_fields: ['nick', 'mail', 'link']
 #     lang: en #zh-CN zh-TW en ja
 
-
 # utteranc site: https://utteranc.es/
 # comment:
 #     type: utteranc
 #     repo: removeif/utteranc_comment # (required) GitHub userName & repository name
-#     issue_term: pathname 
-#     issue_number: 
-#     label: 
+#     issue_term: pathname
+#     issue_number:
+#     label:
 #     theme: github-light
 
 # Donate plugin configurations
@@ -174,16 +173,16 @@ comment:
 donates:
   # Alipay donate button configurations
 #    -
-        # Donation entry name
+# Donation entry name
 #        type: alipay
-        # Qrcode image URL
+# Qrcode image URL
 #        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png'
 #    -
-        # Donation entry name
+# Donation entry name
 #        type: wechat
-        # Qrcode image URL
+# Qrcode image URL
 #        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png'
-    # "Buy me a coffee" donate button configurations
+# "Buy me a coffee" donate button configurations
 #    -
 #        type: buymeacoffee
 #        # URL to the "Buy me a coffee" page
@@ -208,123 +207,115 @@ donates:
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
-    type: sharejs
-    # URL to the ShareThis share plugin script
-    install_url: ''
+  type: sharejs
+  # URL to the ShareThis share plugin script
+  install_url: ""
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
-    # Left sidebar configurations
-    left:
-        # Whether the sidebar sticks to the top when page scrolls
-        sticky: true
-    # Right sidebar configurations
-    right:
-        # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+  # Left sidebar configurations
+  left:
+    # Whether the sidebar sticks to the top when page scrolls
+    sticky: true
+  # Right sidebar configurations
+  right:
+    # Whether the sidebar sticks to the top when page scrolls
+    sticky: false
 # Sidebar widget configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
-    # Table of contents widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: toc
-        # Select show index
-        index: false
-    # Profile widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: profile
-        # Author name
-        author: 微笑
-        # Author title
-        author_title: java is fucking shit ❤️
-        # Author's current location
-        location: 台灣
-        # URL or path to the avatar image
-        avatar: https://avatars.githubusercontent.com/u/62000156
-        # Whether show the rounded avatar image
-        avatar_rounded: true
-        # Email address for the Gravatar
-        gravatar: 
-        # URL or path for the follow button
-        follow_link: 'https://github.com/Mr-Smilin'
-        # Links to be shown on the bottom of the profile widget
-        social_links:
-            Github:
-                icon: fab fa-github
-                url: 'https://github.com/Mr-Smilin'
-            Weibo:
-                icon: fab fa-facebook
-                url: 'https://www.facebook.com/profile.php?id=100003120783130'
-            Email:
-                icon: fa fa-envelope
-                url: 'mailto:lion31lion31@gmail.com'
-            RSS:
-                icon: fas fa-rss
-                url: /atom.xml
-        has_hitokoto: true
-    # Recommendation links widget configurations
-    #-
-        # Where should the widget be placed, left sidebar or right sidebar
-    #    position: left
-    #    type: links
-        # Names and URLs of the sites
-    #    links:
-    #        Hexo: 'https://hexo.io'
-    #        Bulma: 'https://bulma.io'
-    # Latest comment widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: latest_comment
-    # Recent posts widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: recent_posts
-    # Categories widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: categories
-    # Archives widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: archives
-    # Tags widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: tags
-    # Google FeedBurner email subscription widget configurations
-#    -
-        # Where should the widget be placed, left sidebar or right sidebar
-#        position: right
-#        type: subscribe_email
-        # Hint text under the email input
-#        description: 
-        # Feedburner ID
-#        feedburner_id: ''
-#    -
-#        position: right
-#        type: followit
-#        description: testMail
-#        action_url: https://api.follow.it/subscription-form/RG84a0lqeFdDemViVGJzVUJic3NEWEwxVWNzclhYd1lBL3I4aUpFR0ZaRjUwQXJlR0M0L2NPYTdEa0FiakZHY1FEOXZhYlFXMHRaaUNRNjJXOG4rcVZKT1N0RWZFZFhjMEpFbllrT0hzOTl4RGpMczFxL0o2QzVSVHpNWndvL2Z8VktiU3dGeVhkeFQwRnBOZmZSbkZNUUN4ZTByenhON0taYkQ2dGZuL2Nraz0=/8
-#        verification_code: Da1P26rBj5SXcgh5CDpX
-    # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: adsense
+  # Table of contents widget configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: left
+    type: toc
+    # Select show index
+    index: false
+  # Profile widget configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: left
+    type: profile
+    # Author name
+    author: 微笑
+    # Author title
+    author_title: 崩潰之鍊金術師
+    # Author's current location
+    location: 台灣
+    # URL or path to the avatar image
+    avatar: https://avatars.githubusercontent.com/u/62000156
+    # Whether show the rounded avatar image
+    avatar_rounded: true
+    # Email address for the Gravatar
+    gravatar:
+    # URL or path for the follow button
+    follow_link: "https://github.com/Mr-Smilin"
+    # Links to be shown on the bottom of the profile widget
+    social_links:
+      Github:
+        icon: fab fa-github
+        url: "https://github.com/Mr-Smilin"
+      Weibo:
+        icon: fab fa-facebook
+        url: "https://www.facebook.com/profile.php?id=100003120783130"
+      Email:
+        icon: fa fa-envelope
+        url: "mailto:lion31lion31@gmail.com"
+      RSS:
+        icon: fas fa-rss
+        url: /atom.xml
+    has_hitokoto: true
+  # Recommendation links widget configurations
+  #-
+  # Where should the widget be placed, left sidebar or right sidebar
+  #    position: left
+  #    type: links
+  # Names and URLs of the sites
+  #    links:
+  #        Hexo: 'https://hexo.io'
+  #        Bulma: 'https://bulma.io'
+  # Latest comment widget configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: right
+    type: latest_comment
+  # Recent posts widget configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: right
+    type: recent_posts
+  # Categories widget configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: right
+    type: categories
+  # Archives widget configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: right
+    type: archives
+  # Tags widget configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: right
+    type: tags
+  # Google FeedBurner email subscription widget configurations
+  #    -
+  # Where should the widget be placed, left sidebar or right sidebar
+  #        position: right
+  #        type: subscribe_email
+  # Hint text under the email input
+  #        description:
+  # Feedburner ID
+  #        feedburner_id: ''
+  #    -
+  #        position: right
+  #        type: followit
+  #        description: testMail
+  #        action_url: https://api.follow.it/subscription-form/RG84a0lqeFdDemViVGJzVUJic3NEWEwxVWNzclhYd1lBL3I4aUpFR0ZaRjUwQXJlR0M0L2NPYTdEa0FiakZHY1FEOXZhYlFXMHRaaUNRNjJXOG4rcVZKT1N0RWZFZFhjMEpFbllrT0hzOTl4RGpMczFxL0o2QzVSVHpNWndvL2Z8VktiU3dGeVhkeFQwRnBOZmZSbkZNUUN4ZTByenhON0taYkQ2dGZuL2Nraz0=/8
+  #        verification_code: Da1P26rBj5SXcgh5CDpX
+  # Google AdSense unit configurations
+  - # Where should the widget be placed, left sidebar or right sidebar
+    position: right
+    type: adsense
 
 # AdSense client ID
 adsense_client_id: #'ca-pub-6343805421927634'
 # AdSense AD unit ID
-adsense_slot_id: '5134765588'
+adsense_slot_id: "5134765588"
 # article head ad
 article_head_has_ad: true
 # comment head ad
@@ -335,60 +326,59 @@ index_ad_positions: 2,5,9 #首页adsense放置广告的位置，尽量少配置�
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
-    # Enable page startup animations
-    animejs: true
-    # Show the "back to top" button
-    back_to_top: true
-    # Baidu Analytics plugin settings
-    # https://tongji.baidu.com
-    baidu_analytics:
-        # Baidu Analytics tracking ID
-        tracking_id: 
-    # BuSuanZi site/page view counter
-    # https://busuanzi.ibruce.info
-    busuanzi: true
-    # CNZZ statistics
-    # https://www.umeng.com/web
-    cnzz:
-        # CNZZ tracker id
-        id: 
-        # CNZZ website id
-        web_id: 
-    # Enable the lightGallery and Justified Gallery plugins
-    gallery: true
-    # Google Analytics plugin settings
-    # https://analytics.google.com
-    google_analytics:
-        # Google Analytics tracking ID
-        tracking_id: 
-    # Hotjar user feedback plugin
-    # https://www.hotjar.com/
-    hotjar:
-        # Hotjar site id
-        site_id: 
-    # Enable the KaTeX math typesetting supprot
-    # https://katex.org/
-    katex: false
-    # Enable the MathJax math typesetting support
-    # https://www.mathjax.org/
-    mathjax: false
-    # Enable the Outdated Browser plugin
-    # https://outdatedbrowser.com/
-    outdated_browser: false
-    # Show a progress bar at top of the page on page loading
-    progressbar: true
+  # Enable page startup animations
+  animejs: true
+  # Show the "back to top" button
+  back_to_top: true
+  # Baidu Analytics plugin settings
+  # https://tongji.baidu.com
+  baidu_analytics:
+    # Baidu Analytics tracking ID
+    tracking_id:
+  # BuSuanZi site/page view counter
+  # https://busuanzi.ibruce.info
+  busuanzi: true
+  # CNZZ statistics
+  # https://www.umeng.com/web
+  cnzz:
+    # CNZZ tracker id
+    id:
+    # CNZZ website id
+    web_id:
+  # Enable the lightGallery and Justified Gallery plugins
+  gallery: true
+  # Google Analytics plugin settings
+  # https://analytics.google.com
+  google_analytics:
+    # Google Analytics tracking ID
+    tracking_id:
+  # Hotjar user feedback plugin
+  # https://www.hotjar.com/
+  hotjar:
+    # Hotjar site id
+    site_id:
+  # Enable the KaTeX math typesetting supprot
+  # https://katex.org/
+  katex: false
+  # Enable the MathJax math typesetting support
+  # https://www.mathjax.org/
+  mathjax: false
+  # Enable the Outdated Browser plugin
+  # https://outdatedbrowser.com/
+  outdated_browser: false
+  # Show a progress bar at top of the page on page loading
+  progressbar: true
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
-    # Name or URL template of the JavaScript and/or stylesheet CDN provider
-    cdn: loli
-    # Name or URL template of the webfont CDN provider
-    fontcdn: loli
-    # Name or URL of the fontawesome icon font CDN provider
-    iconcdn: loli
-    # https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v1.0.6/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
-    # my_cdn_pre: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@v1.0.8/ #https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v2.2.1
-
+  # Name or URL template of the JavaScript and/or stylesheet CDN provider
+  cdn: loli
+  # Name or URL template of the webfont CDN provider
+  fontcdn: loli
+  # Name or URL of the fontawesome icon font CDN provider
+  iconcdn: loli
+  # https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v1.0.6/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
+  # my_cdn_pre: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@v1.0.8/ #https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v2.2.1
 
 footer_copyright_dsec: © 版權說明：[本網站所有內容均收集於互聯網或自己創作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便於網友與自己學習交流，如有侵權，請<a href="/message" target="_blank">留言</a>，立即處理]<br /> #footer 版权说明 可自由配置
 website_start_time: 2021/09/15 18:00:00 #网站运行开始时间,不填不显示
