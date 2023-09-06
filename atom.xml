@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>微笑家</title>
+  
+  <subtitle>教學，日常</subtitle>
+  <link href="https://smilin.net/atom.xml" rel="self"/>
+  
+  <link href="https://smilin.net/"/>
+  <updated>2023-09-06T02:06:46.692Z</updated>
+  <id>https://smilin.net/</id>
+  
+  <author>
+    <name>Smilin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Alist 好用的自建雲端介紹</title>
+    <link href="https://smilin.net/2023/09/06/alist-started/"/>
+    <id>https://smilin.net/2023/09/06/alist-started/</id>
+    <published>2023-09-06T02:00:00.000Z</published>
+    <updated>2023-09-06T02:06:46.692Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;隨著 GOOGLE &amp;#x2F; ONEDRIVE 等空間限制增多&lt;/p&gt;
+&lt;p&gt;筆者轉為使用自架雲端方案一段時間，其中特別中意 Alist 的畫面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/cwZF7fX.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;高自定義的 UI，強大的用戶管理&lt;br&gt;最重要的是在目錄下默認讀取 readme.md 做介紹！&lt;/p&gt;
+&lt;p&gt;整理雲端檔案，最常遇到的難題&lt;br&gt;就是多年後很難輕易在一堆檔案中找到自己需要的資料&lt;/p&gt;
+&lt;p&gt;除此以外還支援&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元數據(載入特定目錄會跳出的訊息)&lt;/li&gt;
+&lt;li&gt;文件搜索&lt;/li&gt;
+&lt;li&gt;雲端掛載(GD&amp;#x2F;OD&amp;#x2F;MEGA&amp;#x2F;還有一堆..)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用 Alist 不僅能讓雲端變得美觀，還能很輕鬆的管理文件&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    <category term="雲端相關" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/"/>
+    
+    
+    <category term="Alist" scheme="https://smilin.net/tags/Alist/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>discord.js 升上 14 版，架構說明</title>
+    <link href="https://smilin.net/2023/06/01/discordJs14-1/"/>
+    <id>https://smilin.net/2023/06/01/discordJs14-1/</id>
+    <published>2023-06-01T12:00:00.000Z</published>
+    <updated>2023-09-06T01:37:46.289Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/Mr-Smilin/AliceZero/tree/v14&quot;&gt;github 連結&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;從 2021 年，discord.js 升上 13 版&lt;br&gt;heroku 改成收費&lt;br&gt;youtube 不喜歡 discord 蹭他們的服務&lt;br&gt;音樂機器人相繼關閉 yt 服務&lt;br&gt;12 版許多功能時常報錯&lt;br&gt;discord.js 升上 14 版..&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;期間不管是工作又或是休假時，都很希望能升級以前寫的機器人&lt;br&gt;不斷想重構出更好維護的程式架構，也一再推翻之前的程式&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;終於..！在最近 Alice 也正式升上了 discord.js 14.11.0 版本&lt;br&gt;不會總是因為舊版本不支援而爆炸啦！(誤)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/M6hj8wU.jpg&quot; alt=&quot;levelUp!&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blog 網址搬遷 &amp; github改名</title>
+    <link href="https://smilin.net/2023/03/17/goodbyeNalocal/"/>
+    <id>https://smilin.net/2023/03/17/goodbyeNalocal/</id>
+    <published>2023-03-17T06:30:00.000Z</published>
+    <updated>2023-09-06T01:37:46.294Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/1EqvZfv.png&quot; alt=&quot;title&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;再見-Nalocal&quot;&gt;&lt;a href=&quot;#再見-Nalocal&quot; class=&quot;headerlink&quot; title=&quot;再見 Nalocal&quot;&gt;&lt;/a&gt;再見 Nalocal&lt;/h2&gt;&lt;p&gt;最初使用 Nalocal，做為 Github 上使用的名字&lt;/p&gt;
+&lt;p&gt;想著這個名字的發音還挺順口的，近似於貓咪的喵叫聲&lt;/p&gt;
+&lt;p&gt;拆開來看的話有非本地，支持雲端概念存在的好名字..&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日記" scheme="https://smilin.net/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+    <category term="日記" scheme="https://smilin.net/tags/%E6%97%A5%E8%A8%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BDB更新日誌#3</title>
+    <link href="https://smilin.net/2022/11/01/bdb3/"/>
+    <id>https://smilin.net/2022/11/01/bdb3/</id>
+    <published>2022-11-01T10:00:00.000Z</published>
+    <updated>2023-09-05T07:08:50.197Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;主要更新&quot;&gt;&lt;a href=&quot;#主要更新&quot; class=&quot;headerlink&quot; title=&quot;主要更新&quot;&gt;&lt;/a&gt;主要更新&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;DiscordJSmySelf 更名為 BaseDiscordBot&lt;/li&gt;
+&lt;li&gt;discord.js 的所有參考都塞進 BaseDiscordBot&lt;/li&gt;
+&lt;li&gt;斜線 &amp;#x2F; 選項 &amp;#x2F; 按鈕 &amp;#x2F; 菜單 框架完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;次要更新&quot;&gt;&lt;a href=&quot;#次要更新&quot; class=&quot;headerlink&quot; title=&quot;次要更新&quot;&gt;&lt;/a&gt;次要更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;env 更新&lt;/li&gt;
+&lt;li&gt;readMe 更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;github&quot;&gt;&lt;a href=&quot;#github&quot; class=&quot;headerlink&quot; title=&quot;github&quot;&gt;&lt;/a&gt;github&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0&quot;&gt;github 頁面&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="BaseDiscordBot" scheme="https://smilin.net/categories/BaseDiscordBot/"/>
+    
+    <category term="更新日誌" scheme="https://smilin.net/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BDB更新日誌#2 - discord.js v14.6.0</title>
+    <link href="https://smilin.net/2022/10/31/bdb2/"/>
+    <id>https://smilin.net/2022/10/31/bdb2/</id>
+    <published>2022-10-31T10:00:00.000Z</published>
+    <updated>2023-09-05T07:08:50.196Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;主要更新&quot;&gt;&lt;a href=&quot;#主要更新&quot; class=&quot;headerlink&quot; title=&quot;主要更新&quot;&gt;&lt;/a&gt;主要更新&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;將專案適配到 &lt;code&gt;discord.js&lt;/code&gt; v14.6.0 版本&lt;/li&gt;
+&lt;li&gt;全版本專案棄用 &lt;code&gt;auth.json&lt;/code&gt; ，改成 &lt;code&gt;.env&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;次要更新&quot;&gt;&lt;a href=&quot;#次要更新&quot; class=&quot;headerlink&quot; title=&quot;次要更新&quot;&gt;&lt;/a&gt;次要更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;message 邏輯整合&lt;/li&gt;
+&lt;li&gt;修改部分註解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;github&quot;&gt;&lt;a href=&quot;#github&quot; class=&quot;headerlink&quot; title=&quot;github&quot;&gt;&lt;/a&gt;github&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0&quot;&gt;github 頁面&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="BaseDiscordBot" scheme="https://smilin.net/categories/BaseDiscordBot/"/>
+    
+    <category term="更新日誌" scheme="https://smilin.net/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>將專案從heroku轉到render過程思路</title>
+    <link href="https://smilin.net/2022/10/25/herokuToRender/"/>
+    <id>https://smilin.net/2022/10/25/herokuToRender/</id>
+    <published>2022-10-25T10:00:00.000Z</published>
+    <updated>2023-09-05T07:08:50.198Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大家好，我是微笑&lt;/p&gt;
+&lt;p&gt;繼上次發文過了九個月了&lt;/p&gt;
+&lt;p&gt;很可怕啊，感覺自己好混，哈哈哈&lt;/p&gt;
+&lt;p&gt;疫情期間，遇到了不少事情，最近才終於有一點調整回正軌的感覺&lt;/p&gt;
+&lt;p&gt;剛好 Heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 &lt;del&gt;水一點文章&lt;/del&gt;&lt;/p&gt;
+&lt;br&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    <category term="託管平台相關" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E8%A8%97%E7%AE%A1%E5%B9%B3%E5%8F%B0%E7%9B%B8%E9%97%9C/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="heroku" scheme="https://smilin.net/tags/heroku/"/>
+    
+    <category term="render" scheme="https://smilin.net/tags/render/"/>
+    
+    <category term="render.com" scheme="https://smilin.net/tags/render-com/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BDB更新日誌#1</title>
+    <link href="https://smilin.net/2022/01/17/bdb1/"/>
+    <id>https://smilin.net/2022/01/17/bdb1/</id>
+    <published>2022-01-17T10:00:00.000Z</published>
+    <updated>2023-09-05T07:08:50.196Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;主要更新&quot;&gt;&lt;a href=&quot;#主要更新&quot; class=&quot;headerlink&quot; title=&quot;主要更新&quot;&gt;&lt;/a&gt;主要更新&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;bot 啟動時自動註冊斜線命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;次要更新&quot;&gt;&lt;a href=&quot;#次要更新&quot; class=&quot;headerlink&quot; title=&quot;次要更新&quot;&gt;&lt;/a&gt;次要更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;斜線命令相關邏輯調整&lt;/li&gt;
+&lt;li&gt;修改 js 檔名&lt;/li&gt;
+&lt;li&gt;修改部分註解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;github&quot;&gt;&lt;a href=&quot;#github&quot; class=&quot;headerlink&quot; title=&quot;github&quot;&gt;&lt;/a&gt;github&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Mr-Smilin/BaseDiscordBot/tree/2e168a31c74994c18e276f8f4bf1ff67d74803c9&quot;&gt;github 頁面&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="BaseDiscordBot" scheme="https://smilin.net/categories/BaseDiscordBot/"/>
+    
+    <category term="更新日誌" scheme="https://smilin.net/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>競速疊屍腳本 - 台版彈射世界</title>
+    <link href="https://smilin.net/2021/12/14/racingScript-worldFlipper/"/>
+    <id>https://smilin.net/2021/12/14/racingScript-worldFlipper/</id>
+    <published>2021-12-14T04:00:00.000Z</published>
+    <updated>2023-09-05T07:08:50.198Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;腳本運作環境&quot;&gt;&lt;a href=&quot;#腳本運作環境&quot; class=&quot;headerlink&quot; title=&quot;腳本運作環境&quot;&gt;&lt;/a&gt;腳本運作環境&lt;/h2&gt;&lt;p&gt;型號&lt;br&gt;redmi note 8 pro&lt;/p&gt;
+&lt;p&gt;解析度&lt;br&gt;1080x2340&lt;/p&gt;
+&lt;p&gt;如果你跟筆者用的是同解析度甚至同一台手機&lt;br&gt;欸、恭喜、&lt;del&gt;我們貼貼&lt;/del&gt; 大部份體驗會很良好&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="彈射世界" scheme="https://smilin.net/tags/%E5%BD%88%E5%B0%84%E4%B8%96%E7%95%8C/"/>
+    
+    <category term="遊戲" scheme="https://smilin.net/tags/%E9%81%8A%E6%88%B2/"/>
+    
+    <category term="腳本" scheme="https://smilin.net/tags/%E8%85%B3%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>fluid支持pjax主題源碼分享</title>
+    <link href="https://smilin.net/2021/11/16/fluidThemeShare/"/>
+    <id>https://smilin.net/2021/11/16/fluidThemeShare/</id>
+    <published>2021-11-16T04:00:00.000Z</published>
+    <updated>2023-09-05T07:08:50.197Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/yl9bnuZ.png&quot; alt=&quot;theme&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;寫在前面&quot;&gt;&lt;a href=&quot;#寫在前面&quot; class=&quot;headerlink&quot; title=&quot;寫在前面&quot;&gt;&lt;/a&gt;寫在前面&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;本主題基於 fluid 1.8.11 版本製作，在此之上參雜了許多私貨
+又因為本人前端並不熟練，源碼被改得亂七八糟的，因此有任何問題在blog聯繫我詢問即可。
+再此感謝開發 and 維護源碼的所有大大們。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;fluid-主題主要改動&quot;&gt;&lt;a href=&quot;#fluid-主題主要改動&quot; class=&quot;headerlink&quot; title=&quot;fluid 主題主要改動&quot;&gt;&lt;/a&gt;fluid 主題主要改動&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; pjax 支持&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 添加本地音樂箱&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 添加右下角 Live2D 妹子&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; pjax JS 回調(解決大部分 fluid 不支持 pjax 之異常)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 目錄頁次浮動顯示&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 文章列表搜出留言數&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; Markdown 介面修改&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 文章底部上下篇連結位置對調(上一篇就該在左邊，下一篇就該在右邊 &amp;#x3D; &amp;#x3D; )&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 修復繁體中文字型&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; rss 功能&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="hexo主題分享" scheme="https://smilin.net/categories/hexo%E4%B8%BB%E9%A1%8C%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="hexo" scheme="https://smilin.net/tags/hexo/"/>
+    
+    <category term="fluid" scheme="https://smilin.net/tags/fluid/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>公開Live2D模型蒐集分享</title>
+    <link href="https://smilin.net/2021/11/16/live2DShareList/"/>
+    <id>https://smilin.net/2021/11/16/live2DShareList/</id>
+    <published>2021-11-16T02:00:00.000Z</published>
+    <updated>2023-09-05T07:08:50.198Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;此文章來源來自 &lt;a href=&quot;https://www.cnblogs.com/strengthen/p/11112215.html&quot;&gt;https://www.cnblogs.com/strengthen/p/11112215.html&lt;/a&gt;&lt;br&gt;此文章僅用於教學，不進行任何營利行為&lt;br&gt;引用時間 2021-11-16&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Live2D" scheme="https://smilin.net/tags/Live2D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>關於discord.js升級至13版本</title>
+    <link href="https://smilin.net/2021/09/27/aboutDiscordJs13/"/>
+    <id>https://smilin.net/2021/09/27/aboutDiscordJs13/</id>
+    <published>2021-09-27T05:47:20.000Z</published>
+    <updated>2023-09-05T07:08:50.196Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;discord.js 是基於 node.js ，提供開發人員架設 discord bot 的一套 library&lt;/p&gt;
+&lt;p&gt;在去年的這個月，我寫了一篇關於&lt;a href=&quot;https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/&quot;&gt;使用 discord.js 架設 bot 的教學文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;而在今年的 8 月 13 號， discord.js 從 12 版升至 13 版&lt;/p&gt;
+&lt;p&gt;此改動影響了不少功能，聲明了以 message 事件為首的許多功能即將遭到廢棄(目前的 13 版仍然可用)，且使用前必須先行宣告 partials 與 intents&lt;/p&gt;
+&lt;p&gt;至此，使用最新版本的開發者，理所當然的無法在網路上找到較為全面的教學，因為 13 版在一開始初始化時的寫法就與以往大相逕庭&lt;/p&gt;
+&lt;p&gt;針對於現況，繼續使用 12 版 library ，又或是試著自己摸索 13 版的寫法都不失為一種辦法&lt;/p&gt;
+&lt;p&gt;對此我也寫了一個模板，提供最基礎的套用&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="BaseDiscordBot" scheme="https://smilin.net/categories/BaseDiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Smilin</title>
+    <link href="https://smilin.net/2021/09/16/hello-smilin/"/>
+    <id>https://smilin.net/2021/09/16/hello-smilin/</id>
+    <published>2021-09-16T05:57:00.000Z</published>
+    <updated>2023-09-06T01:37:46.298Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;20210916&quot;&gt;&lt;a href=&quot;#20210916&quot; class=&quot;headerlink&quot; title=&quot;20210916&quot;&gt;&lt;/a&gt;&lt;em&gt;20210916&lt;/em&gt;&lt;/h2&gt;&lt;p&gt;這是這個 blog 創建的第一天&lt;/p&gt;
+&lt;p&gt;眾所周知，”Hello World”是所有程序猿最開始學習的第一句話語&lt;/p&gt;
+&lt;p&gt;結合我自己的名字，我想把 blog 的第一篇文章標題寫成 Hello Smilin，我覺得這樣挺有意思的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日記" scheme="https://smilin.net/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+    <category term="日記" scheme="https://smilin.net/tags/%E6%97%A5%E8%A8%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>沉沉入睡的回憶小姐，匆匆揚帆的時間先生</title>
+    <link href="https://smilin.net/2020/09/30/12thDayEnd/"/>
+    <id>https://smilin.net/2020/09/30/12thDayEnd/</id>
+    <published>2020-09-30T02:20:37.000Z</published>
+    <updated>2023-09-05T07:08:50.195Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最初看到鐵人賽是大學二年級的時候，距離現在也就兩年，其實還挺短的&lt;/p&gt;
+&lt;p&gt;因為早早為專題做準備…需要查資料？造訪了這個地方&lt;/p&gt;
+&lt;p&gt;當時想都沒想過自己會寫鐵人賽(笑&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    <category term="日記" scheme="https://smilin.net/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="日記" scheme="https://smilin.net/tags/%E6%97%A5%E8%A8%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Day30 - tag控管機制(4)</title>
+    <link href="https://smilin.net/2020/09/30/12thDay30/"/>
+    <id>https://smilin.net/2020/09/30/12thDay30/</id>
+    <published>2020-09-30T01:53:30.000Z</published>
+    <updated>2023-09-05T07:08:50.193Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天把tag的最後一件事做完&lt;/p&gt;
+&lt;p&gt;將使用者從指定權限組移除&lt;br&gt;將指定權限組移除&lt;/p&gt;
+&lt;p&gt;在tag入口新增Delete方法&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Day29 - tag控管機制(3)</title>
+    <link href="https://smilin.net/2020/09/29/12thDay29/"/>
+    <id>https://smilin.net/2020/09/29/12thDay29/</id>
+    <published>2020-09-29T01:27:13.000Z</published>
+    <updated>2023-09-05T07:08:50.192Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨天我們做好了 將使用者加入身份組指令&lt;br&gt;今天把 創建身分組的指令做好&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Day28 - tag控管機制(2)</title>
+    <link href="https://smilin.net/2020/09/28/12thDay28/"/>
+    <id>https://smilin.net/2020/09/28/12thDay28/</id>
+    <published>2020-09-28T01:25:39.000Z</published>
+    <updated>2023-09-05T07:08:50.192Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天來把postAPI跟續行的框架與加入使用者至身份組的功能寫好&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Day27 - tag控管 - 續行方法解說</title>
+    <link href="https://smilin.net/2020/09/27/12thDay27/"/>
+    <id>https://smilin.net/2020/09/27/12thDay27/</id>
+    <published>2020-09-27T07:59:10.000Z</published>
+    <updated>2023-09-05T07:08:50.192Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨天我們實作了tag身份組功能&lt;br&gt;使用者透過機器人tag一整個身份組的功能&lt;br&gt;我們希望還可以有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;創建身分組的指令&lt;/li&gt;
+&lt;li&gt;將使用者加入身份組指令&lt;/li&gt;
+&lt;li&gt;刪除身分組的指令&lt;/li&gt;
+&lt;li&gt;將使用者從某個身份組中刪除的指令&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Day26 - tag控管機制(1)</title>
+    <link href="https://smilin.net/2020/09/26/12thDay26/"/>
+    <id>https://smilin.net/2020/09/26/12thDay26/</id>
+    <published>2020-09-26T01:54:26.000Z</published>
+    <updated>2023-09-05T07:08:50.192Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨天我們描繪了權限系統的架構，今天來建立身份組環境&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Day25 - 權限系統規格</title>
+    <link href="https://smilin.net/2020/09/25/12thDay25/"/>
+    <id>https://smilin.net/2020/09/25/12thDay25/</id>
+    <published>2020-09-25T01:42:13.000Z</published>
+    <updated>2023-09-05T07:08:50.191Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近在編寫群組權限相關的功能，就說說這個吧&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Day24 - 愛麗絲安靜!</title>
+    <link href="https://smilin.net/2020/09/24/12thDay24/"/>
+    <id>https://smilin.net/2020/09/24/12thDay24/</id>
+    <published>2020-09-24T02:58:46.000Z</published>
+    <updated>2023-09-05T07:08:50.191Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今天想教怎麼讓機器人安靜&amp;#x2F;啟動&lt;br&gt;這樣才能說之後想教的東西&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
+    
+    
+    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
+    
+    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
+    
+    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
+    
+    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
+    
+    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
+    
+    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
+    
+  </entry>
+  
+</feed>

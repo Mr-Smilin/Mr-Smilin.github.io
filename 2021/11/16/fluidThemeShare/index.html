@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>fluid支持pjax主題源碼分享 - 微笑家</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="微笑家"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="微笑家"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="寫在前面本主題基於 fluid 1.8.11 版本製作，在此之上參雜了許多私貨 又因為本人前端並不熟練，源碼被改得亂七八糟的，因此有任何問題在blog聯繫我詢問即可。 再此感謝開發 and 維護源碼的所有大大們。  fluid 主題主要改動  pjax 支持  添加本地音樂箱  添加右下角 Live2D 妹子  pjax JS 回調(解決大部分 fluid 不支持 pjax 之異常)  目錄頁次"><meta property="og:type" content="blog"><meta property="og:title" content="微笑の家"><meta property="og:url" content="https://smilin.net/"><meta property="og:site_name" content="微笑の家"><meta property="og:description" content="寫在前面本主題基於 fluid 1.8.11 版本製作，在此之上參雜了許多私貨 又因為本人前端並不熟練，源碼被改得亂七八糟的，因此有任何問題在blog聯繫我詢問即可。 再此感謝開發 and 維護源碼的所有大大們。  fluid 主題主要改動  pjax 支持  添加本地音樂箱  添加右下角 Live2D 妹子  pjax JS 回調(解決大部分 fluid 不支持 pjax 之異常)  目錄頁次"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://avatars.githubusercontent.com/u/62000156"><meta property="article:published_time" content="2021-11-16T04:00:00.000Z"><meta property="article:modified_time" content="2023-09-05T07:08:50.197Z"><meta property="article:author" content="Mr.S"><meta property="article:tag" content="教學"><meta property="article:tag" content="hexo"><meta property="article:tag" content="fluid"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62000156"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://smilin.net/2021/11/16/fluidThemeShare/"},"headline":"微笑家","image":["https://i.imgur.com/yl9bnuZ.png"],"datePublished":"2021-11-16T04:00:00.000Z","dateModified":"2023-09-05T07:08:50.197Z","author":{"@type":"Person","name":"Smilin"},"description":"寫在前面本主題基於 fluid 1.8.11 版本製作，在此之上參雜了許多私貨 又因為本人前端並不熟練，源碼被改得亂七八糟的，因此有任何問題在blog聯繫我詢問即可。 再此感謝開發 and 維護源碼的所有大大們。  fluid 主題主要改動  pjax 支持  添加本地音樂箱  添加右下角 Live2D 妹子  pjax JS 回調(解決大部分 fluid 不支持 pjax 之異常)  目錄頁次"}</script><link rel="canonical" href="https://smilin.net/2021/11/16/fluidThemeShare/"><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="微笑家" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首頁</a><a class="navbar-item" href="/archives/">文章</a><a class="navbar-item" href="/categories/">分類</a><a class="navbar-item" href="/message/">留言</a><a class="navbar-item" href="/about/">關於我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目錄" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-11-16  <a class="commentCountImg" href="/2021/11/16/fluidThemeShare/#comment-container"><span class="display-none-class">16672e364d54529b80a6bd109d788f90</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="16672e364d54529b80a6bd109d788f90">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>6 分鐘  <i class="fas fa-pencil-alt"> </i>0.8 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次訪問</span></div></div><h1 class="title is-3 is-size-4-mobile">fluid支持pjax主題源碼分享</h1><div class="content"><p><img src="https://i.imgur.com/yl9bnuZ.png" alt="theme"></p>
+<h1 id="寫在前面"><a href="#寫在前面" class="headerlink" title="寫在前面"></a>寫在前面</h1><pre><code>本主題基於 fluid 1.8.11 版本製作，在此之上參雜了許多私貨
+又因為本人前端並不熟練，源碼被改得亂七八糟的，因此有任何問題在blog聯繫我詢問即可。
+再此感謝開發 and 維護源碼的所有大大們。
+</code></pre>
+<h2 id="fluid-主題主要改動"><a href="#fluid-主題主要改動" class="headerlink" title="fluid 主題主要改動"></a>fluid 主題主要改動</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> pjax 支持</li>
+<li><input checked="" disabled="" type="checkbox"> 添加本地音樂箱</li>
+<li><input checked="" disabled="" type="checkbox"> 添加右下角 Live2D 妹子</li>
+<li><input checked="" disabled="" type="checkbox"> pjax JS 回調(解決大部分 fluid 不支持 pjax 之異常)</li>
+<li><input checked="" disabled="" type="checkbox"> 目錄頁次浮動顯示</li>
+<li><input disabled="" type="checkbox"> 文章列表搜出留言數</li>
+<li><input checked="" disabled="" type="checkbox"> Markdown 介面修改</li>
+<li><input checked="" disabled="" type="checkbox"> 文章底部上下篇連結位置對調(上一篇就該在左邊，下一篇就該在右邊 &#x3D; &#x3D; )</li>
+<li><input checked="" disabled="" type="checkbox"> 修復繁體中文字型</li>
+<li><input checked="" disabled="" type="checkbox"> rss 功能</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="環境配置"><a href="#環境配置" class="headerlink" title="環境配置"></a>環境配置</h2><pre><code>hexo -v
+INFO  Validating config
+hexo: 5.4.0
+hexo-cli: 4.3.0
+</code></pre>
+<p>主題下載</p>
+<pre><code>https://github.com/Mr-Smilin/hexo-theme-fluid.git
+</code></pre>
+<p>hexo _config 配置請添加以下</p>
+<h3 id="rss"><a href="#rss" class="headerlink" title="rss"></a>rss</h3><pre><code>feed:
+    type: atom # RSS的类型(atom/rss2)
+    path: atom.xml # 文件路径,默认是atom.xml/rss2.xml
+    limit: 20 # 展示文章的数量,使用0或则false代表展示全部
+    hub:
+    content: # 在RSS文件中是否包含内容 ,有3个值 true/false默认不填为false
+    content_limit: # 指定内容的长度作为摘要,仅仅在上面content设置为false和没有自定义的描述出现
+    content_limit_delim: &#39; &#39; # 上面截取描述的分隔符,截取内容是以指定的这个分隔符作为截取结束的标志.在达到规定的内容长度之前最后出现的这个分隔符之前的内容,，防止从中间截断.
+</code></pre>
+<h3 id="live-2D"><a href="#live-2D" class="headerlink" title="live 2D"></a>live 2D</h3><pre><code>live2d:
+    enable: true
+    scriptFrom: local
+    pluginRootPath: live2dw/
+    pluginJsPath: lib/
+    pluginModelPath: assets/
+    tagMode: false
+    log: false
+    model:
+        use: live2d-widget-model-shizuku
+    display:
+        position: right
+        width: 150
+        height: 300
+    mobile:
+        show: false
+    react:
+        opacity: 0.7
+</code></pre>
+<p>更多 live2D 模組可訪問 <code>https://smilin.net/2021/11/16/live2DShareList/</code></p>
+<h3 id="音樂箱音樂"><a href="#音樂箱音樂" class="headerlink" title="音樂箱音樂"></a>音樂箱音樂</h3><p>開啟 <code>source\dist\music.js</code></p>
+<pre><code>const ap = new APlayer(&#123;
+    container: document.getElementById(&#39;aplayer&#39;),
+    fixed: true,
+    mini: true,
+    autoplay: false,
+    loop: &#39;all&#39;,
+    volume: 0.7,
+    listFolded: true,
+    listMaxHeight: 60,
+    audio: [
+        &#123;
+            name: &#39;最近在聽的歌&#39;,
+            artist: &#39;星茶会&#39;,
+            url: &#39;/music/星茶会.mp3&#39;,
+            cover: &#39;/img/avatar.png&#39;,
+        &#125;,
+        &#123;
+            name: &#39;最近在聽的歌&#39;,
+            artist: &#39;Fullmetal Alchemist Brotherhood&#39;,
+            url: &#39;/music/Fullmetal-Alchemist-Brotherhood.mp3&#39;,
+            cover: &#39;/img/avatar.png&#39;,
+        &#125;
+    ]
+&#125;);
+</code></pre>
+<p>對應路徑檔案可替換</p>
+<hr>
+<p>配置好後，做 hexo 上傳 sop</p>
+<pre><code>$ npm install #安裝library（僅第一次執行）
+$ hexo clean #清除
+$ hexo g #編譯
+$ hexo d #上傳git
+</code></pre>
+<p>以上就是配置此 theme 的流程，使用上若有遇到問題歡迎在底下詢問</p>
+<hr>
+<h2 id="期待這篇文章可以幫助到需要的人"><a href="#期待這篇文章可以幫助到需要的人" class="headerlink" title="期待這篇文章可以幫助到需要的人"></a>期待這篇文章可以幫助到需要的人</h2><p>fluid 是本 blog 第一個使用的 theme<br>fluid 的設計…非常讚!(詞窮)<br>逛著 blog 的期間，可以從各處巧思中感受到作者對美感的一套見解</p>
+<p>不過 fluid 因為其框架的侷限，其致命傷便是無法支援 pjax(ajax)做局部頁面更新<br>從 issues 上可以看到，對於 pjax 的開發目前是不了了之</p>
+<p>但這並非是 fluid 無法支援 pjax，而是因為引入 pjax 會破壞 fluid 既有框架<br>也因此這些改動要改進正式版本是十分困難的，但如果只是魔改的話，儘管是像筆者對前端並不精熟，也能試著修改(code 不保證好看就是了 xD)</p>
+<p>因為筆者最近可能會試著替換成其他主題，故想記錄下使用版本，算是分享。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>fluid支持pjax主題源碼分享</p><p><a href="https://smilin.net/2021/11/16/fluidThemeShare/">https://smilin.net/2021/11/16/fluidThemeShare/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://smilin.net"><p>Smilin</p></a></div></div><div class="level-item is-narrow"><div><h6>發佈於</h6><p>2021-11-16</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2023-09-05</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/12/14/racingScript-worldFlipper/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">競速疊屍腳本 - 台版彈射世界</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/16/live2DShareList/"><span class="level-item">公開Live2D模型蒐集分享</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">評論</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-TW',
+            id: '16672e364d54529b80a6bd109d788f90',
+            repo: 'Mr-Smilin.github.io',
+            owner: 'Mr-Smilin',
+            clientID: '9a33a548232178c23121',
+            clientSecret: 'bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6',
+            admin: ["Mr-Smilin"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目錄</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#寫在前面"><span>寫在前面</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#fluid-主題主要改動"><span>fluid 主題主要改動</span></a></li><li><a class="is-flex is-mobile" href="#環境配置"><span>環境配置</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#rss"><span>rss</span></a></li><li><a class="is-flex is-mobile" href="#live-2D"><span>live 2D</span></a></li><li><a class="is-flex is-mobile" href="#音樂箱音樂"><span>音樂箱音樂</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#期待這篇文章可以幫助到需要的人"><span>期待這篇文章可以幫助到需要的人</span></a></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/62000156" alt="微笑"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">微笑</p><p class="is-size-6 is-block">java is fucking shit ❤️</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>台灣</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">43</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分類</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">標籤</p><a href="/tags"><p class="title">17</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Mr-Smilin" target="_blank" rel="noopener">關注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Mr-Smilin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://www.facebook.com/profile.php?id=100003120783130"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:lion31lion31@gmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子獲取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"來源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新評論</h3><span class="body_hot_comment">加載中，最新評論有1分鐘緩存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-06T02:00:00.000Z">2023-09-06</time></p><p class="title"><a href="/2023/09/06/alist-started/">Alist 好用的自建雲端介紹</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a> / <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/">雲端相關</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-01T12:00:00.000Z">2023-06-01</time></p><p class="title"><a href="/2023/06/01/discordJs14-1/">discord.js 升上 14 版，架構說明</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-17T06:30:00.000Z">2023-03-17</time></p><p class="title"><a href="/2023/03/17/goodbyeNalocal/">blog 網址搬遷 &amp; github改名</a></p><p class="categories"><a href="/categories/%E6%97%A5%E8%A8%98/">日記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-11-01T10:00:00.000Z">2022-11-01</time></p><p class="title"><a href="/2022/11/01/bdb3/">BDB更新日誌#3</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-31T10:00:00.000Z">2022-10-31</time></p><p class="title"><a href="/2022/10/31/bdb2/">BDB更新日誌#2 - discord.js v14.6.0</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分類</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/"><span class="level-start"><span class="level-item">BaseDiscordBot</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/"><span class="level-start"><span class="level-item">更新日誌</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/hexo%E4%B8%BB%E9%A1%8C%E5%88%86%E4%BA%AB/"><span class="level-start"><span class="level-item">hexo主題分享</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%97%A5%E8%A8%98/"><span class="level-start"><span class="level-item">日記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"><span class="level-start"><span class="level-item">程式簡記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E8%A8%97%E7%AE%A1%E5%B9%B3%E5%8F%B0%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">託管平台相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">雲端相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="level-start"><span class="level-item">鐵人賽</span></span><span class="level-end"><span class="level-item tag">31</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"><span class="level-start"><span class="level-item">用Node.js製作後台零負擔的DiscordBot</span></span><span class="level-end"><span class="level-item tag">31</span></span></a></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">歸檔</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/03/"><span class="level-start"><span class="level-item">三月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/11/"><span class="level-start"><span class="level-item">十一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/10/"><span class="level-start"><span class="level-item">十月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">標籤</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/bot/"><span class="tag">bot</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord/"><span class="tag">discord</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord-js/"><span class="tag">discord.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node-js/"><span class="tag">node.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E5%AD%B8/"><span class="tag">教學</span><span class="tag is-grey-lightest">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="tag">12th鐵人賽</span><span class="tag is-grey-lightest">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E8%A8%98/"><span class="tag">日記</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Alist/"><span class="tag">Alist</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Live2D/"><span class="tag">Live2D</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fluid/"><span class="tag">fluid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/heroku/"><span class="tag">heroku</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render/"><span class="tag">render</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render-com/"><span class="tag">render.com</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BD%88%E5%B0%84%E4%B8%96%E7%95%8C/"><span class="tag">彈射世界</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%85%B3%E6%9C%AC/"><span class="tag">腳本</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%81%8A%E6%88%B2/"><span class="tag">遊戲</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a><p class="size-small"><span>&copy; 2023 Smilin</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版權說明：[本網站所有內容均收集於互聯網或自己創作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便於網友與自己學習交流，如有侵權，請<a href="/message" target="_blank">留言</a>，立即處理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已運行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小時 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！ ❤️";
+        }var now = new Date();setInterval("createTime('2021/09/15 18:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感謝 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光臨！ ❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="/dist/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="/dist/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script></div><script type="text/javascript" color="0,205,205" opacity="0.7" zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到頂端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);})</script><script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什麼..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什麼...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

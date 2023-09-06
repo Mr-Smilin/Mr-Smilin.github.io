@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>將專案從heroku轉到render過程思路 - 微笑家</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="微笑家"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="微笑家"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="前言大家好，我是微笑 繼上次發文過了九個月了 很可怕啊，感覺自己好混，哈哈哈 疫情期間，遇到了不少事情，最近才終於有一點調整回正軌的感覺 剛好 Heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 水一點文章"><meta property="og:type" content="blog"><meta property="og:title" content="微笑の家"><meta property="og:url" content="https://smilin.net/"><meta property="og:site_name" content="微笑の家"><meta property="og:description" content="前言大家好，我是微笑 繼上次發文過了九個月了 很可怕啊，感覺自己好混，哈哈哈 疫情期間，遇到了不少事情，最近才終於有一點調整回正軌的感覺 剛好 Heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 水一點文章"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://avatars.githubusercontent.com/u/62000156"><meta property="article:published_time" content="2022-10-25T10:00:00.000Z"><meta property="article:modified_time" content="2023-09-05T07:08:50.198Z"><meta property="article:author" content="Mr.S"><meta property="article:tag" content="node.js"><meta property="article:tag" content="bot"><meta property="article:tag" content="discord"><meta property="article:tag" content="discord.js"><meta property="article:tag" content="教學"><meta property="article:tag" content="heroku"><meta property="article:tag" content="render"><meta property="article:tag" content="render.com"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62000156"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://smilin.net/2022/10/25/herokuToRender/"},"headline":"微笑家","image":["https://i.imgur.com/K3Pngg8.png","https://i.imgur.com/JqcraLM.png","https://i.imgur.com/TFqJqEB.png","https://i.imgur.com/JgEO1dE.png","https://i.imgur.com/dvzYkqs.png"],"datePublished":"2022-10-25T10:00:00.000Z","dateModified":"2023-09-05T07:08:50.198Z","author":{"@type":"Person","name":"Smilin"},"description":"前言大家好，我是微笑 繼上次發文過了九個月了 很可怕啊，感覺自己好混，哈哈哈 疫情期間，遇到了不少事情，最近才終於有一點調整回正軌的感覺 剛好 Heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 水一點文章"}</script><link rel="canonical" href="https://smilin.net/2022/10/25/herokuToRender/"><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="微笑家" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首頁</a><a class="navbar-item" href="/archives/">文章</a><a class="navbar-item" href="/categories/">分類</a><a class="navbar-item" href="/message/">留言</a><a class="navbar-item" href="/about/">關於我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目錄" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-10-25  <a class="commentCountImg" href="/2022/10/25/herokuToRender/#comment-container"><span class="display-none-class">b85154de9e203fe1c7978e0a35a560f3</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="b85154de9e203fe1c7978e0a35a560f3">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>9 分鐘  <i class="fas fa-pencil-alt"> </i>1.4 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次訪問</span></div></div><h1 class="title is-3 is-size-4-mobile">將專案從heroku轉到render過程思路</h1><div class="content"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大家好，我是微笑</p>
+<p>繼上次發文過了九個月了</p>
+<p>很可怕啊，感覺自己好混，哈哈哈</p>
+<p>疫情期間，遇到了不少事情，最近才終於有一點調整回正軌的感覺</p>
+<p>剛好 Heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 <del>水一點文章</del></p>
+<br>
+
+<span id="more"></span>
+
+<hr>
+<h3 id="關於發生在-Heroku-上的一些問題"><a href="#關於發生在-Heroku-上的一些問題" class="headerlink" title="關於發生在 Heroku 上的一些問題"></a>關於發生在 Heroku 上的一些問題</h3><p>Heroku 在10月初時，寄送給了開發者一封信</p>
+<p>裡面提到，Heroku 將於2022年11月28號以後，全面關閉免費方案的主機</p>
+<p>如果繼續使用 Heroku 的話，根據目前定價方案，一台託管主機需要負擔一個月 7 美元的成本</p>
+<p>對於單純在學習的學生，又或是我這種程序用愛發電沒有利益的行為，顯然是十足的噩耗</p>
+<p>也因此，原本在 Heroku 上使用免費方案的使用者，開始到處尋找可以繼續使用的平台。</p>
+<p><img src="https://i.imgur.com/K3Pngg8.png" alt="heroku將於2022年11月28號以後，全面關閉免費方案的主機"></p>
+<br>
+
+<hr>
+<h3 id="多樣化的選擇"><a href="#多樣化的選擇" class="headerlink" title="多樣化的選擇"></a>多樣化的選擇</h3><p>因應 Heroku 收費化的開始，有許多平台陸續浮現到開發者的眼前，其中甚至有網站的標題是「Migrate from Heroku to Railway」</p>
+<p>可以看到，除了 Heroku 以外仍有許多平台等待著開發者發掘(Fly.io&#x2F;Railway.app&#x2F;GoogleCloudPlatform - CloudRun等..)</p>
+<p>雖然根據專案不同，沒有所謂最好的選擇，不過筆者在多次嘗試後，最後決定將程式搬遷到 Render 上</p>
+<br>
+
+<hr>
+<h3 id="render-com"><a href="#render-com" class="headerlink" title="render.com"></a>render.com</h3><p><img src="https://i.imgur.com/JqcraLM.png" alt="render.com"></p>
+<br>
+
+<p>當初搬遷主機時，最看中的點就是希望能盡量不用改動原本的架構，免費額度足夠</p>
+<p>Render 目前有著每月 750 小時的免費額度，只開一台機器的話等同免費</p>
+<p>並且他支援從 GitHub &#x2F; GitLab 等開源平台專案部署的方式，功能單一讓流程簡化</p>
+<p>除了支援許多語言直接部署，也支援 Docker 映像檔部署，這幾乎是現在主流平台都有的功能了。</p>
+<p>那因為筆者的專案使用 Node.js，剛好在 Render 支援的語言列表內，所以設定好之後，將專案推到 Github，他就會自動做部署行為了</p>
+<br>
+
+<hr>
+<h3 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h3><br>
+
+<p>第一次部署肯定會比較麻煩的</p>
+<p>首先我們要先用 Github 帳號登入 Render 註冊帳號，進來後他會先告訴你，免費方案如以下</p>
+<p><img src="https://i.imgur.com/TFqJqEB.png" alt="免費方案"></p>
+<br>
+
+<p>Render 提供許多方案，這邊我們要找到 web services 才能使用免費主機</p>
+<br>
+
+<p><img src="https://i.imgur.com/JgEO1dE.png" alt="Overview"></p>
+<br>
+
+<p>之後取得 Github 授權 repository，就可以載入專案，選擇主機地區，語言等設置</p>
+<p>比較需要注意的是，因為 Render 的 web 每個半小時無人訪問，會進入休眠(記得 Heroku 也有這類設定)</p>
+<p>需要再次訪問網站才能讓他喚醒</p>
+<p>以 Node 來說，我們可以使用 request 跟 node-schedule ，呼叫自己防止進入睡眠的方式，來讓真正需要的程序能不間斷運行</p>
+<br>
+
+<hr>
+<h3 id="env"><a href="#env" class="headerlink" title="env"></a>env</h3><br>
+
+<p>以前在 Heroku ，如果不透過 Github 自動部署，而是用 Heroku Git 的話，是可以直接將較為私密的 key 等資料，直接明碼上傳上去的</p>
+<p>雖然不是很好的做法，但是對於私人專案來說，這的確是個很方便的做法，只上傳在 Heroku 也有效的保障了程序的安全性</p>
+<p>但是 Render 只接受 Github 鏡像部署，私密的 key 是無論如何都不會放在 Github 上的</p>
+<p>Render 在 env 的設定上也是十分方便，<a target="_blank" rel="noopener" href="https://render.com/docs/configure-environment-variables">官方流程可參考這篇文檔</a></p>
+<p><img src="https://i.imgur.com/dvzYkqs.png" alt="env"></p>
+<br>
+
+<p>單一的 key 要放在 Environment Variables</p>
+<p>如果原本就習慣使用 .env 管理所有參數的話，可以將檔案的內容複製進 Secret Files</p>
+<p>Render 在 env 有個好處是，一般平台設置 env 後，基於安全性，平台都不會讓使用者在前台存取 env 的真實資料</p>
+<p>但是 Render 可以，而且還可以直接修改內容，雖然必須犧牲一些安全性，但這樣也方便了開發者對值的管理，對筆者來說是利大於弊</p>
+<br>
+
+<hr>
+<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><br>
+
+<p>筆者當初使用 Heroku，是因為接觸了 discord bot，為此還寫了鐵人賽</p>
+<p>說長不長說短不短的兩年，Heroku 宣告收費化，對於筆者這樣的使用者來說，就像是一個平台的關閉一般</p>
+<p>這兩年從後端摸到前端，再從前端學回後端，因為疫情也遇到了不少事情，原本覺得搬遷主機，對於筆者這點能力來說一定是一件艱鉅的工程</p>
+<p>不過在搬遷的過程中，重新拾起 Node，摸索對筆者最好的平台時，感受到許多愉快，有一種 原來我還是能快樂寫 code 阿，的感想</p>
+<p>我想 sideProject 就像是開發者們心靈的綠洲吧，能因為這次機會，重新澆灌他，我也收穫頗豐。</p>
+<p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10255630">文末附上去年內部員工自己寫的推薦文</a></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>將專案從heroku轉到render過程思路</p><p><a href="https://smilin.net/2022/10/25/herokuToRender/">https://smilin.net/2022/10/25/herokuToRender/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://smilin.net"><p>Smilin</p></a></div></div><div class="level-item is-narrow"><div><h6>發佈於</h6><p>2022-10-25</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2023-09-05</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/10/31/bdb2/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">BDB更新日誌#2 - discord.js v14.6.0</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/01/17/bdb1/"><span class="level-item">BDB更新日誌#1</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">評論</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-TW',
+            id: 'b85154de9e203fe1c7978e0a35a560f3',
+            repo: 'Mr-Smilin.github.io',
+            owner: 'Mr-Smilin',
+            clientID: '9a33a548232178c23121',
+            clientSecret: 'bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6',
+            admin: ["Mr-Smilin"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目錄</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#前言"><span>前言</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#關於發生在-Heroku-上的一些問題"><span>關於發生在 Heroku 上的一些問題</span></a></li><li><a class="is-flex is-mobile" href="#多樣化的選擇"><span>多樣化的選擇</span></a></li><li><a class="is-flex is-mobile" href="#render-com"><span>render.com</span></a></li><li><a class="is-flex is-mobile" href="#部署流程"><span>部署流程</span></a></li><li><a class="is-flex is-mobile" href="#env"><span>env</span></a></li><li><a class="is-flex is-mobile" href="#結語"><span>結語</span></a></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/62000156" alt="微笑"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">微笑</p><p class="is-size-6 is-block">java is fucking shit ❤️</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>台灣</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">43</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分類</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">標籤</p><a href="/tags"><p class="title">17</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Mr-Smilin" target="_blank" rel="noopener">關注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Mr-Smilin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://www.facebook.com/profile.php?id=100003120783130"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:lion31lion31@gmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子獲取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"來源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新評論</h3><span class="body_hot_comment">加載中，最新評論有1分鐘緩存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-06T02:00:00.000Z">2023-09-06</time></p><p class="title"><a href="/2023/09/06/alist-started/">Alist 好用的自建雲端介紹</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a> / <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/">雲端相關</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-01T12:00:00.000Z">2023-06-01</time></p><p class="title"><a href="/2023/06/01/discordJs14-1/">discord.js 升上 14 版，架構說明</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-17T06:30:00.000Z">2023-03-17</time></p><p class="title"><a href="/2023/03/17/goodbyeNalocal/">blog 網址搬遷 &amp; github改名</a></p><p class="categories"><a href="/categories/%E6%97%A5%E8%A8%98/">日記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-11-01T10:00:00.000Z">2022-11-01</time></p><p class="title"><a href="/2022/11/01/bdb3/">BDB更新日誌#3</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-31T10:00:00.000Z">2022-10-31</time></p><p class="title"><a href="/2022/10/31/bdb2/">BDB更新日誌#2 - discord.js v14.6.0</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分類</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/"><span class="level-start"><span class="level-item">BaseDiscordBot</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/"><span class="level-start"><span class="level-item">更新日誌</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/hexo%E4%B8%BB%E9%A1%8C%E5%88%86%E4%BA%AB/"><span class="level-start"><span class="level-item">hexo主題分享</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%97%A5%E8%A8%98/"><span class="level-start"><span class="level-item">日記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"><span class="level-start"><span class="level-item">程式簡記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E8%A8%97%E7%AE%A1%E5%B9%B3%E5%8F%B0%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">託管平台相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">雲端相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="level-start"><span class="level-item">鐵人賽</span></span><span class="level-end"><span class="level-item tag">31</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"><span class="level-start"><span class="level-item">用Node.js製作後台零負擔的DiscordBot</span></span><span class="level-end"><span class="level-item tag">31</span></span></a></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">歸檔</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/03/"><span class="level-start"><span class="level-item">三月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/11/"><span class="level-start"><span class="level-item">十一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/10/"><span class="level-start"><span class="level-item">十月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">標籤</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/bot/"><span class="tag">bot</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord/"><span class="tag">discord</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord-js/"><span class="tag">discord.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node-js/"><span class="tag">node.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E5%AD%B8/"><span class="tag">教學</span><span class="tag is-grey-lightest">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="tag">12th鐵人賽</span><span class="tag is-grey-lightest">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E8%A8%98/"><span class="tag">日記</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Alist/"><span class="tag">Alist</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Live2D/"><span class="tag">Live2D</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fluid/"><span class="tag">fluid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/heroku/"><span class="tag">heroku</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render/"><span class="tag">render</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render-com/"><span class="tag">render.com</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BD%88%E5%B0%84%E4%B8%96%E7%95%8C/"><span class="tag">彈射世界</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%85%B3%E6%9C%AC/"><span class="tag">腳本</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%81%8A%E6%88%B2/"><span class="tag">遊戲</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a><p class="size-small"><span>&copy; 2023 Smilin</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版權說明：[本網站所有內容均收集於互聯網或自己創作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便於網友與自己學習交流，如有侵權，請<a href="/message" target="_blank">留言</a>，立即處理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已運行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小時 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！ ❤️";
+        }var now = new Date();setInterval("createTime('2021/09/15 18:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感謝 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光臨！ ❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="/dist/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="/dist/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script></div><script type="text/javascript" color="0,205,205" opacity="0.7" zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到頂端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);})</script><script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什麼..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什麼...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

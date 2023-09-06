@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Day22 - 音樂系統的多群組化(額外) - 微笑家</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="微笑家"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="微笑家"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="這兩天來把音樂系統教完好了"><meta property="og:type" content="blog"><meta property="og:title" content="微笑の家"><meta property="og:url" content="https://smilin.net/"><meta property="og:site_name" content="微笑の家"><meta property="og:description" content="這兩天來把音樂系統教完好了"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://avatars.githubusercontent.com/u/62000156"><meta property="article:published_time" content="2020-09-22T02:10:05.000Z"><meta property="article:modified_time" content="2023-09-05T07:08:50.190Z"><meta property="article:author" content="Mr.S"><meta property="article:tag" content="node.js"><meta property="article:tag" content="bot"><meta property="article:tag" content="discord"><meta property="article:tag" content="discord.js"><meta property="article:tag" content="教學"><meta property="article:tag" content="12th鐵人賽"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62000156"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://smilin.net/2020/09/22/12thDay22/"},"headline":"微笑家","image":["https://i.imgur.com/sKuhlfp.png","https://i.imgur.com/KSRmbTG.png","https://i.imgur.com/gax5Dun.png","https://i.imgur.com/MpGvBiu.png","https://i.imgur.com/GHYrwdz.png","https://i.imgur.com/0noksiD.png","https://i.imgur.com/j3vClrt.png","https://i.imgur.com/0mjB6g9.png","https://i.imgur.com/6ekTspK.png","https://i.imgur.com/BMVGiLi.png","https://i.imgur.com/5dS1Qmq.png","https://i.imgur.com/7rysBLk.png","https://i.imgur.com/GdOBJIn.png","https://i.imgur.com/Eu0wFM2.png","https://i.imgur.com/FgMco0X.png","https://i.imgur.com/3J61doA.png"],"datePublished":"2020-09-22T02:10:05.000Z","dateModified":"2023-09-05T07:08:50.190Z","author":{"@type":"Person","name":"Smilin"},"description":"這兩天來把音樂系統教完好了"}</script><link rel="canonical" href="https://smilin.net/2020/09/22/12thDay22/"><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="微笑家" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首頁</a><a class="navbar-item" href="/archives/">文章</a><a class="navbar-item" href="/categories/">分類</a><a class="navbar-item" href="/message/">留言</a><a class="navbar-item" href="/about/">關於我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目錄" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2020-09-22  <a class="commentCountImg" href="/2020/09/22/12thDay22/#comment-container"><span class="display-none-class">1e04f011eac8a1d42069cf449a8acf17</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="1e04f011eac8a1d42069cf449a8acf17">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>13 分鐘  <i class="fas fa-pencil-alt"> </i>2.0 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次訪問</span></div></div><h1 class="title is-3 is-size-4-mobile">Day22 - 音樂系統的多群組化(額外)</h1><div class="content"><p>這兩天來把音樂系統教完好了</p>
+<span id="more"></span>
+
+<p>目前為止的音樂系統只支援一隻機器人 for 一個群組的模式<br>如果有多群組同時要使用音樂系統，會導致歌單列表共用</p>
+<p>這是因為機器人的系統中，並沒有將群組納入判斷<br>要改起來並不難，但邏輯要清晰</p>
+<p>不知道當時有沒有小夥伴自己搞定這一塊的?我們今天會再帶過</p>
+<p>程式碼是依照之前的進度，不會重頭開始，如果需要但沒有基礎程式碼的話可以回去看音樂系統的教學</p>
+<hr>
+<h1 id="MusicFunction"><a href="#MusicFunction" class="headerlink" title="MusicFunction"></a>MusicFunction</h1><p><img src="https://i.imgur.com/sKuhlfp.png" alt="22-1"></p>
+<p>首先請把宣告成全域變數的兩個參數，初始化都設為Map()</p>
+<p><img src="https://i.imgur.com/KSRmbTG.png" alt="22-2"></p>
+<p>再來我們在音樂指令的入口提取guildID，並且放入每一個function內</p>
+<h1 id="playMusic"><a href="#playMusic" class="headerlink" title="playMusic"></a>playMusic</h1><p><img src="https://i.imgur.com/gax5Dun.png" alt="22-3"></p>
+<p>修改了151,155跟171行<br>(可以根據左側顏色判斷)</p>
+<p>第一次進入語音廳的群組需要先以群組ID宣告一個歌曲列表<br>原本歌曲列表放入資料的方法是這樣</p>
+<pre><code>musicList.push(網址)
+</code></pre>
+<p>現在變成</p>
+<pre><code>music.get(群組id).push(網址)
+</code></pre>
+<p>也就是根據群組id提取歌曲列表</p>
+<h1 id="playMusic2"><a href="#playMusic2" class="headerlink" title="playMusic2"></a>playMusic2</h1><p><img src="https://i.imgur.com/MpGvBiu.png" alt="22-4"></p>
+<p>改了185,195,202,204跟206行<br>(可以根據左側顏色判斷)</p>
+<p>原則上都跟剛剛一樣，注意歌曲清單跟播放遙控器應該是一個群組一個而已</p>
+<h1 id="disconnectMusic"><a href="#disconnectMusic" class="headerlink" title="disconnectMusic"></a>disconnectMusic</h1><p><img src="https://i.imgur.com/GHYrwdz.png" alt="22-5"></p>
+<p>修改了222行<br>(可以根據左側顏色判斷)</p>
+<h1 id="replayMusic"><a href="#replayMusic" class="headerlink" title="replayMusic"></a>replayMusic</h1><p><img src="https://i.imgur.com/0noksiD.png" alt="22-6"></p>
+<p>改了235,237與240行<br>(可以根據左側顏色判斷)</p>
+<h1 id="skipMusic"><a href="#skipMusic" class="headerlink" title="skipMusic"></a>skipMusic</h1><p><img src="https://i.imgur.com/j3vClrt.png" alt="22-7"></p>
+<p>只有一行</p>
+<h1 id="nowPlayMusic"><a href="#nowPlayMusic" class="headerlink" title="nowPlayMusic"></a>nowPlayMusic</h1><p><img src="https://i.imgur.com/0mjB6g9.png" alt="22-8"></p>
+<p>修改了253,255跟261行<br>(可以根據左側顏色判斷)</p>
+<p>字串串接部分拿的是已經處理好的參數，所以不用修改streamString</p>
+<h1 id="queueShow"><a href="#queueShow" class="headerlink" title="queueShow"></a>queueShow</h1><p><img src="https://i.imgur.com/6ekTspK.png" alt="22-9"></p>
+<p>修改了291,294跟296行<br>(可以根據左側顏色判斷)</p>
+<hr>
+<p>這樣基本就都改好了，我們試著運行看看</p>
+<p>運行前，因為之前我們已經上傳機器人到heroku上，理論上現在機器人是在運行狀態的<br>這時候如果我們使用node bot，雖然不會有bug，但會造成bot裡面同時有兩隻程序登入，會造成很有趣的現象，各位有興趣可以試試</p>
+<p>那這邊筆者為了繞過這問題，想直接上傳至heroku，這樣就可以只跑一個程序，也剛好介紹怎麼用heroku瀏覽程序歷程</p>
+<h1 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h1><p>我們先回到專案資料夾底下，將.git改名gitHub，然後將gitHeroku改回.git</p>
+<p>回到vsCode，將專案推上heroku</p>
+<p>推完看到Build succeeded後幫我下</p>
+<pre><code>heroku log -t
+</code></pre>
+<p>之前應該有提到<br>這是觀察專案在heroku上的託管狀態<br>如果我們要透過heroku來直接跑程序，或是之後出問題都是來這邊看error訊息</p>
+<p>開好訊息後，我們試著測試看看機器人是不是真的可以分群播音樂了</p>
+<p><img src="https://i.imgur.com/BMVGiLi.png" alt="22-10"></p>
+<p><img src="https://i.imgur.com/5dS1Qmq.png" alt="22-11"></p>
+<p><img src="https://i.imgur.com/7rysBLk.png" alt="22-12"></p>
+<p><img src="https://i.imgur.com/GdOBJIn.png" alt="22-13"></p>
+<p><img src="https://i.imgur.com/Eu0wFM2.png" alt="22-14"></p>
+<p><img src="https://i.imgur.com/FgMco0X.png" alt="22-15"></p>
+<p><img src="https://i.imgur.com/3J61doA.png" alt="22-16"></p>
+<hr>
+<p>大致如此，我們可以看到，機器人確實在兩個群組收到指令時，不會影響到對方了</p>
+<p>音樂系統的多群組支援教到這<br>明天看看要不要教一些額外的功能，我們明天見</p>
+<h1 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h1><pre><code>//#region 音樂系統
+//歌曲控制器
+let dispatcher = new Map();
+//歌曲清單
+let musicList = new Map();
+
+function MusicFunction(msg) &#123;
+    //將訊息內的前綴字截斷，後面的字是我們要的
+    const content = msg.content.substring(prefix[1].Value.length);
+    //指定我們的間隔符號
+    const splitText = &#39; &#39;;
+    //用間隔符號隔開訊息 contents[0] = 指令,contents[1] = 參數
+    const contents = content.split(splitText);
+    //因為會持續使用到，將群組ID獨立成參數
+    const guildID = msg.guild.id;
+
+    switch (contents[0]) &#123;
+        case &#39;play&#39;:
+            //點歌&amp;播放歌曲功能
+            playMusic(guildID, msg, contents);
+            break;
+        case &#39;replay&#39;:
+            //重播當前歌曲
+            replayMusic(guildID);
+            break;
+        case &#39;np&#39;:
+            //當前歌曲資訊
+            nowPlayMusic(guildID, msg.channel.id);
+            break;
+        case &#39;queue&#39;:
+            //歌曲清單
+            queueShow(guildID, msg.channel.id);
+            break;
+        case &#39;skip&#39;:
+            //中斷歌曲
+            skipMusic(guildID);
+            break;
+        case &#39;disconnect&#39;:
+            //退出語音頻道並且清空歌曲清單
+            disconnectMusic(guildID, msg.channel.id);
+            break;
+    &#125;
+&#125;
+
+//?play
+async function playMusic(guildID, msg, contents) &#123;
+    //定義我們的第一個參數必需是網址
+    const urlED = contents[1];
+    try &#123;
+        //第一個參數不是連結就要篩選掉
+        if (urlED.substring(0, 4) !== &#39;http&#39;) return msg.reply(&#39;The link is not working.1&#39;);
+
+        //透過library判斷連結是否可運行
+        const validate = await ytdl.validateURL(urlED);
+        if (!validate) return msg.reply(&#39;The link is not working.2&#39;);
+
+        //獲取歌曲資訊
+        const info = await ytdl.getInfo(urlED);
+        //判斷資訊是否正常
+        if (info.videoDetails) &#123;
+            //指令下達者是否在語音頻道
+            if (msg.member.voice.channel) &#123;
+                //判斷bot是否已經連到語音頻道 是:將歌曲加入歌單 不是:進入語音頻道並且播放歌曲
+                if (!client.voice.connections.get(msg.guild.id)) &#123;
+                    //因為是第一次加入，宣告新的歌曲列表
+                    musicList.set(guildID, new Array());
+
+                    //將歌曲加入歌單
+                    musicList.get(guildID).push(urlED);
+                    //進入語音頻道
+                    msg.member.voice.channel.join()
+                        .then(connection =&gt; &#123;
+                            msg.reply(&#39;來了~&#39;);
+                            //const guildID = msg.guild.id;
+                            const channelID = msg.channel.id;
+                            //播放歌曲
+                            playMusic2(connection, guildID, channelID);
+                        &#125;)
+                        .catch(err =&gt; &#123;
+                            msg.reply(&#39;bot進入語音頻道時發生錯誤，請再試一次&#39;);
+                            console.log(err, &#39;playMusicError2&#39;);
+                        &#125;)
+                &#125; else &#123;
+                    //將歌曲加入歌單
+                    musicList.get(guildID).push(urlED);
+                    msg.reply(&#39;已將歌曲加入歌單!&#39;);
+                &#125;
+            &#125; else return msg.reply(&#39;請先進入頻道:3...&#39;);
+        &#125; else return msg.reply(&#39;The link is not working.3&#39;);
+    &#125; catch (err) &#123;
+        console.log(err, &#39;playMusicError&#39;);
+    &#125;
+&#125;
+
+//?play 遞迴函式
+async function playMusic2(connection, guildID, channelID) &#123;
+    try &#123;
+        //播放前歌曲清單不能沒有網址
+        if (musicList.get(guildID).length &gt; 0) &#123;
+            //設定音樂相關參數
+            const streamOptions = &#123;
+                seek: 0,
+                volume: 0.5,
+                Bitrate: 192000,
+                Passes: 1,
+                highWaterMark: 1
+            &#125;;
+            //讀取清單第一位網址
+            const stream = await ytdl(musicList.get(guildID)[0], &#123;
+                filter: &#39;audioonly&#39;,
+                quality: &#39;highestaudio&#39;,
+                highWaterMark: 26214400 //25ms
+            &#125;)
+
+            //播放歌曲，並且存入dispatcher
+            dispatcher.set(guildID, connection.play(stream, streamOptions));
+            //監聽歌曲播放結束事件
+            dispatcher.get(guildID).on(&quot;finish&quot;, finish =&gt; &#123;
+                //將清單中第一首歌清除
+                if (musicList.get(guildID).length &gt; 0) musicList.get(guildID).shift();
+                //播放歌曲
+                playMusic2(connection, guildID, channelID);
+            &#125;)
+        &#125; else disconnectMusic(guildID, channelID); //清空歌單並且退出語音頻道
+    &#125; catch (err) &#123;
+        console.log(err, &#39;playMusic2Error&#39;);
+    &#125;
+&#125;
+
+//?disconnect
+function disconnectMusic(guildID, channelID) &#123;
+    try &#123;
+        //判斷bot是否在此群組的語音頻道
+        if (client.voice.connections.get(guildID)) &#123;
+            //清空歌曲清單
+            musicList.set(guildID, new Array());
+            //退出語音頻道
+            client.voice.connections.get(guildID).disconnect();
+
+            client.channels.fetch(channelID).then(channel =&gt; channel.send(&#39;晚安~&#39;));
+        &#125; else client.channels.fetch(channelID).then(channel =&gt; channel.send(&#39;可是..我還沒進來:3&#39;))
+    &#125; catch (err) &#123;
+        console.log(err, &#39;disconnectMusicError&#39;);
+    &#125;
+&#125;
+
+//?replay
+function replayMusic(guildID) &#123;
+    if (musicList.get(guildID).length &gt; 0) &#123;
+        //把當前曲目再推一個到最前面
+        musicList.get(guildID).unshift(musicList[0]);
+        //將歌曲關閉，觸發finish事件
+        //finish事件將清單第一首歌排出，然後繼續播放下一首
+        if (dispatcher.get(guildID) !== undefined) dispatcher.get(guildID).end();
+    &#125;
+&#125;
+
+//?skip
+function skipMusic(guildID) &#123;
+    //將歌曲關閉，觸發finish事件
+    if (dispatcher.get(guildID) !== undefined) dispatcher.get(guildID).end();
+&#125;
+
+//?np
+async function nowPlayMusic(guildID, channelID) &#123;
+    try &#123;
+        if (dispatcher.get(guildID) !== undefined &amp;&amp; musicList.get(guildID).length &gt; 0) &#123;
+            //從連結中獲取歌曲資訊 標題 總長度等
+            const info = await ytdl.getInfo(musicList.get(guildID)[0]);
+            //歌曲標題
+            const title = info.videoDetails.title;
+            //歌曲全長(s)
+            const songLength = info.videoDetails.lengthSeconds;
+            //當前播放時間(ms)
+            const nowSongLength = Math.floor(dispatcher.get(guildID).streamTime / 1000);
+            //串字串
+            const message = `$&#123;title&#125;\n$&#123;streamString(songLength,nowSongLength)&#125;`;
+            client.channels.fetch(channelID).then(channel =&gt; channel.send(message))
+        &#125;
+    &#125; catch (err) &#123;
+        console.log(err, &#39;nowPlayMusicError&#39;);
+    &#125;
+&#125;
+
+//▬▬▬▬▬▬▬▬▬?▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+function streamString(songLength, nowSongLength) &#123;
+    let mainText = &#39;?&#39;;
+    const secondText = &#39;▬&#39;;
+    const whereMain = Math.floor((nowSongLength / songLength) * 100);
+    let message = &#39;&#39;;
+    for (i = 1; i &lt;= 30; i++) &#123;
+        if (i * 3.3 + 1 &gt;= whereMain) &#123;
+            message = message + mainText;
+            mainText = secondText;
+        &#125; else &#123;
+            message = message + secondText;
+        &#125;
+    &#125;
+    return message;
+&#125;
+
+//?queue
+async function queueShow(guildID, channelID) &#123;
+    try &#123;
+        if (musicList.get(guildID).length &gt; 0) &#123;
+            let info;
+            let message = &#39;&#39;;
+            for (i = 0; i &lt; musicList.get(guildID).length; i++) &#123;
+                //從連結中獲取歌曲資訊 標題 總長度等
+                info = await ytdl.getInfo(musicList.get(guildID)[i]);
+                //歌曲標題
+                title = info.videoDetails.title;
+                //串字串
+                message = message + `\n$&#123;i+1&#125;. $&#123;title&#125;`;
+            &#125;
+            //把最前面的\n拿掉
+            message = message.substring(1, message.length);
+            client.channels.fetch(channelID).then(channel =&gt; channel.send(message))
+        &#125;
+    &#125; catch (err) &#123;
+        console.log(err, &#39;queueShowError&#39;);
+    &#125;
+&#125;
+//#endregion
+</code></pre>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Day22 - 音樂系統的多群組化(額外)</p><p><a href="https://smilin.net/2020/09/22/12thDay22/">https://smilin.net/2020/09/22/12thDay22/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://smilin.net"><p>Smilin</p></a></div></div><div class="level-item is-narrow"><div><h6>發佈於</h6><p>2020-09-22</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2023-09-05</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相關文章</span><br><span>  1.<a class="is-size-6" href="/2020/09/30/12thDay30/" target="_blank">Day30 - tag控管機制(4)</a><br></span><span>  2.<a class="is-size-6" href="/2020/09/29/12thDay29/" target="_blank">Day29 - tag控管機制(3)</a><br></span><span>  3.<a class="is-size-6" href="/2020/09/28/12thDay28/" target="_blank">Day28 - tag控管機制(2)</a><br></span><span>  4.<a class="is-size-6" href="/2020/09/27/12thDay27/" target="_blank">Day27 - tag控管 - 續行方法解說</a><br></span><span>  5.<a class="is-size-6" href="/2020/09/26/12thDay26/" target="_blank">Day26 - tag控管機制(1)</a><br></span><span>  6.<a class="is-size-6" href="/2020/09/25/12thDay25/" target="_blank">Day25 - 權限系統規格</a><br></span><span>  7.<a class="is-size-6" href="/2020/09/24/12thDay24/" target="_blank">Day24 - 愛麗絲安靜!</a><br></span><span>  8.<a class="is-size-6" href="/2020/09/23/12thDay23/" target="_blank">Day23 - 音樂系統的歌單批量載入(額外)</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2020/09/23/12thDay23/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Day23 - 音樂系統的歌單批量載入(額外)</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/09/21/12thDay21/"><span class="level-item">Day21 - 認識GitHub</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">評論</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-TW',
+            id: '1e04f011eac8a1d42069cf449a8acf17',
+            repo: 'Mr-Smilin.github.io',
+            owner: 'Mr-Smilin',
+            clientID: '9a33a548232178c23121',
+            clientSecret: 'bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6',
+            admin: ["Mr-Smilin"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目錄</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#MusicFunction"><span>MusicFunction</span></a></li><li><a class="is-flex is-mobile" href="#playMusic"><span>playMusic</span></a></li><li><a class="is-flex is-mobile" href="#playMusic2"><span>playMusic2</span></a></li><li><a class="is-flex is-mobile" href="#disconnectMusic"><span>disconnectMusic</span></a></li><li><a class="is-flex is-mobile" href="#replayMusic"><span>replayMusic</span></a></li><li><a class="is-flex is-mobile" href="#skipMusic"><span>skipMusic</span></a></li><li><a class="is-flex is-mobile" href="#nowPlayMusic"><span>nowPlayMusic</span></a></li><li><a class="is-flex is-mobile" href="#queueShow"><span>queueShow</span></a></li><li><a class="is-flex is-mobile" href="#測試"><span>測試</span></a></li><li><a class="is-flex is-mobile" href="#主程序"><span>主程序</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/62000156" alt="微笑"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">微笑</p><p class="is-size-6 is-block">java is fucking shit ❤️</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>台灣</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">43</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分類</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">標籤</p><a href="/tags"><p class="title">17</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Mr-Smilin" target="_blank" rel="noopener">關注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Mr-Smilin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://www.facebook.com/profile.php?id=100003120783130"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:lion31lion31@gmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子獲取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"來源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新評論</h3><span class="body_hot_comment">加載中，最新評論有1分鐘緩存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-06T02:00:00.000Z">2023-09-06</time></p><p class="title"><a href="/2023/09/06/alist-started/">Alist 好用的自建雲端介紹</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a> / <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/">雲端相關</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-01T12:00:00.000Z">2023-06-01</time></p><p class="title"><a href="/2023/06/01/discordJs14-1/">discord.js 升上 14 版，架構說明</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-17T06:30:00.000Z">2023-03-17</time></p><p class="title"><a href="/2023/03/17/goodbyeNalocal/">blog 網址搬遷 &amp; github改名</a></p><p class="categories"><a href="/categories/%E6%97%A5%E8%A8%98/">日記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-11-01T10:00:00.000Z">2022-11-01</time></p><p class="title"><a href="/2022/11/01/bdb3/">BDB更新日誌#3</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-31T10:00:00.000Z">2022-10-31</time></p><p class="title"><a href="/2022/10/31/bdb2/">BDB更新日誌#2 - discord.js v14.6.0</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分類</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/"><span class="level-start"><span class="level-item">BaseDiscordBot</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/"><span class="level-start"><span class="level-item">更新日誌</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/hexo%E4%B8%BB%E9%A1%8C%E5%88%86%E4%BA%AB/"><span class="level-start"><span class="level-item">hexo主題分享</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%97%A5%E8%A8%98/"><span class="level-start"><span class="level-item">日記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"><span class="level-start"><span class="level-item">程式簡記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E8%A8%97%E7%AE%A1%E5%B9%B3%E5%8F%B0%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">託管平台相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">雲端相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="level-start"><span class="level-item">鐵人賽</span></span><span class="level-end"><span class="level-item tag">31</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"><span class="level-start"><span class="level-item">用Node.js製作後台零負擔的DiscordBot</span></span><span class="level-end"><span class="level-item tag">31</span></span></a></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">歸檔</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/03/"><span class="level-start"><span class="level-item">三月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/11/"><span class="level-start"><span class="level-item">十一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/10/"><span class="level-start"><span class="level-item">十月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">標籤</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/bot/"><span class="tag">bot</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord/"><span class="tag">discord</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord-js/"><span class="tag">discord.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node-js/"><span class="tag">node.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E5%AD%B8/"><span class="tag">教學</span><span class="tag is-grey-lightest">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="tag">12th鐵人賽</span><span class="tag is-grey-lightest">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E8%A8%98/"><span class="tag">日記</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Alist/"><span class="tag">Alist</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Live2D/"><span class="tag">Live2D</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fluid/"><span class="tag">fluid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/heroku/"><span class="tag">heroku</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render/"><span class="tag">render</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render-com/"><span class="tag">render.com</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BD%88%E5%B0%84%E4%B8%96%E7%95%8C/"><span class="tag">彈射世界</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%85%B3%E6%9C%AC/"><span class="tag">腳本</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%81%8A%E6%88%B2/"><span class="tag">遊戲</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a><p class="size-small"><span>&copy; 2023 Smilin</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版權說明：[本網站所有內容均收集於互聯網或自己創作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便於網友與自己學習交流，如有侵權，請<a href="/message" target="_blank">留言</a>，立即處理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已運行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小時 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！ ❤️";
+        }var now = new Date();setInterval("createTime('2021/09/15 18:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感謝 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光臨！ ❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="/dist/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="/dist/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script></div><script type="text/javascript" color="0,205,205" opacity="0.7" zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到頂端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);})</script><script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什麼..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什麼...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

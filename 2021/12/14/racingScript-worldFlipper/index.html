@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>競速疊屍腳本 - 台版彈射世界 - 微笑家</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="微笑家"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="微笑家"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="腳本運作環境型號redmi note 8 pro 解析度1080x2340 如果你跟筆者用的是同解析度甚至同一台手機欸、恭喜、我們貼貼 大部份體驗會很良好"><meta property="og:type" content="blog"><meta property="og:title" content="微笑の家"><meta property="og:url" content="https://smilin.net/"><meta property="og:site_name" content="微笑の家"><meta property="og:description" content="腳本運作環境型號redmi note 8 pro 解析度1080x2340 如果你跟筆者用的是同解析度甚至同一台手機欸、恭喜、我們貼貼 大部份體驗會很良好"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://avatars.githubusercontent.com/u/62000156"><meta property="article:published_time" content="2021-12-14T04:00:00.000Z"><meta property="article:modified_time" content="2023-09-05T07:08:50.198Z"><meta property="article:author" content="Mr.S"><meta property="article:tag" content="教學"><meta property="article:tag" content="彈射世界"><meta property="article:tag" content="遊戲"><meta property="article:tag" content="腳本"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://avatars.githubusercontent.com/u/62000156"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://smilin.net/2021/12/14/racingScript-worldFlipper/"},"headline":"微笑家","image":["https://i.imgur.com/x11mtLv.jpg","https://i.imgur.com/pMP0WVz.jpg","https://i.imgur.com/yoVC16o.jpg"],"datePublished":"2021-12-14T04:00:00.000Z","dateModified":"2023-09-05T07:08:50.198Z","author":{"@type":"Person","name":"Smilin"},"description":"腳本運作環境型號redmi note 8 pro 解析度1080x2340 如果你跟筆者用的是同解析度甚至同一台手機欸、恭喜、我們貼貼 大部份體驗會很良好"}</script><link rel="canonical" href="https://smilin.net/2021/12/14/racingScript-worldFlipper/"><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="微笑家" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首頁</a><a class="navbar-item" href="/archives/">文章</a><a class="navbar-item" href="/categories/">分類</a><a class="navbar-item" href="/message/">留言</a><a class="navbar-item" href="/about/">關於我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目錄" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-12-14  <a class="commentCountImg" href="/2021/12/14/racingScript-worldFlipper/#comment-container"><span class="display-none-class">ebfdeeafb1742473fc13cb8e2d00833a</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="ebfdeeafb1742473fc13cb8e2d00833a">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>15 分鐘  <i class="fas fa-pencil-alt"> </i>2.3 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次訪問</span></div></div><h1 class="title is-3 is-size-4-mobile">競速疊屍腳本 - 台版彈射世界</h1><div class="content"><h2 id="腳本運作環境"><a href="#腳本運作環境" class="headerlink" title="腳本運作環境"></a>腳本運作環境</h2><p>型號<br>redmi note 8 pro</p>
+<p>解析度<br>1080x2340</p>
+<p>如果你跟筆者用的是同解析度甚至同一台手機<br>欸、恭喜、<del>我們貼貼</del> 大部份體驗會很良好</p>
+<span id="more"></span>
+
+<h2 id="適配機型-缺乏資料，歡迎各位踴躍提供"><a href="#適配機型-缺乏資料，歡迎各位踴躍提供" class="headerlink" title="適配機型(缺乏資料，歡迎各位踴躍提供)"></a>適配機型(缺乏資料，歡迎各位踴躍提供)</h2><p>缺乏資料，歡迎各位踴躍提供</p>
+<hr>
+<h2 id="載點"><a href="#載點" class="headerlink" title="載點"></a>載點</h2><p><a target="_blank" rel="noopener" href="https://www.zdjl.org/">腳本精靈 apk</a></p>
+<p><a target="_blank" rel="noopener" href="https://drive.google.com/file/d/15BtIQWg8qRVFHv9yN2u3V20YBUY0hlgq/view?usp=sharing">雲水小號腳本三件套</a></p>
+<h2 id="安裝教學"><a href="#安裝教學" class="headerlink" title="安裝教學"></a>安裝教學</h2><p>下載上方兩個檔案後，安裝腳本精靈</p>
+<p>開啟腳本精靈，給予權限後，點選畫面中下方的 <strong>製作</strong><br>直到彈回主畫面後，即可關閉腳本精靈</p>
+<p>這時候，手機根目錄會出現一個叫做 <strong>自动精灵</strong> 的資料夾<br>將雲水小號三件套解壓，將檔案放入該資料夾</p>
+<p>回到腳本精靈就會看到此腳本</p>
+<h2 id="使用教學"><a href="#使用教學" class="headerlink" title="使用教學"></a>使用教學</h2><p>請使用新角色開始遊戲，並且手動玩到 1-4-2，打完貓頭鷹並解鎖 auto 系統<br>之後運行腳本即可(不用再手動玩到貓頭鷹)</p>
+<p>會這樣設計是因為大家解析度不同，很有可能我寫完的腳本你不能用<br>而開啟 auto 後的腳本邏輯相對簡單，理論上相對不會有 bug，所以將腳本啟動點放在這</p>
+<h2 id="無論如何都希望可以從創角開始就全自動"><a href="#無論如何都希望可以從創角開始就全自動" class="headerlink" title="無論如何都希望可以從創角開始就全自動"></a>無論如何都希望可以從創角開始就全自動</h2><p>開啟腳本，請點選 <strong>雲水小號全自動</strong>，之後點右下角的編輯</p>
+<div  align="center">
+<img src="https://i.imgur.com/x11mtLv.jpg" width = "30%" height = "30%" alt="" align=center />
+</div>
+
+<p>腳本出現後，開啟遊戲，到主畫面</p>
+<div  align="center">
+<img src="https://i.imgur.com/pMP0WVz.jpg" width = "30%" height = "30%" alt="" align=center />
+</div>
+請確認當前是處於新角色且從未登入狀態，如果不是，請從右上角設定中 **刪除資料** 
+之後將腳本拉到第六點 **創角流程** (圖中第四點是舊的，錯誤的)，長按後會出現 **從這裡開始運行** 
+點選後就會從創角開始自動循環了。
+
+<h2 id="如果我在運行過程因為-BUG-充電-手不小心按到等原因，導致中斷執行了，可以再繼續運行腳本嗎，還是只能重刷"><a href="#如果我在運行過程因為-BUG-充電-手不小心按到等原因，導致中斷執行了，可以再繼續運行腳本嗎，還是只能重刷" class="headerlink" title="如果我在運行過程因為 BUG&#x2F;充電&#x2F;手不小心按到等原因，導致中斷執行了，可以再繼續運行腳本嗎，還是只能重刷"></a>如果我在運行過程因為 BUG&#x2F;充電&#x2F;手不小心按到等原因，導致中斷執行了，可以再繼續運行腳本嗎，還是只能重刷</h2><p>可以繼續運行腳本，不用重刷，這邊介紹一下腳本的大概流程<br>腳本大概可以拆成幾個區塊，由上到下依序是</p>
+<p>1.開啟 auto&amp;跳過&amp;下一步 2.打雲水囉 3.重開小號 4.關閉&amp;開啟彈射世界 5.創角流程 6.手操&amp;跳過&amp;下一步 7.腳本手操<br>(以上名稱皆對應腳本描述)</p>
+<h3 id="開啟-auto-跳過-下一步"><a href="#開啟-auto-跳過-下一步" class="headerlink" title="開啟 auto&amp;跳過&amp;下一步"></a>開啟 auto&amp;跳過&amp;下一步</h3><p>指通關貓頭鷹(1-4-2)以後，到第 1 章全通關，這期間的所有關卡都會在這個分類內循環<br>如果在這期間中斷了腳本，<font color=#FF6600>回到有 new 關卡的地方啟動腳本即可</font></p>
+<h3 id="打雲水囉"><a href="#打雲水囉" class="headerlink" title="打雲水囉"></a>打雲水囉</h3><p>指打通第一章最終 boss 並通過最後兩個故事，獲得第一章武器寶珠 精靈的微笑 後，會切換到此流程<br>此分類涵蓋從第一章退出，進入活動頁，進雲水，被送出來結算後<br>因此，如果打完第一章後忽然中斷，想從這裡繼續執行是可以的<br>但因為打完雲水就要換帳號了，個人是建議<font color=#FF6600>各位直接手動進雲水送死，重新刷號比較快。</font></p>
+<h3 id="重開小號"><a href="#重開小號" class="headerlink" title="重開小號"></a>重開小號</h3><p>指被雲水送出來後，回到標題畫面刪除帳號資料<br>這一段區間是不會無限執行的，跟上一個分類一樣，<font color=#FF6600>卡在這建議直接手動</font></p>
+<h3 id="關閉-開啟彈射世界"><a href="#關閉-開啟彈射世界" class="headerlink" title="關閉&amp;開啟彈射世界"></a>關閉&amp;開啟彈射世界</h3><p>指刪除完角色資料後，重新啟動彈射世界，以釋放部分記憶體<br>跟上一個分類一樣，<font color=#FF6600>卡在這建議自己重啟，並且改用 記憶體負載 版本</font></p>
+<h3 id="創角流程"><a href="#創角流程" class="headerlink" title="創角流程"></a>創角流程</h3><p>指從主畫面進入，直到領完登入獎勵&amp;夏日登入獎勵這段時間<br>如果創角期間有任何原因中斷腳本，可以長按這個分類並且選擇 <font color=#FF6600>從這裡開始運行</font></p>
+<h3 id="手操-跳過-下一步"><a href="#手操-跳過-下一步" class="headerlink" title="手操&amp;跳過&amp;下一步"></a>手操&amp;跳過&amp;下一步</h3><p>指領完登入獎勵，1-1-1 到 1-4-2 期間的所有流程<br>如果是在打完貓頭鷹前就發生意外，導致腳本中斷的話<br>請回到有 new 關卡的地方，長按這個分類並且選擇 <font color=#FF6600>從這裡開始運行</font></p>
+<h3 id="腳本手操"><a href="#腳本手操" class="headerlink" title="腳本手操"></a>腳本手操</h3><p>此分類與上一個分類連動，當運行手操流程，進關卡時，會進入此分類<br><font color=#FF6600>無論任何情況都不會從這個分類中繼續執行</font></p>
+<h2 id="若是因為解析度問題，導致這個腳本在你的環境中有一堆問題"><a href="#若是因為解析度問題，導致這個腳本在你的環境中有一堆問題" class="headerlink" title="若是因為解析度問題，導致這個腳本在你的環境中有一堆問題"></a>若是因為解析度問題，導致這個腳本在你的環境中有一堆問題</h2><p>請改為使用 <strong>雲水小號半自動</strong><br>此版本只會協助自動通關貓頭鷹後的關卡&amp;進雲水送頭<br>這一段的邏輯相對簡易，如果遇到問題各位也可以試著修改。</p>
+<h2 id="一些話"><a href="#一些話" class="headerlink" title="一些話"></a>一些話</h2><details>
+  <summary>一些廢話</summary>
+  <p>
+        想寫這個腳本的想法，從修車大開始寫的雲水行前手冊時就有了；
+        時常一起玩的朋友沒有完美雷拳盤，希望可以繼續一起玩這款遊戲，大概是像這樣的想法。
+        雖然現實似乎是連完美盤也只能哭，能不能幫到他已經是未知數了
+  </p>
+  <p>
+        官方在競速開始前一刻，加強了模擬器的驗證機制，
+        這對於腳本的普及是毀滅性的；
+        模擬器可以提供的是統一的硬體規格與解析度，
+        關閉模擬器並不能遏阻使用外掛的使用者。
+        對於腳本的分享，會因為要考慮到機種規格不同，遇到極大的考驗，
+        這是十分打擊熱情的。
+  </p>	
+  <p>
+        儘管如此，活動開始幾天後，知道版上需要腳本的人仍佔大多數，死馬當活馬醫，姑且還是嘗試著寫了一下，雖然已經預想的到腳本會有多難推廣了(扶額)；
+        希望各位願意點進這篇文章、願意幫助他人的你，哪怕只是想搶救下自己的排名，也別忘記保持善心，
+        不用理會其他人說腳本是外掛這類反智言論，純粹的理念會是你堅持使用腳本的秘訣。
+  </p>
+</details>
+
+<hr>
+<h2 id="常見問題"><a href="#常見問題" class="headerlink" title="常見問題"></a>常見問題</h2><p>Q: 腳本精靈自行停止運作<br>A: 通常是因為記憶體回收機制，自動將腳本精靈關閉導致，這時再次開啟腳本精靈也會有問題，請重開機，並且將腳本精靈設定成不可自動回收的應用程式(每家手機廠設定方式不同)<br>Ex:</p>
+<div  align="center">
+<img src="https://i.imgur.com/yoVC16o.jpg" width = "30%" height = "30%" alt="" align=center />
+</div>
+
+<p>Q: 我的角色打關卡死掉，腳本就不會動了<br>A: 欸….我測試期間至少刷了 20 隻帳號，發文當下也在刷，目前沒有死過<br>亞里沙打 1 章跟鬼一樣，1 章的難度應該….是不會死的<br>萬一真刷出死掉的狀況…我..我再想想辦法。</p>
+<p>Q: 我的腳本擅自將遊戲關閉後，不會重新啟動<br>A: 部分機種不會讓腳本可以開關遊戲程式，筆者自己也是這一類機型，請使用 <strong>雲水小號全自動(記憶體負載)</strong><br>使用此版本不會自動重啟遊戲，大約 1 小時(刷 1~2 隻角色後)，需手動重啟遊戲，否則整隻手機會因為記憶體塞滿卡住。<br>p.s.就算是使用 <strong>雲水小號全自動</strong> 的使用者，也推薦每隔一小時查看一次手機，尤其是一開始幾分鐘，最好一直看著，腳本終究只是腳本，只要出現突發狀況就會炸掉 <del>當然也有筆者寫得不好的原因</del></p>
+<p>Q: 動作運行失敗，已暫停<br>A: 通常是運行期間閃退，導致部分權限拿不到，重開機解決</p>
+<p>Q: 截屏為空，請確定是否開啟了其他截屏軟件<br>A: 關閉其他允許顯示在應用上層的軟件後再嘗試</p>
+<p>Q: 運行失敗&amp;卡在奇怪的地方不繼續動了<br>A: 請依照上方教學，從一般運行改為編輯模式，可以試著調整抓取圖片解析度，或是抓圖範圍，使腳本適配於自身機種<br>並且提供機型&amp;解析度&amp;卡住的地方，在下方留言給我，又或是透過巴哈站內信給我，以利資料蒐集&amp;幫助更多的人</p>
+<p>不知道該怎麼留言時，可以試著使用的留言格式</p>
+<pre><code>機種(必填):
+解析度:
+卡住的地方(必填):
+狀況的補充說明:
+想說的話:
+截圖:
+</code></pre>
+</div><div class="article-licensing box"><div class="licensing-title"><p>競速疊屍腳本 - 台版彈射世界</p><p><a href="https://smilin.net/2021/12/14/racingScript-worldFlipper/">https://smilin.net/2021/12/14/racingScript-worldFlipper/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://smilin.net"><p>Smilin</p></a></div></div><div class="level-item is-narrow"><div><h6>發佈於</h6><p>2021-12-14</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2023-09-05</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相關文章</span><br><span>  1.<a class="is-size-6" href="/2021/11/16/live2DShareList/" target="_blank">公開Live2D模型蒐集分享</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/01/17/bdb1/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">BDB更新日誌#1</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/11/16/fluidThemeShare/"><span class="level-item">fluid支持pjax主題源碼分享</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">評論</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-TW',
+            id: 'ebfdeeafb1742473fc13cb8e2d00833a',
+            repo: 'Mr-Smilin.github.io',
+            owner: 'Mr-Smilin',
+            clientID: '9a33a548232178c23121',
+            clientSecret: 'bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6',
+            admin: ["Mr-Smilin"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目錄</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#腳本運作環境"><span>腳本運作環境</span></a></li><li><a class="is-flex is-mobile" href="#適配機型-缺乏資料，歡迎各位踴躍提供"><span>適配機型(缺乏資料，歡迎各位踴躍提供)</span></a></li><li><a class="is-flex is-mobile" href="#載點"><span>載點</span></a></li><li><a class="is-flex is-mobile" href="#安裝教學"><span>安裝教學</span></a></li><li><a class="is-flex is-mobile" href="#使用教學"><span>使用教學</span></a></li><li><a class="is-flex is-mobile" href="#無論如何都希望可以從創角開始就全自動"><span>無論如何都希望可以從創角開始就全自動</span></a></li><li><a class="is-flex is-mobile" href="#如果我在運行過程因為-BUG-充電-手不小心按到等原因，導致中斷執行了，可以再繼續運行腳本嗎，還是只能重刷"><span>如果我在運行過程因為 BUG/充電/手不小心按到等原因，導致中斷執行了，可以再繼續運行腳本嗎，還是只能重刷</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#開啟-auto-跳過-下一步"><span>開啟 auto&amp;跳過&amp;下一步</span></a></li><li><a class="is-flex is-mobile" href="#打雲水囉"><span>打雲水囉</span></a></li><li><a class="is-flex is-mobile" href="#重開小號"><span>重開小號</span></a></li><li><a class="is-flex is-mobile" href="#關閉-開啟彈射世界"><span>關閉&amp;開啟彈射世界</span></a></li><li><a class="is-flex is-mobile" href="#創角流程"><span>創角流程</span></a></li><li><a class="is-flex is-mobile" href="#手操-跳過-下一步"><span>手操&amp;跳過&amp;下一步</span></a></li><li><a class="is-flex is-mobile" href="#腳本手操"><span>腳本手操</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#若是因為解析度問題，導致這個腳本在你的環境中有一堆問題"><span>若是因為解析度問題，導致這個腳本在你的環境中有一堆問題</span></a></li><li><a class="is-flex is-mobile" href="#一些話"><span>一些話</span></a></li><li><a class="is-flex is-mobile" href="#常見問題"><span>常見問題</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/62000156" alt="微笑"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">微笑</p><p class="is-size-6 is-block">java is fucking shit ❤️</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>台灣</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">43</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分類</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">標籤</p><a href="/tags"><p class="title">17</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Mr-Smilin" target="_blank" rel="noopener">關注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Mr-Smilin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://www.facebook.com/profile.php?id=100003120783130"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:lion31lion31@gmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子獲取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"來源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新評論</h3><span class="body_hot_comment">加載中，最新評論有1分鐘緩存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-06T02:00:00.000Z">2023-09-06</time></p><p class="title"><a href="/2023/09/06/alist-started/">Alist 好用的自建雲端介紹</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a> / <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/">雲端相關</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-01T12:00:00.000Z">2023-06-01</time></p><p class="title"><a href="/2023/06/01/discordJs14-1/">discord.js 升上 14 版，架構說明</a></p><p class="categories"><a href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/">程式簡記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-03-17T06:30:00.000Z">2023-03-17</time></p><p class="title"><a href="/2023/03/17/goodbyeNalocal/">blog 網址搬遷 &amp; github改名</a></p><p class="categories"><a href="/categories/%E6%97%A5%E8%A8%98/">日記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-11-01T10:00:00.000Z">2022-11-01</time></p><p class="title"><a href="/2022/11/01/bdb3/">BDB更新日誌#3</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-10-31T10:00:00.000Z">2022-10-31</time></p><p class="title"><a href="/2022/10/31/bdb2/">BDB更新日誌#2 - discord.js v14.6.0</a></p><p class="categories"><a href="/categories/BaseDiscordBot/">BaseDiscordBot</a> / <a href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/">更新日誌</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分類</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/"><span class="level-start"><span class="level-item">BaseDiscordBot</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/BaseDiscordBot/%E6%9B%B4%E6%96%B0%E6%97%A5%E8%AA%8C/"><span class="level-start"><span class="level-item">更新日誌</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/hexo%E4%B8%BB%E9%A1%8C%E5%88%86%E4%BA%AB/"><span class="level-start"><span class="level-item">hexo主題分享</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%97%A5%E8%A8%98/"><span class="level-start"><span class="level-item">日記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"><span class="level-start"><span class="level-item">程式簡記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E8%A8%97%E7%AE%A1%E5%B9%B3%E5%8F%B0%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">託管平台相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/"><span class="level-start"><span class="level-item">雲端相關</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="level-start"><span class="level-item">鐵人賽</span></span><span class="level-end"><span class="level-item tag">31</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"><span class="level-start"><span class="level-item">用Node.js製作後台零負擔的DiscordBot</span></span><span class="level-end"><span class="level-item tag">31</span></span></a></li></ul></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">歸檔</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/03/"><span class="level-start"><span class="level-item">三月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/11/"><span class="level-start"><span class="level-item">十一月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/10/"><span class="level-start"><span class="level-item">十月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">標籤</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/bot/"><span class="tag">bot</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord/"><span class="tag">discord</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/discord-js/"><span class="tag">discord.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node-js/"><span class="tag">node.js</span><span class="tag is-grey-lightest">37</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%99%E5%AD%B8/"><span class="tag">教學</span><span class="tag is-grey-lightest">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"><span class="tag">12th鐵人賽</span><span class="tag is-grey-lightest">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E8%A8%98/"><span class="tag">日記</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Alist/"><span class="tag">Alist</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Live2D/"><span class="tag">Live2D</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fluid/"><span class="tag">fluid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/heroku/"><span class="tag">heroku</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render/"><span class="tag">render</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/render-com/"><span class="tag">render.com</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BD%88%E5%B0%84%E4%B8%96%E7%95%8C/"><span class="tag">彈射世界</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%85%B3%E6%9C%AC/"><span class="tag">腳本</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%81%8A%E6%88%B2/"><span class="tag">遊戲</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="微笑家" height="28"></a><p class="size-small"><span>&copy; 2023 Smilin</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© 版權說明：[本網站所有內容均收集於互聯網或自己創作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便於網友與自己學習交流，如有侵權，請<a href="/message" target="_blank">留言</a>，立即處理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已運行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小時 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！ ❤️";
+        }var now = new Date();setInterval("createTime('2021/09/15 18:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感謝 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光臨！ ❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Mr-Smilin/Mr-Smilin.github.io"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="/dist/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="/dist/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script></div><script type="text/javascript" color="0,205,205" opacity="0.7" zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到頂端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);})</script><script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什麼..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什麼...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>
