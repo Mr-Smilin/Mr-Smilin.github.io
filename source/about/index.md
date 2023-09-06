@@ -28,27 +28,26 @@ layout: about
 ## 語言
 
 - 前端  
-  `html,css,javascript,react`  
+  `html,css,javascript,react`
 
 - 後端  
-  `c#,java,node.js,python,git`  
+  `java,node.js,c#,python,git`
 
 - 資料庫  
-  `mysql,mssql,nosql,sqlite`  
-
+  `mysql,mssql,nosql,sqlite`
 
 ## 工具
 
 - IDE  
   `VsCode,IDEA,Android Studio,Anaconda`
 - 開發  
-  `anydesk,postman,cmder,github desktop,sourcetree,sizer,slack`  
+  `anydesk,postman,cmder,github desktop,sourcetree,sizer,slack`
 
 - 辦公  
-  `word,excel,ppt,google sheet,google doc`  
+  `word,excel,ppt,google sheet,google doc`
 
 - 資料庫  
-  `HeidiSQL,SSMS,SQLyog`  
+  `HeidiSQL,SSMS,SQLyog`
 
 - 自動化  
   `docker,VMWare,腳本精靈,windows排程,bat`  
