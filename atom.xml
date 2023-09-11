@@ -6,7 +6,7 @@
   <link href="https://smilin.net/atom.xml" rel="self"/>
   
   <link href="https://smilin.net/"/>
-  <updated>2023-09-06T02:06:46.692Z</updated>
+  <updated>2023-09-11T08:56:48.812Z</updated>
   <id>https://smilin.net/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Alist 單檔太大上傳失敗，思路整理</title>
+    <link href="https://smilin.net/2023/09/11/alist-file-error/"/>
+    <id>https://smilin.net/2023/09/11/alist-file-error/</id>
+    <published>2023-09-11T10:00:00.000Z</published>
+    <updated>2023-09-11T08:56:48.812Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;註：本文並沒有完全解決遇到的上傳問題&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;筆者只想到替代方案，曲線救國&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;筆者是自建雲端的愛用者，目前使用 Alist&lt;/p&gt;
+&lt;p&gt;前一陣子因為自身需求，添加了 Cloudflare 反向代理&lt;/p&gt;
+&lt;p&gt;原本一切看起來都很美好，但某天上傳檔案時才發現不對，只要檔案大於 100 MB 就有機會遇到 413 問題。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/rNNhTq5.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://alist.nn.ci/zh/guide/install/reverse-proxy.html&quot;&gt;官方的反向代理配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，文檔下大多也是哀鴻遍野，看來只要配置了反代很容易就會碰到這個問題&lt;/p&gt;
+&lt;p&gt;尤其文檔不支援 Cloudflare，實在頭痛..&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    <category term="雲端相關" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E9%9B%B2%E7%AB%AF%E7%9B%B8%E9%97%9C/"/>
+    
+    
+    <category term="Alist" scheme="https://smilin.net/tags/Alist/"/>
+    
+    <category term="Cloudflare" scheme="https://smilin.net/tags/Cloudflare/"/>
+    
+  </entry>
   
   <entry>
     <title>Alist 好用的自建雲端介紹</title>
@@ -595,37 +627,6 @@
     
     
     <summary type="html">&lt;p&gt;最近在編寫群組權限相關的功能，就說說這個吧&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
-    
-    
-    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
-    
-    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
-    
-    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
-    
-    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
-    
-    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
-    
-    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Day24 - 愛麗絲安靜!</title>
-    <link href="https://smilin.net/2020/09/24/12thDay24/"/>
-    <id>https://smilin.net/2020/09/24/12thDay24/</id>
-    <published>2020-09-24T02:58:46.000Z</published>
-    <updated>2023-09-05T07:08:50.191Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今天想教怎麼讓機器人安靜&amp;#x2F;啟動&lt;br&gt;這樣才能說之後想教的東西&lt;/p&gt;</summary>
     
     
     
