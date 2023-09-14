@@ -11,7 +11,7 @@ var COMMENT_CACHE_KEY = "commentKey";
 var valine;
 
 // 管理员名称,评论时添加 [博主] 后缀
-var ADMIN_NAME = "removeif";
+var ADMIN_NAME = "Mr-Smilin";
 
 function ajaxReqForGitHub(url, authorizationToken, call) {
     $.ajax({
