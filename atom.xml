@@ -6,7 +6,7 @@
   <link href="https://smilin.net/atom.xml" rel="self"/>
   
   <link href="https://smilin.net/"/>
-  <updated>2023-09-11T08:56:48.812Z</updated>
+  <updated>2023-09-15T07:03:09.647Z</updated>
   <id>https://smilin.net/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>淺談 js 深拷貝與淺拷貝的差異</title>
+    <link href="https://smilin.net/2023/09/15/deepCopyAndShallowCopy/"/>
+    <id>https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</id>
+    <published>2023-09-15T04:00:00.000Z</published>
+    <updated>2023-09-15T07:03:09.647Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Deep-copy-和-Shallow-copy&quot;&gt;&lt;a href=&quot;#Deep-copy-和-Shallow-copy&quot; class=&quot;headerlink&quot; title=&quot;Deep copy 和 Shallow copy&quot;&gt;&lt;/a&gt;Deep copy 和 Shallow copy&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;先來個考題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = a;
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    <category term="程式相關" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/"/>
+    
+    <category term="javascript" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/javascript/"/>
+    
+    
+    <category term="javascript" scheme="https://smilin.net/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>Alist 單檔太大上傳失敗，思路整理</title>
@@ -596,37 +627,6 @@
     
     
     <summary type="html">&lt;p&gt;昨天我們描繪了權限系統的架構，今天來建立身份組環境&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
-    
-    
-    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
-    
-    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
-    
-    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
-    
-    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
-    
-    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
-    
-    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Day25 - 權限系統規格</title>
-    <link href="https://smilin.net/2020/09/25/12thDay25/"/>
-    <id>https://smilin.net/2020/09/25/12thDay25/</id>
-    <published>2020-09-25T01:42:13.000Z</published>
-    <updated>2023-09-05T07:08:50.191Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近在編寫群組權限相關的功能，就說說這個吧&lt;/p&gt;</summary>
     
     
     
