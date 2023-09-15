@@ -7,7 +7,7 @@ $.getJSON("../json_data/music.json", function (data) {
     musicJsons = data;
     for (var i = 0; i < musicJsons.length; i++) {
         musicJsons[i].loop = false;
-        var $li = $('<li><span>' + musicJsons[i].title + '</span>&nbsp;&nbsp;&nbsp;&nbsp;时长：' + musicJsons[i].time + '&nbsp;&nbsp;&nbsp;&nbsp; 歌手：' + musicJsons[i].author + '</li>');
+        var $li = $('<li><span>' + musicJsons[i].title + '</span>&nbsp;&nbsp;&nbsp;&nbsp;時長：' + musicJsons[i].time + '&nbsp;&nbsp;&nbsp;&nbsp; 歌手：' + musicJsons[i].author + '</li>');
         $li.attr('id', i);
         $li.css('list-style-type', 'none');
         $li.css('height', '40px');

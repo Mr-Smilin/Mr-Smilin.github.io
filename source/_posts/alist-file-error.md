@@ -1,9 +1,16 @@
 ---
 toc: true
-title: Alist 使用 Cloudflare CDN 服務，上傳失敗的排錯
-date: 2023-09-06 18:00
-tags: [Alist, Cloudflare, CDN]
+title: Alist 單檔太大上傳失敗，思路整理
+date: 2023-09-11 18:00
+tags: [Alist, Cloudflare]
+categories:
+  - [程式簡記, 雲端相關]
 ---
+
+**註：本文並沒有完全解決遇到的上傳問題**  
+**筆者只想到替代方案，曲線救國**
+
+<br>
 
 筆者是自建雲端的愛用者，目前使用 Alist
 
@@ -42,14 +49,7 @@ server {
 
 不過筆者並沒有使用到 NGINX，此解顯然並非這次遇到的問題
 
-## Cloudflare 免費版限制
-
-![2](https://i.imgur.com/lm8M9jc.png)
-
-Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限
-
-沒看到 Alist 是否支援分片上傳  
-[stream 源代碼](https://github.com/alist-org/alist/blob/f2f312b43a89e6e72af50cb9ca8d3285c218809e/server/handles/fsup.go#L77) 如果有人熟悉 GO 語言的話歡迎補充。
+<br>
 
 ## Cloudflare 緩存問題
 
@@ -57,11 +57,11 @@ Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限
 
 在 Rule -> Page Rules -> Create Page Rule
 
-![3](https://i.imgur.com/N8gi01N.png)
+![2](https://i.imgur.com/N8gi01N.png)
 
 之後再到 Caching -> Cache Rules -> Create rule
 
-![4](https://i.imgur.com/TAkvVl3.png)
+![3](https://i.imgur.com/TAkvVl3.png)
 
 設定完後再上傳，成功迴避掉 413 問題!
 
@@ -72,7 +72,7 @@ Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限
 甜美的日子沒過多久  
 雖然照著上述配置後，不會再出現 413 了，但..
 
-![5](https://i.imgur.com/hHjLAns.png)
+![4](https://i.imgur.com/hHjLAns.png)
 
 馬上就遇到新的錯誤了 QQ...
 
@@ -92,6 +92,25 @@ Error Log 只寫了網路問題，偶而會提示
 有趣的是只要同時下載檔案，上傳不會失敗
 
 開啟 Cloudflare Development Mode ，上傳失敗
+
+## Cloudflare 免費版限制
+
+![5](https://i.imgur.com/lm8M9jc.png)
+
+Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限
+
+Alist 僅支援單檔上傳  
+[github issue](https://github.com/alist-org/alist/issues/5176)
+
+想來或許就是在這關上卡住了
+
+如開發者所說， Alist 的上傳存在一定的缺陷
+
+就算不使用 Cloudflare，直連上傳過大的檔案也有機會失敗
+
+好在除此之外功能正常，頂多不透過網頁，自行額外實現上傳方法即可(Ex:webdav/ftp/nasGui/local..)
+
+<br>
 
 ---
 

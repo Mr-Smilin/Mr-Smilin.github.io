@@ -1,6 +1,6 @@
 ---
 toc: true
-title: Alist 好用的自建雲端介紹
+title: Alist 好用的自建雲端分享
 date: 2023-09-06 10:00
 tags: [Alist]
 categories:
@@ -93,7 +93,7 @@ docker exec -it alist ./alist admin
 ![7](https://i.imgur.com/oCqbTCR.png)
 ![8](https://i.imgur.com/mOr53lK.png)
 
-設定完大概如上
+設定完大致如上
 
 <br>
 
