@@ -92,7 +92,7 @@ console.log(a.foo.fpp); // 印出baz
 const a = { b: 1 };
 const c = { ...a }; // 解構賦值
 c.b = 2;
-console.log(c); // { b: 1 }
+console.log(a); // { b: 1 }
 ```
 
 得益於其精簡的代碼，實務上很常使用。

@@ -262,7 +262,7 @@ widgets:
       RSS:
         icon: fas fa-rss
         url: /atom.xml
-    has_hitokoto: true
+    has_hitokoto: false
   # Recommendation links widget configurations
   #-
   # Where should the widget be placed, left sidebar or right sidebar
