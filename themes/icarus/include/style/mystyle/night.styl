@@ -3,11 +3,16 @@
  * --------------------------------- */
 
 // night Mode
-// author by removef
-// https://removeif.github.io/
-night-color = #151313
+// author by smilin
+// https://mr-smilin.github.io/
+night-color = rgba(40,44,52,0.8)
+// night-color-hover = #7a7a7a
 night-color-hover = #7a7a7a
 night-link = #3273dc
+
+body.night {
+    background: black;
+}
 
 .night {
 
@@ -225,11 +230,11 @@ night-link = #3273dc
   .fa-envelope
   input,
   img {
-    filter: brightness(.6) !important
+    filter: brightness(.8) !important
   }
 
   figure {
-    filter: brightness(.7) !important
+    filter: brightness(.8) !important
   }
 
   strong {
@@ -306,13 +311,13 @@ night-link = #3273dc
     color: unset;
   }
   .g-ads-x {
-    filter: brightness(0.6) !important;
+    filter: brightness(0.8) !important;
   }
   .g-ads-y {
-    filter: brightness(0.6) !important;
+    filter: brightness(0.8) !important;
   }
   .google-auto-placed {
-    filter: brightness(0.6) !important;
+    filter: brightness(0.8) !important;
   }
 
   .pagination-previous, .pagination-next, .pagination-link {
@@ -350,7 +355,7 @@ night-link = #3273dc
   #index_hot_div {
     filter: unset !important;
     .item {
-      filter: brightness(0.6) !important;
+      filter: brightness(0.8) !important;
     }
   }
   .gt-container .gt-meta {
@@ -376,7 +381,7 @@ night-link = #3273dc
   }
 
   .g-ads-x, .g-ads-y, .google-auto-placed {
-    filter: brightness(0.6) !important;
+    filter: brightness(0.8) !important;
   }
   .index-category-tag {
     .button.is-small {
@@ -412,7 +417,39 @@ night-link = #3273dc
   }
 
   .navbar, footer.footer, .card {
-    background-color: rgba(21, 19, 19, 0.678);
+    background-color: rgba(40,44,52,0.5)
   }
 
+  .navbar, footer.footer, .card:hover {
+    background-color: rgba(40,44,52,0.8)
+  }
+
+  .searchbox-container {
+    background-color: night-color;
+  }
+  .searchbox-result-section{
+    border-color: night-color-hover;
+  }
+  .searchbox-container .searchbox-result-item:hover {
+    background-color: night-color-hover !important;
+  }
+  
+  #universe{
+    background: radial-gradient(1600px at 70% 120%,#212750 10%,#020409 100%);
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+}
+
+#universe {
+  display: none;
 }

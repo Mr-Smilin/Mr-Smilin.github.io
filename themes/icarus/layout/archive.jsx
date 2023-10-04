@@ -11,7 +11,7 @@ module.exports = class extends Component {
         const language = page.lang || page.language || config.language;
 
         var nameMap = language.indexOf('zh') >= 0 ? 'cn' : 'en';
-        var titleText = language.indexOf('zh') >= 0 ? '文章贡献' : 'Post Calendar';
+        var titleText = language.indexOf('zh') >= 0 ? '文章貢獻' : 'Post Calendar';
 
         // ======================= calculate range.
         var startDate = moment().subtract(0.70, 'years');
@@ -153,11 +153,11 @@ module.exports = class extends Component {
         return <Fragment>
             <div className="card">
                 <div className="card-content">
-                    <div style="post-calendar-pre">
+                    {/* <div style="post-calendar-pre">
                         <div id="post-calendar"></div>
-                    </div>
+                    </div> */}
                     <script type="text/javascript" src={my_cdn(url_for("/js/echarts.min.js"))}></script>
-                    <script type="text/javascript" dangerouslySetInnerHTML={{__html: js}}></script>
+                    {/* <script type="text/javascript" dangerouslySetInnerHTML={{__html: js}}></script> */}
                     {articleList}
                 </div>
             </div>

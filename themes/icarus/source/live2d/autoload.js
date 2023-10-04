@@ -11,6 +11,7 @@ try {
 			live2d_settings['waifuFontSize'] = '16px';       // 提示框字体，例如 '12px', '30px'
 			live2d_settings['waifuToolTop'] = '-60px'         // 工具栏顶部边距，例如 '0px', '-60px'
 			live2d_settings['waifuDraggable'] = 'unlimited'; // 拖拽样式，例如 'disable'(禁用), 'axis-x'(只能水平拖拽), 'unlimited'(自由拖拽)
+            live2d_settings['waifuEdgeSide'] = 'left:72'; // 看板娘贴边方向，例如 'left:0'(靠左 0px), 
             /* 在 initModel 前添加 */
             initModel("/live2d/waifu-tips.json");
         }});

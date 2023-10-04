@@ -10,7 +10,7 @@ const Search = require('./common/search');
 module.exports = class extends Component {
     render() {
         const { site, config, page, helper, body } = this.props;
-        const { comment, use_pjax, has_banner } = config;
+        const { comment, use_pjax, has_banner, use_universe } = config;
         const { __, my_cdn, url_for } = helper;
 
         // 默认不加载公式，文中头部开启mathJax:true才加载
@@ -133,6 +133,7 @@ module.exports = class extends Component {
             <body className={`is-${columnCount}-column has-navbar-fixed-top`}>
                 <Navbar config={config} helper={helper} page={page} />
                 <script type="text/javascript" src={my_cdn(url_for('/js/theme-setting.js'))}></script>
+                <canvas id="universe" width="smilin" height="blog"></canvas>
                 <section class="section">
                     <div class="container">
                         <div class="columns">
@@ -155,6 +156,7 @@ module.exports = class extends Component {
                 {use_pjax ? <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> : null}
                 {use_pjax ? <script type="text/javascript" dangerouslySetInnerHTML={{ __html: pjaxJs }}></script> : null}
                 {isMath ? <script type="text/javascript" dangerouslySetInnerHTML={{ __html: mathJaxJs }}></script> : null}
+                {use_universe ? <script src="/js/universe.js"></script> : null}
             </body>
         </html>;
     }

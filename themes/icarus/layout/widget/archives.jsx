@@ -18,7 +18,7 @@ class Archives extends Component {
                     <ul class="menu-list">
                         {/*限制只返回5个月的，太多显示不好看*/}
                         {items.map(archive => {
-                          return  count++ < 5 ? <li>
+                          return  count++ < 24 ? <li>
                                 <a class="level is-mobile is-marginless" href={archive.url}>
                                 <span class="level-start">
                                     <span class="level-item">{archive.name}</span>
@@ -29,7 +29,7 @@ class Archives extends Component {
                                 </a>
                             </li> : null
                         })}
-                        {count >= 5 ?
+                        {count >= 24 ?
                             <a className="level is-mobile is-marginless" href={allUrl}>
                                 <span className="level-start">
                                     <span className="level-item">查看全部>></span>
@@ -79,7 +79,7 @@ module.exports = Archives.Cacheable = cacheComponent(Archives, 'widget.archives'
 
         const year = date.year();
         const month = date.month() + 1;
-        const name = date.format(format || type === 'monthly' ? 'MMMM YYYY' : 'YYYY');
+        const name = date.format(format || type === 'monthly' ? 'YYYY 年 M 月' : 'YYYY');
         const lastData = data[length - 1];
 
         if (!lastData || lastData.name !== name) {

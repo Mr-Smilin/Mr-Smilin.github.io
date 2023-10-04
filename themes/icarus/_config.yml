@@ -216,11 +216,11 @@ sidebar:
   # Left sidebar configurations
   left:
     # Whether the sidebar sticks to the top when page scrolls
-    sticky: true
+    sticky: false
   # Right sidebar configurations
   right:
     # Whether the sidebar sticks to the top when page scrolls
-    sticky: false
+    sticky: true
 # Sidebar widget configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
@@ -286,7 +286,7 @@ widgets:
     type: categories
   # Archives widget configurations
   - # Where should the widget be placed, left sidebar or right sidebar
-    position: right
+    position: left
     type: archives
   # Tags widget configurations
   - # Where should the widget be placed, left sidebar or right sidebar
@@ -389,3 +389,4 @@ has_live_2D_switch: true #live2D开关 true-开 false-关
 live2DCanMove: true #live2D是否可移動
 use_pjax: true #是否pjax
 use_canvas_nest: true #啟用背景粒子特效
+use_universe: true #啟用夜空宇宙背景
