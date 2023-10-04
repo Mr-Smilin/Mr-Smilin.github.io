@@ -12268,6 +12268,9 @@ body.night {
 .night .searchbox-container .searchbox-result-item:hover {
   background-color: #7a7a7a !important;
 }
+.night .box {
+  color: #c0c0c0;
+}
 .night #universe {
   background: radial-gradient(1600px at 70% 120%, #212750 10%, #020409 100%);
   display: block;
