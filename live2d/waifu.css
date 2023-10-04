@@ -1,7 +1,7 @@
 .waifu {
     position: fixed;
     bottom: 0;
-    z-index: 1;
+    z-index: 100;
     font-size: 0;
     -webkit-transform: translateY(3px);
     transform: translateY(3px);
@@ -287,4 +287,10 @@
 }
 .fui-user:before {
   content: "\e631";
+}
+
+@media (max-width: 767px) {
+.waifu {
+    position: unset;
+}
 }
