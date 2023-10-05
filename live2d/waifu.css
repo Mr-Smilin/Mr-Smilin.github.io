@@ -291,6 +291,6 @@
 
 @media (max-width: 767px) {
 .waifu {
-    position: unset !important;
+    display: none !important;
 }
 }
