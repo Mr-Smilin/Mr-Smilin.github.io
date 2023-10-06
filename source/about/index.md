@@ -1,67 +1,65 @@
 ---
-title: 關於我
 date: 2021-09-16 14:15:47
 layout: about
 ---
 
-一名 Back End ，當前任務: 深入學習 JAVA
+## 緣起 origin
+
 <br>
 
 ---
 
-# fun project
+<br>
+
+如果哪一天，有人看到一個網站，界面很樸素，內容也不多，但是無一不是用心去完成  
+每一個細節都經過了精心雕刻，蘊含的思想經歷  
+內容深度和技術含量不亞於任何其它創作或非創作網站，甚至隱藏了很多只有深入體會才能注意到的細節。  
+後來可能又發現這個網站甚至從未聲張過，沒有任何推廣，搜索排名也很靠後。  
+網站本身也從未涉及到商業、或者絕大部分網站都去做的一些世俗的事。  
+這時候可能發現她完全是用愛去完成的。
+
+在這個有一點點精神或物質資源都會被迅速瓜分，有一點點技術就會去放大 100 倍張揚的現世
+她仍然低調，保持蘊含著 20 年前那種能給予觀測者很大的空間的主題思想，和那種出淤泥而不染。
+如果有人看到了她並且被感動，如同當年改變了我一生的那個絲毫不奢華卻蘊含著非常單純的愛的網站一樣
+這就是我的願望。
+
+## 自述 about me
+
+<br>
+
+---
+
+<br>
+
+**後端開發** 對程式的興趣普普通通，但他能幫助到我，所以我去學習
+
+**刀劍神域廚** 曾經寫的 discord bot，其形象取自 SAO UW 篇的 **愛麗絲·滋貝魯庫** ，因為刀劍神域認識許多人，是情感的寄託
+
+**頤指思清** 深思落筆，思慮明晰，不喜歡寫作，更不喜歡讓時間帶走一切；期許自己的文章文意通順，如沐春風，有著這樣的含意。
+
+## 項目 fun project
+
+<br>
+
+---
+
+<br>
 
 - discord bot - 小愛麗絲
   - [介紹文章](https://smilin.net/2020/09/02/12thDay2/)
   - [邀請她](https://supr.link/COL1X)
-- discord.js 基礎模板
-  - [介紹文章](https://smilin.net/2021/09/27/aboutDiscordJs13/)
-  - [git](https://github.com/Mr-Smilin/BaseDiscordBot)
-    - [discord.js 12.5.3](https://github.com/Mr-Smilin/BaseDiscordBot/tree/v12.5.3)
-- and more..
-  <br>
+- 巴哈姆特 - 巴友紀錄插件
+  - [介紹文章](https://home.gamer.com.tw/artwork.php?sn=5800119)
+  - [下載點](https://greasyfork.org/zh-TW/scripts/475916)
 
----
+## 時光機 rememeber
 
-# 擅長技術
-
-## 語言
-
-- 前端  
-  `html,css,javascript,react`
-
-- 後端  
-  `java,node.js,c#,python,git`
-
-- 資料庫  
-  `mysql,mssql,nosql,sqlite`
-
-## 工具
-
-- IDE  
-  `VsCode,IDEA,Android Studio,Anaconda`
-- 開發  
-  `anydesk,postman,cmder,github desktop,sourcetree,sizer,slack`
-
-- 辦公  
-  `word,excel,ppt,google sheet,google doc`
-
-- 資料庫  
-  `HeidiSQL,SSMS,SQLyog`
-
-- 自動化  
-  `docker,VMWare,腳本精靈,windows排程,bat`  
-  .  
-  .  
-  .  
-  其餘族繁不及備載
-  <br>
-
-# 時間軸紀錄
+<br>
 
 ---
 
 <br>
+
 <div class="time-axis-main">
 	<ul class="time-axis"></ul>
 </div>
@@ -71,22 +69,9 @@ layout: about
 
 ---
 
-# 聯絡我
+## 聯絡我 contact
 
-請透過上方 fb 私訊，或是寄信至以下
+請透過上方 fb 私訊，或是寄信至以下  
 `lion31lion31@gmail.com`
 
-<br>
-<br>
-
-> 如果哪一天，有人看到一個網站，界面很樸素，內容也不多，但是無一不是用心去完成
-> 每一個細節都經過了精心雕刻，蘊含的思想經歷
-> 內容深度和技術含量不亞於任何其它創作或非創作網站，甚至隱藏了很多只有深入體會才能注意到的細節。
-> 後來可能又發現這個網站甚至從未聲張過，沒有任何推廣，搜索排名也很靠後。
-> 網站本身也從未涉及到商業、或者絕大部分網站都去做的一些世俗的事。
-> 這時候可能發現她完全是用愛去完成的。
->
-> 在這個有一點點精神或物質資源都會被迅速瓜分，有一點點技術就會去放大 100 倍張揚的現世
-> 她仍然低調，保持蘊含著 10 年前那種能給予觀測者很大的空間的主題思想，和那種出淤泥而不染。
-> 如果有人看到了她並且被感動，如同當年改變了我一生的那個絲毫不奢華卻蘊含著非常單純的愛的網站一樣
-> 這就是我的願望。
+當今社群網站垃圾訊息繁多，請務必說明來意
