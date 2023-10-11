@@ -11506,6 +11506,7 @@ figure.highlight .section {
     display: none;
     position: fixed;
     margin: 1rem;
+    top: unset;
     left: 0;
     right: 0;
     bottom: 0;
@@ -11710,6 +11711,12 @@ article.article .article-meta {
 .navbar.is-fixed-bottom,
 .navbar.is-fixed-top {
   z-index: 100;
+}
+@media (min-width: 769px) {
+  #toc {
+    position: sticky;
+    top: 5.5rem;
+  }
 }
 @media screen and (min-width: 1280px) {
   .is-1-column .container,
