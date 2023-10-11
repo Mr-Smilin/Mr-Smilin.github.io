@@ -60,6 +60,24 @@ function formatAllWidgets(widgets) {
     return result;
 }
 
+function formatTocWidgets(widgets) {
+    const result = {};
+    if (Array.isArray(widgets)) {
+        var tocWidget = widgets.filter(widget => typeof widget === 'object').find(widget => {
+            if ('position' in widget && (widget.position === 'left' || widget.position === 'right')) {
+                if(widget.type === "toc"){
+                    return true;
+                }
+            }
+        });
+        if(!!tocWidget){
+            tocWidget = clone(tocWidget);
+            result[tocWidget.position] = [tocWidget];
+        }
+    }
+    return result;
+}
+
 function hasColumn(widgets, position) {
     if (Array.isArray(widgets)) {
         return typeof widgets.find(widget => widget.position === position) !== 'undefined';
@@ -101,7 +119,7 @@ function isColumnSticky(config, position) {
 class Widgets extends Component {
     render() {
         const { site, config, helper, page, position } = this.props;
-        const widgets = (page.layout == 'post' || page.layout == 'page') ? formatAllWidgets(config.widgets)[position] || [] : formatWidgets(config.widgets)[position] || [];
+        const widgets = page.layout == 'page' ? formatAllWidgets(config.widgets)[position] || [] : page.layout == 'post' ? formatTocWidgets(config.widgets)[position] || [] :formatWidgets(config.widgets)[position] || [];
         const columnCount = getColumnCount(config.widgets);
 
         if (!widgets.length) {

@@ -214,7 +214,7 @@ _/
 
 let obj = { name: "mr-smilin" };
 const target = new Map();
-target.set(obj, "頤指思清");
+target.set(obj, "微笑工房");
 obj = null;
 
 ```
@@ -226,7 +226,7 @@ obj = null;
 
 let obj = { name: "mr-smilin" };
 const target = new WeakMap();
-target.set(obj, "頤指思清");
+target.set(obj, "微笑工房");
 obj = null;
 
 ```

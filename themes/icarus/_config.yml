@@ -13,7 +13,7 @@ head:
   open_graph:
     # Page title (og:title) (optional)
     # You should leave this blank for most of the time
-    title: 頤指思清
+    title: 微笑工房
     # Page type (og:type) (optional)
     # You should leave this blank for most of the time
     type: blog
@@ -22,10 +22,10 @@ head:
     url: https://smilin.net/
     # Page cover (og:image) (optional)
     # You should leave this blank for most of the time
-    image: https://avatars.githubusercontent.com/u/62000156
+    image: https://smilin.net/img/avatar.png
     # Site name (og:site_name) (optional)
     # You should leave this blank for most of the time
-    site_name: 頤指思清
+    site_name: 微笑工房
     # Page author (article:author) (optional)
     # You should leave this blank for most of the time
     author: Mr.S
@@ -78,7 +78,7 @@ navbar:
     分類: /categories/
     雲端: https://drive.smilin.net/smiloud/
     留言: /message/
-    # 友鏈: /friend/
+    友鏈: /friend/
     自述: /about/
   # Links to be shown on the right of the navigation bar
   links:
@@ -156,7 +156,7 @@ comment:
 #     avatar: 'mp'
 #     placeholder: '留下您的高见！'
 #     has_latest_comment: true #是否有最新评论 true-有，false-无
-#     owner: 頤指思清 #博主名 最新评论标注[博主]
+#     owner: 微笑工房 #博主名 最新评论标注[博主]
 #     required_fields: ['nick', 'mail', 'link']
 #     lang: en #zh-CN zh-TW en ja
 
