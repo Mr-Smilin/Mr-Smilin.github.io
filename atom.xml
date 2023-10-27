@@ -6,7 +6,7 @@
   <link href="https://smilin.net/atom.xml" rel="self"/>
   
   <link href="https://smilin.net/"/>
-  <updated>2023-10-27T09:24:03.714Z</updated>
+  <updated>2023-10-27T09:33:56.862Z</updated>
   <id>https://smilin.net/</id>
   
   <author>
@@ -17,9 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Rust 學習紀錄[2] = Rust 的 NPM</title>
+    <link href="https://smilin.net/2023/10/27/rust_learning_02/"/>
+    <id>https://smilin.net/2023/10/27/rust_learning_02/</id>
+    <published>2023-10-27T13:00:00.000Z</published>
+    <updated>2023-10-27T09:33:56.862Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;讓我們接著原本的進度繼續&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    <category term="程式相關" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/"/>
+    
+    <category term="Rust" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/Rust/"/>
+    
+    
+    <category term="Rust" scheme="https://smilin.net/tags/Rust/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Rust 學習紀錄[1] = 日誌中的教學</title>
-    <link href="https://smilin.net/2023/10/27/rust1/"/>
-    <id>https://smilin.net/2023/10/27/rust1/</id>
+    <link href="https://smilin.net/2023/10/27/rust_learning_01/"/>
+    <id>https://smilin.net/2023/10/27/rust_learning_01/</id>
     <published>2023-10-27T10:00:00.000Z</published>
     <updated>2023-10-27T09:24:03.714Z</updated>
     
@@ -44,8 +67,8 @@
   
   <entry>
     <title>Rust 學習紀錄[0] = 前言</title>
-    <link href="https://smilin.net/2023/10/27/rust0/"/>
-    <id>https://smilin.net/2023/10/27/rust0/</id>
+    <link href="https://smilin.net/2023/10/27/rust_learning_00/"/>
+    <id>https://smilin.net/2023/10/27/rust_learning_00/</id>
     <published>2023-10-27T04:00:00.000Z</published>
     <updated>2023-10-27T08:40:10.441Z</updated>
     
@@ -582,37 +605,6 @@ console.log(a.foo); // 印出?
     
     
     <summary type="html">&lt;p&gt;昨天我們做好了 將使用者加入身份組指令&lt;br&gt;今天把 創建身分組的指令做好&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
-    
-    
-    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
-    
-    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
-    
-    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
-    
-    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
-    
-    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
-    
-    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Day28 - tag控管機制(2)</title>
-    <link href="https://smilin.net/2020/09/28/12thDay28/"/>
-    <id>https://smilin.net/2020/09/28/12thDay28/</id>
-    <published>2020-09-28T01:25:39.000Z</published>
-    <updated>2023-09-05T07:08:50.192Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今天來把postAPI跟續行的框架與加入使用者至身份組的功能寫好&lt;/p&gt;</summary>
     
     
     
