@@ -6,7 +6,7 @@
   <link href="https://smilin.net/atom.xml" rel="self"/>
   
   <link href="https://smilin.net/"/>
-  <updated>2023-09-18T05:47:30.052Z</updated>
+  <updated>2023-10-27T09:13:34.614Z</updated>
   <id>https://smilin.net/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Rust 學習紀錄[1] = 日誌中的教學</title>
+    <link href="https://smilin.net/2023/10/27/rust1/"/>
+    <id>https://smilin.net/2023/10/27/rust1/</id>
+    <published>2023-10-27T10:00:00.000Z</published>
+    <updated>2023-10-27T09:13:34.614Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;工欲善其事，必先利其器&lt;br&gt;想學一門語言，要從一篇教學文檔找起&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://doc.rust-lang.org/book/&quot;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;恩，官方文檔看起來挺不錯的，就這個吧&lt;/p&gt;
+&lt;p&gt;筆者撰寫時，對應 Rust 版本為 &lt;code&gt;Rust 1.67.1 (released 2023-02-09) or later&lt;/code&gt;&lt;br&gt;如果因為版本不同造成閱讀的困擾的話，可以在學會安裝 Rust 後自行降版學習。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    <category term="程式相關" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/"/>
+    
+    <category term="Rust" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/Rust/"/>
+    
+    
+    <category term="Rust" scheme="https://smilin.net/tags/Rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rust 學習紀錄[0] = 前言</title>
+    <link href="https://smilin.net/2023/10/27/rust0/"/>
+    <id>https://smilin.net/2023/10/27/rust0/</id>
+    <published>2023-10-27T04:00:00.000Z</published>
+    <updated>2023-10-27T08:40:10.441Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/216px-Rust_programming_language_black_logo.svg.png&quot; alt=&quot;Rust&quot;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;2021 年 2 月，Rust 基金會成立&lt;/p&gt;
+&lt;p&gt;以 AWS、GOOGLE 等多家資訊巨頭為首&lt;br&gt;因為看好 Rust 兼顧了高效能 &amp;amp; 安全性而投資&lt;br&gt;使得 Rust 這兩年有了巨大的成長。&lt;/p&gt;
+&lt;p&gt;這也是為什麼，近幾年工程師無論如何不願意&lt;br&gt;多少也會聽過 Rust 的名號，隱隱有與 C++ 並駕齊驅的勢頭。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程式簡記" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/"/>
+    
+    <category term="程式相關" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/"/>
+    
+    <category term="Rust" scheme="https://smilin.net/categories/%E7%A8%8B%E5%BC%8F%E7%B0%A1%E8%A8%98/%E7%A8%8B%E5%BC%8F%E7%9B%B8%E9%97%9C/Rust/"/>
+    
+    
+    <category term="Rust" scheme="https://smilin.net/tags/Rust/"/>
+    
+  </entry>
   
   <entry>
     <title>淺談 js 深拷貝與淺拷貝的差異</title>
@@ -559,74 +613,6 @@ console.log(a.foo); // 印出?
     
     
     <summary type="html">&lt;p&gt;今天來把postAPI跟續行的框架與加入使用者至身份組的功能寫好&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
-    
-    
-    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
-    
-    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
-    
-    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
-    
-    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
-    
-    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
-    
-    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Day27 - tag控管 - 續行方法解說</title>
-    <link href="https://smilin.net/2020/09/27/12thDay27/"/>
-    <id>https://smilin.net/2020/09/27/12thDay27/</id>
-    <published>2020-09-27T07:59:10.000Z</published>
-    <updated>2023-09-05T07:08:50.192Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;昨天我們實作了tag身份組功能&lt;br&gt;使用者透過機器人tag一整個身份組的功能&lt;br&gt;我們希望還可以有&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;創建身分組的指令&lt;/li&gt;
-&lt;li&gt;將使用者加入身份組指令&lt;/li&gt;
-&lt;li&gt;刪除身分組的指令&lt;/li&gt;
-&lt;li&gt;將使用者從某個身份組中刪除的指令&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="鐵人賽" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-    <category term="用Node.js製作後台零負擔的DiscordBot" scheme="https://smilin.net/categories/%E9%90%B5%E4%BA%BA%E8%B3%BD/%E7%94%A8Node-js%E8%A3%BD%E4%BD%9C%E5%BE%8C%E5%8F%B0%E9%9B%B6%E8%B2%A0%E6%93%94%E7%9A%84DiscordBot/"/>
-    
-    
-    <category term="node.js" scheme="https://smilin.net/tags/node-js/"/>
-    
-    <category term="bot" scheme="https://smilin.net/tags/bot/"/>
-    
-    <category term="discord" scheme="https://smilin.net/tags/discord/"/>
-    
-    <category term="discord.js" scheme="https://smilin.net/tags/discord-js/"/>
-    
-    <category term="教學" scheme="https://smilin.net/tags/%E6%95%99%E5%AD%B8/"/>
-    
-    <category term="12th鐵人賽" scheme="https://smilin.net/tags/12th%E9%90%B5%E4%BA%BA%E8%B3%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Day26 - tag控管機制(1)</title>
-    <link href="https://smilin.net/2020/09/26/12thDay26/"/>
-    <id>https://smilin.net/2020/09/26/12thDay26/</id>
-    <published>2020-09-26T01:54:26.000Z</published>
-    <updated>2023-09-05T07:08:50.192Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;昨天我們描繪了權限系統的架構，今天來建立身份組環境&lt;/p&gt;</summary>
     
     
     
