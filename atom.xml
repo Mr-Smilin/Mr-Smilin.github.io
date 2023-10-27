@@ -6,7 +6,7 @@
   <link href="https://smilin.net/atom.xml" rel="self"/>
   
   <link href="https://smilin.net/"/>
-  <updated>2023-10-27T09:13:34.614Z</updated>
+  <updated>2023-10-27T09:24:03.714Z</updated>
   <id>https://smilin.net/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://smilin.net/2023/10/27/rust1/"/>
     <id>https://smilin.net/2023/10/27/rust1/</id>
     <published>2023-10-27T10:00:00.000Z</published>
-    <updated>2023-10-27T09:13:34.614Z</updated>
+    <updated>2023-10-27T09:24:03.714Z</updated>
     
     
     <summary type="html">&lt;p&gt;工欲善其事，必先利其器&lt;br&gt;想學一門語言，要從一篇教學文檔找起&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://doc.rust-lang.org/book/&quot;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;恩，官方文檔看起來挺不錯的，就這個吧&lt;/p&gt;
-&lt;p&gt;筆者撰寫時，對應 Rust 版本為 &lt;code&gt;Rust 1.67.1 (released 2023-02-09) or later&lt;/code&gt;&lt;br&gt;如果因為版本不同造成閱讀的困擾的話，可以在學會安裝 Rust 後自行降版學習。&lt;/p&gt;</summary>
+&lt;p&gt;這篇文撰寫當下，文檔對應 Rust 版本為 &lt;code&gt;Rust 1.67.1 (released 2023-02-09) or later&lt;/code&gt;&lt;br&gt;如果因為版本不同造成閱讀的困擾的話，可以在學會安裝 Rust 後自行降版學習。&lt;/p&gt;</summary>
     
     
     
