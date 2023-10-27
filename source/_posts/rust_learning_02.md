@@ -27,7 +27,7 @@ categories:
 cargo --version // cargo 1.73.0 (9c4383fb5 2023-08-26)
 ```
 
-沒問題的話，讓我們使用 `Cargo` 創建跟昨天相似的專案。
+沒問題的話，接著使用 `Cargo` 創建跟昨天相似的專案。
 
 <br>
 
@@ -62,7 +62,7 @@ Cargo.toml
 
 <br>
 
-讓我們試著 build 起這個專案看看  
+試著 build 起這個專案看看  
 `cargo build`
 
 執行後，專案內多出了幾個檔案
@@ -137,7 +137,7 @@ cargo build --release
 與 debug 版本不同，release 的編譯過程比較久，但會最佳化產出的結果
 
 因此，使用 debug 開發可以有效降低等待編譯的時間  
-當我們需要發佈檔案時，再使用 release。
+需要發佈檔案時，再使用 release。
 
 <br>
 
