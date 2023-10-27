@@ -24,6 +24,7 @@
             "ithome": ["Hello! 來自IT邦的朋友<br>你也是來學 <span style=\"color:#0099cc;\">","</span> 的嗎?","discordBot"],
             "gamer": ["Hello! 來自巴哈姆特的朋友<br>歡迎閱讀<span style=\"color:#0099cc;\">『", "』</span>", " - "],
             "kater": ["Hello! 來自卡特論壇的朋友<br>歡迎閱讀<span style=\"color:#0099cc;\">『", "』</span>", " - "],
+            "imaegoo": ["Hello! 來自虹墨空間站的朋友<br>歡迎閱讀<span style=\"color:#0099cc;\">『", "』</span>", " - "],
             "default": ["Hello! 來自 <span style=\"color:#0099cc;\">", "</span> 的朋友"],
             "none": ["歡迎閱讀<span style=\"color:#0099cc;\">『", "』</span>", " - "]
         },
