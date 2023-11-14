@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>微笑工房 • Posts by &#34;程式相關&#34; category</title>
+        <link>https://smilin.net</link>
+        <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
+        <language>zh-TW</language>
+        <pubDate>Fri, 27 Oct 2023 21:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 27 Oct 2023 21:00:00 +0800</lastBuildDate>
+        <category>node.js</category>
+        <category>bot</category>
+        <category>discord</category>
+        <category>discord.js</category>
+        <category>教學</category>
+        <category>12th鐵人賽</category>
+        <category>日記</category>
+        <category>Alist</category>
+        <category>Cloudflare</category>
+        <category>javascript</category>
+        <category>hexo</category>
+        <category>fluid</category>
+        <category>heroku</category>
+        <category>render</category>
+        <category>render.com</category>
+        <category>Live2D</category>
+        <category>彈射世界</category>
+        <category>遊戲</category>
+        <category>腳本</category>
+        <category>Rust</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_02/</guid>
+            <title>Rust 學習紀錄[2] = Rust 的 NPM</title>
+            <link>https://smilin.net/2023/10/27/rust_learning_02/</link>
+            <category>Rust</category>
+            <pubDate>Fri, 27 Oct 2023 21:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;讓我們接著原本的進度繼續&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;Cargo&#34;&gt;&lt;a href=&#34;#Cargo&#34; class=&#34;headerlink&#34; title=&#34;Cargo&#34;&gt;&lt;/a&gt;Cargo&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;Cargo&lt;/code&gt; 是 &lt;code&gt;Rust&lt;/code&gt; 的專案建置工具以及套件管理器&lt;br&gt;恩..聽起來是個 &lt;code&gt;npm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;我們在安裝 &lt;code&gt;rustup&lt;/code&gt; 時已經一併安裝了 &lt;code&gt;Cargo&lt;/code&gt;&lt;br&gt;使用 &lt;code&gt;cargo --version&lt;/code&gt; 來確認是否正確安裝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo --version // cargo 1.73.0 (9c4383fb5 2023-08-26)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;沒問題的話，接著使用 &lt;code&gt;Cargo&lt;/code&gt; 創建跟昨天相似的專案。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;創建專案&#34;&gt;&lt;a href=&#34;#創建專案&#34; class=&#34;headerlink&#34; title=&#34;創建專案&#34;&gt;&lt;/a&gt;創建專案&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;在專案目錄(rust_project)下輸入創建專案的指令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo new _02_hello_cargo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;現在我們有名為 &lt;code&gt;_02_hello_cargo&lt;/code&gt; 的資料夾，裡面結構如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;src
+  main.rs
+.gitignore
+Cargo.toml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;src&lt;/code&gt; - 常見程式開發檔案目錄，看就知道&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;src\main.rs&lt;/code&gt; - 主程式&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; - git 的描述文件，主要功能是防止裡面提到的檔案在 git 傳輸時被包進去(Ex:log&amp;#x2F;target)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Cargo.toml&lt;/code&gt; - 打開來看了下，應該是專案描述文件，對應 node 的 &lt;code&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;編譯-build&#34;&gt;&lt;a href=&#34;#編譯-build&#34; class=&#34;headerlink&#34; title=&#34;編譯(build)&#34;&gt;&lt;/a&gt;編譯(build)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;試著 build 起這個專案看看&lt;br&gt;&lt;code&gt;cargo build&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;執行後，專案內多出了幾個檔案&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;target
+  debug
+    _02_hello_cargo.exe
+    more debug files...
+  .rustc_info.json
+  CACHEDIR.TAG
+Cargo.lock
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Cargo.lock&lt;/code&gt; - 對應 node 的 &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;target\debug\_02_hello_cargo.exe&lt;/code&gt; - 我們產出的執行檔，debug 大概是 building 的默認方式，之後應該會有相對嚴謹的方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\target\debug\_02_hello_cargo // Hello, world!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;編譯並運行-run&#34;&gt;&lt;a href=&#34;#編譯並運行-run&#34; class=&#34;headerlink&#34; title=&#34;編譯並運行(run)&#34;&gt;&lt;/a&gt;編譯並運行(run)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;Cargo 有提供一種命令，可以將編譯與運行合併成一個指令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo run // Hello, world!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果開發檔案沒有修改，&lt;code&gt;cargo run&lt;/code&gt; 不會重建 target&lt;br&gt;加上合併兩個步驟，比 &lt;code&gt;cargo build&lt;/code&gt; 方便許多。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;檢查-check&#34;&gt;&lt;a href=&#34;#檢查-check&#34; class=&#34;headerlink&#34; title=&#34;檢查(check)&#34;&gt;&lt;/a&gt;檢查(check)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;除了編譯與運行，Cargo 當然也提供了檢查命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo check
+  /**
+    Checking _02_hello_cargo v0.1.0(C:\my\01\git\rust\_02_hello_cargo)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.07s
+  **/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;單純的 &lt;code&gt;check&lt;/code&gt; 比 &lt;code&gt;build&lt;/code&gt; 快上許多&lt;br&gt;在自動化部屬等一類場景中廣泛運用。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;正式編譯-release&#34;&gt;&lt;a href=&#34;#正式編譯-release&#34; class=&#34;headerlink&#34; title=&#34;正式編譯(release)&#34;&gt;&lt;/a&gt;正式編譯(release)&lt;/h2&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;code&gt;cargo build --release
+  /**
+    Compiling _02_hello_cargo v0.1.0 (C:\my\01\git\rust\_02_hello_cargo)
+        Finished release [optimized] target(s) in 0.36s
+  **/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 &lt;code&gt;--release&lt;/code&gt; building 的檔案會放在 &lt;code&gt;target\release&lt;/code&gt;&lt;br&gt;與 debug 版本不同，release 的編譯過程比較久，但會最佳化產出的結果&lt;/p&gt;
+&lt;p&gt;因此，使用 debug 開發可以有效降低等待編譯的時間&lt;br&gt;需要發佈檔案時，再使用 release。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;今日小結&#34;&gt;&lt;a href=&#34;#今日小結&#34; class=&#34;headerlink&#34; title=&#34;今日小結&#34;&gt;&lt;/a&gt;今日小結&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;cargo --version&lt;/code&gt; 驗證版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo new &amp;#123;project_name&amp;#125;&lt;/code&gt; 創建專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo build&lt;/code&gt; 編譯專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt; 編譯&amp;amp;運行專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo check&lt;/code&gt; 驗證專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo build --release&lt;/code&gt; 正式版本的編譯&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_01/</guid>
+            <title>Rust 學習紀錄[1] = 日誌中的教學</title>
+            <link>https://smilin.net/2023/10/27/rust_learning_01/</link>
+            <category>Rust</category>
+            <pubDate>Fri, 27 Oct 2023 18:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;工欲善其事，必先利其器&lt;br&gt;想學一門語言，要從一篇教學文檔找起&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doc.rust-lang.org/book/&#34;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;恩，官方文檔看起來挺不錯的，就這個吧&lt;/p&gt;
+&lt;p&gt;這篇文撰寫當下，文檔對應 Rust 版本為 &lt;code&gt;Rust 1.67.1 (released 2023-02-09) or later&lt;/code&gt;&lt;br&gt;如果因為版本不同造成閱讀的困擾的話，可以在學會安裝 Rust 後自行降版學習。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;安裝&#34;&gt;&lt;a href=&#34;#安裝&#34; class=&#34;headerlink&#34; title=&#34;安裝&#34;&gt;&lt;/a&gt;安裝&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;說是 Rust，其實第一個遇到的是 &lt;code&gt;rustup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/tools/install&#34;&gt;Window 安裝 rustup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安裝過程一直 Enter 就好，之後在 cmd 下 &lt;code&gt;rustc --version&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;得到版本號 &lt;code&gt;rustc 1.73.0 (cc66ad468 2023-10-03)&lt;/code&gt;，表示安裝成功&lt;/p&gt;
+&lt;p&gt;其他比較常用的指令還有&lt;/p&gt;
+&lt;p&gt;更新 Rust 版本 - &lt;code&gt;rustup update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;卸載 Rust 跟 rustup - &lt;code&gt;rustup self uninstall&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查看 Rust Doc 本機離線版 - &lt;code&gt;rustup doc&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;根據 Rust 自己的說明，約莫每兩周會有一次小版更新&lt;br&gt;也因此，除非目標是維護專案，理論上更新版本 &amp;amp; 追蹤文檔改動會很頻繁。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;HELLO-RUST！&#34;&gt;&lt;a href=&#34;#HELLO-RUST！&#34; class=&#34;headerlink&#34; title=&#34;HELLO RUST！&#34;&gt;&lt;/a&gt;HELLO RUST！&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;首先讓我們創建一個資料夾&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rust_project&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;往後任何的 Rust 程式都會放在這個資料夾下&lt;br&gt;現在在專案資料夾下新增我們要製作的第一個 Rust 程式&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rust_project\_01_hello_rust\main.rs&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fn main() &amp;#123;
+    println!(&amp;quot;Hello, Rust!&amp;quot;);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;之後打開 cmd ，輸入以下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rustc main.rs
+.\main.exe // 印出 Hello, Rust!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如此，我們完成了第一隻 Rust 程式。&lt;br&gt;&lt;del&gt;超快！！&lt;/del&gt;&lt;br&gt;&lt;del&gt;嘛、畢竟是 Hello World 嘛&lt;/del&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;&lt;a href=&#34;#感想&#34; class=&#34;headerlink&#34; title=&#34;感想&#34;&gt;&lt;/a&gt;感想&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;首先注意到的，是執行的指令拆成了兩個&lt;br&gt;分別是 &lt;strong&gt;編譯&lt;/strong&gt; 的行為與 &lt;strong&gt;執行&lt;/strong&gt; 的行為&lt;/p&gt;
+&lt;p&gt;編譯出來的檔案是 &lt;code&gt;.exe&lt;/code&gt;，意味著寫好的程式不需要借助 Rust 就能運行&lt;br&gt;這在筆者之前的經驗中是比較少見的&lt;/p&gt;
+&lt;p&gt;同樣被編譯出來的還有一個 &lt;code&gt;main.pdb&lt;/code&gt;&lt;br&gt;暫時不知道是做甚麼用的，之後學到再回來更新&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;println!();&lt;/code&gt;&lt;br&gt;在這段酷似 JAVASCRIPT 風格的 JAVA 式命名輸出語法上，突兀的出現了個 &lt;code&gt;!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;這是 Rust 的 &lt;code&gt;macro&lt;/code&gt;&lt;br&gt;比起 Rust 的 &lt;code&gt;function&lt;/code&gt;，&lt;code&gt;macro&lt;/code&gt; 更接近 JAVASCRIPT 的 &lt;code&gt;function&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Rust 中，存在 &lt;code&gt;fn(function)&lt;/code&gt; 跟 &lt;code&gt;macro_rules(macro)&lt;/code&gt;&lt;br&gt;他們的差別主要在於 &lt;code&gt;function(函式)&lt;/code&gt; 的參數數量是固定的&lt;br&gt;而 &lt;code&gt;macro(巨集)&lt;/code&gt; 則可以動態傳入參數&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;println&lt;/code&gt; 預期要能夠傳入多個參數，當他要做格式化傳輸時&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;println!(&amp;quot;Hello, Macro! My name is &amp;#123;&amp;#125;!&amp;quot;, &amp;quot;Smilin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;比起 &lt;code&gt;fn&lt;/code&gt;，&lt;code&gt;macro_rules&lt;/code&gt; 顯然更符合需求。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;今日小結&#34;&gt;&lt;a href=&#34;#今日小結&#34; class=&#34;headerlink&#34; title=&#34;今日小結&#34;&gt;&lt;/a&gt;今日小結&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;rustc --version&lt;/code&gt; 驗證版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup update&lt;/code&gt; 更新 Rust&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup self uninstall&lt;/code&gt; 反安裝 Rust&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup doc&lt;/code&gt; 運行 Rust Local Doc&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustc main.rs&lt;/code&gt; 編譯 rs 檔&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.pdb&lt;/code&gt; ???&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;macro&lt;/code&gt; 巨集 &amp;#x2F; 宏，可以傳入動態參數&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;function&lt;/code&gt; 函式 &amp;#x2F; 方法，宣告時就要規範好參數數量與型別&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;資料參考&#34;&gt;&lt;a href=&#34;#資料參考&#34; class=&#34;headerlink&#34; title=&#34;資料參考&#34;&gt;&lt;/a&gt;資料參考&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://doc.rust-lang.org/book/&#34;&gt;Rust 官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/tools/install&#34;&gt;Window 安裝 rustup&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_00/</guid>
+            <title>Rust 學習紀錄[0] = 前言</title>
+            <link>https://smilin.net/2023/10/27/rust_learning_00/</link>
+            <category>Rust</category>
+            <pubDate>Fri, 27 Oct 2023 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/216px-Rust_programming_language_black_logo.svg.png&#34; alt=&#34;Rust&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;2021 年 2 月，Rust 基金會成立&lt;/p&gt;
+&lt;p&gt;以 AWS、GOOGLE 等多家資訊巨頭為首&lt;br&gt;因為看好 Rust 兼顧了高效能 &amp;amp; 安全性而投資&lt;br&gt;使得 Rust 這兩年有了巨大的成長。&lt;/p&gt;
+&lt;p&gt;這也是為什麼，近幾年工程師無論如何不願意&lt;br&gt;多少也會聽過 Rust 的名號，隱隱有與 C++ 並駕齊驅的勢頭。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;筆者平常習慣 node.js or java 的開發，接觸 Rust 算是偶然&lt;br&gt;剛好想嘗試所謂能真正實現高效能程式碼(沒碰過 C++)&lt;/p&gt;
+&lt;p&gt;做為學習動力，一方面會將自己的學習過程發布在 blog&lt;br&gt;另一方面打算在學到一個階段後，試著用 Rust 構建一個微型社群平台，當作目標。&lt;/p&gt;
+&lt;p&gt;本次系列與其說是教學，更像是日記一類的東西，如果能激起看這篇文的你的興趣的話，我會很高興的。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</guid>
+            <title>淺談 js 深拷貝與淺拷貝的差異</title>
+            <link>https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</link>
+            <category>javascript</category>
+            <pubDate>Fri, 15 Sep 2023 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Deep-copy-和-Shallow-copy&#34;&gt;&lt;a href=&#34;#Deep-copy-和-Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy 和 Shallow copy&#34;&gt;&lt;/a&gt;Deep copy 和 Shallow copy&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;先來個考題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = a;
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+baz
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;下一題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = structuredClone(a); // 深拷貝
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+bar  
+&lt;br&gt;&lt;br&gt;
+深拷貝(Deep Copy) 可以將內層對象一併拷貝  
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Shallow-copy&#34;&gt;&lt;a href=&#34;#Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Shallow copy&#34;&gt;&lt;/a&gt;Shallow copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;淺拷貝(Shallow Copy) 與深拷貝同樣是用來拷貝物件層級，避免指向同一記憶體位置&lt;/p&gt;
+&lt;p&gt;與深拷貝不同的是，淺拷貝只會複製第一層的對象，如果是 &lt;code&gt;Object.Object&lt;/code&gt; 的結構就沒轍。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;Object-assign&#34;&gt;&lt;a href=&#34;#Object-assign&#34; class=&#34;headerlink&#34; title=&#34;Object.assign&#34;&gt;&lt;/a&gt;Object.assign&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;Object.assign&lt;/code&gt; 屬於淺拷貝(Shallow Copy)&lt;br&gt;在上述案例中，可以得到跟深拷貝一樣的結果&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;#123; fpp: &amp;quot;bar&amp;quot; &amp;#125; &amp;#125;;
+b = Object.assign(&amp;#123;&amp;#125;, a);
+b.foo.fpp = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo.fpp); // 印出baz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;解構賦值&#34;&gt;&lt;a href=&#34;#解構賦值&#34; class=&#34;headerlink&#34; title=&#34;解構賦值&#34;&gt;&lt;/a&gt;解構賦值&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;解構賦值是 &lt;code&gt;ES6&lt;/code&gt; 以後的語法糖，同樣屬於淺拷貝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const a = &amp;#123; b: 1 &amp;#125;;
+const c = &amp;#123; ...a &amp;#125;; // 解構賦值
+c.b = 2;
+console.log(a); // &amp;#123; b: 1 &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;得益於其精簡的代碼，實務上很常使用。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Deep-copy&#34;&gt;&lt;a href=&#34;#Deep-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy&#34;&gt;&lt;/a&gt;Deep copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;與前面提到的淺拷貝不同，深拷貝對於深層結構也能一併複製&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;早期的深拷貝&#34;&gt;&lt;a href=&#34;#早期的深拷貝&#34; class=&#34;headerlink&#34; title=&#34;早期的深拷貝&#34;&gt;&lt;/a&gt;早期的深拷貝&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;JSON.parse(JSON.stringify());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;這個寫法大致上有以下缺點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;忽略 &lt;code&gt;function&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;忽略原形鏈&lt;/li&gt;
+&lt;li&gt;忽略 &lt;code&gt;undefined&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;子層太多會導致 &lt;code&gt;stack overflow&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;儘管如此，由於已經可以處理大多狀況&lt;br&gt;如果不是為了性能或是特殊邏輯，此寫法已經夠用，是常見的深拷貝實現。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;structuredClone&#34;&gt;&lt;a href=&#34;#structuredClone&#34; class=&#34;headerlink&#34; title=&#34;structuredClone&#34;&gt;&lt;/a&gt;structuredClone&lt;/h3&gt;&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 是 &lt;code&gt;node.js&lt;/code&gt; 17 版以後支援的官方深拷貝實現&lt;/p&gt;
+&lt;p&gt;目前各大瀏覽器默認支援此語法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/tPXjO1o.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 存在一些限制&lt;/p&gt;
+&lt;p&gt;不允許結構中存在 &lt;code&gt;Error&lt;/code&gt; 、 &lt;code&gt;Function&lt;/code&gt; 以及 &lt;code&gt;DOM&lt;/code&gt; 對象&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;RegExp&lt;/code&gt; 對象的 &lt;code&gt;lastIndex&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;read-only&lt;/code&gt; 等描述符，即無法限制 &lt;code&gt;setters&lt;/code&gt; &lt;code&gt;getters&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留原形鏈&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

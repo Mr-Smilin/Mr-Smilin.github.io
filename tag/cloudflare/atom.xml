@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://smilin.net</id>
+    <title>微笑工房 • Posts by &#34;cloudflare&#34; tag</title>
+    <link href="https://smilin.net" />
+    <updated>2023-09-11T10:00:00.000Z</updated>
+    <category term="node.js" />
+    <category term="bot" />
+    <category term="discord" />
+    <category term="discord.js" />
+    <category term="教學" />
+    <category term="12th鐵人賽" />
+    <category term="日記" />
+    <category term="Alist" />
+    <category term="Cloudflare" />
+    <category term="javascript" />
+    <category term="hexo" />
+    <category term="fluid" />
+    <category term="heroku" />
+    <category term="render" />
+    <category term="render.com" />
+    <category term="Live2D" />
+    <category term="彈射世界" />
+    <category term="遊戲" />
+    <category term="腳本" />
+    <category term="Rust" />
+    <entry>
+        <id>https://smilin.net/2023/09/11/alist-file-error/</id>
+        <title>Alist 單檔太大上傳失敗，思路整理</title>
+        <link rel="alternate" href="https://smilin.net/2023/09/11/alist-file-error/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;註：本文並沒有完全解決遇到的上傳問題&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;筆者只想到替代方案，曲線救國&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;筆者是自建雲端的愛用者，目前使用 Alist&lt;/p&gt;
+&lt;p&gt;前一陣子因為自身需求，添加了 Cloudflare 反向代理&lt;/p&gt;
+&lt;p&gt;原本一切看起來都很美好，但某天上傳檔案時才發現不對，只要檔案大於 100 MB 就有機會遇到 413 問題。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/rNNhTq5.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://alist.nn.ci/zh/guide/install/reverse-proxy.html&#34;&gt;官方的反向代理配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，文檔下大多也是哀鴻遍野，看來只要配置了反代很容易就會碰到這個問題&lt;/p&gt;
+&lt;p&gt;尤其文檔不支援 Cloudflare，實在頭痛..&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;問題排查&#34;&gt;&lt;a href=&#34;#問題排查&#34; class=&#34;headerlink&#34; title=&#34;問題排查&#34;&gt;&lt;/a&gt;問題排查&lt;/h1&gt;&lt;h2 id=&#34;NGINX-設定-client-max-body-size&#34;&gt;&lt;a href=&#34;#NGINX-設定-client-max-body-size&#34; class=&#34;headerlink&#34; title=&#34;NGINX 設定 client_max_body_size&#34;&gt;&lt;/a&gt;NGINX 設定 client_max_body_size&lt;/h2&gt;&lt;p&gt;參考資料時，大多資料都指向是 NGINX 設定的問題&lt;br&gt;只要將 &lt;code&gt;client_max_body_size&lt;/code&gt; 上限拉高即可解決&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;server &amp;#123;
+    ．．．．．．．．．
+    location / &amp;#123;
+    ．．．．
+        client_max_body_size 10G;
+    ．．．．
+    &amp;#125;
+    ．．．．．．．．．
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不過筆者並沒有使用到 NGINX，此解顯然並非這次遇到的問題&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Cloudflare-緩存問題&#34;&gt;&lt;a href=&#34;#Cloudflare-緩存問題&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 緩存問題&#34;&gt;&lt;/a&gt;Cloudflare 緩存問題&lt;/h2&gt;&lt;p&gt;爬文發現有人提到可能是 Cloudflare 緩存的問題&lt;/p&gt;
+&lt;p&gt;在 Rule -&amp;gt; Page Rules -&amp;gt; Create Page Rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/N8gi01N.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之後再到 Caching -&amp;gt; Cache Rules -&amp;gt; Create rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/TAkvVl3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定完後再上傳，成功迴避掉 413 問題!&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;新的問題&#34;&gt;&lt;a href=&#34;#新的問題&#34; class=&#34;headerlink&#34; title=&#34;新的問題&#34;&gt;&lt;/a&gt;新的問題&lt;/h1&gt;&lt;p&gt;甜美的日子沒過多久&lt;br&gt;雖然照著上述配置後，不會再出現 413 了，但..&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hHjLAns.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;馬上就遇到新的錯誤了 QQ…&lt;/p&gt;
+&lt;p&gt;這個問題問 google 大神也沒甚麼好辦法&lt;br&gt;沒辦法囉，只好再次自己動手檢查&lt;/p&gt;
+&lt;h2 id=&#34;測試過程&#34;&gt;&lt;a href=&#34;#測試過程&#34; class=&#34;headerlink&#34; title=&#34;測試過程&#34;&gt;&lt;/a&gt;測試過程&lt;/h2&gt;&lt;p&gt;Error Log 只寫了網路問題，偶而會提示&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;quot;message&amp;quot;:&amp;quot;A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received&amp;quot;&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;猜測是 Cloudflare 提早關閉了連線&lt;/p&gt;
+&lt;p&gt;有趣的是只要同時下載檔案，上傳不會失敗&lt;/p&gt;
+&lt;p&gt;開啟 Cloudflare Development Mode ，上傳失敗&lt;/p&gt;
+&lt;h2 id=&#34;Cloudflare-免費版限制&#34;&gt;&lt;a href=&#34;#Cloudflare-免費版限制&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 免費版限制&#34;&gt;&lt;/a&gt;Cloudflare 免費版限制&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/lm8M9jc.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限&lt;/p&gt;
+&lt;p&gt;Alist 僅支援單檔上傳&lt;br&gt;&lt;a href=&#34;https://github.com/alist-org/alist/issues/5176&#34;&gt;github issue&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;想來或許就是在這關上卡住了&lt;/p&gt;
+&lt;p&gt;如開發者所說， Alist 的上傳存在一定的缺陷&lt;/p&gt;
+&lt;p&gt;就算不使用 Cloudflare，直連上傳過大的檔案也有機會失敗&lt;/p&gt;
+&lt;p&gt;好在除此之外功能正常，頂多不透過網頁，自行額外實現上傳方法即可(Ex:webdav&amp;#x2F;ftp&amp;#x2F;nasGui&amp;#x2F;local..)&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;p&gt;文章參考:&lt;br&gt;&lt;a href=&#34;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&#34;&gt;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="Alist" />
+        <category term="Cloudflare" />
+        <updated>2023-09-11T10:00:00.000Z</updated>
+    </entry>
+</feed>

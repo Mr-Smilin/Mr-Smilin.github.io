@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>微笑工房 • Posts by &#34;javascript&#34; category</title>
+        <link>https://smilin.net</link>
+        <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
+        <language>zh-TW</language>
+        <pubDate>Fri, 15 Sep 2023 12:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 15 Sep 2023 12:00:00 +0800</lastBuildDate>
+        <category>node.js</category>
+        <category>bot</category>
+        <category>discord</category>
+        <category>discord.js</category>
+        <category>教學</category>
+        <category>12th鐵人賽</category>
+        <category>日記</category>
+        <category>Alist</category>
+        <category>Cloudflare</category>
+        <category>javascript</category>
+        <category>hexo</category>
+        <category>fluid</category>
+        <category>heroku</category>
+        <category>render</category>
+        <category>render.com</category>
+        <category>Live2D</category>
+        <category>彈射世界</category>
+        <category>遊戲</category>
+        <category>腳本</category>
+        <category>Rust</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</guid>
+            <title>淺談 js 深拷貝與淺拷貝的差異</title>
+            <link>https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</link>
+            <category>javascript</category>
+            <pubDate>Fri, 15 Sep 2023 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Deep-copy-和-Shallow-copy&#34;&gt;&lt;a href=&#34;#Deep-copy-和-Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy 和 Shallow copy&#34;&gt;&lt;/a&gt;Deep copy 和 Shallow copy&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;先來個考題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = a;
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+baz
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;下一題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = structuredClone(a); // 深拷貝
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+bar  
+&lt;br&gt;&lt;br&gt;
+深拷貝(Deep Copy) 可以將內層對象一併拷貝  
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Shallow-copy&#34;&gt;&lt;a href=&#34;#Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Shallow copy&#34;&gt;&lt;/a&gt;Shallow copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;淺拷貝(Shallow Copy) 與深拷貝同樣是用來拷貝物件層級，避免指向同一記憶體位置&lt;/p&gt;
+&lt;p&gt;與深拷貝不同的是，淺拷貝只會複製第一層的對象，如果是 &lt;code&gt;Object.Object&lt;/code&gt; 的結構就沒轍。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;Object-assign&#34;&gt;&lt;a href=&#34;#Object-assign&#34; class=&#34;headerlink&#34; title=&#34;Object.assign&#34;&gt;&lt;/a&gt;Object.assign&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;Object.assign&lt;/code&gt; 屬於淺拷貝(Shallow Copy)&lt;br&gt;在上述案例中，可以得到跟深拷貝一樣的結果&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;#123; fpp: &amp;quot;bar&amp;quot; &amp;#125; &amp;#125;;
+b = Object.assign(&amp;#123;&amp;#125;, a);
+b.foo.fpp = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo.fpp); // 印出baz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;解構賦值&#34;&gt;&lt;a href=&#34;#解構賦值&#34; class=&#34;headerlink&#34; title=&#34;解構賦值&#34;&gt;&lt;/a&gt;解構賦值&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;解構賦值是 &lt;code&gt;ES6&lt;/code&gt; 以後的語法糖，同樣屬於淺拷貝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const a = &amp;#123; b: 1 &amp;#125;;
+const c = &amp;#123; ...a &amp;#125;; // 解構賦值
+c.b = 2;
+console.log(a); // &amp;#123; b: 1 &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;得益於其精簡的代碼，實務上很常使用。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Deep-copy&#34;&gt;&lt;a href=&#34;#Deep-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy&#34;&gt;&lt;/a&gt;Deep copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;與前面提到的淺拷貝不同，深拷貝對於深層結構也能一併複製&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;早期的深拷貝&#34;&gt;&lt;a href=&#34;#早期的深拷貝&#34; class=&#34;headerlink&#34; title=&#34;早期的深拷貝&#34;&gt;&lt;/a&gt;早期的深拷貝&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;JSON.parse(JSON.stringify());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;這個寫法大致上有以下缺點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;忽略 &lt;code&gt;function&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;忽略原形鏈&lt;/li&gt;
+&lt;li&gt;忽略 &lt;code&gt;undefined&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;子層太多會導致 &lt;code&gt;stack overflow&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;儘管如此，由於已經可以處理大多狀況&lt;br&gt;如果不是為了性能或是特殊邏輯，此寫法已經夠用，是常見的深拷貝實現。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;structuredClone&#34;&gt;&lt;a href=&#34;#structuredClone&#34; class=&#34;headerlink&#34; title=&#34;structuredClone&#34;&gt;&lt;/a&gt;structuredClone&lt;/h3&gt;&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 是 &lt;code&gt;node.js&lt;/code&gt; 17 版以後支援的官方深拷貝實現&lt;/p&gt;
+&lt;p&gt;目前各大瀏覽器默認支援此語法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/tPXjO1o.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 存在一些限制&lt;/p&gt;
+&lt;p&gt;不允許結構中存在 &lt;code&gt;Error&lt;/code&gt; 、 &lt;code&gt;Function&lt;/code&gt; 以及 &lt;code&gt;DOM&lt;/code&gt; 對象&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;RegExp&lt;/code&gt; 對象的 &lt;code&gt;lastIndex&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;read-only&lt;/code&gt; 等描述符，即無法限制 &lt;code&gt;setters&lt;/code&gt; &lt;code&gt;getters&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留原形鏈&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

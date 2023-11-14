@@ -1,0 +1,43 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "微笑工房 • All posts by \"日記\" tag",
+    "description": "程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記",
+    "home_page_url": "https://smilin.net",
+    "items": [
+        {
+            "id": "https://smilin.net/2023/03/17/goodbyeNalocal/",
+            "url": "https://smilin.net/2023/03/17/goodbyeNalocal/",
+            "title": "blog 網址搬遷 & github改名",
+            "date_published": "2023-03-17T06:30:00.000Z",
+            "content_html": "<p><img src=\"https://i.imgur.com/1EqvZfv.png\" alt=\"title\"></p>\n<h2 id=\"再見-Nalocal\"><a href=\"#再見-Nalocal\" class=\"headerlink\" title=\"再見 Nalocal\"></a>再見 Nalocal</h2><p>最初使用 Nalocal，做為 Github 上使用的名字</p>\n<p>想著這個名字的發音還挺順口的，近似於貓咪的喵叫聲</p>\n<p>拆開來看的話有非本地，支持雲端概念存在的好名字..</p>\n<span id=\"more\"></span>\n\n<p><strong>不過我的名字實在太多啦!</strong></p>\n<p>在 FB 上叫做漣漪，網名叫微笑，換個論壇又會有別的名字</p>\n<p>而且對於名字是否順口好記，也是近期挺在意的事情</p>\n<p>經營 blog，似乎逐漸從原本單純的樣貌，變成必需慎重考慮該如何營造的一個個人品牌了</p>\n<br>\n\n<p>所以，趁此機會一併更改了網域，github page 提供的免費網域終究存在侷限</p>\n<p>雖然替換初期會有點痛苦，往後也算是重新經營了</p>\n<p>但我想這會是必要的，也希望以後我能堅持多寫些文章，添加柴火。</p>\n",
+            "tags": [
+                "日記"
+            ]
+        },
+        {
+            "id": "https://smilin.net/2021/09/16/hello-smilin/",
+            "url": "https://smilin.net/2021/09/16/hello-smilin/",
+            "title": "Hello Smilin",
+            "date_published": "2021-09-16T05:57:00.000Z",
+            "content_html": "<h2 id=\"20210916\"><a href=\"#20210916\" class=\"headerlink\" title=\"20210916\"></a><em>20210916</em></h2><p>這是這個 blog 創建的第一天</p>\n<p>眾所周知，”Hello World”是所有程序猿最開始學習的第一句話語</p>\n<p>結合我自己的名字，我想把 blog 的第一篇文章標題寫成 Hello Smilin，我覺得這樣挺有意思的。</p>\n<span id=\"more\"></span>\n\n<hr>\n<p>你好，我是微笑，GitHub 的名字是 Mr.Smilin</p>\n<p>基於方便，叫我微笑就好了</p>\n<p>身為台灣廉價碼農的一員，工作上會需要爬文，參考大神的文章</p>\n<p>時常看到其他碼農會寫自己的 blog，不管是熱門的，或是門可羅雀的</p>\n<p>也因此，創建 blog 的想法從在學期間就醞釀著</p>\n<p>在此 blog 前，也有其他 微笑家 建起，之後因為各種原因又廢棄掉</p>\n<p>最近因為 discord.js 的更新，希望有一個可以紀錄 side project 的地方，此站便應運而生</p>\n<p>希望這次能堅持下去，這也是創建 blog 的初衷。</p>\n",
+            "tags": [
+                "日記"
+            ]
+        },
+        {
+            "id": "https://smilin.net/2020/09/30/12thDayEnd/",
+            "url": "https://smilin.net/2020/09/30/12thDayEnd/",
+            "title": "沉沉入睡的回憶小姐，匆匆揚帆的時間先生",
+            "date_published": "2020-09-30T02:20:37.000Z",
+            "content_html": "<p>最初看到鐵人賽是大學二年級的時候，距離現在也就兩年，其實還挺短的</p>\n<p>因為早早為專題做準備…需要查資料？造訪了這個地方</p>\n<p>當時想都沒想過自己會寫鐵人賽(笑</p>\n<span id=\"more\"></span>\n\n<hr>\n<p>都說大學的人生是最多采多姿的</p>\n<p>中間遇到了許多事情</p>\n<p>時常為了專題留校</p>\n<p>遇到可以一起努力的人</p>\n<p>偶而一起吃午餐</p>\n<p>每天都感到充實</p>\n<p>雖然不全是快樂的事情</p>\n<p>有許多寶貴的回憶呀</p>\n<p>想必有更多有趣的事情沒有去挖掘</p>\n<p>有更多的日子可以去揮霍</p>\n<p>不過也畢業了</p>\n<p>也有許多事是已經錯過的</p>\n<p>不會有機會再去嘗試了</p>\n<hr>\n<p>最初參加鐵人賽的契機，表面上是想分享機器人的寫法，想增加自己履歷上的談資</p>\n<p>現在想來，只是希望可以嘗試更多事情吧</p>\n<p>想著也許這樣子做，我也會有甚麼改變</p>\n<p>雖然到後來，鐵人賽真的讓我感覺蠻辛苦的</p>\n<p>時常覺得，反正也不會有人來看我的文章</p>\n<p>並不是說不努力，我花了很多時間來想要教甚麼才好</p>\n<p>但就像自暴自棄一般的寫起流水帳了</p>\n<p>十分抱歉</p>\n<hr>\n<p>那麼，時間也差不多到了</p>\n<p>有許多事情都還沒做</p>\n<p>有得必有失，想必之後也會繼續過著得一失一的日子吧</p>\n<p>儘管如此，我也會努力的</p>\n<p>因為想變得比現在更好。</p>\n",
+            "tags": [
+                "node.js",
+                "bot",
+                "discord",
+                "discord.js",
+                "12th鐵人賽",
+                "日記"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://smilin.net</id>
+    <title>微笑工房 • Posts by &#34;更新日誌&#34; category</title>
+    <link href="https://smilin.net" />
+    <updated>2022-11-01T10:00:00.000Z</updated>
+    <category term="node.js" />
+    <category term="bot" />
+    <category term="discord" />
+    <category term="discord.js" />
+    <category term="教學" />
+    <category term="12th鐵人賽" />
+    <category term="日記" />
+    <category term="Alist" />
+    <category term="Cloudflare" />
+    <category term="javascript" />
+    <category term="hexo" />
+    <category term="fluid" />
+    <category term="heroku" />
+    <category term="render" />
+    <category term="render.com" />
+    <category term="Live2D" />
+    <category term="彈射世界" />
+    <category term="遊戲" />
+    <category term="腳本" />
+    <category term="Rust" />
+    <entry>
+        <id>https://smilin.net/2022/11/01/bdb3/</id>
+        <title>BDB更新日誌#3</title>
+        <link rel="alternate" href="https://smilin.net/2022/11/01/bdb3/"/>
+        <content type="html">&lt;h2 id=&#34;主要更新&#34;&gt;&lt;a href=&#34;#主要更新&#34; class=&#34;headerlink&#34; title=&#34;主要更新&#34;&gt;&lt;/a&gt;主要更新&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;DiscordJSmySelf 更名為 BaseDiscordBot&lt;/li&gt;
+&lt;li&gt;discord.js 的所有參考都塞進 BaseDiscordBot&lt;/li&gt;
+&lt;li&gt;斜線 &amp;#x2F; 選項 &amp;#x2F; 按鈕 &amp;#x2F; 菜單 框架完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;次要更新&#34;&gt;&lt;a href=&#34;#次要更新&#34; class=&#34;headerlink&#34; title=&#34;次要更新&#34;&gt;&lt;/a&gt;次要更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;env 更新&lt;/li&gt;
+&lt;li&gt;readMe 更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;github&#34;&gt;&lt;a href=&#34;#github&#34; class=&#34;headerlink&#34; title=&#34;github&#34;&gt;&lt;/a&gt;github&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0&#34;&gt;github 頁面&lt;/a&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;一些話&#34;&gt;&lt;a href=&#34;#一些話&#34; class=&#34;headerlink&#34; title=&#34;一些話&#34;&gt;&lt;/a&gt;一些話&lt;/h2&gt;&lt;br&gt;
+嗨，昨天才見面呢  
+最近比較閒，忽然就可以比較常更新日誌了
+
+&lt;p&gt;其實原本有點懶得寫，但 BDB 目前的狀態，跟之前相比算是有了非常大的改變&lt;br&gt;所以就稍微紀錄一下，雖然、大概、沒人看就是了 xD ~~&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;主要更新說明&#34;&gt;&lt;a href=&#34;#主要更新說明&#34; class=&#34;headerlink&#34; title=&#34;主要更新說明&#34;&gt;&lt;/a&gt;主要更新說明&lt;/h3&gt;  &lt;br&gt;
+首先，最重要的就是，DBD 的核心文件做了一次更名啦 ~~ &lt;br&gt; 
+筆者實在是對命名很不在行，原本的想法很單純，想寫一套屬於我的翻譯文件  &lt;br&gt;
+用來翻譯 discord.js 的 API ，這樣以後 discord.js 改版的時候，就不用再把原有的邏輯拆掉重組了  
+  &lt;br&gt;&lt;br&gt;
+新的名字與專案相同，也算是重新確立了本專案的方向 (啪嘰啪嘰~)  
+  
+  &lt;br&gt;
+  
+&lt;p&gt;雖然認真的朋友應該早就看出來了，其實筆者的程式水平並不怎樣呢，也難怪會當受薪階級了 (x)&lt;br&gt;不過筆者也沒有因此放棄，目標一直都是在程式的道路上磨練，所以相較於以往，對程式的理解還是有提高的喔&lt;/p&gt;
+&lt;p&gt;這次花了些時間整理，正式將所有與 discord.js 有關的 import 都塞入 BDB 內了&lt;br&gt;也就是以後使用 BDB，就真正可以做到換一個檔案 -&amp;gt; 升級完畢，的這種事情了 ~~&lt;br&gt;雖然只是初衷一般的事情，也是最近稍微閒下來才終於可以整理好啊..感覺審視了一次自己的作業效率阿 (汗)&lt;/p&gt;
+  &lt;br&gt;
+
+&lt;p&gt;以及相比前兩個比較小咖，但也算是主要更新的&lt;br&gt;discord.js 13 版引入，14 版改過一次實例方式的各種功能都做出框架了&lt;br&gt;雖然沒能在 13 版時就做出來有點遺憾，但筆者對目前的框架很有自信，相信等 15 版出來的時候，這些 code 也會很容易維護吧！&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;次要更新說明&#34;&gt;&lt;a href=&#34;#次要更新說明&#34; class=&#34;headerlink&#34; title=&#34;次要更新說明&#34;&gt;&lt;/a&gt;次要更新說明&lt;/h3&gt;  &lt;br&gt;
+在env的部分加上了 `MASTER_ID`，並沒有實際功能&lt;br&gt;    
+更多是用於 DEBUG，或是往後要開一些只有自己能用的開發人員指令時可以使用  
+  
+  &lt;br&gt;
+  
+&lt;p&gt;因為更新內容眾多， readMe 也做了一次更新，改了不少，但還是缺很多東西，只交代了最基本的內容&lt;br&gt;畢竟使用 BDB 相當於重新認識一種 API ，未來想開一份專屬於 BDB 的文檔&lt;br&gt;不知道還要多久就是了，請大家等等我囉 xD ~&lt;/p&gt;
+&lt;br&gt;
+</content>
+        <category term="node.js" />
+        <category term="bot" />
+        <category term="discord" />
+        <category term="discord.js" />
+        <category term="教學" />
+        <updated>2022-11-01T10:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2022/10/31/bdb2/</id>
+        <title>BDB更新日誌#2 - discord.js v14.6.0</title>
+        <link rel="alternate" href="https://smilin.net/2022/10/31/bdb2/"/>
+        <content type="html">&lt;h2 id=&#34;主要更新&#34;&gt;&lt;a href=&#34;#主要更新&#34; class=&#34;headerlink&#34; title=&#34;主要更新&#34;&gt;&lt;/a&gt;主要更新&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;將專案適配到 &lt;code&gt;discord.js&lt;/code&gt; v14.6.0 版本&lt;/li&gt;
+&lt;li&gt;全版本專案棄用 &lt;code&gt;auth.json&lt;/code&gt; ，改成 &lt;code&gt;.env&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;次要更新&#34;&gt;&lt;a href=&#34;#次要更新&#34; class=&#34;headerlink&#34; title=&#34;次要更新&#34;&gt;&lt;/a&gt;次要更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;message 邏輯整合&lt;/li&gt;
+&lt;li&gt;修改部分註解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;github&#34;&gt;&lt;a href=&#34;#github&#34; class=&#34;headerlink&#34; title=&#34;github&#34;&gt;&lt;/a&gt;github&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0&#34;&gt;github 頁面&lt;/a&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;一些話&#34;&gt;&lt;a href=&#34;#一些話&#34; class=&#34;headerlink&#34; title=&#34;一些話&#34;&gt;&lt;/a&gt;一些話&lt;/h2&gt;&lt;p&gt;大家好，我是微笑&lt;/p&gt;
+&lt;p&gt;這次版本更新，在基本架構上跟 13 並沒有差太多&lt;br&gt;主要是修改了之前 code 的一些架構設計，讓主體更加精簡了一些，以及使用更加正規的方式儲存私密數值&lt;/p&gt;
+&lt;p&gt;之後如果時間允許，希望可以將自己的 bot 提升到 14.6.0 的版本(12 遇到的 bug 越來越多了&lt;del&gt;)&lt;br&gt;屆時或許會再將功能拆分，更新到這邊吧，不過因為已經真鹿太多次了，已經有點不好意思給承諾了，各位看看就好吧，哈哈哈&lt;/del&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;主要更新說明&#34;&gt;&lt;a href=&#34;#主要更新說明&#34; class=&#34;headerlink&#34; title=&#34;主要更新說明&#34;&gt;&lt;/a&gt;主要更新說明&lt;/h3&gt;&lt;p&gt;原本專案使用 json 做參數管理&lt;br&gt;最近筆者因為換了上雲平台，重新研究了一次相關資料，這次索性將 &lt;code&gt;auth.json&lt;/code&gt; 棄用，統一改成 &lt;code&gt;.env&lt;/code&gt;&lt;br&gt;利用 &lt;code&gt;dotenv&lt;/code&gt; 的效果，就可以用 &lt;code&gt;process.env.&lt;/code&gt; 的方式載入各種環境參數了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/yCrkWDD.png&#34; alt=&#34;引入dotenv，改用process.env.xxx來取值&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;次要更新說明&#34;&gt;&lt;a href=&#34;#次要更新說明&#34; class=&#34;headerlink&#34; title=&#34;次要更新說明&#34;&gt;&lt;/a&gt;次要更新說明&lt;/h3&gt;&lt;p&gt;另外比較重要的修改，就是原本將 message 入口放在主程序，看起來挺奇怪的，就跟 &lt;code&gt;prefix.json&lt;/code&gt; 一起重新統合到獨立的分類了&lt;br&gt;以及在註解上，也重新做了一輪調整，讓文件間的註解存在統一性，相對不會太過雜亂&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/0m0R3m4.png&#34; alt=&#34;prefix.json更名，並且放入messageManager模組內&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/c7brWXz.png&#34; alt=&#34;把message邏輯搬到獨立文件內，以及部分註解統一&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+</content>
+        <category term="node.js" />
+        <category term="bot" />
+        <category term="discord" />
+        <category term="discord.js" />
+        <category term="教學" />
+        <updated>2022-10-31T10:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2022/01/17/bdb1/</id>
+        <title>BDB更新日誌#1</title>
+        <link rel="alternate" href="https://smilin.net/2022/01/17/bdb1/"/>
+        <content type="html">&lt;h2 id=&#34;主要更新&#34;&gt;&lt;a href=&#34;#主要更新&#34; class=&#34;headerlink&#34; title=&#34;主要更新&#34;&gt;&lt;/a&gt;主要更新&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;bot 啟動時自動註冊斜線命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;次要更新&#34;&gt;&lt;a href=&#34;#次要更新&#34; class=&#34;headerlink&#34; title=&#34;次要更新&#34;&gt;&lt;/a&gt;次要更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;斜線命令相關邏輯調整&lt;/li&gt;
+&lt;li&gt;修改 js 檔名&lt;/li&gt;
+&lt;li&gt;修改部分註解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;github&#34;&gt;&lt;a href=&#34;#github&#34; class=&#34;headerlink&#34; title=&#34;github&#34;&gt;&lt;/a&gt;github&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/BaseDiscordBot/tree/2e168a31c74994c18e276f8f4bf1ff67d74803c9&#34;&gt;github 頁面&lt;/a&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;一些話&#34;&gt;&lt;a href=&#34;#一些話&#34; class=&#34;headerlink&#34; title=&#34;一些話&#34;&gt;&lt;/a&gt;一些話&lt;/h2&gt;&lt;p&gt;大家好，我是微笑&lt;/p&gt;
+&lt;p&gt;總覺得很久沒發文，自上次簡單介紹 discord.js 升版後有四個月了…&lt;/p&gt;
+&lt;p&gt;與以往渾渾噩噩不同，&lt;br&gt;架設了 blog、有了實際的紀錄後更可以感覺到自己必需努力(雖然平常更多時間都在放電 haha)&lt;/p&gt;
+&lt;p&gt;原本新年後第一篇文章，希望可以寫點想說的話；&lt;br&gt;可之前沒有相關經驗，一到真的要動筆時總是不知道該寫些甚麼。&lt;br&gt;結果就拖到現在了，實在是有點慚愧(抹臉&lt;/p&gt;
+&lt;p&gt;雖然不是 2022 第一篇，相關的雜談就留待日後吧~&lt;br&gt;這邊做為更新日誌，會盡量以介紹更新為主的，恩恩。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;主要更新說明&#34;&gt;&lt;a href=&#34;#主要更新說明&#34; class=&#34;headerlink&#34; title=&#34;主要更新說明&#34;&gt;&lt;/a&gt;主要更新說明&lt;/h3&gt;&lt;p&gt;敘述上挺好懂的，BDB(BaseDiscordBot)原本並不會在註冊時自動跑&lt;a href=&#34;https://discord.js.org/#/docs/discord.js/v13/class/GuildApplicationCommandManager&#34;&gt;斜線指令&lt;/a&gt;。&lt;br&gt;原本的 code 有點問題，這次改了寫法，並且拉進了&lt;a href=&#34;https://discord.js.org/#/docs/discord.js/v13/class/Client?scrollTo=e-ready&#34;&gt;Client#ready&lt;/a&gt;事件內。&lt;br&gt;以後執行時，就會將 bot 所在的所有群組都註冊一次斜線指令&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/wFQPoia.png&#34; alt=&#34;移除註解，修改傳入的參數&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/J8d01FY.png&#34; alt=&#34;實際在ready呼叫了InsertSlash&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;次要更新說明&#34;&gt;&lt;a href=&#34;#次要更新說明&#34; class=&#34;headerlink&#34; title=&#34;次要更新說明&#34;&gt;&lt;/a&gt;次要更新說明&lt;/h3&gt;&lt;p&gt;原本 BDB 在升級到 discord.js 13 時，目標著重在保全 &lt;strong&gt;功能模組化&lt;/strong&gt; 此一優點上，&lt;br&gt;斜線指令的兼容，並沒有花費過多的時間去研究。&lt;/p&gt;
+&lt;p&gt;此次除了主要更新中提到的內容，還修改了斜線指令被觸發時的邏輯，&lt;br&gt;將 reply 一同寫在 json 內，以利於往後擴充。&lt;/p&gt;
+&lt;p&gt;改動簡易，優點也是顯而易見的，&lt;br&gt;有效避免日後斜線指令過多，註冊與回傳列表不同步的風險。&lt;/p&gt;
+&lt;p&gt;基於 &lt;strong&gt;功能模組化&lt;/strong&gt; 訴求，針對這一塊的下一步優化，&lt;br&gt;預計會是在程式碼上做出子母 json 檔案；&lt;br&gt;可以根據要使用的功能別，來直接套用各個功能對應的 json。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;原本 BDB 的啟動檔取名做 bot.js，因筆者自身寫的 bot，檔名都是 alice(女兒)。&lt;br&gt;BDB 畢竟也是我的專案，怎麼可以有差別待遇呢(不是&lt;br&gt;乾脆就一併統一成愛稱了。&lt;/p&gt;
+&lt;p&gt;另外調整了一點點註解上的形容。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/l93RXrB.png&#34; alt=&#34;修改了斜線指令，以回傳類型決定邏輯&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/QOybZGB.png&#34; alt=&#34;調整後的slashJson&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/bvwPWkT.png&#34; alt=&#34;調整了註解與執行的jsName&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="node.js" />
+        <category term="bot" />
+        <category term="discord" />
+        <category term="discord.js" />
+        <category term="教學" />
+        <updated>2022-01-17T10:00:00.000Z</updated>
+    </entry>
+</feed>

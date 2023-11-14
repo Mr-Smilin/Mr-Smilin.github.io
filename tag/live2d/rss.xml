@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>微笑工房 • Posts by &#34;live2d&#34; tag</title>
+        <link>https://smilin.net</link>
+        <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
+        <language>zh-TW</language>
+        <pubDate>Tue, 16 Nov 2021 10:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 16 Nov 2021 10:00:00 +0800</lastBuildDate>
+        <category>node.js</category>
+        <category>bot</category>
+        <category>discord</category>
+        <category>discord.js</category>
+        <category>教學</category>
+        <category>12th鐵人賽</category>
+        <category>日記</category>
+        <category>Alist</category>
+        <category>Cloudflare</category>
+        <category>javascript</category>
+        <category>hexo</category>
+        <category>fluid</category>
+        <category>heroku</category>
+        <category>render</category>
+        <category>render.com</category>
+        <category>Live2D</category>
+        <category>彈射世界</category>
+        <category>遊戲</category>
+        <category>腳本</category>
+        <category>Rust</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2021/11/16/live2DShareList/</guid>
+            <title>公開Live2D模型蒐集分享</title>
+            <link>https://smilin.net/2021/11/16/live2DShareList/</link>
+            <category>Live2D</category>
+            <pubDate>Tue, 16 Nov 2021 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;此文章來源來自 &lt;a href=&#34;https://www.cnblogs.com/strengthen/p/11112215.html&#34;&gt;https://www.cnblogs.com/strengthen/p/11112215.html&lt;/a&gt;&lt;br&gt;此文章僅用於教學，不進行任何營利行為&lt;br&gt;引用時間 2021-11-16&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-epsilon2_1@1.0.5/assets/epsilon2_1.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-gf@1.0.5/assets/gf.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-haru/01@1.0.5/assets/haru/01.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-haru/02@1.0.5/assets/haru/02.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145737099-1995701915.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145755122-1250198826.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145808171-1134873927.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-izumi@1.0.5/assets/izumi.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145820786-1515142054.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145837395-2129851551.png&#34; alt=&#34;10&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145854892-1189973297.png&#34; alt=&#34;11&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-ni-j@1.0.5/assets/ni.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nico@1.0.5/assets/nico.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145946543-386246366.png&#34; alt=&#34;13&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nietzsche@1.0.5/assets/nietzsche.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145958186-1073145583.png&#34; alt=&#34;15&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;16&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nito@1.0.5/assets/nito.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150012305-869512378.png&#34; alt=&#34;16&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;17&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150021685-1723203157.png&#34; alt=&#34;17&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;18&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150030436-2105740210.png&#34; alt=&#34;18&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;19&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-tsumiki@1.0.5/assets/tsumiki.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150044063-1455978557.png&#34; alt=&#34;19&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;20&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150055987-2049508002.png&#34; alt=&#34;20&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;21&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150106688-127892585.png&#34; alt=&#34;21&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;22&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150115397-624103248.png&#34; alt=&#34;22&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

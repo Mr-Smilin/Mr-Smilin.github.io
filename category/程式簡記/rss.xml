@@ -1,0 +1,717 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>微笑工房 • Posts by &#34;程式簡記&#34; category</title>
+        <link>https://smilin.net</link>
+        <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
+        <language>zh-TW</language>
+        <pubDate>Fri, 27 Oct 2023 21:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 27 Oct 2023 21:00:00 +0800</lastBuildDate>
+        <category>node.js</category>
+        <category>bot</category>
+        <category>discord</category>
+        <category>discord.js</category>
+        <category>教學</category>
+        <category>12th鐵人賽</category>
+        <category>日記</category>
+        <category>Alist</category>
+        <category>Cloudflare</category>
+        <category>javascript</category>
+        <category>hexo</category>
+        <category>fluid</category>
+        <category>heroku</category>
+        <category>render</category>
+        <category>render.com</category>
+        <category>Live2D</category>
+        <category>彈射世界</category>
+        <category>遊戲</category>
+        <category>腳本</category>
+        <category>Rust</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_02/</guid>
+            <title>Rust 學習紀錄[2] = Rust 的 NPM</title>
+            <link>https://smilin.net/2023/10/27/rust_learning_02/</link>
+            <category>Rust</category>
+            <pubDate>Fri, 27 Oct 2023 21:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;讓我們接著原本的進度繼續&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;Cargo&#34;&gt;&lt;a href=&#34;#Cargo&#34; class=&#34;headerlink&#34; title=&#34;Cargo&#34;&gt;&lt;/a&gt;Cargo&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;Cargo&lt;/code&gt; 是 &lt;code&gt;Rust&lt;/code&gt; 的專案建置工具以及套件管理器&lt;br&gt;恩..聽起來是個 &lt;code&gt;npm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;我們在安裝 &lt;code&gt;rustup&lt;/code&gt; 時已經一併安裝了 &lt;code&gt;Cargo&lt;/code&gt;&lt;br&gt;使用 &lt;code&gt;cargo --version&lt;/code&gt; 來確認是否正確安裝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo --version // cargo 1.73.0 (9c4383fb5 2023-08-26)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;沒問題的話，接著使用 &lt;code&gt;Cargo&lt;/code&gt; 創建跟昨天相似的專案。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;創建專案&#34;&gt;&lt;a href=&#34;#創建專案&#34; class=&#34;headerlink&#34; title=&#34;創建專案&#34;&gt;&lt;/a&gt;創建專案&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;在專案目錄(rust_project)下輸入創建專案的指令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo new _02_hello_cargo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;現在我們有名為 &lt;code&gt;_02_hello_cargo&lt;/code&gt; 的資料夾，裡面結構如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;src
+  main.rs
+.gitignore
+Cargo.toml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;src&lt;/code&gt; - 常見程式開發檔案目錄，看就知道&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;src\main.rs&lt;/code&gt; - 主程式&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; - git 的描述文件，主要功能是防止裡面提到的檔案在 git 傳輸時被包進去(Ex:log&amp;#x2F;target)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Cargo.toml&lt;/code&gt; - 打開來看了下，應該是專案描述文件，對應 node 的 &lt;code&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;編譯-build&#34;&gt;&lt;a href=&#34;#編譯-build&#34; class=&#34;headerlink&#34; title=&#34;編譯(build)&#34;&gt;&lt;/a&gt;編譯(build)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;試著 build 起這個專案看看&lt;br&gt;&lt;code&gt;cargo build&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;執行後，專案內多出了幾個檔案&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;target
+  debug
+    _02_hello_cargo.exe
+    more debug files...
+  .rustc_info.json
+  CACHEDIR.TAG
+Cargo.lock
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Cargo.lock&lt;/code&gt; - 對應 node 的 &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;target\debug\_02_hello_cargo.exe&lt;/code&gt; - 我們產出的執行檔，debug 大概是 building 的默認方式，之後應該會有相對嚴謹的方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\target\debug\_02_hello_cargo // Hello, world!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;編譯並運行-run&#34;&gt;&lt;a href=&#34;#編譯並運行-run&#34; class=&#34;headerlink&#34; title=&#34;編譯並運行(run)&#34;&gt;&lt;/a&gt;編譯並運行(run)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;Cargo 有提供一種命令，可以將編譯與運行合併成一個指令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo run // Hello, world!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果開發檔案沒有修改，&lt;code&gt;cargo run&lt;/code&gt; 不會重建 target&lt;br&gt;加上合併兩個步驟，比 &lt;code&gt;cargo build&lt;/code&gt; 方便許多。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;檢查-check&#34;&gt;&lt;a href=&#34;#檢查-check&#34; class=&#34;headerlink&#34; title=&#34;檢查(check)&#34;&gt;&lt;/a&gt;檢查(check)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;除了編譯與運行，Cargo 當然也提供了檢查命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo check
+  /**
+    Checking _02_hello_cargo v0.1.0(C:\my\01\git\rust\_02_hello_cargo)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.07s
+  **/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;單純的 &lt;code&gt;check&lt;/code&gt; 比 &lt;code&gt;build&lt;/code&gt; 快上許多&lt;br&gt;在自動化部屬等一類場景中廣泛運用。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;正式編譯-release&#34;&gt;&lt;a href=&#34;#正式編譯-release&#34; class=&#34;headerlink&#34; title=&#34;正式編譯(release)&#34;&gt;&lt;/a&gt;正式編譯(release)&lt;/h2&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;code&gt;cargo build --release
+  /**
+    Compiling _02_hello_cargo v0.1.0 (C:\my\01\git\rust\_02_hello_cargo)
+        Finished release [optimized] target(s) in 0.36s
+  **/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 &lt;code&gt;--release&lt;/code&gt; building 的檔案會放在 &lt;code&gt;target\release&lt;/code&gt;&lt;br&gt;與 debug 版本不同，release 的編譯過程比較久，但會最佳化產出的結果&lt;/p&gt;
+&lt;p&gt;因此，使用 debug 開發可以有效降低等待編譯的時間&lt;br&gt;需要發佈檔案時，再使用 release。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;今日小結&#34;&gt;&lt;a href=&#34;#今日小結&#34; class=&#34;headerlink&#34; title=&#34;今日小結&#34;&gt;&lt;/a&gt;今日小結&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;cargo --version&lt;/code&gt; 驗證版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo new &amp;#123;project_name&amp;#125;&lt;/code&gt; 創建專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo build&lt;/code&gt; 編譯專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt; 編譯&amp;amp;運行專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo check&lt;/code&gt; 驗證專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo build --release&lt;/code&gt; 正式版本的編譯&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_01/</guid>
+            <title>Rust 學習紀錄[1] = 日誌中的教學</title>
+            <link>https://smilin.net/2023/10/27/rust_learning_01/</link>
+            <category>Rust</category>
+            <pubDate>Fri, 27 Oct 2023 18:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;工欲善其事，必先利其器&lt;br&gt;想學一門語言，要從一篇教學文檔找起&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doc.rust-lang.org/book/&#34;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;恩，官方文檔看起來挺不錯的，就這個吧&lt;/p&gt;
+&lt;p&gt;這篇文撰寫當下，文檔對應 Rust 版本為 &lt;code&gt;Rust 1.67.1 (released 2023-02-09) or later&lt;/code&gt;&lt;br&gt;如果因為版本不同造成閱讀的困擾的話，可以在學會安裝 Rust 後自行降版學習。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;安裝&#34;&gt;&lt;a href=&#34;#安裝&#34; class=&#34;headerlink&#34; title=&#34;安裝&#34;&gt;&lt;/a&gt;安裝&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;說是 Rust，其實第一個遇到的是 &lt;code&gt;rustup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/tools/install&#34;&gt;Window 安裝 rustup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安裝過程一直 Enter 就好，之後在 cmd 下 &lt;code&gt;rustc --version&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;得到版本號 &lt;code&gt;rustc 1.73.0 (cc66ad468 2023-10-03)&lt;/code&gt;，表示安裝成功&lt;/p&gt;
+&lt;p&gt;其他比較常用的指令還有&lt;/p&gt;
+&lt;p&gt;更新 Rust 版本 - &lt;code&gt;rustup update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;卸載 Rust 跟 rustup - &lt;code&gt;rustup self uninstall&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查看 Rust Doc 本機離線版 - &lt;code&gt;rustup doc&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;根據 Rust 自己的說明，約莫每兩周會有一次小版更新&lt;br&gt;也因此，除非目標是維護專案，理論上更新版本 &amp;amp; 追蹤文檔改動會很頻繁。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;HELLO-RUST！&#34;&gt;&lt;a href=&#34;#HELLO-RUST！&#34; class=&#34;headerlink&#34; title=&#34;HELLO RUST！&#34;&gt;&lt;/a&gt;HELLO RUST！&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;首先讓我們創建一個資料夾&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rust_project&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;往後任何的 Rust 程式都會放在這個資料夾下&lt;br&gt;現在在專案資料夾下新增我們要製作的第一個 Rust 程式&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rust_project\_01_hello_rust\main.rs&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fn main() &amp;#123;
+    println!(&amp;quot;Hello, Rust!&amp;quot;);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;之後打開 cmd ，輸入以下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rustc main.rs
+.\main.exe // 印出 Hello, Rust!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如此，我們完成了第一隻 Rust 程式。&lt;br&gt;&lt;del&gt;超快！！&lt;/del&gt;&lt;br&gt;&lt;del&gt;嘛、畢竟是 Hello World 嘛&lt;/del&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;&lt;a href=&#34;#感想&#34; class=&#34;headerlink&#34; title=&#34;感想&#34;&gt;&lt;/a&gt;感想&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;首先注意到的，是執行的指令拆成了兩個&lt;br&gt;分別是 &lt;strong&gt;編譯&lt;/strong&gt; 的行為與 &lt;strong&gt;執行&lt;/strong&gt; 的行為&lt;/p&gt;
+&lt;p&gt;編譯出來的檔案是 &lt;code&gt;.exe&lt;/code&gt;，意味著寫好的程式不需要借助 Rust 就能運行&lt;br&gt;這在筆者之前的經驗中是比較少見的&lt;/p&gt;
+&lt;p&gt;同樣被編譯出來的還有一個 &lt;code&gt;main.pdb&lt;/code&gt;&lt;br&gt;暫時不知道是做甚麼用的，之後學到再回來更新&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;println!();&lt;/code&gt;&lt;br&gt;在這段酷似 JAVASCRIPT 風格的 JAVA 式命名輸出語法上，突兀的出現了個 &lt;code&gt;!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;這是 Rust 的 &lt;code&gt;macro&lt;/code&gt;&lt;br&gt;比起 Rust 的 &lt;code&gt;function&lt;/code&gt;，&lt;code&gt;macro&lt;/code&gt; 更接近 JAVASCRIPT 的 &lt;code&gt;function&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Rust 中，存在 &lt;code&gt;fn(function)&lt;/code&gt; 跟 &lt;code&gt;macro_rules(macro)&lt;/code&gt;&lt;br&gt;他們的差別主要在於 &lt;code&gt;function(函式)&lt;/code&gt; 的參數數量是固定的&lt;br&gt;而 &lt;code&gt;macro(巨集)&lt;/code&gt; 則可以動態傳入參數&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;println&lt;/code&gt; 預期要能夠傳入多個參數，當他要做格式化傳輸時&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;println!(&amp;quot;Hello, Macro! My name is &amp;#123;&amp;#125;!&amp;quot;, &amp;quot;Smilin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;比起 &lt;code&gt;fn&lt;/code&gt;，&lt;code&gt;macro_rules&lt;/code&gt; 顯然更符合需求。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;今日小結&#34;&gt;&lt;a href=&#34;#今日小結&#34; class=&#34;headerlink&#34; title=&#34;今日小結&#34;&gt;&lt;/a&gt;今日小結&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;rustc --version&lt;/code&gt; 驗證版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup update&lt;/code&gt; 更新 Rust&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup self uninstall&lt;/code&gt; 反安裝 Rust&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup doc&lt;/code&gt; 運行 Rust Local Doc&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustc main.rs&lt;/code&gt; 編譯 rs 檔&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.pdb&lt;/code&gt; ???&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;macro&lt;/code&gt; 巨集 &amp;#x2F; 宏，可以傳入動態參數&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;function&lt;/code&gt; 函式 &amp;#x2F; 方法，宣告時就要規範好參數數量與型別&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;資料參考&#34;&gt;&lt;a href=&#34;#資料參考&#34; class=&#34;headerlink&#34; title=&#34;資料參考&#34;&gt;&lt;/a&gt;資料參考&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://doc.rust-lang.org/book/&#34;&gt;Rust 官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/tools/install&#34;&gt;Window 安裝 rustup&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_00/</guid>
+            <title>Rust 學習紀錄[0] = 前言</title>
+            <link>https://smilin.net/2023/10/27/rust_learning_00/</link>
+            <category>Rust</category>
+            <pubDate>Fri, 27 Oct 2023 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/216px-Rust_programming_language_black_logo.svg.png&#34; alt=&#34;Rust&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;2021 年 2 月，Rust 基金會成立&lt;/p&gt;
+&lt;p&gt;以 AWS、GOOGLE 等多家資訊巨頭為首&lt;br&gt;因為看好 Rust 兼顧了高效能 &amp;amp; 安全性而投資&lt;br&gt;使得 Rust 這兩年有了巨大的成長。&lt;/p&gt;
+&lt;p&gt;這也是為什麼，近幾年工程師無論如何不願意&lt;br&gt;多少也會聽過 Rust 的名號，隱隱有與 C++ 並駕齊驅的勢頭。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;筆者平常習慣 node.js or java 的開發，接觸 Rust 算是偶然&lt;br&gt;剛好想嘗試所謂能真正實現高效能程式碼(沒碰過 C++)&lt;/p&gt;
+&lt;p&gt;做為學習動力，一方面會將自己的學習過程發布在 blog&lt;br&gt;另一方面打算在學到一個階段後，試著用 Rust 構建一個微型社群平台，當作目標。&lt;/p&gt;
+&lt;p&gt;本次系列與其說是教學，更像是日記一類的東西，如果能激起看這篇文的你的興趣的話，我會很高興的。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</guid>
+            <title>淺談 js 深拷貝與淺拷貝的差異</title>
+            <link>https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</link>
+            <category>javascript</category>
+            <pubDate>Fri, 15 Sep 2023 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Deep-copy-和-Shallow-copy&#34;&gt;&lt;a href=&#34;#Deep-copy-和-Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy 和 Shallow copy&#34;&gt;&lt;/a&gt;Deep copy 和 Shallow copy&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;先來個考題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = a;
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+baz
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;下一題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = structuredClone(a); // 深拷貝
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+bar  
+&lt;br&gt;&lt;br&gt;
+深拷貝(Deep Copy) 可以將內層對象一併拷貝  
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Shallow-copy&#34;&gt;&lt;a href=&#34;#Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Shallow copy&#34;&gt;&lt;/a&gt;Shallow copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;淺拷貝(Shallow Copy) 與深拷貝同樣是用來拷貝物件層級，避免指向同一記憶體位置&lt;/p&gt;
+&lt;p&gt;與深拷貝不同的是，淺拷貝只會複製第一層的對象，如果是 &lt;code&gt;Object.Object&lt;/code&gt; 的結構就沒轍。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;Object-assign&#34;&gt;&lt;a href=&#34;#Object-assign&#34; class=&#34;headerlink&#34; title=&#34;Object.assign&#34;&gt;&lt;/a&gt;Object.assign&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;Object.assign&lt;/code&gt; 屬於淺拷貝(Shallow Copy)&lt;br&gt;在上述案例中，可以得到跟深拷貝一樣的結果&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;#123; fpp: &amp;quot;bar&amp;quot; &amp;#125; &amp;#125;;
+b = Object.assign(&amp;#123;&amp;#125;, a);
+b.foo.fpp = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo.fpp); // 印出baz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;解構賦值&#34;&gt;&lt;a href=&#34;#解構賦值&#34; class=&#34;headerlink&#34; title=&#34;解構賦值&#34;&gt;&lt;/a&gt;解構賦值&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;解構賦值是 &lt;code&gt;ES6&lt;/code&gt; 以後的語法糖，同樣屬於淺拷貝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const a = &amp;#123; b: 1 &amp;#125;;
+const c = &amp;#123; ...a &amp;#125;; // 解構賦值
+c.b = 2;
+console.log(a); // &amp;#123; b: 1 &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;得益於其精簡的代碼，實務上很常使用。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Deep-copy&#34;&gt;&lt;a href=&#34;#Deep-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy&#34;&gt;&lt;/a&gt;Deep copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;與前面提到的淺拷貝不同，深拷貝對於深層結構也能一併複製&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;早期的深拷貝&#34;&gt;&lt;a href=&#34;#早期的深拷貝&#34; class=&#34;headerlink&#34; title=&#34;早期的深拷貝&#34;&gt;&lt;/a&gt;早期的深拷貝&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;JSON.parse(JSON.stringify());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;這個寫法大致上有以下缺點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;忽略 &lt;code&gt;function&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;忽略原形鏈&lt;/li&gt;
+&lt;li&gt;忽略 &lt;code&gt;undefined&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;子層太多會導致 &lt;code&gt;stack overflow&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;儘管如此，由於已經可以處理大多狀況&lt;br&gt;如果不是為了性能或是特殊邏輯，此寫法已經夠用，是常見的深拷貝實現。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;structuredClone&#34;&gt;&lt;a href=&#34;#structuredClone&#34; class=&#34;headerlink&#34; title=&#34;structuredClone&#34;&gt;&lt;/a&gt;structuredClone&lt;/h3&gt;&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 是 &lt;code&gt;node.js&lt;/code&gt; 17 版以後支援的官方深拷貝實現&lt;/p&gt;
+&lt;p&gt;目前各大瀏覽器默認支援此語法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/tPXjO1o.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 存在一些限制&lt;/p&gt;
+&lt;p&gt;不允許結構中存在 &lt;code&gt;Error&lt;/code&gt; 、 &lt;code&gt;Function&lt;/code&gt; 以及 &lt;code&gt;DOM&lt;/code&gt; 對象&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;RegExp&lt;/code&gt; 對象的 &lt;code&gt;lastIndex&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;read-only&lt;/code&gt; 等描述符，即無法限制 &lt;code&gt;setters&lt;/code&gt; &lt;code&gt;getters&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留原形鏈&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/09/11/alist-file-error/</guid>
+            <title>Alist 單檔太大上傳失敗，思路整理</title>
+            <link>https://smilin.net/2023/09/11/alist-file-error/</link>
+            <category>Alist</category>
+            <category>Cloudflare</category>
+            <pubDate>Mon, 11 Sep 2023 18:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;註：本文並沒有完全解決遇到的上傳問題&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;筆者只想到替代方案，曲線救國&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;筆者是自建雲端的愛用者，目前使用 Alist&lt;/p&gt;
+&lt;p&gt;前一陣子因為自身需求，添加了 Cloudflare 反向代理&lt;/p&gt;
+&lt;p&gt;原本一切看起來都很美好，但某天上傳檔案時才發現不對，只要檔案大於 100 MB 就有機會遇到 413 問題。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/rNNhTq5.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://alist.nn.ci/zh/guide/install/reverse-proxy.html&#34;&gt;官方的反向代理配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，文檔下大多也是哀鴻遍野，看來只要配置了反代很容易就會碰到這個問題&lt;/p&gt;
+&lt;p&gt;尤其文檔不支援 Cloudflare，實在頭痛..&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;問題排查&#34;&gt;&lt;a href=&#34;#問題排查&#34; class=&#34;headerlink&#34; title=&#34;問題排查&#34;&gt;&lt;/a&gt;問題排查&lt;/h1&gt;&lt;h2 id=&#34;NGINX-設定-client-max-body-size&#34;&gt;&lt;a href=&#34;#NGINX-設定-client-max-body-size&#34; class=&#34;headerlink&#34; title=&#34;NGINX 設定 client_max_body_size&#34;&gt;&lt;/a&gt;NGINX 設定 client_max_body_size&lt;/h2&gt;&lt;p&gt;參考資料時，大多資料都指向是 NGINX 設定的問題&lt;br&gt;只要將 &lt;code&gt;client_max_body_size&lt;/code&gt; 上限拉高即可解決&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;server &amp;#123;
+    ．．．．．．．．．
+    location / &amp;#123;
+    ．．．．
+        client_max_body_size 10G;
+    ．．．．
+    &amp;#125;
+    ．．．．．．．．．
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不過筆者並沒有使用到 NGINX，此解顯然並非這次遇到的問題&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Cloudflare-緩存問題&#34;&gt;&lt;a href=&#34;#Cloudflare-緩存問題&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 緩存問題&#34;&gt;&lt;/a&gt;Cloudflare 緩存問題&lt;/h2&gt;&lt;p&gt;爬文發現有人提到可能是 Cloudflare 緩存的問題&lt;/p&gt;
+&lt;p&gt;在 Rule -&amp;gt; Page Rules -&amp;gt; Create Page Rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/N8gi01N.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之後再到 Caching -&amp;gt; Cache Rules -&amp;gt; Create rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/TAkvVl3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定完後再上傳，成功迴避掉 413 問題!&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;新的問題&#34;&gt;&lt;a href=&#34;#新的問題&#34; class=&#34;headerlink&#34; title=&#34;新的問題&#34;&gt;&lt;/a&gt;新的問題&lt;/h1&gt;&lt;p&gt;甜美的日子沒過多久&lt;br&gt;雖然照著上述配置後，不會再出現 413 了，但..&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hHjLAns.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;馬上就遇到新的錯誤了 QQ…&lt;/p&gt;
+&lt;p&gt;這個問題問 google 大神也沒甚麼好辦法&lt;br&gt;沒辦法囉，只好再次自己動手檢查&lt;/p&gt;
+&lt;h2 id=&#34;測試過程&#34;&gt;&lt;a href=&#34;#測試過程&#34; class=&#34;headerlink&#34; title=&#34;測試過程&#34;&gt;&lt;/a&gt;測試過程&lt;/h2&gt;&lt;p&gt;Error Log 只寫了網路問題，偶而會提示&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;quot;message&amp;quot;:&amp;quot;A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received&amp;quot;&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;猜測是 Cloudflare 提早關閉了連線&lt;/p&gt;
+&lt;p&gt;有趣的是只要同時下載檔案，上傳不會失敗&lt;/p&gt;
+&lt;p&gt;開啟 Cloudflare Development Mode ，上傳失敗&lt;/p&gt;
+&lt;h2 id=&#34;Cloudflare-免費版限制&#34;&gt;&lt;a href=&#34;#Cloudflare-免費版限制&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 免費版限制&#34;&gt;&lt;/a&gt;Cloudflare 免費版限制&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/lm8M9jc.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限&lt;/p&gt;
+&lt;p&gt;Alist 僅支援單檔上傳&lt;br&gt;&lt;a href=&#34;https://github.com/alist-org/alist/issues/5176&#34;&gt;github issue&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;想來或許就是在這關上卡住了&lt;/p&gt;
+&lt;p&gt;如開發者所說， Alist 的上傳存在一定的缺陷&lt;/p&gt;
+&lt;p&gt;就算不使用 Cloudflare，直連上傳過大的檔案也有機會失敗&lt;/p&gt;
+&lt;p&gt;好在除此之外功能正常，頂多不透過網頁，自行額外實現上傳方法即可(Ex:webdav&amp;#x2F;ftp&amp;#x2F;nasGui&amp;#x2F;local..)&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;p&gt;文章參考:&lt;br&gt;&lt;a href=&#34;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&#34;&gt;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/09/06/alist-started/</guid>
+            <title>Alist 好用的自建雲端分享</title>
+            <link>https://smilin.net/2023/09/06/alist-started/</link>
+            <category>Alist</category>
+            <pubDate>Wed, 06 Sep 2023 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;隨著 GOOGLE &amp;#x2F; ONEDRIVE 等空間限制增多&lt;/p&gt;
+&lt;p&gt;筆者轉為使用自架雲端方案一段時間，其中特別中意 Alist 的畫面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/cwZF7fX.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;高自定義的 UI，強大的用戶管理&lt;br&gt;最重要的是在目錄下默認讀取 readme.md 做介紹！&lt;/p&gt;
+&lt;p&gt;整理雲端檔案，最常遇到的難題&lt;br&gt;就是多年後很難輕易在一堆檔案中找到自己需要的資料&lt;/p&gt;
+&lt;p&gt;除此以外還支援&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元數據(載入特定目錄會跳出的訊息)&lt;/li&gt;
+&lt;li&gt;文件搜索&lt;/li&gt;
+&lt;li&gt;雲端掛載(GD&amp;#x2F;OD&amp;#x2F;MEGA&amp;#x2F;還有一堆..)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用 Alist 不僅能讓雲端變得美觀，還能很輕鬆的管理文件&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;Alist-官方文檔&#34;&gt;&lt;a href=&#34;#Alist-官方文檔&#34; class=&#34;headerlink&#34; title=&#34;Alist 官方文檔&#34;&gt;&lt;/a&gt;&lt;a href=&#34;https://alist.nn.ci/zh/&#34;&gt;Alist 官方文檔&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/pbxhpkZ.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;從文檔首頁可以感受到，Alist 有著強大的功能&lt;/p&gt;
+&lt;p&gt;因為支援中文，在閱讀文檔時不會遇到障礙&lt;/p&gt;
+&lt;h2 id=&#34;環境建置&#34;&gt;&lt;a href=&#34;#環境建置&#34; class=&#34;headerlink&#34; title=&#34;環境建置&#34;&gt;&lt;/a&gt;環境建置&lt;/h2&gt;&lt;p&gt;筆者使用 Docker 運行 Alist&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull xhofe/alist:v3.13.2
+
+docker run -d --restart=always -v &amp;#123;你的本機目錄&amp;#125;:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name=&amp;quot;alist&amp;quot; xhofe/alist:v3.13.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;記得將上方的 {你的本機目錄} 替換成你的環境&lt;/p&gt;
+&lt;p&gt;Container run 起後使用這段指令查看預設帳號密碼&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker exec -it alist ./alist admin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/sKMQUPf.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/wvAH9Od.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;登入成功後我們會回到首頁，這裡目前甚麼都沒有&lt;/p&gt;
+&lt;p&gt;在網址後方加入 @manage 進入控制台&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/8ziYJ8B.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這邊先將管理員帳密改成你好記的樣子&lt;/p&gt;
+&lt;p&gt;在存儲可以添加需要加入到 Alist 的空間&lt;br&gt;從基本的本地環境到雲端都可以放在 Alist 管理&lt;/p&gt;
+&lt;p&gt;設置雲端掛載時記得根據 Alist 版本，查看對應的文檔，留意任何留言，記得備份~&lt;/p&gt;
+&lt;p&gt;筆者這邊以本地環境做示範&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;首先到設定 {你的本機目錄} 的地方，創建一個資料夾&lt;/p&gt;
+&lt;p&gt;這會做為未來我們掛載本地檔案的路徑&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/FKzeLks.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;驅動選擇 本地存儲&lt;/li&gt;
+&lt;li&gt;掛載路徑 &amp;#x2F;{資料夾名稱}&lt;/li&gt;
+&lt;li&gt;根資料夾路徑 &amp;#x2F;opt&amp;#x2F;alist&amp;#x2F;data&amp;#x2F;{資料夾名稱}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/oCqbTCR.png&#34; alt=&#34;7&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://i.imgur.com/mOr53lK.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定完大致如上&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/ZimHdEW.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
+&lt;p&gt;回首頁看就會有空間了!&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;實用-CSS&#34;&gt;&lt;a href=&#34;#實用-CSS&#34; class=&#34;headerlink&#34; title=&#34;實用 CSS&#34;&gt;&lt;/a&gt;實用 CSS&lt;/h2&gt;&lt;p&gt;Alist 後台的 “設置” ，可以調整絕大多數的 UI 畫面&lt;br&gt;不過如果想自定義一些細節，推薦使用 CSS 達成&lt;/p&gt;
+&lt;p&gt;設置 -&amp;gt; 全域設定 -&amp;gt; 自定義頭部&lt;/p&gt;
+&lt;p&gt;可以在這做自定義 CSS 的添加&lt;br&gt;以下提供一些不錯的樣式&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;去除網站圖標與搜索&#34;&gt;&lt;a href=&#34;#去除網站圖標與搜索&#34; class=&#34;headerlink&#34; title=&#34;去除網站圖標與搜索&#34;&gt;&lt;/a&gt;去除網站圖標與搜索&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iiOacaA-css &amp;#123;display: none!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;站點公告去除-X-關閉按鈕&#34;&gt;&lt;a href=&#34;#站點公告去除-X-關閉按鈕&#34; class=&#34;headerlink&#34; title=&#34;站點公告去除 X 關閉按鈕&#34;&gt;&lt;/a&gt;站點公告去除 X 關閉按鈕&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.notify-render .hope-close-button&amp;#123;display: none;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用背景圖-亮色背景-GIF-可用&#34;&gt;&lt;a href=&#34;#使用背景圖-亮色背景-GIF-可用&#34; class=&#34;headerlink&#34; title=&#34;使用背景圖(亮色背景)(GIF 可用)&#34;&gt;&lt;/a&gt;使用背景圖(亮色背景)(GIF 可用)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-ui-light&amp;#123;background-image: url(&amp;quot;&amp;quot;)!important;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用背景圖-暗色背景-GIF-可用&#34;&gt;&lt;a href=&#34;#使用背景圖-暗色背景-GIF-可用&#34; class=&#34;headerlink&#34; title=&#34;使用背景圖(暗色背景)(GIF 可用)&#34;&gt;&lt;/a&gt;使用背景圖(暗色背景)(GIF 可用)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-ui-dark &amp;#123;background-image: url(&amp;quot;&amp;quot;) !important;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;列表改透明-亮色背景&#34;&gt;&lt;a href=&#34;#列表改透明-亮色背景&#34; class=&#34;headerlink&#34; title=&#34;列表改透明(亮色背景)&#34;&gt;&lt;/a&gt;列表改透明(亮色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css&amp;#123;background-color: rgba(255, 255, 255, 0.5) !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;列表改透明-暗色背景&#34;&gt;&lt;a href=&#34;#列表改透明-暗色背景&#34; class=&#34;headerlink&#34; title=&#34;列表改透明(暗色背景)&#34;&gt;&lt;/a&gt;列表改透明(暗色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css&amp;#123;background-color:rgb(0 0 0 / 50%) !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;元信息改透明-亮色背景&#34;&gt;&lt;a href=&#34;#元信息改透明-亮色背景&#34; class=&#34;headerlink&#34; title=&#34;元信息改透明(亮色背景)&#34;&gt;&lt;/a&gt;元信息改透明(亮色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-c-PJLV.hope-c-PJLV-ikSuVsl-css&amp;#123;background-color: rgba(255, 255, 255, 0.5)!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;元信息改透明-暗色背景&#34;&gt;&lt;a href=&#34;#元信息改透明-暗色背景&#34; class=&#34;headerlink&#34; title=&#34;元信息改透明(暗色背景)&#34;&gt;&lt;/a&gt;元信息改透明(暗色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-c-PJLV.hope-c-PJLV-iiuDLME-css&amp;#123;background-color:rgb(0 0 0 / 50%)!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;去除尾頁&#34;&gt;&lt;a href=&#34;#去除尾頁&#34; class=&#34;headerlink&#34; title=&#34;去除尾頁&#34;&gt;&lt;/a&gt;去除尾頁&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.footer &amp;#123;display: none !important;&amp;#125;]&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;移除下載選項&#34;&gt;&lt;a href=&#34;#移除下載選項&#34; class=&#34;headerlink&#34; title=&#34;移除下載選項&#34;&gt;&lt;/a&gt;移除下載選項&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-select__trigger.hope-c-kvTTWD.hope-c-huZphZ.hope-c-kvTTWD-hYRNAb-variant-filled.hope-c-kvTTWD-gfwxhr-size-md.hope-c-huZphZ-cIGthf-cv.hope-c-PJLV.hope-c-PJLV-ijSQbqe-css&amp;#123;display: none !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;p&gt;推薦一些網站:&lt;br&gt;&lt;a href=&#34;https://anwen-anyi.github.io/&#34;&gt;Alist 魔改代碼分享&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://telegra.ph/AList-UI-01-11&#34;&gt;CSS 參考&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2023/06/01/discordJs14-1/</guid>
+            <title>discord.js 升上 14 版，架構說明</title>
+            <link>https://smilin.net/2023/06/01/discordJs14-1/</link>
+            <category>node.js</category>
+            <category>bot</category>
+            <category>discord</category>
+            <category>discord.js</category>
+            <pubDate>Thu, 01 Jun 2023 20:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/AliceZero/tree/v14&#34;&gt;github 連結&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;從 2021 年，discord.js 升上 13 版&lt;br&gt;heroku 改成收費&lt;br&gt;youtube 不喜歡 discord 蹭他們的服務&lt;br&gt;音樂機器人相繼關閉 yt 服務&lt;br&gt;12 版許多功能時常報錯&lt;br&gt;discord.js 升上 14 版..&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;期間不管是工作又或是休假時，都很希望能升級以前寫的機器人&lt;br&gt;不斷想重構出更好維護的程式架構，也一再推翻之前的程式&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;終於..！在最近 Alice 也正式升上了 discord.js 14.11.0 版本&lt;br&gt;不會總是因為舊版本不支援而爆炸啦！(誤)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/M6hj8wU.jpg&#34; alt=&#34;levelUp!&#34;&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;安裝套件&#34;&gt;&lt;a href=&#34;#安裝套件&#34; class=&#34;headerlink&#34; title=&#34;安裝套件&#34;&gt;&lt;/a&gt;安裝套件&lt;/h2&gt;&lt;p&gt;必備&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js v16.9.0 或以上&lt;/li&gt;
+&lt;li&gt;Discord.js v14.11.0&lt;br&gt;discord.js 核心套件&lt;pre&gt;&lt;code&gt;npm install discord.js@14.11.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;dotenv v16.0.3&lt;br&gt;讀取 .env ，即 token 的套件&lt;pre&gt;&lt;code&gt;npm install dotenv@16.0.3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;點我展開BDB(baseDiscordBot.js)所需套件&lt;/summary&gt;
+
+&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@discordjs&amp;#x2F;builders v1.3.0&lt;br&gt;discord.js 提供的類別產生器類型&lt;pre&gt;&lt;code&gt;npm install @discordjs/builders@1.3.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;details&gt;
+&lt;summary&gt;點我展開音樂系統所需套件&lt;/summary&gt;
+
+&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@discordjs&amp;#x2F;voice v0.16.0&lt;br&gt;控制 discord 語音的核心套件&lt;br&gt;p.s.使用舊版本極度容易出現問題，如果播放過程發生 bug 可以先檢查 voice 是不是最新版&lt;pre&gt;&lt;code&gt;npm install @discordjs/voice@0.16.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;@discordjs&amp;#x2F;opus v0.9.0&lt;br&gt;Opus 編碼器&lt;pre&gt;&lt;code&gt;npm install @discordjs/opus@0.9.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;ffmpeg-static v5.1.0&lt;br&gt;ffmpeg 轉碼器&lt;pre&gt;&lt;code&gt;npm install ffmpeg-static@5.1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;libsodium-wrappers v0.7.11&lt;br&gt;串流加密工具&lt;pre&gt;&lt;code&gt;npm install libsodium-wrappers@0.7.11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;play-dl v1.9.6&lt;br&gt; 串流套件，取代 ytdl-core&lt;pre&gt;&lt;code&gt;npm install play-dl@1.9.6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;details&gt;
+&lt;summary&gt;點我展開Render託管推薦套件&lt;/summary&gt;
+
+&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;axios v1.4.0&lt;br&gt;打 http 使用的套件&lt;pre&gt;&lt;code&gt;npm install axios@1.4.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;node-schedule v2.1.0&lt;br&gt;定時任務套件&lt;pre&gt;&lt;code&gt;npm node-schedule@2.1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;前置動作&#34;&gt;&lt;a href=&#34;#前置動作&#34; class=&#34;headerlink&#34; title=&#34;前置動作&#34;&gt;&lt;/a&gt;前置動作&lt;/h2&gt;&lt;p&gt;如果是舊版 discord bot ，要先去 &lt;a href=&#34;https://discord.com/developers/applications&#34;&gt;discordDeveloper&lt;/a&gt;&lt;br&gt;選中自己的 bot 後，選擇左邊 Bot 選項，然後將這邊的開關都打開&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/GoIc5Ld.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這是一些限制機器人存取特定資訊的開關，默認是關閉的，如果沒有打開，就算在程式中要求存取權，也是拿不到這些資訊的喔！&lt;/p&gt;
+&lt;p&gt;之後在專案根目錄創建一個 &lt;code&gt;.env&lt;/code&gt; 檔案，性質類似於以前教學中的 &lt;code&gt;auth.json&lt;/code&gt;&lt;br&gt;差別在於，放在 &lt;code&gt;Environment&lt;/code&gt; 的參數意味著參數不該被公開，不會在任何的公開場合獲得此類 value (例如 github)，僅在執行專案時會被注入&lt;/p&gt;
+&lt;h3 id=&#34;env-預覽&#34;&gt;&lt;a href=&#34;#env-預覽&#34; class=&#34;headerlink&#34; title=&#34;.env 預覽&#34;&gt;&lt;/a&gt;.env 預覽&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;TOKEN=&amp;quot;your bot token&amp;quot;
+MASTER_ID=&amp;quot;your client ID&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;專案結構&#34;&gt;&lt;a href=&#34;#專案結構&#34; class=&#34;headerlink&#34; title=&#34;專案結構&#34;&gt;&lt;/a&gt;專案結構&lt;/h2&gt;&lt;br&gt;
+
+&lt;details&gt;
+&lt;summary&gt;點我展開專案結構&lt;/summary&gt;
+
+&lt;p&gt;AliceZero&amp;#x2F;&lt;br&gt;├─ baseJS&amp;#x2F;&lt;br&gt;│ 　　 ├ BaseDiscordBot.js&lt;br&gt;│ 　　 ├ CatchF.js&lt;br&gt;│ 　　 ├ CronTask.js&lt;br&gt;│ 　　 ├ HealthCheck.js&lt;br&gt;├─ manager&amp;#x2F;&lt;br&gt;│ 　　 ├ buttonManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ commands&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpNowQueue.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpPause.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpPlay.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpPlayFirst.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpResume.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpSkip.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpSleep.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpTrpgDice.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpTrpgSort.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ myKiritoSkillNicename.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ myKiritoSkillSkill.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ myKiritoSkillStatus.js&lt;br&gt;│ 　　 ├ 　　 ├ buttonC.js&lt;br&gt;│ 　　 ├ 　　 ├ buttonM.js&lt;br&gt;│ 　　 ├ 　　 ├ buttonType.json&lt;br&gt;│ 　　 ├ componentManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ componentM.js&lt;br&gt;│ 　　 ├ embedManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ embedC.js&lt;br&gt;│ 　　 ├ messageManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ messageC.js&lt;br&gt;│ 　　 ├ 　　 ├ messageM.js&lt;br&gt;│ 　　 ├ 　　 ├ messagePrefix.json&lt;br&gt;│ 　　 ├ 　　 ├ messageUpdateM.js&lt;br&gt;│ 　　 ├ 　　 ├ nineData.js&lt;br&gt;│ 　　 ├ musicManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ musicC.js&lt;br&gt;│ 　　 ├ 　　 ├ musicM.js&lt;br&gt;│ 　　 ├ mykiritoManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ requests&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ boss.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ level.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ skill.js&lt;br&gt;│ 　　 ├ 　　 ├ myKiritoC.js&lt;br&gt;│ 　　 ├ 　　 ├ myKiritoM.js&lt;br&gt;│ 　　 ├ selectMenuManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ commands&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ help.js&lt;br&gt;│ 　　 ├ 　　 ├ selectMenuC.js&lt;br&gt;│ 　　 ├ 　　 ├ selectMenuM.js&lt;br&gt;│ 　　 ├ slashManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ commands&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ help.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ m.js&lt;br&gt;│ 　　 ├ 　　 ├ slashM.js&lt;br&gt;│ 　　 ├ trpgManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ trpgC.js&lt;br&gt;│ 　　 ├ 　　 ├ trpgM.js&lt;br&gt;├─ .env&lt;br&gt;├─ alice.js&lt;br&gt;├─ package.json&lt;br&gt;├─ package-lock.json&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;p&gt;因為這篇不是教學，不會一個個講解，大概說明一下各 Manager 的作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BaseDiscordBot.js&lt;br&gt;從登入 token 到訊息傳送&lt;br&gt;與 discord.js 的任何交互都在這，唯一引用 discord.js 的地方&lt;br&gt;好處是當 discord.js 改版時只要更改 BDB 即可&lt;br&gt;壞處是其他地方的邏輯可能會比較難以理解，都需要點進 BDB 查看&lt;/li&gt;
+&lt;li&gt;CatchF.js&lt;br&gt;自定義的 log 工具，改這裡就可以一次更改所有的 log style&lt;/li&gt;
+&lt;li&gt;CronTask.js&lt;br&gt;託管平台用到的工具&lt;/li&gt;
+&lt;li&gt;HealthCheck.js&lt;br&gt;同上&lt;/li&gt;
+&lt;li&gt;alice.js&lt;br&gt;&lt;code&gt;npm start&lt;/code&gt; 的執行檔，敘述了啟動時會執行的內容&lt;/li&gt;
+&lt;li&gt;slashManager&lt;br&gt;discord.js 13 版以後新增的斜線指令，包含其註冊與監聽的方法都寫在這&lt;br&gt;commands 可以看出這個 bot 目前有多少指令(本次範例來說有 &lt;code&gt;help&lt;/code&gt; 跟 &lt;code&gt;m&lt;/code&gt; 指令)&lt;/li&gt;
+&lt;li&gt;messageManager&lt;br&gt;傳統 bot 對文字訊息回應的主要行為，&lt;code&gt;messageUpdate&lt;/code&gt; 訊息更新觸發的行為也放在這&lt;/li&gt;
+&lt;li&gt;selectMenuManager&lt;br&gt;菜單組件，commands 可以看出這個 bot 目前有多少菜單組件&lt;/li&gt;
+&lt;li&gt;buttonManager&lt;br&gt;按鈕組件，commands 可以看出這個 bot 目前有多少按鈕組件&lt;/li&gt;
+&lt;li&gt;embedManager&lt;br&gt;嵌入式訊息組件，&lt;code&gt;@discordjs/builders&lt;/code&gt; 有著 &lt;code&gt;EmbedBuilder&lt;/code&gt; 這個 embed 產生器&lt;br&gt;避免往後的更新要改一堆地方，在 BDB 中被繼承完才給 embedManager 使用&lt;/li&gt;
+&lt;li&gt;componentManager&lt;br&gt;組件管理器，當訊息非單純的文字訊息，有使用到 菜單 &amp;#x2F; 按鈕 &amp;#x2F; 嵌入訊息 任一組件時，會從這裡拿&lt;/li&gt;
+&lt;li&gt;musicManager&lt;br&gt;音樂相關邏輯，musicM 負責定義邏輯，musicC 實例實際內容，與 &lt;code&gt;play-dl&lt;/code&gt; 等套件互動&lt;/li&gt;
+&lt;li&gt;trpgManager&lt;br&gt;派對系統，目前只會骰骰子，而且 code 還是從舊版直接搬過來的..&lt;/li&gt;
+&lt;li&gt;mykiritoManager&lt;br&gt;攻略組系統，提供 mykirito 大群的資訊查詢，雖然很久沒更新，但仍然還有人在使用，所以也更新過來了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/AliceZero/tree/v14&#34;&gt;github 連結&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;現在的架構算是終於確定下來，以後會在這個架構上繼續更新&lt;br&gt;不過畢竟是 side project ，架構中有些地方整理的比較草率&lt;br&gt;如果之後寫教學，會重新寫一個 bot 的&lt;/p&gt;
+&lt;p&gt;看到這裡的朋友，如果在寫 bot ，但苦於不知該如何下手的話&lt;br&gt;這裡推薦可以看看 &lt;a href=&#34;https://b-l-u-e-b-e-r-r-y.github.io/post/DiscordBot03/&#34;&gt;藍莓大大&lt;/a&gt; 的文章&lt;br&gt;淺顯以懂，最後甚至是給了乾貨，可以直接載了拿去用~&lt;/p&gt;
+&lt;p&gt;或是使用 &lt;a href=&#34;https://github.com/Mr-Smilin/BaseDiscordBot&#34;&gt;我的 BDB&lt;/a&gt;&lt;br&gt;除了像是 mykirito 這種比較偏門的功能，其他 alice 會的指令都會慢慢更新在 BDB 專案上，可以自由取用~&lt;/p&gt;
+&lt;p&gt;感謝看到這裡的你^^!&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2022/10/25/herokuToRender/</guid>
+            <title>將專案從heroku轉到render過程思路</title>
+            <link>https://smilin.net/2022/10/25/herokuToRender/</link>
+            <category>node.js</category>
+            <category>bot</category>
+            <category>discord</category>
+            <category>discord.js</category>
+            <category>教學</category>
+            <category>heroku</category>
+            <category>render</category>
+            <category>render.com</category>
+            <pubDate>Tue, 25 Oct 2022 18:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大家好，我是微笑&lt;/p&gt;
+&lt;p&gt;繼上次發文過了九個月了&lt;/p&gt;
+&lt;p&gt;很可怕啊，感覺自己好混，哈哈哈&lt;/p&gt;
+&lt;p&gt;疫情期間，遇到了不少事情，最近才終於有一點調整回正軌的感覺&lt;/p&gt;
+&lt;p&gt;剛好 Heroku 發生了一些問題，需要搬移程序到其他託管平台，這邊順便 &lt;del&gt;水一點文章&lt;/del&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;關於發生在-Heroku-上的一些問題&#34;&gt;&lt;a href=&#34;#關於發生在-Heroku-上的一些問題&#34; class=&#34;headerlink&#34; title=&#34;關於發生在 Heroku 上的一些問題&#34;&gt;&lt;/a&gt;關於發生在 Heroku 上的一些問題&lt;/h3&gt;&lt;p&gt;Heroku 在10月初時，寄送給了開發者一封信&lt;/p&gt;
+&lt;p&gt;裡面提到，Heroku 將於2022年11月28號以後，全面關閉免費方案的主機&lt;/p&gt;
+&lt;p&gt;如果繼續使用 Heroku 的話，根據目前定價方案，一台託管主機需要負擔一個月 7 美元的成本&lt;/p&gt;
+&lt;p&gt;對於單純在學習的學生，又或是我這種程序用愛發電沒有利益的行為，顯然是十足的噩耗&lt;/p&gt;
+&lt;p&gt;也因此，原本在 Heroku 上使用免費方案的使用者，開始到處尋找可以繼續使用的平台。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/K3Pngg8.png&#34; alt=&#34;heroku將於2022年11月28號以後，全面關閉免費方案的主機&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;多樣化的選擇&#34;&gt;&lt;a href=&#34;#多樣化的選擇&#34; class=&#34;headerlink&#34; title=&#34;多樣化的選擇&#34;&gt;&lt;/a&gt;多樣化的選擇&lt;/h3&gt;&lt;p&gt;因應 Heroku 收費化的開始，有許多平台陸續浮現到開發者的眼前，其中甚至有網站的標題是「Migrate from Heroku to Railway」&lt;/p&gt;
+&lt;p&gt;可以看到，除了 Heroku 以外仍有許多平台等待著開發者發掘(Fly.io&amp;#x2F;Railway.app&amp;#x2F;GoogleCloudPlatform - CloudRun等..)&lt;/p&gt;
+&lt;p&gt;雖然根據專案不同，沒有所謂最好的選擇，不過筆者在多次嘗試後，最後決定將程式搬遷到 Render 上&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;render-com&#34;&gt;&lt;a href=&#34;#render-com&#34; class=&#34;headerlink&#34; title=&#34;render.com&#34;&gt;&lt;/a&gt;render.com&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/JqcraLM.png&#34; alt=&#34;render.com&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;當初搬遷主機時，最看中的點就是希望能盡量不用改動原本的架構，免費額度足夠&lt;/p&gt;
+&lt;p&gt;Render 目前有著每月 750 小時的免費額度，只開一台機器的話等同免費&lt;/p&gt;
+&lt;p&gt;並且他支援從 GitHub &amp;#x2F; GitLab 等開源平台專案部署的方式，功能單一讓流程簡化&lt;/p&gt;
+&lt;p&gt;除了支援許多語言直接部署，也支援 Docker 映像檔部署，這幾乎是現在主流平台都有的功能了。&lt;/p&gt;
+&lt;p&gt;那因為筆者的專案使用 Node.js，剛好在 Render 支援的語言列表內，所以設定好之後，將專案推到 Github，他就會自動做部署行為了&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;部署流程&#34;&gt;&lt;a href=&#34;#部署流程&#34; class=&#34;headerlink&#34; title=&#34;部署流程&#34;&gt;&lt;/a&gt;部署流程&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;第一次部署肯定會比較麻煩的&lt;/p&gt;
+&lt;p&gt;首先我們要先用 Github 帳號登入 Render 註冊帳號，進來後他會先告訴你，免費方案如以下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/TFqJqEB.png&#34; alt=&#34;免費方案&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;Render 提供許多方案，這邊我們要找到 web services 才能使用免費主機&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/JgEO1dE.png&#34; alt=&#34;Overview&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;之後取得 Github 授權 repository，就可以載入專案，選擇主機地區，語言等設置&lt;/p&gt;
+&lt;p&gt;比較需要注意的是，因為 Render 的 web 每個半小時無人訪問，會進入休眠(記得 Heroku 也有這類設定)&lt;/p&gt;
+&lt;p&gt;需要再次訪問網站才能讓他喚醒&lt;/p&gt;
+&lt;p&gt;以 Node 來說，我們可以使用 request 跟 node-schedule ，呼叫自己防止進入睡眠的方式，來讓真正需要的程序能不間斷運行&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;env&#34;&gt;&lt;a href=&#34;#env&#34; class=&#34;headerlink&#34; title=&#34;env&#34;&gt;&lt;/a&gt;env&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;以前在 Heroku ，如果不透過 Github 自動部署，而是用 Heroku Git 的話，是可以直接將較為私密的 key 等資料，直接明碼上傳上去的&lt;/p&gt;
+&lt;p&gt;雖然不是很好的做法，但是對於私人專案來說，這的確是個很方便的做法，只上傳在 Heroku 也有效的保障了程序的安全性&lt;/p&gt;
+&lt;p&gt;但是 Render 只接受 Github 鏡像部署，私密的 key 是無論如何都不會放在 Github 上的&lt;/p&gt;
+&lt;p&gt;Render 在 env 的設定上也是十分方便，&lt;a href=&#34;https://render.com/docs/configure-environment-variables&#34;&gt;官方流程可參考這篇文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/dvzYkqs.png&#34; alt=&#34;env&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;單一的 key 要放在 Environment Variables&lt;/p&gt;
+&lt;p&gt;如果原本就習慣使用 .env 管理所有參數的話，可以將檔案的內容複製進 Secret Files&lt;/p&gt;
+&lt;p&gt;Render 在 env 有個好處是，一般平台設置 env 後，基於安全性，平台都不會讓使用者在前台存取 env 的真實資料&lt;/p&gt;
+&lt;p&gt;但是 Render 可以，而且還可以直接修改內容，雖然必須犧牲一些安全性，但這樣也方便了開發者對值的管理，對筆者來說是利大於弊&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;筆者當初使用 Heroku，是因為接觸了 discord bot，為此還寫了鐵人賽&lt;/p&gt;
+&lt;p&gt;說長不長說短不短的兩年，Heroku 宣告收費化，對於筆者這樣的使用者來說，就像是一個平台的關閉一般&lt;/p&gt;
+&lt;p&gt;這兩年從後端摸到前端，再從前端學回後端，因為疫情也遇到了不少事情，原本覺得搬遷主機，對於筆者這點能力來說一定是一件艱鉅的工程&lt;/p&gt;
+&lt;p&gt;不過在搬遷的過程中，重新拾起 Node，摸索對筆者最好的平台時，感受到許多愉快，有一種 原來我還是能快樂寫 code 阿，的感想&lt;/p&gt;
+&lt;p&gt;我想 sideProject 就像是開發者們心靈的綠洲吧，能因為這次機會，重新澆灌他，我也收穫頗豐。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ithelp.ithome.com.tw/articles/10255630&#34;&gt;文末附上去年內部員工自己寫的推薦文&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

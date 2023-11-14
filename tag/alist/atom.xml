@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://smilin.net</id>
+    <title>微笑工房 • Posts by &#34;alist&#34; tag</title>
+    <link href="https://smilin.net" />
+    <updated>2023-09-11T10:00:00.000Z</updated>
+    <category term="node.js" />
+    <category term="bot" />
+    <category term="discord" />
+    <category term="discord.js" />
+    <category term="教學" />
+    <category term="12th鐵人賽" />
+    <category term="日記" />
+    <category term="Alist" />
+    <category term="Cloudflare" />
+    <category term="javascript" />
+    <category term="hexo" />
+    <category term="fluid" />
+    <category term="heroku" />
+    <category term="render" />
+    <category term="render.com" />
+    <category term="Live2D" />
+    <category term="彈射世界" />
+    <category term="遊戲" />
+    <category term="腳本" />
+    <category term="Rust" />
+    <entry>
+        <id>https://smilin.net/2023/09/11/alist-file-error/</id>
+        <title>Alist 單檔太大上傳失敗，思路整理</title>
+        <link rel="alternate" href="https://smilin.net/2023/09/11/alist-file-error/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;註：本文並沒有完全解決遇到的上傳問題&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;筆者只想到替代方案，曲線救國&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;筆者是自建雲端的愛用者，目前使用 Alist&lt;/p&gt;
+&lt;p&gt;前一陣子因為自身需求，添加了 Cloudflare 反向代理&lt;/p&gt;
+&lt;p&gt;原本一切看起來都很美好，但某天上傳檔案時才發現不對，只要檔案大於 100 MB 就有機會遇到 413 問題。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/rNNhTq5.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://alist.nn.ci/zh/guide/install/reverse-proxy.html&#34;&gt;官方的反向代理配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，文檔下大多也是哀鴻遍野，看來只要配置了反代很容易就會碰到這個問題&lt;/p&gt;
+&lt;p&gt;尤其文檔不支援 Cloudflare，實在頭痛..&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;問題排查&#34;&gt;&lt;a href=&#34;#問題排查&#34; class=&#34;headerlink&#34; title=&#34;問題排查&#34;&gt;&lt;/a&gt;問題排查&lt;/h1&gt;&lt;h2 id=&#34;NGINX-設定-client-max-body-size&#34;&gt;&lt;a href=&#34;#NGINX-設定-client-max-body-size&#34; class=&#34;headerlink&#34; title=&#34;NGINX 設定 client_max_body_size&#34;&gt;&lt;/a&gt;NGINX 設定 client_max_body_size&lt;/h2&gt;&lt;p&gt;參考資料時，大多資料都指向是 NGINX 設定的問題&lt;br&gt;只要將 &lt;code&gt;client_max_body_size&lt;/code&gt; 上限拉高即可解決&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;server &amp;#123;
+    ．．．．．．．．．
+    location / &amp;#123;
+    ．．．．
+        client_max_body_size 10G;
+    ．．．．
+    &amp;#125;
+    ．．．．．．．．．
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不過筆者並沒有使用到 NGINX，此解顯然並非這次遇到的問題&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Cloudflare-緩存問題&#34;&gt;&lt;a href=&#34;#Cloudflare-緩存問題&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 緩存問題&#34;&gt;&lt;/a&gt;Cloudflare 緩存問題&lt;/h2&gt;&lt;p&gt;爬文發現有人提到可能是 Cloudflare 緩存的問題&lt;/p&gt;
+&lt;p&gt;在 Rule -&amp;gt; Page Rules -&amp;gt; Create Page Rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/N8gi01N.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之後再到 Caching -&amp;gt; Cache Rules -&amp;gt; Create rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/TAkvVl3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定完後再上傳，成功迴避掉 413 問題!&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;新的問題&#34;&gt;&lt;a href=&#34;#新的問題&#34; class=&#34;headerlink&#34; title=&#34;新的問題&#34;&gt;&lt;/a&gt;新的問題&lt;/h1&gt;&lt;p&gt;甜美的日子沒過多久&lt;br&gt;雖然照著上述配置後，不會再出現 413 了，但..&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hHjLAns.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;馬上就遇到新的錯誤了 QQ…&lt;/p&gt;
+&lt;p&gt;這個問題問 google 大神也沒甚麼好辦法&lt;br&gt;沒辦法囉，只好再次自己動手檢查&lt;/p&gt;
+&lt;h2 id=&#34;測試過程&#34;&gt;&lt;a href=&#34;#測試過程&#34; class=&#34;headerlink&#34; title=&#34;測試過程&#34;&gt;&lt;/a&gt;測試過程&lt;/h2&gt;&lt;p&gt;Error Log 只寫了網路問題，偶而會提示&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;quot;message&amp;quot;:&amp;quot;A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received&amp;quot;&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;猜測是 Cloudflare 提早關閉了連線&lt;/p&gt;
+&lt;p&gt;有趣的是只要同時下載檔案，上傳不會失敗&lt;/p&gt;
+&lt;p&gt;開啟 Cloudflare Development Mode ，上傳失敗&lt;/p&gt;
+&lt;h2 id=&#34;Cloudflare-免費版限制&#34;&gt;&lt;a href=&#34;#Cloudflare-免費版限制&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 免費版限制&#34;&gt;&lt;/a&gt;Cloudflare 免費版限制&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/lm8M9jc.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限&lt;/p&gt;
+&lt;p&gt;Alist 僅支援單檔上傳&lt;br&gt;&lt;a href=&#34;https://github.com/alist-org/alist/issues/5176&#34;&gt;github issue&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;想來或許就是在這關上卡住了&lt;/p&gt;
+&lt;p&gt;如開發者所說， Alist 的上傳存在一定的缺陷&lt;/p&gt;
+&lt;p&gt;就算不使用 Cloudflare，直連上傳過大的檔案也有機會失敗&lt;/p&gt;
+&lt;p&gt;好在除此之外功能正常，頂多不透過網頁，自行額外實現上傳方法即可(Ex:webdav&amp;#x2F;ftp&amp;#x2F;nasGui&amp;#x2F;local..)&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;p&gt;文章參考:&lt;br&gt;&lt;a href=&#34;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&#34;&gt;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="Alist" />
+        <category term="Cloudflare" />
+        <updated>2023-09-11T10:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/09/06/alist-started/</id>
+        <title>Alist 好用的自建雲端分享</title>
+        <link rel="alternate" href="https://smilin.net/2023/09/06/alist-started/"/>
+        <content type="html">&lt;p&gt;隨著 GOOGLE &amp;#x2F; ONEDRIVE 等空間限制增多&lt;/p&gt;
+&lt;p&gt;筆者轉為使用自架雲端方案一段時間，其中特別中意 Alist 的畫面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/cwZF7fX.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;高自定義的 UI，強大的用戶管理&lt;br&gt;最重要的是在目錄下默認讀取 readme.md 做介紹！&lt;/p&gt;
+&lt;p&gt;整理雲端檔案，最常遇到的難題&lt;br&gt;就是多年後很難輕易在一堆檔案中找到自己需要的資料&lt;/p&gt;
+&lt;p&gt;除此以外還支援&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元數據(載入特定目錄會跳出的訊息)&lt;/li&gt;
+&lt;li&gt;文件搜索&lt;/li&gt;
+&lt;li&gt;雲端掛載(GD&amp;#x2F;OD&amp;#x2F;MEGA&amp;#x2F;還有一堆..)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用 Alist 不僅能讓雲端變得美觀，還能很輕鬆的管理文件&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;Alist-官方文檔&#34;&gt;&lt;a href=&#34;#Alist-官方文檔&#34; class=&#34;headerlink&#34; title=&#34;Alist 官方文檔&#34;&gt;&lt;/a&gt;&lt;a href=&#34;https://alist.nn.ci/zh/&#34;&gt;Alist 官方文檔&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/pbxhpkZ.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;從文檔首頁可以感受到，Alist 有著強大的功能&lt;/p&gt;
+&lt;p&gt;因為支援中文，在閱讀文檔時不會遇到障礙&lt;/p&gt;
+&lt;h2 id=&#34;環境建置&#34;&gt;&lt;a href=&#34;#環境建置&#34; class=&#34;headerlink&#34; title=&#34;環境建置&#34;&gt;&lt;/a&gt;環境建置&lt;/h2&gt;&lt;p&gt;筆者使用 Docker 運行 Alist&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull xhofe/alist:v3.13.2
+
+docker run -d --restart=always -v &amp;#123;你的本機目錄&amp;#125;:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name=&amp;quot;alist&amp;quot; xhofe/alist:v3.13.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;記得將上方的 {你的本機目錄} 替換成你的環境&lt;/p&gt;
+&lt;p&gt;Container run 起後使用這段指令查看預設帳號密碼&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker exec -it alist ./alist admin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/sKMQUPf.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/wvAH9Od.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;登入成功後我們會回到首頁，這裡目前甚麼都沒有&lt;/p&gt;
+&lt;p&gt;在網址後方加入 @manage 進入控制台&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/8ziYJ8B.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這邊先將管理員帳密改成你好記的樣子&lt;/p&gt;
+&lt;p&gt;在存儲可以添加需要加入到 Alist 的空間&lt;br&gt;從基本的本地環境到雲端都可以放在 Alist 管理&lt;/p&gt;
+&lt;p&gt;設置雲端掛載時記得根據 Alist 版本，查看對應的文檔，留意任何留言，記得備份~&lt;/p&gt;
+&lt;p&gt;筆者這邊以本地環境做示範&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;首先到設定 {你的本機目錄} 的地方，創建一個資料夾&lt;/p&gt;
+&lt;p&gt;這會做為未來我們掛載本地檔案的路徑&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/FKzeLks.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;驅動選擇 本地存儲&lt;/li&gt;
+&lt;li&gt;掛載路徑 &amp;#x2F;{資料夾名稱}&lt;/li&gt;
+&lt;li&gt;根資料夾路徑 &amp;#x2F;opt&amp;#x2F;alist&amp;#x2F;data&amp;#x2F;{資料夾名稱}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/oCqbTCR.png&#34; alt=&#34;7&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://i.imgur.com/mOr53lK.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定完大致如上&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/ZimHdEW.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
+&lt;p&gt;回首頁看就會有空間了!&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;實用-CSS&#34;&gt;&lt;a href=&#34;#實用-CSS&#34; class=&#34;headerlink&#34; title=&#34;實用 CSS&#34;&gt;&lt;/a&gt;實用 CSS&lt;/h2&gt;&lt;p&gt;Alist 後台的 “設置” ，可以調整絕大多數的 UI 畫面&lt;br&gt;不過如果想自定義一些細節，推薦使用 CSS 達成&lt;/p&gt;
+&lt;p&gt;設置 -&amp;gt; 全域設定 -&amp;gt; 自定義頭部&lt;/p&gt;
+&lt;p&gt;可以在這做自定義 CSS 的添加&lt;br&gt;以下提供一些不錯的樣式&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;去除網站圖標與搜索&#34;&gt;&lt;a href=&#34;#去除網站圖標與搜索&#34; class=&#34;headerlink&#34; title=&#34;去除網站圖標與搜索&#34;&gt;&lt;/a&gt;去除網站圖標與搜索&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iiOacaA-css &amp;#123;display: none!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;站點公告去除-X-關閉按鈕&#34;&gt;&lt;a href=&#34;#站點公告去除-X-關閉按鈕&#34; class=&#34;headerlink&#34; title=&#34;站點公告去除 X 關閉按鈕&#34;&gt;&lt;/a&gt;站點公告去除 X 關閉按鈕&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.notify-render .hope-close-button&amp;#123;display: none;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用背景圖-亮色背景-GIF-可用&#34;&gt;&lt;a href=&#34;#使用背景圖-亮色背景-GIF-可用&#34; class=&#34;headerlink&#34; title=&#34;使用背景圖(亮色背景)(GIF 可用)&#34;&gt;&lt;/a&gt;使用背景圖(亮色背景)(GIF 可用)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-ui-light&amp;#123;background-image: url(&amp;quot;&amp;quot;)!important;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用背景圖-暗色背景-GIF-可用&#34;&gt;&lt;a href=&#34;#使用背景圖-暗色背景-GIF-可用&#34; class=&#34;headerlink&#34; title=&#34;使用背景圖(暗色背景)(GIF 可用)&#34;&gt;&lt;/a&gt;使用背景圖(暗色背景)(GIF 可用)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-ui-dark &amp;#123;background-image: url(&amp;quot;&amp;quot;) !important;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;列表改透明-亮色背景&#34;&gt;&lt;a href=&#34;#列表改透明-亮色背景&#34; class=&#34;headerlink&#34; title=&#34;列表改透明(亮色背景)&#34;&gt;&lt;/a&gt;列表改透明(亮色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css&amp;#123;background-color: rgba(255, 255, 255, 0.5) !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;列表改透明-暗色背景&#34;&gt;&lt;a href=&#34;#列表改透明-暗色背景&#34; class=&#34;headerlink&#34; title=&#34;列表改透明(暗色背景)&#34;&gt;&lt;/a&gt;列表改透明(暗色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css&amp;#123;background-color:rgb(0 0 0 / 50%) !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;元信息改透明-亮色背景&#34;&gt;&lt;a href=&#34;#元信息改透明-亮色背景&#34; class=&#34;headerlink&#34; title=&#34;元信息改透明(亮色背景)&#34;&gt;&lt;/a&gt;元信息改透明(亮色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-c-PJLV.hope-c-PJLV-ikSuVsl-css&amp;#123;background-color: rgba(255, 255, 255, 0.5)!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;元信息改透明-暗色背景&#34;&gt;&lt;a href=&#34;#元信息改透明-暗色背景&#34; class=&#34;headerlink&#34; title=&#34;元信息改透明(暗色背景)&#34;&gt;&lt;/a&gt;元信息改透明(暗色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-c-PJLV.hope-c-PJLV-iiuDLME-css&amp;#123;background-color:rgb(0 0 0 / 50%)!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;去除尾頁&#34;&gt;&lt;a href=&#34;#去除尾頁&#34; class=&#34;headerlink&#34; title=&#34;去除尾頁&#34;&gt;&lt;/a&gt;去除尾頁&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.footer &amp;#123;display: none !important;&amp;#125;]&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;移除下載選項&#34;&gt;&lt;a href=&#34;#移除下載選項&#34; class=&#34;headerlink&#34; title=&#34;移除下載選項&#34;&gt;&lt;/a&gt;移除下載選項&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-select__trigger.hope-c-kvTTWD.hope-c-huZphZ.hope-c-kvTTWD-hYRNAb-variant-filled.hope-c-kvTTWD-gfwxhr-size-md.hope-c-huZphZ-cIGthf-cv.hope-c-PJLV.hope-c-PJLV-ijSQbqe-css&amp;#123;display: none !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;p&gt;推薦一些網站:&lt;br&gt;&lt;a href=&#34;https://anwen-anyi.github.io/&#34;&gt;Alist 魔改代碼分享&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://telegra.ph/AList-UI-01-11&#34;&gt;CSS 參考&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="Alist" />
+        <updated>2023-09-06T02:00:00.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,50 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "微笑工房 • All posts by \"更新日誌\" category",
+    "description": "程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記",
+    "home_page_url": "https://smilin.net",
+    "items": [
+        {
+            "id": "https://smilin.net/2022/11/01/bdb3/",
+            "url": "https://smilin.net/2022/11/01/bdb3/",
+            "title": "BDB更新日誌#3",
+            "date_published": "2022-11-01T10:00:00.000Z",
+            "content_html": "<h2 id=\"主要更新\"><a href=\"#主要更新\" class=\"headerlink\" title=\"主要更新\"></a>主要更新</h2><ul>\n<li>DiscordJSmySelf 更名為 BaseDiscordBot</li>\n<li>discord.js 的所有參考都塞進 BaseDiscordBot</li>\n<li>斜線 &#x2F; 選項 &#x2F; 按鈕 &#x2F; 菜單 框架完成</li>\n</ul>\n<h3 id=\"次要更新\"><a href=\"#次要更新\" class=\"headerlink\" title=\"次要更新\"></a>次要更新</h3><ul>\n<li>env 更新</li>\n<li>readMe 更新</li>\n</ul>\n<h3 id=\"github\"><a href=\"#github\" class=\"headerlink\" title=\"github\"></a>github</h3><p><a href=\"https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0\">github 頁面</a></p>\n<span id=\"more\"></span>\n\n<hr>\n<h2 id=\"一些話\"><a href=\"#一些話\" class=\"headerlink\" title=\"一些話\"></a>一些話</h2><br>\n嗨，昨天才見面呢  \n最近比較閒，忽然就可以比較常更新日誌了\n\n<p>其實原本有點懶得寫，但 BDB 目前的狀態，跟之前相比算是有了非常大的改變<br>所以就稍微紀錄一下，雖然、大概、沒人看就是了 xD ~~</p>\n<br>\n\n<hr>\n<h3 id=\"主要更新說明\"><a href=\"#主要更新說明\" class=\"headerlink\" title=\"主要更新說明\"></a>主要更新說明</h3>  <br>\n首先，最重要的就是，DBD 的核心文件做了一次更名啦 ~~ <br> \n筆者實在是對命名很不在行，原本的想法很單純，想寫一套屬於我的翻譯文件  <br>\n用來翻譯 discord.js 的 API ，這樣以後 discord.js 改版的時候，就不用再把原有的邏輯拆掉重組了  \n  <br><br>\n新的名字與專案相同，也算是重新確立了本專案的方向 (啪嘰啪嘰~)  \n  \n  <br>\n  \n<p>雖然認真的朋友應該早就看出來了，其實筆者的程式水平並不怎樣呢，也難怪會當受薪階級了 (x)<br>不過筆者也沒有因此放棄，目標一直都是在程式的道路上磨練，所以相較於以往，對程式的理解還是有提高的喔</p>\n<p>這次花了些時間整理，正式將所有與 discord.js 有關的 import 都塞入 BDB 內了<br>也就是以後使用 BDB，就真正可以做到換一個檔案 -&gt; 升級完畢，的這種事情了 ~~<br>雖然只是初衷一般的事情，也是最近稍微閒下來才終於可以整理好啊..感覺審視了一次自己的作業效率阿 (汗)</p>\n  <br>\n\n<p>以及相比前兩個比較小咖，但也算是主要更新的<br>discord.js 13 版引入，14 版改過一次實例方式的各種功能都做出框架了<br>雖然沒能在 13 版時就做出來有點遺憾，但筆者對目前的框架很有自信，相信等 15 版出來的時候，這些 code 也會很容易維護吧！</p>\n<br>\n\n<hr>\n<h3 id=\"次要更新說明\"><a href=\"#次要更新說明\" class=\"headerlink\" title=\"次要更新說明\"></a>次要更新說明</h3>  <br>\n在env的部分加上了 `MASTER_ID`，並沒有實際功能<br>    \n更多是用於 DEBUG，或是往後要開一些只有自己能用的開發人員指令時可以使用  \n  \n  <br>\n  \n<p>因為更新內容眾多， readMe 也做了一次更新，改了不少，但還是缺很多東西，只交代了最基本的內容<br>畢竟使用 BDB 相當於重新認識一種 API ，未來想開一份專屬於 BDB 的文檔<br>不知道還要多久就是了，請大家等等我囉 xD ~</p>\n<br>\n",
+            "tags": [
+                "node.js",
+                "bot",
+                "discord",
+                "discord.js",
+                "教學"
+            ]
+        },
+        {
+            "id": "https://smilin.net/2022/10/31/bdb2/",
+            "url": "https://smilin.net/2022/10/31/bdb2/",
+            "title": "BDB更新日誌#2 - discord.js v14.6.0",
+            "date_published": "2022-10-31T10:00:00.000Z",
+            "content_html": "<h2 id=\"主要更新\"><a href=\"#主要更新\" class=\"headerlink\" title=\"主要更新\"></a>主要更新</h2><ul>\n<li>將專案適配到 <code>discord.js</code> v14.6.0 版本</li>\n<li>全版本專案棄用 <code>auth.json</code> ，改成 <code>.env</code></li>\n</ul>\n<h3 id=\"次要更新\"><a href=\"#次要更新\" class=\"headerlink\" title=\"次要更新\"></a>次要更新</h3><ul>\n<li>message 邏輯整合</li>\n<li>修改部分註解</li>\n</ul>\n<h3 id=\"github\"><a href=\"#github\" class=\"headerlink\" title=\"github\"></a>github</h3><p><a href=\"https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0\">github 頁面</a></p>\n<span id=\"more\"></span>\n\n<hr>\n<h2 id=\"一些話\"><a href=\"#一些話\" class=\"headerlink\" title=\"一些話\"></a>一些話</h2><p>大家好，我是微笑</p>\n<p>這次版本更新，在基本架構上跟 13 並沒有差太多<br>主要是修改了之前 code 的一些架構設計，讓主體更加精簡了一些，以及使用更加正規的方式儲存私密數值</p>\n<p>之後如果時間允許，希望可以將自己的 bot 提升到 14.6.0 的版本(12 遇到的 bug 越來越多了<del>)<br>屆時或許會再將功能拆分，更新到這邊吧，不過因為已經真鹿太多次了，已經有點不好意思給承諾了，各位看看就好吧，哈哈哈</del></p>\n<br>\n\n<hr>\n<h3 id=\"主要更新說明\"><a href=\"#主要更新說明\" class=\"headerlink\" title=\"主要更新說明\"></a>主要更新說明</h3><p>原本專案使用 json 做參數管理<br>最近筆者因為換了上雲平台，重新研究了一次相關資料，這次索性將 <code>auth.json</code> 棄用，統一改成 <code>.env</code><br>利用 <code>dotenv</code> 的效果，就可以用 <code>process.env.</code> 的方式載入各種環境參數了</p>\n<p><img src=\"https://i.imgur.com/yCrkWDD.png\" alt=\"引入dotenv，改用process.env.xxx來取值\"></p>\n<br>\n\n<hr>\n<h3 id=\"次要更新說明\"><a href=\"#次要更新說明\" class=\"headerlink\" title=\"次要更新說明\"></a>次要更新說明</h3><p>另外比較重要的修改，就是原本將 message 入口放在主程序，看起來挺奇怪的，就跟 <code>prefix.json</code> 一起重新統合到獨立的分類了<br>以及在註解上，也重新做了一輪調整，讓文件間的註解存在統一性，相對不會太過雜亂</p>\n<p><img src=\"https://i.imgur.com/0m0R3m4.png\" alt=\"prefix.json更名，並且放入messageManager模組內\"></p>\n<p><img src=\"https://i.imgur.com/c7brWXz.png\" alt=\"把message邏輯搬到獨立文件內，以及部分註解統一\"></p>\n<br>\n",
+            "tags": [
+                "node.js",
+                "bot",
+                "discord",
+                "discord.js",
+                "教學"
+            ]
+        },
+        {
+            "id": "https://smilin.net/2022/01/17/bdb1/",
+            "url": "https://smilin.net/2022/01/17/bdb1/",
+            "title": "BDB更新日誌#1",
+            "date_published": "2022-01-17T10:00:00.000Z",
+            "content_html": "<h2 id=\"主要更新\"><a href=\"#主要更新\" class=\"headerlink\" title=\"主要更新\"></a>主要更新</h2><ul>\n<li>bot 啟動時自動註冊斜線命令</li>\n</ul>\n<h3 id=\"次要更新\"><a href=\"#次要更新\" class=\"headerlink\" title=\"次要更新\"></a>次要更新</h3><ul>\n<li>斜線命令相關邏輯調整</li>\n<li>修改 js 檔名</li>\n<li>修改部分註解</li>\n</ul>\n<h3 id=\"github\"><a href=\"#github\" class=\"headerlink\" title=\"github\"></a>github</h3><p><a href=\"https://github.com/Mr-Smilin/BaseDiscordBot/tree/2e168a31c74994c18e276f8f4bf1ff67d74803c9\">github 頁面</a></p>\n<span id=\"more\"></span>\n\n<br>\n\n<hr>\n<h2 id=\"一些話\"><a href=\"#一些話\" class=\"headerlink\" title=\"一些話\"></a>一些話</h2><p>大家好，我是微笑</p>\n<p>總覺得很久沒發文，自上次簡單介紹 discord.js 升版後有四個月了…</p>\n<p>與以往渾渾噩噩不同，<br>架設了 blog、有了實際的紀錄後更可以感覺到自己必需努力(雖然平常更多時間都在放電 haha)</p>\n<p>原本新年後第一篇文章，希望可以寫點想說的話；<br>可之前沒有相關經驗，一到真的要動筆時總是不知道該寫些甚麼。<br>結果就拖到現在了，實在是有點慚愧(抹臉</p>\n<p>雖然不是 2022 第一篇，相關的雜談就留待日後吧~<br>這邊做為更新日誌，會盡量以介紹更新為主的，恩恩。</p>\n<br>\n\n<hr>\n<h3 id=\"主要更新說明\"><a href=\"#主要更新說明\" class=\"headerlink\" title=\"主要更新說明\"></a>主要更新說明</h3><p>敘述上挺好懂的，BDB(BaseDiscordBot)原本並不會在註冊時自動跑<a href=\"https://discord.js.org/#/docs/discord.js/v13/class/GuildApplicationCommandManager\">斜線指令</a>。<br>原本的 code 有點問題，這次改了寫法，並且拉進了<a href=\"https://discord.js.org/#/docs/discord.js/v13/class/Client?scrollTo=e-ready\">Client#ready</a>事件內。<br>以後執行時，就會將 bot 所在的所有群組都註冊一次斜線指令</p>\n<p><img src=\"https://i.imgur.com/wFQPoia.png\" alt=\"移除註解，修改傳入的參數\"></p>\n<p><img src=\"https://i.imgur.com/J8d01FY.png\" alt=\"實際在ready呼叫了InsertSlash\"></p>\n<br>\n\n<hr>\n<h3 id=\"次要更新說明\"><a href=\"#次要更新說明\" class=\"headerlink\" title=\"次要更新說明\"></a>次要更新說明</h3><p>原本 BDB 在升級到 discord.js 13 時，目標著重在保全 <strong>功能模組化</strong> 此一優點上，<br>斜線指令的兼容，並沒有花費過多的時間去研究。</p>\n<p>此次除了主要更新中提到的內容，還修改了斜線指令被觸發時的邏輯，<br>將 reply 一同寫在 json 內，以利於往後擴充。</p>\n<p>改動簡易，優點也是顯而易見的，<br>有效避免日後斜線指令過多，註冊與回傳列表不同步的風險。</p>\n<p>基於 <strong>功能模組化</strong> 訴求，針對這一塊的下一步優化，<br>預計會是在程式碼上做出子母 json 檔案；<br>可以根據要使用的功能別，來直接套用各個功能對應的 json。</p>\n<br>\n\n<hr>\n<br>\n\n<p>原本 BDB 的啟動檔取名做 bot.js，因筆者自身寫的 bot，檔名都是 alice(女兒)。<br>BDB 畢竟也是我的專案，怎麼可以有差別待遇呢(不是<br>乾脆就一併統一成愛稱了。</p>\n<p>另外調整了一點點註解上的形容。</p>\n<p><img src=\"https://i.imgur.com/l93RXrB.png\" alt=\"修改了斜線指令，以回傳類型決定邏輯\"></p>\n<p><img src=\"https://i.imgur.com/QOybZGB.png\" alt=\"調整後的slashJson\"></p>\n<p><img src=\"https://i.imgur.com/bvwPWkT.png\" alt=\"調整了註解與執行的jsName\"></p>\n",
+            "tags": [
+                "node.js",
+                "bot",
+                "discord",
+                "discord.js",
+                "教學"
+            ]
+        }
+    ]
+}

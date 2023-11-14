@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "微笑工房 • All posts by \"javascript\" category",
+    "description": "程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記",
+    "home_page_url": "https://smilin.net",
+    "items": [
+        {
+            "id": "https://smilin.net/2023/09/15/deepCopyAndShallowCopy/",
+            "url": "https://smilin.net/2023/09/15/deepCopyAndShallowCopy/",
+            "title": "淺談 js 深拷貝與淺拷貝的差異",
+            "date_published": "2023-09-15T04:00:00.000Z",
+            "content_html": "<h1 id=\"Deep-copy-和-Shallow-copy\"><a href=\"#Deep-copy-和-Shallow-copy\" class=\"headerlink\" title=\"Deep copy 和 Shallow copy\"></a>Deep copy 和 Shallow copy</h1><br>\n\n<p>先來個考題：</p>\n<pre><code>a = &#123; foo: &quot;bar&quot; &#125;;\nb = a;\nb.foo = &quot;baz&quot;;\n\nconsole.log(a.foo); // 印出?\n</code></pre>\n<span id=\"more\"></span>\n\n<details>\n<summary>答案</summary>\n<br>\nbaz\n</details>\n\n<p><br><br></p>\n<p>下一題：</p>\n<pre><code>a = &#123; foo: &quot;bar&quot; &#125;;\nb = structuredClone(a); // 深拷貝\nb.foo = &quot;baz&quot;;\n\nconsole.log(a.foo); // 印出?\n</code></pre>\n<details>\n<summary>答案</summary>\n<br>\nbar  \n<br><br>\n深拷貝(Deep Copy) 可以將內層對象一併拷貝  \n</details>\n\n<p><br><br></p>\n<hr>\n<br>\n\n<h2 id=\"Shallow-copy\"><a href=\"#Shallow-copy\" class=\"headerlink\" title=\"Shallow copy\"></a>Shallow copy</h2><br>\n\n<p>淺拷貝(Shallow Copy) 與深拷貝同樣是用來拷貝物件層級，避免指向同一記憶體位置</p>\n<p>與深拷貝不同的是，淺拷貝只會複製第一層的對象，如果是 <code>Object.Object</code> 的結構就沒轍。</p>\n<br>\n\n<h3 id=\"Object-assign\"><a href=\"#Object-assign\" class=\"headerlink\" title=\"Object.assign\"></a>Object.assign</h3><br>\n\n<p><code>Object.assign</code> 屬於淺拷貝(Shallow Copy)<br>在上述案例中，可以得到跟深拷貝一樣的結果</p>\n<pre><code>a = &#123; foo: &#123; fpp: &quot;bar&quot; &#125; &#125;;\nb = Object.assign(&#123;&#125;, a);\nb.foo.fpp = &quot;baz&quot;;\n\nconsole.log(a.foo.fpp); // 印出baz\n</code></pre>\n<br>\n\n<h3 id=\"解構賦值\"><a href=\"#解構賦值\" class=\"headerlink\" title=\"解構賦值\"></a>解構賦值</h3><br>\n\n<p>解構賦值是 <code>ES6</code> 以後的語法糖，同樣屬於淺拷貝</p>\n<pre><code>const a = &#123; b: 1 &#125;;\nconst c = &#123; ...a &#125;; // 解構賦值\nc.b = 2;\nconsole.log(a); // &#123; b: 1 &#125;\n</code></pre>\n<p>得益於其精簡的代碼，實務上很常使用。</p>\n<p><br><br></p>\n<hr>\n<br>\n\n<h2 id=\"Deep-copy\"><a href=\"#Deep-copy\" class=\"headerlink\" title=\"Deep copy\"></a>Deep copy</h2><br>\n\n<p>與前面提到的淺拷貝不同，深拷貝對於深層結構也能一併複製</p>\n<br>\n\n<h3 id=\"早期的深拷貝\"><a href=\"#早期的深拷貝\" class=\"headerlink\" title=\"早期的深拷貝\"></a>早期的深拷貝</h3><pre><code>JSON.parse(JSON.stringify());\n</code></pre>\n<p>這個寫法大致上有以下缺點：</p>\n<ul>\n<li>忽略 <code>function</code></li>\n<li>忽略原形鏈</li>\n<li>忽略 <code>undefined</code></li>\n<li>子層太多會導致 <code>stack overflow</code></li>\n</ul>\n<p>儘管如此，由於已經可以處理大多狀況<br>如果不是為了性能或是特殊邏輯，此寫法已經夠用，是常見的深拷貝實現。</p>\n<br>\n\n<h3 id=\"structuredClone\"><a href=\"#structuredClone\" class=\"headerlink\" title=\"structuredClone\"></a>structuredClone</h3><p><code>structuredClone</code> 是 <code>node.js</code> 17 版以後支援的官方深拷貝實現</p>\n<p>目前各大瀏覽器默認支援此語法</p>\n<p><img src=\"https://i.imgur.com/tPXjO1o.png\" alt=\"1\"></p>\n<br>\n\n<p><code>structuredClone</code> 存在一些限制</p>\n<p>不允許結構中存在 <code>Error</code> 、 <code>Function</code> 以及 <code>DOM</code> 對象</p>\n<p>不保留 <code>RegExp</code> 對象的 <code>lastIndex</code></p>\n<p>不保留 <code>read-only</code> 等描述符，即無法限制 <code>setters</code> <code>getters</code></p>\n<p>不保留原形鏈</p>\n",
+            "tags": [
+                "javascript"
+            ]
+        }
+    ]
+}
