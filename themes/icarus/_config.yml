@@ -251,18 +251,24 @@ widgets:
     follow_link: "https://www.youtube.com/playlist?list=PLfv69MM6gyefWRdJuRf9OCMIq3Pd3zNPS"
     # Links to be shown on the bottom of the profile widget
     social_links:
-      Github:
-        icon: fab fa-github
-        url: "https://github.com/Mr-Smilin"
-      Weibo:
-        icon: fab fa-facebook
-        url: "https://www.facebook.com/profile.php?id=100003120783130"
-      Email:
-        icon: fa fa-envelope
-        url: "mailto:lion31lion31@gmail.com"
-      RSS:
-        icon: fas fa-rss
+      # Github:
+      #   icon: fab fa-github
+      #   url: "https://github.com/Mr-Smilin"
+      # Weibo:
+      #   icon: fab fa-facebook
+      #   url: "https://www.facebook.com/profile.php?id=100003120783130"
+      # Email:
+      #   icon: fa fa-envelope
+      #   url: "mailto:lion31lion31@gmail.com"
+      ATOM:
+        icon: fa fa-rss-square
         url: /atom.xml
+      RSS:
+        icon: fa fa-rss
+        url: /rss.xml
+      FEED:
+        icon: fa fa-file-code
+        url: /feed.json
     has_hitokoto: false
   # Recommendation links widget configurations
   #-

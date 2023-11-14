@@ -12,5 +12,12 @@
     "name": "@iMaeGoo’s Blog",
     "desc": "虹墨空间站",
     "url": "https://www.imaegoo.com/"
+  },
+  {
+    "date": "2023.11.02",
+    "src": "https://luiyang08.github.io/img/head.jpg",
+    "name": "LuiYang的博客",
+    "desc": "與其臨淵羨慕魚，不如退而結網！",
+    "url": "https://luiyang08.github.io/"
   }
 ]
