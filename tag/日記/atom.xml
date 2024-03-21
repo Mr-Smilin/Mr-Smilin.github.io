@@ -13,17 +13,17 @@
     <category term="日記" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
-    <category term="heroku" />
-    <category term="render" />
-    <category term="render.com" />
+    <category term="javascript" />
     <category term="Live2D" />
-    <category term="Rust" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
+    <category term="Rust" />
+    <category term="heroku" />
+    <category term="render" />
+    <category term="render.com" />
     <entry>
         <id>https://smilin.net/2023/03/17/goodbyeNalocal/</id>
         <title>blog 網址搬遷 &amp; github改名</title>
