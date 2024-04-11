@@ -5,6 +5,16 @@
     "home_page_url": "https://smilin.net",
     "items": [
         {
+            "id": "https://smilin.net/2024/04/11/giveUp/",
+            "url": "https://smilin.net/2024/04/11/giveUp/",
+            "title": "我的人生不需要英文",
+            "date_published": "2024-04-11T04:00:00.000Z",
+            "content_html": "<p><img src=\"https://i.imgur.com/gwL59EQ.jpg\" alt=\"title\"></p>\n<p>學不會，沒動力學，沒必要學</p>\n<p>最近，大概半年，持續沒甚麼動力學習<br>只是乏味的原地踏步，工作著</p>\n<p>以前明明每天都會抽空看一點知識的</p>\n<p>原本覺得為了找到更好的工作，我應該開始加強英文，補回我以前怠惰學習的債務</p>\n<p>事實是我對這東西真的完全沒有興趣</p>\n<p>這幾天放棄學習英文後，逐漸找回了那個可以繼續對學習程式有熱忱的自己</p>\n<p>感覺有點悲哀，但又很歡喜</p>\n<p>也許這個人就是如此，既然沒辦法揠苗助長，那就順其自然吧。</p>\n",
+            "tags": [
+                "日記"
+            ]
+        },
+        {
             "id": "https://smilin.net/2023/03/17/goodbyeNalocal/",
             "url": "https://smilin.net/2023/03/17/goodbyeNalocal/",
             "title": "blog 網址搬遷 & github改名",

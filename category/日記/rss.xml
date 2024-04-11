@@ -5,28 +5,45 @@
         <link>https://smilin.net</link>
         <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
         <language>zh-TW</language>
-        <pubDate>Fri, 17 Mar 2023 14:30:00 +0800</pubDate>
-        <lastBuildDate>Fri, 17 Mar 2023 14:30:00 +0800</lastBuildDate>
+        <pubDate>Thu, 11 Apr 2024 12:00:00 +0800</pubDate>
+        <lastBuildDate>Thu, 11 Apr 2024 12:00:00 +0800</lastBuildDate>
         <category>node.js</category>
         <category>bot</category>
         <category>discord</category>
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
-        <category>日記</category>
         <category>Alist</category>
+        <category>日記</category>
         <category>Cloudflare</category>
+        <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
-        <category>javascript</category>
-        <category>Live2D</category>
-        <category>彈射世界</category>
-        <category>遊戲</category>
-        <category>腳本</category>
-        <category>Rust</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
+        <category>Live2D</category>
+        <category>Rust</category>
+        <category>彈射世界</category>
+        <category>遊戲</category>
+        <category>腳本</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2024/04/11/giveUp/</guid>
+            <title>我的人生不需要英文</title>
+            <link>https://smilin.net/2024/04/11/giveUp/</link>
+            <category>日記</category>
+            <pubDate>Thu, 11 Apr 2024 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;https://i.imgur.com/gwL59EQ.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;學不會，沒動力學，沒必要學&lt;/p&gt;
+&lt;p&gt;最近，大概半年，持續沒甚麼動力學習&lt;br&gt;只是乏味的原地踏步，工作著&lt;/p&gt;
+&lt;p&gt;以前明明每天都會抽空看一點知識的&lt;/p&gt;
+&lt;p&gt;原本覺得為了找到更好的工作，我應該開始加強英文，補回我以前怠惰學習的債務&lt;/p&gt;
+&lt;p&gt;事實是我對這東西真的完全沒有興趣&lt;/p&gt;
+&lt;p&gt;這幾天放棄學習英文後，逐漸找回了那個可以繼續對學習程式有熱忱的自己&lt;/p&gt;
+&lt;p&gt;感覺有點悲哀，但又很歡喜&lt;/p&gt;
+&lt;p&gt;也許這個人就是如此，既然沒辦法揠苗助長，那就順其自然吧。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/03/17/goodbyeNalocal/</guid>
             <title>blog 網址搬遷 &amp; github改名</title>

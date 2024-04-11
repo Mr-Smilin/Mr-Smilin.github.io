@@ -3,27 +3,44 @@
     <id>https://smilin.net</id>
     <title>微笑工房</title>
     <link href="https://smilin.net" />
-    <updated>2023-10-27T13:00:00.000Z</updated>
+    <updated>2024-04-11T04:00:00.000Z</updated>
     <category term="node.js" />
     <category term="bot" />
     <category term="discord" />
     <category term="discord.js" />
     <category term="教學" />
     <category term="12th鐵人賽" />
-    <category term="日記" />
     <category term="Alist" />
+    <category term="日記" />
     <category term="Cloudflare" />
+    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
-    <category term="javascript" />
-    <category term="Live2D" />
-    <category term="彈射世界" />
-    <category term="遊戲" />
-    <category term="腳本" />
-    <category term="Rust" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
+    <category term="Live2D" />
+    <category term="Rust" />
+    <category term="彈射世界" />
+    <category term="遊戲" />
+    <category term="腳本" />
+    <entry>
+        <id>https://smilin.net/2024/04/11/giveUp/</id>
+        <title>我的人生不需要英文</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/11/giveUp/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/gwL59EQ.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;學不會，沒動力學，沒必要學&lt;/p&gt;
+&lt;p&gt;最近，大概半年，持續沒甚麼動力學習&lt;br&gt;只是乏味的原地踏步，工作著&lt;/p&gt;
+&lt;p&gt;以前明明每天都會抽空看一點知識的&lt;/p&gt;
+&lt;p&gt;原本覺得為了找到更好的工作，我應該開始加強英文，補回我以前怠惰學習的債務&lt;/p&gt;
+&lt;p&gt;事實是我對這東西真的完全沒有興趣&lt;/p&gt;
+&lt;p&gt;這幾天放棄學習英文後，逐漸找回了那個可以繼續對學習程式有熱忱的自己&lt;/p&gt;
+&lt;p&gt;感覺有點悲哀，但又很歡喜&lt;/p&gt;
+&lt;p&gt;也許這個人就是如此，既然沒辦法揠苗助長，那就順其自然吧。&lt;/p&gt;
+</content>
+        <category term="日記" />
+        <updated>2024-04-11T04:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://smilin.net/2023/10/27/rust_learning_02/</id>
         <title>Rust 學習紀錄[2] = Rust 的 NPM</title>
@@ -2425,364 +2442,5 @@ function CloseAllDoingFunction() &amp;#123;
         <category term="教學" />
         <category term="12th鐵人賽" />
         <updated>2020-09-30T01:53:30.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://smilin.net/2020/09/29/12thDay29/</id>
-        <title>Day29 - tag控管機制(3)</title>
-        <link rel="alternate" href="https://smilin.net/2020/09/29/12thDay29/"/>
-        <content type="html">&lt;p&gt;昨天我們做好了 將使用者加入身份組指令&lt;br&gt;今天把 創建身分組的指令做好&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;p&gt;跟昨天一樣，請先開啟GAS，身分組的GAS叫做getPartyPower&lt;br&gt;新增以下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/eqoYtRi.png&#34; alt=&#34;29-1&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function doPost(e)&amp;#123;
-  var para = e.parameter; // 存放 post 所有傳送的參數
-  
-  var id = &amp;#39;1mQ6qTJfOs3Gv5--K9r87w56wmDc3hUcpHm5hF1YKTms&amp;#39;; //抓取表單
-  var spreadsheet = SpreadsheetApp.openById(id); // Sheet id
-  var sheet1 = spreadsheet.getSheetByName(&amp;quot;PartyPower&amp;quot;); // 根據表格名稱取表
-  var rowLength = sheet1.getLastRow()-1;
-  var columnLength = sheet1.getLastColumn();
-  var data = sheet1.getRange(2,1,rowLength,columnLength).getValues(); // 取得的資料
-  var ID   = para.ID,
-      type = para.type,
-      Power    = para.Power;
-  
-  var upData = [];
-  
-  for(i=0;i&amp;lt;=rowLength-1;i++)&amp;#123;
-    upData = data[i]
-    if((upData[0]==ID) == false)&amp;#123;
-      upData = undefined;
-    &amp;#125;
-  
-  
-    if(upData != undefined)&amp;#123;
-      sheet1.getRange(i+2, 1).setValue(ID);
-      sheet1.getRange(i+2, 2).setValue(type);
-      sheet1.getRange(i+2, 3).setValue(Power);
-      return ContentService.createTextOutput(upData).setMimeType(ContentService.MimeType.JSON);
-    &amp;#125;
-  &amp;#125;
-  
-  
-  sheet1.appendRow([ID,type,Power]); // 插入一列新的資料
-  var dataExportFormat = JSON.stringify(para);
-  return ContentService.createTextOutput(dataExportFormat).setMimeType(ContentService.MimeType.JSON);
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;加到auth.json&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/0brSMZw.png&#34; alt=&#34;29-2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;GetGas.js&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/9KlDFkj.png&#34; alt=&#34;29-3&#34;&gt;&lt;/p&gt;
-&lt;p&gt;bot.js&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/oKcdCTg.png&#34; alt=&#34;29-4&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/nQgPf3p.png&#34; alt=&#34;29-5&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//創建身分組&amp;amp;增加身分組可tag對象(續行)
-function CreatePartyFunctionNow(msg) &amp;#123;
-    try &amp;#123;
-        switch (DoingCount) &amp;#123;
-            case 0:
-                DoData.push(msg.content); //身分組ID
-                DoData.push(&amp;#39;2&amp;#39;); //type 2
-                msg.channel.send(`請輸入要加入的tagID`);
-                break;
-            case 1:
-                DoData.push(msg.content); //加入tagID
-                msg.channel.send(`申請資料如下:\n申請人 &amp;lt;@$&amp;#123;msg.author.id&amp;#125;&amp;gt;\n權限組 &amp;lt;@$&amp;#123;DoData[0]&amp;#125;&amp;gt;\ntagID $&amp;#123;DoData[2]&amp;#125;\n正確 Y / 錯誤 N`);
-                break;
-            case 2:
-                if (msg.content === &amp;#39;Y&amp;#39;) &amp;#123;
-                    msg.channel.send(&amp;#39;已確認，輸入資料中...&amp;#39;);
-                    //與舊資料比對，已有此人資料變進行更新
-                    EditOldPartyPower();
-                    GetGas.postPartyPower(DoData, function(dataED) &amp;#123;
-                        if (dataED) &amp;#123;
-                            //bot內變數不會更新，手動更新
-                            PartyPowerData.unshift(&amp;#123;
-                                &amp;#39;ID&amp;#39;: DoData[0],
-                                &amp;#39;type&amp;#39;: DoData[1],
-                                &amp;#39;Power&amp;#39;: DoData[2]
-                            &amp;#125;);
-                            msg.channel.send(&amp;#39;輸入完畢!&amp;#39;);
-                        &amp;#125; else &amp;#123;
-                            msg.channel.send(&amp;#39;資料輸入失敗，請重新嘗試&amp;#39;);
-                        &amp;#125;
-                        CloseAllDoingFunction();
-                    &amp;#125;);
-                &amp;#125; else if (msg.content === &amp;#39;N&amp;#39;) &amp;#123;
-                    CloseAllDoingFunction();
-                    msg.channel.send(&amp;#39;已取消行為，請重新下達指令&amp;#39;)
-                &amp;#125; else &amp;#123;
-                    DoingCount--;
-                    msg.channel.send(&amp;#39;無法辨識訊息，請輸入Y/N來選擇&amp;#39;);
-                &amp;#125;
-                break;
-        &amp;#125;
-        if (DoUserID !== &amp;#39;&amp;#39;) DoingCount++;
-    &amp;#125; catch (err) &amp;#123;
-        CloseAllDoingFunction();
-        client.channels.fetch(msg.channel.id).then(channel =&amp;gt; channel.send(&amp;#39;發生意外錯誤，中斷指令行為，請重新下達指令!&amp;#39;))
-        console.log(&amp;#39;CreatePartyFunctionNowError&amp;#39;, err);
-    &amp;#125;
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/FB6RfAd.png&#34; alt=&#34;29-6&#34;&gt;&lt;/p&gt;
-&lt;p&gt;作法基本上跟上次新增使用者一樣&lt;br&gt;試著運行看看&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/x3Qx41S.png&#34; alt=&#34;29-7&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/Mf6vO49.png&#34; alt=&#34;29-8&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/VH2f5L2.png&#34; alt=&#34;29-9&#34;&gt;&lt;/p&gt;
-&lt;p&gt;成功&lt;br&gt;明天就是最後一篇了，筆者會把刪除的指令做好&lt;br&gt;其實跟現在新增的作法是大同小異的，各位不彷試試看&lt;/p&gt;
-&lt;p&gt;為了將CheckID與CheckParty的分工化更明確一點，因此有稍微修改程式碼&lt;br&gt;這邊貼上程式碼&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//#region tag系統
-function TagFunction(msg, tempPrefix) &amp;#123;
-    const cmd = msg.content.substring(prefix[tempPrefix].Value.length).split(&amp;#39; &amp;#39;); //以空白分割前綴以後的字串
-
-    switch (cmd[0]) &amp;#123;
-        case &amp;#39;AddUser&amp;#39;: //將使用者加入身份組
-            addUserFunction(msg);
-            break;
-        case &amp;#39;CreateParty&amp;#39;: //創建身分組&amp;amp;增加身分組可tag對象
-            CreatePartyFunction(msg);
-            break;
-        default: //身份組ID
-            tagOther(msg, cmd);
-            break;
-    &amp;#125;
-&amp;#125;
-
-//tag人
-function tagOther(msg, cmd) &amp;#123;
-    CheckID(msg, cmd, msg.author.id, (msg, cmd, haveUserData) =&amp;gt; &amp;#123;
-        CheckParty(msg, cmd, haveUserData, SendTagMessage);
-    &amp;#125;);
-&amp;#125;
-
-//判斷此人有沒有登記資料
-function CheckID(msg, cmd, userID, OtherFunction) &amp;#123;
-    const haveUserData = UserPowerData.find(element =&amp;gt; &amp;#123;
-        return element.userID == userID;
-    &amp;#125;)
-
-    if (haveUserData !== undefined) &amp;#123;
-        //有資料
-        return OtherFunction(msg, cmd, haveUserData);
-    &amp;#125; else &amp;#123;
-        return OtherFunction(msg, cmd, false);
-    &amp;#125;
-&amp;#125;
-
-//根據UserPower獲得Party
-function CheckParty(msg, cmd, haveUserData, OtherFunction) &amp;#123;
-    let havePartyPower;
-    havePartyPower = PartyPowerData.filter(element =&amp;gt; &amp;#123;
-        if (haveUserData.Joins[i].indexOf(element.ID) != -1) &amp;#123;
-            return element.Power.indexOf(cmd[1]) != -1
-        &amp;#125;
-    &amp;#125;)
-
-    if (isEmptyObject(havePartyPower)) &amp;#123;
-        OtherFunction(msg, cmd, haveUserData, false);
-    &amp;#125; else &amp;#123;
-        OtherFunction(msg, cmd, haveUserData, havePartyPower);
-    &amp;#125;
-&amp;#125;
-
-//傳送訊息單獨實例
-function SendTagMessage(msg, cmd, haveUserData, havePartyPower) &amp;#123;
-    if (haveUserData.IsAdmin) &amp;#123;
-        msg.channel.send(`&amp;lt;@&amp;amp;$&amp;#123;cmd[1]&amp;#125;&amp;gt;\n來自管理員&amp;lt;@$&amp;#123;msg.author.id&amp;#125;&amp;gt;的指令呼叫`);
-    &amp;#125; else if (havePartyPower) &amp;#123;
-        msg.channel.send(`&amp;lt;@&amp;amp;$&amp;#123;cmd[1]&amp;#125;&amp;gt;\n來自&amp;lt;@$&amp;#123;msg.author.id&amp;#125;&amp;gt;的指令呼叫`);
-    &amp;#125; else &amp;#123;
-        msg.channel.send(&amp;#39;無權限，請確認參數是否正確&amp;#39;);
-    &amp;#125;
-&amp;#125;
-
-//將xxx加入身分組
-function addUserFunction(msg) &amp;#123;
-    try &amp;#123;
-        if (DoUserID === &amp;#39;&amp;#39;) &amp;#123;
-            tempIsAdmin = CheckID(msg, null, msg.author.id, function(msg, cmd, haveUserData) &amp;#123;
-                if (haveUserData.IsAdmin) return true;
-                else return false;
-            &amp;#125;);
-            if (tempIsAdmin) &amp;#123;
-                nowDoFunction = addUserFunctionNow;
-                DoUserID = msg.author.id;
-                DoData = new Array;
-                msg.channel.send(&amp;#39;請輸入要加入的使用者id&amp;#39;);
-            &amp;#125; else &amp;#123;
-                msg.channel.send(&amp;#39;此指令只有管理員可執行&amp;#39;);
-            &amp;#125;
-        &amp;#125; else &amp;#123;
-            msg.channel.send(&amp;#39;有其他人正在使用續行中，請稍等&amp;#39;);
-        &amp;#125;
-    &amp;#125; catch (err) &amp;#123;
-        console.log(&amp;#39;addUserFunctionError&amp;#39;, err);
-    &amp;#125;
-&amp;#125;
-
-//將xxx加入身份組(續行方法)
-function addUserFunctionNow(msg) &amp;#123;
-    try &amp;#123;
-        switch (DoingCount) &amp;#123;
-            case 0:
-                DoData.push(msg.content); //加入使用者id
-                DoData.push(msg.author.username); //加入申請者名字
-                msg.channel.send(`請輸入要加入的群組`);
-                break;
-            case 1:
-                DoData.push(msg.content); //加入群組
-                DoData.push(false); //IsAdmin預設False不可修改
-                msg.channel.send(`申請資料如下:\n申請人 &amp;lt;@$&amp;#123;msg.author.id&amp;#125;&amp;gt;\n使用者 &amp;lt;@$&amp;#123;DoData[0]&amp;#125;&amp;gt;\n加入權限組 $&amp;#123;DoData[2]&amp;#125;\n正確 Y / 錯誤 N`);
-                break;
-            case 2:
-                if (msg.content === &amp;#39;Y&amp;#39;) &amp;#123;
-                    msg.channel.send(&amp;#39;已確認，輸入資料中...&amp;#39;);
-                    //與舊資料比對，已有此人資料變進行更新
-                    CheckID(msg, null, DoData[0], EditOldUserPower);
-                    GetGas.postUserPower(DoData, function(dataED) &amp;#123;
-                        if (dataED) &amp;#123;
-                            //bot內變數不會更新，手動更新
-                            UserPowerData.unshift(&amp;#123;
-                                &amp;#39;userID&amp;#39;: DoData[0],
-                                &amp;#39;userName&amp;#39;: DoData[1],
-                                &amp;#39;Joins&amp;#39;: DoData[2],
-                                &amp;#39;IsAdmin&amp;#39;: DoData[3]
-                            &amp;#125;);
-                            msg.channel.send(&amp;#39;輸入完畢!&amp;#39;);
-                        &amp;#125; else &amp;#123;
-                            msg.channel.send(&amp;#39;資料輸入失敗，請重新嘗試&amp;#39;);
-                        &amp;#125;
-                        CloseAllDoingFunction();
-                    &amp;#125;);
-                &amp;#125; else if (msg.content === &amp;#39;N&amp;#39;) &amp;#123;
-                    CloseAllDoingFunction();
-                    msg.channel.send(&amp;#39;已取消行為，請重新下達指令&amp;#39;)
-                &amp;#125; else &amp;#123;
-                    DoingCount--;
-                    msg.channel.send(&amp;#39;無法辨識訊息，請輸入Y/N來選擇&amp;#39;);
-                &amp;#125;
-                break;
-        &amp;#125;
-        if (DoUserID !== &amp;#39;&amp;#39;) DoingCount++;
-    &amp;#125; catch (err) &amp;#123;
-        CloseAllDoingFunction();
-        client.channels.fetch(msg.channel.id).then(channel =&amp;gt; channel.send(&amp;#39;發生意外錯誤，中斷指令行為，請重新下達指令!&amp;#39;))
-        console.log(&amp;#39;addUserFunctionNowError&amp;#39;, err);
-    &amp;#125;
-&amp;#125;
-
-//用戶舊資料更新
-function EditOldUserPower(msg, cmd, haveUserData) &amp;#123;
-    //二次確認
-    if (haveUserData) &amp;#123;
-        if (DoData[0] == haveUserData.userID) &amp;#123;
-            DoData[2] = haveUserData.Joins + &amp;#39;;&amp;#39; + DoData[2];
-            DoData[3] = haveUserData.IsAdmin;
-            return true;
-        &amp;#125; else return false;
-    &amp;#125; else return false;
-&amp;#125;
-
-//創建身分組&amp;amp;增加身分組可tag對象
-function CreatePartyFunction(msg) &amp;#123;
-    try &amp;#123;
-        if (DoUserID === &amp;#39;&amp;#39;) &amp;#123;
-            tempIsAdmin = CheckID(msg, null, msg.author.id, function(msg, cmd, haveUserData) &amp;#123;
-                if (haveUserData) &amp;#123;
-                    if (haveUserData.IsAdmin) return true;
-                    else return false;
-                &amp;#125; else return false;
-            &amp;#125;);
-            if (tempIsAdmin) &amp;#123;
-                nowDoFunction = CreatePartyFunctionNow;
-                DoUserID = msg.author.id;
-                DoData = new Array;
-                msg.channel.send(&amp;#39;請輸入身份組名稱&amp;#39;);
-            &amp;#125; else &amp;#123;
-                msg.channel.send(&amp;#39;此指令只有管理員可執行&amp;#39;);
-            &amp;#125;
-        &amp;#125; else &amp;#123;
-            msg.channel.send(&amp;#39;有其他人正在使用續行中，請稍等&amp;#39;);
-        &amp;#125;
-    &amp;#125; catch (err) &amp;#123;
-        console.log(&amp;#39;CreatePartyFunctionError&amp;#39;, err);
-    &amp;#125;
-&amp;#125;
-
-//創建身分組&amp;amp;增加身分組可tag對象(續行)
-function CreatePartyFunctionNow(msg) &amp;#123;
-    try &amp;#123;
-        switch (DoingCount) &amp;#123;
-            case 0:
-                DoData.push(msg.content); //身分組ID
-                DoData.push(&amp;#39;2&amp;#39;); //type 2
-                msg.channel.send(`請輸入要加入的tagID`);
-                break;
-            case 1:
-                DoData.push(msg.content); //加入tagID
-                msg.channel.send(`申請資料如下:\n申請人 &amp;lt;@$&amp;#123;msg.author.id&amp;#125;&amp;gt;\n權限組 $&amp;#123;DoData[0]&amp;#125;\ntagID $&amp;#123;DoData[2]&amp;#125;\n正確 Y / 錯誤 N`);
-                break;
-            case 2:
-                if (msg.content === &amp;#39;Y&amp;#39;) &amp;#123;
-                    msg.channel.send(&amp;#39;已確認，輸入資料中...&amp;#39;);
-                    //與舊資料比對，已有此人資料變進行更新
-                    EditOldPartyPower();
-                    GetGas.postPartyPower(DoData, function(dataED) &amp;#123;
-                        if (dataED) &amp;#123;
-                            //bot內變數不會更新，手動更新
-                            PartyPowerData.unshift(&amp;#123;
-                                &amp;#39;ID&amp;#39;: DoData[0],
-                                &amp;#39;type&amp;#39;: DoData[1],
-                                &amp;#39;Power&amp;#39;: DoData[2]
-                            &amp;#125;);
-                            msg.channel.send(&amp;#39;輸入完畢!&amp;#39;);
-                        &amp;#125; else &amp;#123;
-                            msg.channel.send(&amp;#39;資料輸入失敗，請重新嘗試&amp;#39;);
-                        &amp;#125;
-                        CloseAllDoingFunction();
-                    &amp;#125;);
-                &amp;#125; else if (msg.content === &amp;#39;N&amp;#39;) &amp;#123;
-                    CloseAllDoingFunction();
-                    msg.channel.send(&amp;#39;已取消行為，請重新下達指令&amp;#39;)
-                &amp;#125; else &amp;#123;
-                    DoingCount--;
-                    msg.channel.send(&amp;#39;無法辨識訊息，請輸入Y/N來選擇&amp;#39;);
-                &amp;#125;
-                break;
-        &amp;#125;
-        if (DoUserID !== &amp;#39;&amp;#39;) DoingCount++;
-    &amp;#125; catch (err) &amp;#123;
-        CloseAllDoingFunction();
-        client.channels.fetch(msg.channel.id).then(channel =&amp;gt; channel.send(&amp;#39;發生意外錯誤，中斷指令行為，請重新下達指令!&amp;#39;))
-        console.log(&amp;#39;CreatePartyFunctionNowError&amp;#39;, err);
-    &amp;#125;
-&amp;#125;
-
-//權限組舊資料更新
-function EditOldPartyPower() &amp;#123;
-    if (PartyPowerData) &amp;#123;
-        const tempPartyData = PartyPowerData.find(element =&amp;gt; &amp;#123;
-            return element.ID == DoData[0];
-        &amp;#125;)
-
-        if (tempPartyData !== undefined) &amp;#123;
-            DoData[2] = tempPartyData.Power + &amp;#39;;&amp;#39; + DoData[2];
-        &amp;#125;
-    &amp;#125;
-&amp;#125;
-
-//#endregion
-&lt;/code&gt;&lt;/pre&gt;
-</content>
-        <category term="node.js" />
-        <category term="bot" />
-        <category term="discord" />
-        <category term="discord.js" />
-        <category term="教學" />
-        <category term="12th鐵人賽" />
-        <updated>2020-09-29T01:27:13.000Z</updated>
     </entry>
 </feed>

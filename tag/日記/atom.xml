@@ -3,27 +3,44 @@
     <id>https://smilin.net</id>
     <title>微笑工房 • Posts by &#34;日記&#34; tag</title>
     <link href="https://smilin.net" />
-    <updated>2023-03-17T06:30:00.000Z</updated>
+    <updated>2024-04-11T04:00:00.000Z</updated>
     <category term="node.js" />
     <category term="bot" />
     <category term="discord" />
     <category term="discord.js" />
     <category term="教學" />
     <category term="12th鐵人賽" />
-    <category term="日記" />
     <category term="Alist" />
+    <category term="日記" />
     <category term="Cloudflare" />
+    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
-    <category term="javascript" />
-    <category term="Live2D" />
-    <category term="彈射世界" />
-    <category term="遊戲" />
-    <category term="腳本" />
-    <category term="Rust" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
+    <category term="Live2D" />
+    <category term="Rust" />
+    <category term="彈射世界" />
+    <category term="遊戲" />
+    <category term="腳本" />
+    <entry>
+        <id>https://smilin.net/2024/04/11/giveUp/</id>
+        <title>我的人生不需要英文</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/11/giveUp/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/gwL59EQ.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;學不會，沒動力學，沒必要學&lt;/p&gt;
+&lt;p&gt;最近，大概半年，持續沒甚麼動力學習&lt;br&gt;只是乏味的原地踏步，工作著&lt;/p&gt;
+&lt;p&gt;以前明明每天都會抽空看一點知識的&lt;/p&gt;
+&lt;p&gt;原本覺得為了找到更好的工作，我應該開始加強英文，補回我以前怠惰學習的債務&lt;/p&gt;
+&lt;p&gt;事實是我對這東西真的完全沒有興趣&lt;/p&gt;
+&lt;p&gt;這幾天放棄學習英文後，逐漸找回了那個可以繼續對學習程式有熱忱的自己&lt;/p&gt;
+&lt;p&gt;感覺有點悲哀，但又很歡喜&lt;/p&gt;
+&lt;p&gt;也許這個人就是如此，既然沒辦法揠苗助長，那就順其自然吧。&lt;/p&gt;
+</content>
+        <category term="日記" />
+        <updated>2024-04-11T04:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://smilin.net/2023/03/17/goodbyeNalocal/</id>
         <title>blog 網址搬遷 &amp; github改名</title>
