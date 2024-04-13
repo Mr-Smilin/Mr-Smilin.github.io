@@ -3,7 +3,7 @@
     <id>https://smilin.net</id>
     <title>微笑工房 • Posts by &#34;教學&#34; tag</title>
     <link href="https://smilin.net" />
-    <updated>2022-11-01T10:00:00.000Z</updated>
+    <updated>2024-04-13T11:00:00.000Z</updated>
     <category term="node.js" />
     <category term="bot" />
     <category term="discord" />
@@ -11,8 +11,9 @@
     <category term="教學" />
     <category term="12th鐵人賽" />
     <category term="Alist" />
-    <category term="日記" />
     <category term="Cloudflare" />
+    <category term="日記" />
+    <category term="docker" />
     <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
@@ -24,6 +25,35 @@
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
+    <entry>
+        <id>https://smilin.net/2024/04/13/autoPixai/</id>
+        <title>自動領取 Pixai 每日獎勵</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/13/autoPixai/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/autoPixai_01.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;工程網址&lt;br&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;auto-pixai&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://hub.docker.com/r/smile0301/auto-pixai&#34;&gt;Docker Hub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;近幾年 AI 工具日新月異，我也有幸接觸了 AI 繪圖相關的一鱗半角&lt;/p&gt;
+&lt;p&gt;其中 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 是其中少有的雲端免費算圖網站&lt;/p&gt;
+&lt;p&gt;如果對產出來的圖感到滿意的話，可以透過 AI 進一步運算，產出會動的圖&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;不過說是免費，其實還是有些限制的&lt;/p&gt;
+&lt;p&gt;在網站上的運算行為都需要消耗點數，無論是靜態或動態&lt;/p&gt;
+&lt;p&gt;而點數除了透過付費與活動取得以外，pixai 每日都有一萬點數可供會員領取，也就是每日獎勵&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/autoPixai_02.jpg&#34; alt=&#34;每日獎勵&#34;&gt;&lt;/p&gt;
+&lt;p&gt;只要每天領取就可以免費算圖了，整個佛心來著對吧&lt;/p&gt;
+&lt;p&gt;不過我們工程師最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;auto-pixai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只要輸入帳號跟密碼，該腳本執行一次就會自動進網站領取每日獎勵&lt;/p&gt;
+&lt;p&gt;使用 node.js 撰寫，另有 Docker 容器化，開箱即用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull smile0301/auto-pixai
+docker run -e LOGINNAME=&amp;lt;你的帳號&amp;gt; -e PASSWORD=&amp;lt;你的密碼&amp;gt; --name &amp;lt;container-name&amp;gt; smile0301/auto-pixai
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="node.js" />
+        <category term="教學" />
+        <category term="docker" />
+        <updated>2024-04-13T11:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://smilin.net/2022/11/01/bdb3/</id>
         <title>BDB更新日誌#3</title>
@@ -3268,68 +3298,5 @@ exports.getBaseExcel = function(userTalk, callback) &amp;#123;
         <category term="教學" />
         <category term="12th鐵人賽" />
         <updated>2020-09-18T01:17:51.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://smilin.net/2020/09/17/12thDay17/</id>
-        <title>Day17 - GAS抓表(1)</title>
-        <link rel="alternate" href="https://smilin.net/2020/09/17/12thDay17/"/>
-        <content type="html">&lt;p&gt;今天我們來寫GAS&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;h2 id=&#34;文件創建&#34;&gt;&lt;a href=&#34;#文件創建&#34; class=&#34;headerlink&#34; title=&#34;文件創建&#34;&gt;&lt;/a&gt;文件創建&lt;/h2&gt;&lt;p&gt;首先請打開google，登入你自己的google雲端，並且在喜歡的地方創建一個資料夾，取名為DiscordDataBaseApi&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/rczINQm.png&#34; alt=&#34;17-1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;右鍵分別創建一個試算表跟一個GAS&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/gGDTERM.png&#34; alt=&#34;17-2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/EIbdgPE.png&#34; alt=&#34;17-3&#34;&gt;&lt;/p&gt;
-&lt;p&gt;兩個文件創立後都會直接開一個新視窗&lt;br&gt;Excel取名為MyData，像我們一樣隨便輸入一些資料&lt;br&gt;然後複製網址上面d&amp;#x2F; 到 &amp;#x2F;edit 中間的亂碼，我的是&lt;br&gt;1mQ6qTJfOs3Gv5–K9r87w56wmDc3hUcpHm5hF1YKTms&lt;/p&gt;
-&lt;p&gt;這串英數是我們Excel的ID，只要把這串亂碼給Google看，他就知道你找的是這張表&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/EPVxxkb.png&#34; alt=&#34;17-4&#34;&gt;&lt;/p&gt;
-&lt;p&gt;我們回到 GAS ，填入以下程式&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var id = &amp;#39;你的表格ID&amp;#39;; //抓取表單
-  var spreadsheet = SpreadsheetApp.openById(id); // Sheet id
-  var sheet = spreadsheet.getSheets()[0]; // 要第幾個sheet？ 0 就是第一個
-  var rowLength = sheet.getLastRow()-1; //取行長度
-  var columnLength = sheet.getLastColumn(); //取列長度
-  var data = sheet.getRange(2,1,rowLength,columnLength).getValues(); // 取得的資料
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;把剛剛的id給GAS抓表，抓到表後讀取行列範圍，然後從範圍中抓取資料&lt;br&gt;那一長串程式碼全都是google提供的function，雖然好像有library可以看，筆者是建議記下來就好&lt;/p&gt;
-&lt;p&gt;我們範圍是從第2行開始抓取資料到最底，這是因為我們表格的第一行屬於標題行，給使用者看的，我們就不抓取這行資料&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/YGdSESn.png&#34; alt=&#34;17-5&#34;&gt;&lt;/p&gt;
-&lt;p&gt;再來幫我新增這幾行資料&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  var dataExport = &amp;#123;&amp;#125;;
-  
-  for(i in data)&amp;#123;
-    if(data[i][0] != &amp;quot;&amp;quot;)&amp;#123;
-    dataExport[data[i][0]] = &amp;#123;
-      DATE:   data[i][1],
-      NAME:   data[i][2],
-      VALUE:  data[i][3]
-      &amp;#125;
-    &amp;#125;
-  &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果對json操作有一點經驗的同學，對這幾行應該不陌生&lt;br&gt;把data中的資料一個個串成json，這樣才方便我們做後續處理&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/mewJW4N.png&#34; alt=&#34;17-6&#34;&gt;&lt;/p&gt;
-&lt;p&gt;最後加上這行&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  var dataExportFormat = JSON.stringify(dataExport);
-  return ContentService.createTextOutput(dataExportFormat).setMimeType(ContentService.MimeType.JSON);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;把整理好的資料return回去&lt;br&gt;GAS回傳需要先經手過他們的方法，API接收到的資料才是正常的&lt;br&gt;這部份當成return dataExport就可以了。&lt;/p&gt;
-&lt;h2 id=&#34;發布&#34;&gt;&lt;a href=&#34;#發布&#34; class=&#34;headerlink&#34; title=&#34;發布&#34;&gt;&lt;/a&gt;發布&lt;/h2&gt;&lt;p&gt;表格都填完，GAS都寫好後，我們就能抓取到表格資料了&lt;br&gt;但是程式該怎麼訪問GAS呢?&lt;br&gt;為了讓程式可以訪問到GAS，我們需要將GAS做成API&lt;br&gt;確認程式存檔後，幫我點左上角發布-&amp;gt;部屬為網頁應用程式&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/jR2dTYm.png&#34; alt=&#34;17-7&#34;&gt;&lt;/p&gt;
-&lt;p&gt;會有三個下拉框出現&lt;br&gt;1.	是版本號&lt;br&gt;2.	發布者&lt;br&gt;3.	存取權限&lt;/p&gt;
-&lt;p&gt;因為是第一次發布，版本一定是1&lt;br&gt;發布者是你就好不要動&lt;br&gt;這邊要注意第三點，務必設定成Anyone,even anonymous&lt;br&gt;確定無誤後我們點擊Deploy，他會要你核對權限，一路允許就好&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/HD5slmK.png&#34; alt=&#34;17-8&#34;&gt;&lt;/p&gt;
-&lt;p&gt;都完成後，我們最後會拿到一組連結，我們試著將連結放在瀏覽器上&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/mZh9b3a.png&#34; alt=&#34;17-9&#34;&gt;&lt;/p&gt;
-&lt;p&gt;如果成功就會像筆者這樣拿到表格上的檔案了!&lt;/p&gt;
-</content>
-        <category term="node.js" />
-        <category term="bot" />
-        <category term="discord" />
-        <category term="discord.js" />
-        <category term="教學" />
-        <category term="12th鐵人賽" />
-        <updated>2020-09-17T01:48:31.000Z</updated>
     </entry>
 </feed>

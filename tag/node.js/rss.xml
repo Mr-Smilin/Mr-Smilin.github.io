@@ -5,8 +5,8 @@
         <link>https://smilin.net</link>
         <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
         <language>zh-TW</language>
-        <pubDate>Thu, 01 Jun 2023 20:00:00 +0800</pubDate>
-        <lastBuildDate>Thu, 01 Jun 2023 20:00:00 +0800</lastBuildDate>
+        <pubDate>Sat, 13 Apr 2024 19:00:00 +0800</pubDate>
+        <lastBuildDate>Sat, 13 Apr 2024 19:00:00 +0800</lastBuildDate>
         <category>node.js</category>
         <category>bot</category>
         <category>discord</category>
@@ -14,8 +14,9 @@
         <category>教學</category>
         <category>12th鐵人賽</category>
         <category>Alist</category>
-        <category>日記</category>
         <category>Cloudflare</category>
+        <category>日記</category>
+        <category>docker</category>
         <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
@@ -27,6 +28,35 @@
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2024/04/13/autoPixai/</guid>
+            <title>自動領取 Pixai 每日獎勵</title>
+            <link>https://smilin.net/2024/04/13/autoPixai/</link>
+            <category>node.js</category>
+            <category>教學</category>
+            <category>docker</category>
+            <pubDate>Sat, 13 Apr 2024 19:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/autoPixai_01.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;工程網址&lt;br&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;auto-pixai&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://hub.docker.com/r/smile0301/auto-pixai&#34;&gt;Docker Hub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;近幾年 AI 工具日新月異，我也有幸接觸了 AI 繪圖相關的一鱗半角&lt;/p&gt;
+&lt;p&gt;其中 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 是其中少有的雲端免費算圖網站&lt;/p&gt;
+&lt;p&gt;如果對產出來的圖感到滿意的話，可以透過 AI 進一步運算，產出會動的圖&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;不過說是免費，其實還是有些限制的&lt;/p&gt;
+&lt;p&gt;在網站上的運算行為都需要消耗點數，無論是靜態或動態&lt;/p&gt;
+&lt;p&gt;而點數除了透過付費與活動取得以外，pixai 每日都有一萬點數可供會員領取，也就是每日獎勵&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/autoPixai_02.jpg&#34; alt=&#34;每日獎勵&#34;&gt;&lt;/p&gt;
+&lt;p&gt;只要每天領取就可以免費算圖了，整個佛心來著對吧&lt;/p&gt;
+&lt;p&gt;不過我們工程師最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;auto-pixai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只要輸入帳號跟密碼，該腳本執行一次就會自動進網站領取每日獎勵&lt;/p&gt;
+&lt;p&gt;使用 node.js 撰寫，另有 Docker 容器化，開箱即用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull smile0301/auto-pixai
+docker run -e LOGINNAME=&amp;lt;你的帳號&amp;gt; -e PASSWORD=&amp;lt;你的密碼&amp;gt; --name &amp;lt;container-name&amp;gt; smile0301/auto-pixai
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/06/01/discordJs14-1/</guid>
             <title>discord.js 升上 14 版，架構說明</title>
@@ -3214,88 +3244,6 @@ function GetBaseExcelData(msg) &amp;#123;
 &lt;p&gt;GetGas中對於data的處理方式也是極其低效的，雖然在捨棄SQL這種專為優化資料存取的系統時，就難以追求最高效的方法，但目前的做法也仍是相對低效的&lt;/p&gt;
 &lt;p&gt;以及程序目前只是簡單的判A給B，功能十分單一&lt;br&gt;我沒辦法針對特定群組，有該群組專屬的詞彙，或是對特定回應帶tag等&lt;/p&gt;
 &lt;p&gt;明天我們會將程序做一次翻新&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://smilin.net/2020/09/18/12thDay18/</guid>
-            <title>Day18 - GAS抓表(2)</title>
-            <link>https://smilin.net/2020/09/18/12thDay18/</link>
-            <category>node.js</category>
-            <category>bot</category>
-            <category>discord</category>
-            <category>discord.js</category>
-            <category>教學</category>
-            <category>12th鐵人賽</category>
-            <pubDate>Fri, 18 Sep 2020 09:17:51 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;昨天我們在雲端上建好了試算表&lt;br&gt;將GAS發布成API的GET方法，只要我們訪問就能成功獲取試算表資料&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;p&gt;今天我們來寫點程式&lt;/p&gt;
-&lt;p&gt;我們來回顧一下，目前機器人在Message下可以做到的事情&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;文字回應&lt;/li&gt;
-&lt;li&gt;音樂系統&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我們希望增加一個可以針對表格內容，動態觸發回應的功能&lt;br&gt;這種功能因為不會直接知道有哪些指令，應該要是沒有前綴字的，只要字串符合就會觸發&lt;/p&gt;
-&lt;p&gt;由此可知，我們應該要將這個方法添加在所有功能的最底層&lt;br&gt;只有當前綴字都不符合時，才會來辨識表格資料&lt;/p&gt;
-&lt;p&gt;觀念大致帶過，我們開始動手&lt;/p&gt;
-&lt;p&gt;先幫我在專案目錄下建立一個Script資料夾，在裡面放一個GetGas.js&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/OJB3z4l.png&#34; alt=&#34;18-1&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//#region 全域引用
-const auth = require(&amp;#39;../JSONHome/auth.json&amp;#39;);
-const request = require(&amp;#39;request&amp;#39;);
-
-//#endregion
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;裡面請先幫我引用auth.json跟request&lt;/p&gt;
-&lt;p&gt;auth目前只有存放機器人的key，跟key一樣，我們不希望自己與GAS串接的API暴露&amp;amp;寫死在程式裡面，所以之後要把連結寫在auth，之後透過auth來讀取連結&lt;br&gt;務必注意引用auth的路徑比bot.js多了一個點，這是因為GetGas.js要先從Script路徑出來才找的到JSONHome。&lt;/p&gt;
-&lt;p&gt;request是提供給js的網路請求library，我們之後都會透過他來傳遞Get方法&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/pwcJ7OJ.png&#34; alt=&#34;18-2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;auth.json目前的樣子&lt;/p&gt;
-&lt;p&gt;在原本的Key後面加上一個逗號，然後新增Gas參數，內涵一個JsonObject{}&lt;br&gt;{}裡面再包一個Get參數，內涵一個JsonArray[]&lt;br&gt;第一個JsonObject內包一個baseExcel參數&lt;br&gt;baseExcel參數會帶回我們昨天做的API連結&lt;/p&gt;
-&lt;p&gt;包三層是為了增加程式含意，方便之後閱讀&lt;br&gt;跟Get同一層之後可以再添加post等&lt;br&gt;不過Get原本是包JsonObject就好，這邊為了多介紹JsonArray所以用了，原本就會的同學可以少包Array&lt;/p&gt;
-&lt;p&gt;這種架構下，如果我們要獲取Url就會是&lt;br&gt;auth.Gas.Get[0].baseExcel&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/YcsHJpa.png&#34; alt=&#34;18-3&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//#region 宣告請求
-const baseExcel = &amp;#123;
-    &amp;#39;method&amp;#39;: &amp;#39;GET&amp;#39;,
-    &amp;#39;url&amp;#39;: auth.Gas.Get[0].baseExcel,
-    &amp;#39;headers&amp;#39;: &amp;#123;&amp;#125;
-&amp;#125;;
-
-//#endregion
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;再來我們宣告一個baseExcel常數，將http請求需要的參數帶給他&lt;br&gt;method表示我們使用的是Get方法&lt;br&gt;url就帶我們剛剛寫好的url&lt;br&gt;headers是傳送時的表頭，這邊放空值就好&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/8v4kmCE.png&#34; alt=&#34;18-4&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;//#region 傳送請求
-exports.getBaseExcel = function(userTalk, callback) &amp;#123;
-    let backValue = new Array;
-    request(baseExcel, function(error, response) &amp;#123;
-        try &amp;#123;
-            if (error) &amp;#123;
-                callback(error);
-            &amp;#125; else &amp;#123;
-                const data = JSON.parse(response.body); //接收回傳(response)的body
-                const keysValue = Object.keys(data); //將JsonObject的key值輸出成Array
-                //迴圈判斷是否符合
-                for (let i = 0; i &amp;lt; keysValue.length; i++) &amp;#123;
-                    if (data[keysValue[i]].NAME === userTalk) &amp;#123;
-                        callback(data[keysValue[i]].VALUE); //正確回傳結果
-                    &amp;#125;
-                &amp;#125;
-                callback(false);
-            &amp;#125;
-        &amp;#125; catch (err) &amp;#123;
-            console.log(&amp;#39;getBaseExcelError&amp;#39;, err);
-            callback(&amp;#39;getBaseExcelError&amp;#39;);
-        &amp;#125;
-    &amp;#125;);
-&amp;#125;;
-
-//#endregion
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;最後我們實際創建一個callback方法，供外部調用&lt;br&gt;http請求後，將回傳值定義為JSON給data&lt;br&gt;之後讓data跑迴圈，判斷message是否與表格的NAME欄相符&lt;br&gt;叫到名字的話，機器人就要回傳VALUE值&lt;/p&gt;
-&lt;p&gt;這樣我們就把GetGas.js做好了，剩下bot.js呼叫與傳送訊息的部分&lt;br&gt;我們明天繼續&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

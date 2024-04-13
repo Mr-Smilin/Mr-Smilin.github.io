@@ -5,6 +5,18 @@
     "home_page_url": "https://smilin.net",
     "items": [
         {
+            "id": "https://smilin.net/2024/04/13/autoPixai/",
+            "url": "https://smilin.net/2024/04/13/autoPixai/",
+            "title": "自動領取 Pixai 每日獎勵",
+            "date_published": "2024-04-13T11:00:00.000Z",
+            "content_html": "<p><img src=\"/img/post/autoPixai_01.jpg\" alt=\"title\"></p>\n<p>工程網址<br><a href=\"https://github.com/Mr-Smilin/auto-pixai\">auto-pixai</a><br><a href=\"https://hub.docker.com/r/smile0301/auto-pixai\">Docker Hub</a></p>\n<p>近幾年 AI 工具日新月異，我也有幸接觸了 AI 繪圖相關的一鱗半角</p>\n<p>其中 <a href=\"https://pixai.art/\">pixai</a> 是其中少有的雲端免費算圖網站</p>\n<p>如果對產出來的圖感到滿意的話，可以透過 AI 進一步運算，產出會動的圖</p>\n<span id=\"more\"></span>\n\n<p>不過說是免費，其實還是有些限制的</p>\n<p>在網站上的運算行為都需要消耗點數，無論是靜態或動態</p>\n<p>而點數除了透過付費與活動取得以外，pixai 每日都有一萬點數可供會員領取，也就是每日獎勵</p>\n<p><img src=\"/img/post/autoPixai_02.jpg\" alt=\"每日獎勵\"></p>\n<p>只要每天領取就可以免費算圖了，整個佛心來著對吧</p>\n<p>不過我們工程師最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x</p>\n<p><a href=\"https://github.com/Mr-Smilin/auto-pixai\">auto-pixai</a></p>\n<p>只要輸入帳號跟密碼，該腳本執行一次就會自動進網站領取每日獎勵</p>\n<p>使用 node.js 撰寫，另有 Docker 容器化，開箱即用</p>\n<pre><code>docker pull smile0301/auto-pixai\ndocker run -e LOGINNAME=&lt;你的帳號&gt; -e PASSWORD=&lt;你的密碼&gt; --name &lt;container-name&gt; smile0301/auto-pixai\n</code></pre>\n",
+            "tags": [
+                "node.js",
+                "教學",
+                "docker"
+            ]
+        },
+        {
             "id": "https://smilin.net/2023/06/01/discordJs14-1/",
             "url": "https://smilin.net/2023/06/01/discordJs14-1/",
             "title": "discord.js 升上 14 版，架構說明",
@@ -275,21 +287,6 @@
             "title": "Day19 - GAS抓表(3)",
             "date_published": "2020-09-19T12:00:43.000Z",
             "content_html": "<p>昨天我們的程式成功抓到API的資料並且對他做分析了<br>現在要串回主程序(bot.js)上</p>\n<span id=\"more\"></span>\n\n<p><img src=\"https://i.imgur.com/lLXAqcN.png\" alt=\"19-1\"></p>\n<p>請幫我在bot.js引用GetGas.js</p>\n<p><img src=\"https://i.imgur.com/mwE3NRg.png\" alt=\"19-2\"></p>\n<p><img src=\"https://i.imgur.com/xMGI9Fa.png\" alt=\"19-3\"> </p>\n<p>然後之前的文字回應系統，跟音樂系統一樣用一個function包起來，比較好看</p>\n<p><img src=\"https://i.imgur.com/uvfVZ2Q.png\" alt=\"19-4\"></p>\n<p>我們希望當訊息不符合任一前綴系統的情況，就要拿字串跟資料庫比對<br>所以我們把function放在default(默認)，只要前面的case都沒進去就會到default</p>\n<p><img src=\"https://i.imgur.com/N0R0NAW.png\" alt=\"19-5\"> </p>\n<p>之後新增BaseExcelFunction方法<br>內容是執行GetGas底下的getBaseExcel元素</p>\n<p><img src=\"https://i.imgur.com/lg1t1wq.png\" alt=\"19-6\"></p>\n<p>回來看GetGas的getBaseExcel<br>getBaseExcel元素指向一callback方法<br>帶了一個參數userTalk，callback方法使用callback代表方法的結束，呼叫方會在callback欄位宣告function，其帶回參數(messageED)就是getBaseExcel的方法中callback的值</p>\n<p><img src=\"https://i.imgur.com/XXBAW5u.png\" alt=\"19-7\"></p>\n<p>這樣寫完，機器人就能做簡單的回話了!</p>\n<hr>\n<p>雖然功能做好了，但有許多問題</p>\n<p>依嚴重性依序列舉的話</p>\n<ol>\n<li>   bot每從discord收到一則訊息就會使用一次API</li>\n<li>   使用JsonObject做迴圈查詢十分沒有效率</li>\n<li>   缺乏防呆&amp;參數替換</li>\n</ol>\n<p>理論上，機器人對對應的詞句回話這個動作是即時的，透過這個寫法，我們每次查詢API都必須等待2~3秒的時間，API才會將結果反饋給bot<br>而且多次傳送API不僅降低了程序的穩定，也要考慮GAS提供的每日配額<br>如果bot所在的群組一天訊息超過2萬筆，API就一定會被花光，而一天兩萬筆訊息、對於一個支援多群組的bot來說其實並不困難</p>\n<p>GetGas中對於data的處理方式也是極其低效的，雖然在捨棄SQL這種專為優化資料存取的系統時，就難以追求最高效的方法，但目前的做法也仍是相對低效的</p>\n<p>以及程序目前只是簡單的判A給B，功能十分單一<br>我沒辦法針對特定群組，有該群組專屬的詞彙，或是對特定回應帶tag等</p>\n<p>明天我們會將程序做一次翻新</p>\n",
-            "tags": [
-                "node.js",
-                "bot",
-                "discord",
-                "discord.js",
-                "教學",
-                "12th鐵人賽"
-            ]
-        },
-        {
-            "id": "https://smilin.net/2020/09/18/12thDay18/",
-            "url": "https://smilin.net/2020/09/18/12thDay18/",
-            "title": "Day18 - GAS抓表(2)",
-            "date_published": "2020-09-18T01:17:51.000Z",
-            "content_html": "<p>昨天我們在雲端上建好了試算表<br>將GAS發布成API的GET方法，只要我們訪問就能成功獲取試算表資料</p>\n<span id=\"more\"></span>\n\n<p>今天我們來寫點程式</p>\n<p>我們來回顧一下，目前機器人在Message下可以做到的事情</p>\n<ul>\n<li>文字回應</li>\n<li>音樂系統</li>\n</ul>\n<p>我們希望增加一個可以針對表格內容，動態觸發回應的功能<br>這種功能因為不會直接知道有哪些指令，應該要是沒有前綴字的，只要字串符合就會觸發</p>\n<p>由此可知，我們應該要將這個方法添加在所有功能的最底層<br>只有當前綴字都不符合時，才會來辨識表格資料</p>\n<p>觀念大致帶過，我們開始動手</p>\n<p>先幫我在專案目錄下建立一個Script資料夾，在裡面放一個GetGas.js</p>\n<p><img src=\"https://i.imgur.com/OJB3z4l.png\" alt=\"18-1\"></p>\n<pre><code>//#region 全域引用\nconst auth = require(&#39;../JSONHome/auth.json&#39;);\nconst request = require(&#39;request&#39;);\n\n//#endregion\n</code></pre>\n<p>裡面請先幫我引用auth.json跟request</p>\n<p>auth目前只有存放機器人的key，跟key一樣，我們不希望自己與GAS串接的API暴露&amp;寫死在程式裡面，所以之後要把連結寫在auth，之後透過auth來讀取連結<br>務必注意引用auth的路徑比bot.js多了一個點，這是因為GetGas.js要先從Script路徑出來才找的到JSONHome。</p>\n<p>request是提供給js的網路請求library，我們之後都會透過他來傳遞Get方法</p>\n<p><img src=\"https://i.imgur.com/pwcJ7OJ.png\" alt=\"18-2\"></p>\n<p>auth.json目前的樣子</p>\n<p>在原本的Key後面加上一個逗號，然後新增Gas參數，內涵一個JsonObject{}<br>{}裡面再包一個Get參數，內涵一個JsonArray[]<br>第一個JsonObject內包一個baseExcel參數<br>baseExcel參數會帶回我們昨天做的API連結</p>\n<p>包三層是為了增加程式含意，方便之後閱讀<br>跟Get同一層之後可以再添加post等<br>不過Get原本是包JsonObject就好，這邊為了多介紹JsonArray所以用了，原本就會的同學可以少包Array</p>\n<p>這種架構下，如果我們要獲取Url就會是<br>auth.Gas.Get[0].baseExcel</p>\n<p><img src=\"https://i.imgur.com/YcsHJpa.png\" alt=\"18-3\"></p>\n<pre><code>//#region 宣告請求\nconst baseExcel = &#123;\n    &#39;method&#39;: &#39;GET&#39;,\n    &#39;url&#39;: auth.Gas.Get[0].baseExcel,\n    &#39;headers&#39;: &#123;&#125;\n&#125;;\n\n//#endregion\n</code></pre>\n<p>再來我們宣告一個baseExcel常數，將http請求需要的參數帶給他<br>method表示我們使用的是Get方法<br>url就帶我們剛剛寫好的url<br>headers是傳送時的表頭，這邊放空值就好</p>\n<p><img src=\"https://i.imgur.com/8v4kmCE.png\" alt=\"18-4\"></p>\n<pre><code>//#region 傳送請求\nexports.getBaseExcel = function(userTalk, callback) &#123;\n    let backValue = new Array;\n    request(baseExcel, function(error, response) &#123;\n        try &#123;\n            if (error) &#123;\n                callback(error);\n            &#125; else &#123;\n                const data = JSON.parse(response.body); //接收回傳(response)的body\n                const keysValue = Object.keys(data); //將JsonObject的key值輸出成Array\n                //迴圈判斷是否符合\n                for (let i = 0; i &lt; keysValue.length; i++) &#123;\n                    if (data[keysValue[i]].NAME === userTalk) &#123;\n                        callback(data[keysValue[i]].VALUE); //正確回傳結果\n                    &#125;\n                &#125;\n                callback(false);\n            &#125;\n        &#125; catch (err) &#123;\n            console.log(&#39;getBaseExcelError&#39;, err);\n            callback(&#39;getBaseExcelError&#39;);\n        &#125;\n    &#125;);\n&#125;;\n\n//#endregion\n</code></pre>\n<p>最後我們實際創建一個callback方法，供外部調用<br>http請求後，將回傳值定義為JSON給data<br>之後讓data跑迴圈，判斷message是否與表格的NAME欄相符<br>叫到名字的話，機器人就要回傳VALUE值</p>\n<p>這樣我們就把GetGas.js做好了，剩下bot.js呼叫與傳送訊息的部分<br>我們明天繼續</p>\n",
             "tags": [
                 "node.js",
                 "bot",

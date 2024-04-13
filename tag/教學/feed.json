@@ -5,6 +5,18 @@
     "home_page_url": "https://smilin.net",
     "items": [
         {
+            "id": "https://smilin.net/2024/04/13/autoPixai/",
+            "url": "https://smilin.net/2024/04/13/autoPixai/",
+            "title": "自動領取 Pixai 每日獎勵",
+            "date_published": "2024-04-13T11:00:00.000Z",
+            "content_html": "<p><img src=\"/img/post/autoPixai_01.jpg\" alt=\"title\"></p>\n<p>工程網址<br><a href=\"https://github.com/Mr-Smilin/auto-pixai\">auto-pixai</a><br><a href=\"https://hub.docker.com/r/smile0301/auto-pixai\">Docker Hub</a></p>\n<p>近幾年 AI 工具日新月異，我也有幸接觸了 AI 繪圖相關的一鱗半角</p>\n<p>其中 <a href=\"https://pixai.art/\">pixai</a> 是其中少有的雲端免費算圖網站</p>\n<p>如果對產出來的圖感到滿意的話，可以透過 AI 進一步運算，產出會動的圖</p>\n<span id=\"more\"></span>\n\n<p>不過說是免費，其實還是有些限制的</p>\n<p>在網站上的運算行為都需要消耗點數，無論是靜態或動態</p>\n<p>而點數除了透過付費與活動取得以外，pixai 每日都有一萬點數可供會員領取，也就是每日獎勵</p>\n<p><img src=\"/img/post/autoPixai_02.jpg\" alt=\"每日獎勵\"></p>\n<p>只要每天領取就可以免費算圖了，整個佛心來著對吧</p>\n<p>不過我們工程師最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x</p>\n<p><a href=\"https://github.com/Mr-Smilin/auto-pixai\">auto-pixai</a></p>\n<p>只要輸入帳號跟密碼，該腳本執行一次就會自動進網站領取每日獎勵</p>\n<p>使用 node.js 撰寫，另有 Docker 容器化，開箱即用</p>\n<pre><code>docker pull smile0301/auto-pixai\ndocker run -e LOGINNAME=&lt;你的帳號&gt; -e PASSWORD=&lt;你的密碼&gt; --name &lt;container-name&gt; smile0301/auto-pixai\n</code></pre>\n",
+            "tags": [
+                "node.js",
+                "教學",
+                "docker"
+            ]
+        },
+        {
             "id": "https://smilin.net/2022/11/01/bdb3/",
             "url": "https://smilin.net/2022/11/01/bdb3/",
             "title": "BDB更新日誌#3",
@@ -274,21 +286,6 @@
             "title": "Day18 - GAS抓表(2)",
             "date_published": "2020-09-18T01:17:51.000Z",
             "content_html": "<p>昨天我們在雲端上建好了試算表<br>將GAS發布成API的GET方法，只要我們訪問就能成功獲取試算表資料</p>\n<span id=\"more\"></span>\n\n<p>今天我們來寫點程式</p>\n<p>我們來回顧一下，目前機器人在Message下可以做到的事情</p>\n<ul>\n<li>文字回應</li>\n<li>音樂系統</li>\n</ul>\n<p>我們希望增加一個可以針對表格內容，動態觸發回應的功能<br>這種功能因為不會直接知道有哪些指令，應該要是沒有前綴字的，只要字串符合就會觸發</p>\n<p>由此可知，我們應該要將這個方法添加在所有功能的最底層<br>只有當前綴字都不符合時，才會來辨識表格資料</p>\n<p>觀念大致帶過，我們開始動手</p>\n<p>先幫我在專案目錄下建立一個Script資料夾，在裡面放一個GetGas.js</p>\n<p><img src=\"https://i.imgur.com/OJB3z4l.png\" alt=\"18-1\"></p>\n<pre><code>//#region 全域引用\nconst auth = require(&#39;../JSONHome/auth.json&#39;);\nconst request = require(&#39;request&#39;);\n\n//#endregion\n</code></pre>\n<p>裡面請先幫我引用auth.json跟request</p>\n<p>auth目前只有存放機器人的key，跟key一樣，我們不希望自己與GAS串接的API暴露&amp;寫死在程式裡面，所以之後要把連結寫在auth，之後透過auth來讀取連結<br>務必注意引用auth的路徑比bot.js多了一個點，這是因為GetGas.js要先從Script路徑出來才找的到JSONHome。</p>\n<p>request是提供給js的網路請求library，我們之後都會透過他來傳遞Get方法</p>\n<p><img src=\"https://i.imgur.com/pwcJ7OJ.png\" alt=\"18-2\"></p>\n<p>auth.json目前的樣子</p>\n<p>在原本的Key後面加上一個逗號，然後新增Gas參數，內涵一個JsonObject{}<br>{}裡面再包一個Get參數，內涵一個JsonArray[]<br>第一個JsonObject內包一個baseExcel參數<br>baseExcel參數會帶回我們昨天做的API連結</p>\n<p>包三層是為了增加程式含意，方便之後閱讀<br>跟Get同一層之後可以再添加post等<br>不過Get原本是包JsonObject就好，這邊為了多介紹JsonArray所以用了，原本就會的同學可以少包Array</p>\n<p>這種架構下，如果我們要獲取Url就會是<br>auth.Gas.Get[0].baseExcel</p>\n<p><img src=\"https://i.imgur.com/YcsHJpa.png\" alt=\"18-3\"></p>\n<pre><code>//#region 宣告請求\nconst baseExcel = &#123;\n    &#39;method&#39;: &#39;GET&#39;,\n    &#39;url&#39;: auth.Gas.Get[0].baseExcel,\n    &#39;headers&#39;: &#123;&#125;\n&#125;;\n\n//#endregion\n</code></pre>\n<p>再來我們宣告一個baseExcel常數，將http請求需要的參數帶給他<br>method表示我們使用的是Get方法<br>url就帶我們剛剛寫好的url<br>headers是傳送時的表頭，這邊放空值就好</p>\n<p><img src=\"https://i.imgur.com/8v4kmCE.png\" alt=\"18-4\"></p>\n<pre><code>//#region 傳送請求\nexports.getBaseExcel = function(userTalk, callback) &#123;\n    let backValue = new Array;\n    request(baseExcel, function(error, response) &#123;\n        try &#123;\n            if (error) &#123;\n                callback(error);\n            &#125; else &#123;\n                const data = JSON.parse(response.body); //接收回傳(response)的body\n                const keysValue = Object.keys(data); //將JsonObject的key值輸出成Array\n                //迴圈判斷是否符合\n                for (let i = 0; i &lt; keysValue.length; i++) &#123;\n                    if (data[keysValue[i]].NAME === userTalk) &#123;\n                        callback(data[keysValue[i]].VALUE); //正確回傳結果\n                    &#125;\n                &#125;\n                callback(false);\n            &#125;\n        &#125; catch (err) &#123;\n            console.log(&#39;getBaseExcelError&#39;, err);\n            callback(&#39;getBaseExcelError&#39;);\n        &#125;\n    &#125;);\n&#125;;\n\n//#endregion\n</code></pre>\n<p>最後我們實際創建一個callback方法，供外部調用<br>http請求後，將回傳值定義為JSON給data<br>之後讓data跑迴圈，判斷message是否與表格的NAME欄相符<br>叫到名字的話，機器人就要回傳VALUE值</p>\n<p>這樣我們就把GetGas.js做好了，剩下bot.js呼叫與傳送訊息的部分<br>我們明天繼續</p>\n",
-            "tags": [
-                "node.js",
-                "bot",
-                "discord",
-                "discord.js",
-                "教學",
-                "12th鐵人賽"
-            ]
-        },
-        {
-            "id": "https://smilin.net/2020/09/17/12thDay17/",
-            "url": "https://smilin.net/2020/09/17/12thDay17/",
-            "title": "Day17 - GAS抓表(1)",
-            "date_published": "2020-09-17T01:48:31.000Z",
-            "content_html": "<p>今天我們來寫GAS</p>\n<span id=\"more\"></span>\n\n<h2 id=\"文件創建\"><a href=\"#文件創建\" class=\"headerlink\" title=\"文件創建\"></a>文件創建</h2><p>首先請打開google，登入你自己的google雲端，並且在喜歡的地方創建一個資料夾，取名為DiscordDataBaseApi</p>\n<p><img src=\"https://i.imgur.com/rczINQm.png\" alt=\"17-1\"></p>\n<p>右鍵分別創建一個試算表跟一個GAS</p>\n<p><img src=\"https://i.imgur.com/gGDTERM.png\" alt=\"17-2\"></p>\n<p><img src=\"https://i.imgur.com/EIbdgPE.png\" alt=\"17-3\"></p>\n<p>兩個文件創立後都會直接開一個新視窗<br>Excel取名為MyData，像我們一樣隨便輸入一些資料<br>然後複製網址上面d&#x2F; 到 &#x2F;edit 中間的亂碼，我的是<br>1mQ6qTJfOs3Gv5–K9r87w56wmDc3hUcpHm5hF1YKTms</p>\n<p>這串英數是我們Excel的ID，只要把這串亂碼給Google看，他就知道你找的是這張表</p>\n<p><img src=\"https://i.imgur.com/EPVxxkb.png\" alt=\"17-4\"></p>\n<p>我們回到 GAS ，填入以下程式</p>\n<pre><code>var id = &#39;你的表格ID&#39;; //抓取表單\n  var spreadsheet = SpreadsheetApp.openById(id); // Sheet id\n  var sheet = spreadsheet.getSheets()[0]; // 要第幾個sheet？ 0 就是第一個\n  var rowLength = sheet.getLastRow()-1; //取行長度\n  var columnLength = sheet.getLastColumn(); //取列長度\n  var data = sheet.getRange(2,1,rowLength,columnLength).getValues(); // 取得的資料\n</code></pre>\n<p>把剛剛的id給GAS抓表，抓到表後讀取行列範圍，然後從範圍中抓取資料<br>那一長串程式碼全都是google提供的function，雖然好像有library可以看，筆者是建議記下來就好</p>\n<p>我們範圍是從第2行開始抓取資料到最底，這是因為我們表格的第一行屬於標題行，給使用者看的，我們就不抓取這行資料</p>\n<p><img src=\"https://i.imgur.com/YGdSESn.png\" alt=\"17-5\"></p>\n<p>再來幫我新增這幾行資料</p>\n<pre><code>  var dataExport = &#123;&#125;;\n  \n  for(i in data)&#123;\n    if(data[i][0] != &quot;&quot;)&#123;\n    dataExport[data[i][0]] = &#123;\n      DATE:   data[i][1],\n      NAME:   data[i][2],\n      VALUE:  data[i][3]\n      &#125;\n    &#125;\n  &#125;\n</code></pre>\n<p>如果對json操作有一點經驗的同學，對這幾行應該不陌生<br>把data中的資料一個個串成json，這樣才方便我們做後續處理</p>\n<p><img src=\"https://i.imgur.com/mewJW4N.png\" alt=\"17-6\"></p>\n<p>最後加上這行</p>\n<pre><code>  var dataExportFormat = JSON.stringify(dataExport);\n  return ContentService.createTextOutput(dataExportFormat).setMimeType(ContentService.MimeType.JSON);\n</code></pre>\n<p>把整理好的資料return回去<br>GAS回傳需要先經手過他們的方法，API接收到的資料才是正常的<br>這部份當成return dataExport就可以了。</p>\n<h2 id=\"發布\"><a href=\"#發布\" class=\"headerlink\" title=\"發布\"></a>發布</h2><p>表格都填完，GAS都寫好後，我們就能抓取到表格資料了<br>但是程式該怎麼訪問GAS呢?<br>為了讓程式可以訪問到GAS，我們需要將GAS做成API<br>確認程式存檔後，幫我點左上角發布-&gt;部屬為網頁應用程式</p>\n<p><img src=\"https://i.imgur.com/jR2dTYm.png\" alt=\"17-7\"></p>\n<p>會有三個下拉框出現<br>1.\t是版本號<br>2.\t發布者<br>3.\t存取權限</p>\n<p>因為是第一次發布，版本一定是1<br>發布者是你就好不要動<br>這邊要注意第三點，務必設定成Anyone,even anonymous<br>確定無誤後我們點擊Deploy，他會要你核對權限，一路允許就好</p>\n<p><img src=\"https://i.imgur.com/HD5slmK.png\" alt=\"17-8\"></p>\n<p>都完成後，我們最後會拿到一組連結，我們試著將連結放在瀏覽器上</p>\n<p><img src=\"https://i.imgur.com/mZh9b3a.png\" alt=\"17-9\"></p>\n<p>如果成功就會像筆者這樣拿到表格上的檔案了!</p>\n",
             "tags": [
                 "node.js",
                 "bot",
