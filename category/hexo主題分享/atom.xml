@@ -23,8 +23,8 @@
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
-    <category term="Live2D" />
     <category term="Rust" />
+    <category term="Live2D" />
     <entry>
         <id>https://smilin.net/2021/11/16/fluidThemeShare/</id>
         <title>fluid支持pjax主題源碼分享</title>

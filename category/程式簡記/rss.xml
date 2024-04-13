@@ -26,8 +26,8 @@
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
-        <category>Live2D</category>
         <category>Rust</category>
+        <category>Live2D</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2024/04/13/autoPixai/</guid>
             <title>自動領取 Pixai 每日獎勵</title>
@@ -38,7 +38,7 @@
             <pubDate>Sat, 13 Apr 2024 19:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/autoPixai_01.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
 &lt;p&gt;工程網址&lt;br&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;Github&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://hub.docker.com/r/smile0301/auto-pixai&#34;&gt;Docker Hub&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;近幾年 AI 工具日新月異&lt;br&gt;我也有幸接觸了 AI 繪圖的一鱗半角&lt;/p&gt;
+&lt;p&gt;近幾年 AI 工具日新月異&lt;br&gt;我也有幸接觸了 AI 繪圖的一鱗半爪  &lt;/p&gt;
 &lt;p&gt;其中 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 是少有的雲端免費算圖網站&lt;/p&gt;
 &lt;p&gt;在 pixai 如果對產出來的圖感到滿意的話&lt;br&gt;可以透過 AI 進一步運算，產出會動的圖&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
