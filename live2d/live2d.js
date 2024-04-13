@@ -4040,7 +4040,7 @@ default = o;
 		l = e(3),
 		$ = r(l);
 	o.prototype = new n.L2DBaseModel, o.prototype.load = function(t, i, e) {
-		this.setUpdating(!0), this.setInitialized(!1), this.modelHomeDir = i.substring(0, i.lastIndexOf("/") + 1), this.modelSetting = new _.
+		this.setUpdating(!0), this.setInitialized(!1), /*this.modelHomeDir = i.substring(0, i.lastIndexOf("/") + 1),*/this.modelHomeDir = '', this.modelSetting = new _.
 	default;
 		var r = this;
 		this.modelSetting.loadModelSetting(i, function() {
