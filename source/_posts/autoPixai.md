@@ -14,7 +14,7 @@ categories:
 [Docker Hub](https://hub.docker.com/r/smile0301/auto-pixai)
 
 近幾年 AI 工具日新月異  
-我也有幸接觸了 AI 繪圖的一鱗半角
+我也有幸接觸了 AI 繪圖的一鱗半爪  
 
 其中 [pixai](https://pixai.art) 是少有的雲端免費算圖網站
 
