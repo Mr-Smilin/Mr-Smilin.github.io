@@ -19,7 +19,7 @@ window.live2d_settings = Array(); /*
     　　　　　 　　　'ｰ'　　!_,.:*********************************************************************************/
 
 // 静态 API 文件
-live2d_settings["staticAPIFile"] = "live2d/static-api-file.json";
+live2d_settings["staticAPIFile"] = "/live2d/static-api-file.json";
 live2d_settings["staticPath"] =
 	"https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/model";
 live2d_settings["defaultModel"] =
