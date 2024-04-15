@@ -14,9 +14,10 @@
     opacity: 0;
     margin: -20px 20px;
     padding: 5px 10px;
-    border: 1px solid rgba(224, 186, 140, 0.62);
+    border: 2px solid rgba(120, 193, 199, 0.62);
     border-radius: 12px;
-    background-color: rgba(236, 217, 188, 0.5);
+    background-color: rgba(245, 255, 253, 0.9);
+    color: rgb(0, 0, 0);
     box-shadow: 0 3px 15px 2px rgba(191, 158, 118, 0.2);
     text-overflow: ellipsis;
     overflow: hidden;
