@@ -98,6 +98,7 @@ function localAPI(action, modelID, texturesID = 0) {
 		live2d_settings.nowModelID = modelID;
 		live2d_settings.nowTexturesID = texturesID;
 		if (staticAPI === undefined) {
+			console.log("加載默認 live2d 設定");
 			let blob = new Blob([live2d_settings.defaultModel], {
 				type: "Application/json",
 			}); // type 的值为要创建的文件的MIME
