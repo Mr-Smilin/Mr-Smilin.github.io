@@ -15,16 +15,16 @@
     <category term="Cloudflare" />
     <category term="docker" />
     <category term="javascript" />
+    <category term="hexo" />
+    <category term="fluid" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
     <category term="Live2D" />
-    <category term="hexo" />
-    <category term="fluid" />
+    <category term="Rust" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
-    <category term="Rust" />
     <entry>
         <id>https://smilin.net/2022/11/01/bdb3/</id>
         <title>BDB更新日誌#3</title>
