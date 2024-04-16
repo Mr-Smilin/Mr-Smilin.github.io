@@ -76,8 +76,8 @@ navbar:
   # Naviagtion menu items
   menu:
     首頁: /
-    文章: /archives/
-    分類: /categories/
+    # 文章: /archives/
+    # 分類: /categories/
     雲端: https://drive.smilin.net/
     留言: /message/
     友鏈: /friend/
