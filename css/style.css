@@ -11914,6 +11914,10 @@ body.night {
   color: #c0c0c0 !important;
   background-color: #000;
 }
+.night pre {
+  background-color: #4a4a4a;
+  color: #c0c0c0;
+}
 .night .aplayer .aplayer-miniswitcher {
   background: #c0c0c0 !important;
 }
