@@ -3,7 +3,7 @@
     <channel>
         <title>貓工坊 • Posts by &#34;腳本&#34; tag</title>
         <link>https://smilin.net</link>
-        <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
+        <description>Code · Thinking · ACG</description>
         <language>zh-TW</language>
         <pubDate>Tue, 14 Dec 2021 12:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 14 Dec 2021 12:00:00 +0800</lastBuildDate>
@@ -16,18 +16,18 @@
         <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>javascript</category>
         <category>docker</category>
-        <category>hexo</category>
-        <category>fluid</category>
+        <category>javascript</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>Rust</category>
         <category>Live2D</category>
+        <category>hexo</category>
+        <category>fluid</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
+        <category>Rust</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2021/12/14/racingScript-worldFlipper/</guid>
             <title>競速疊屍腳本 - 台版彈射世界</title>

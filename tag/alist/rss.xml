@@ -3,7 +3,7 @@
     <channel>
         <title>貓工坊 • Posts by &#34;alist&#34; tag</title>
         <link>https://smilin.net</link>
-        <description>程式教學 C#/JAVA/HTML5/NODE.JS，後端開發，日常瑣記</description>
+        <description>Code · Thinking · ACG</description>
         <language>zh-TW</language>
         <pubDate>Mon, 11 Sep 2023 18:00:00 +0800</pubDate>
         <lastBuildDate>Mon, 11 Sep 2023 18:00:00 +0800</lastBuildDate>
@@ -16,18 +16,18 @@
         <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>javascript</category>
         <category>docker</category>
-        <category>hexo</category>
-        <category>fluid</category>
+        <category>javascript</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>Rust</category>
         <category>Live2D</category>
+        <category>hexo</category>
+        <category>fluid</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
+        <category>Rust</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/09/11/alist-file-error/</guid>
             <title>Alist 單檔太大上傳失敗，思路整理</title>

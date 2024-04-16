@@ -11906,12 +11906,24 @@ hr {
 body.night {
   background: #000;
 }
+.navbar-logo .logo-img-dark,
+.footer-logo .logo-img-dark {
+  display: none;
+}
 .night {
   color: #c0c0c0 !important;
   background-color: #000;
 }
 .night .aplayer .aplayer-miniswitcher {
   background: #c0c0c0 !important;
+}
+.night .navbar-logo .logo-img,
+.night .footer-logo .logo-img {
+  display: none;
+}
+.night .navbar-logo .logo-img-dark,
+.night .footer-logo .logo-img-dark {
+  display: inline-block;
 }
 .night .navbar-highlight {
   background-color: rgba(40,44,52,0.8) !important;
