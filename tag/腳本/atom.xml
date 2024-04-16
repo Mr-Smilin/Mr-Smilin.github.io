@@ -21,10 +21,10 @@
     <category term="render" />
     <category term="render.com" />
     <category term="Rust" />
-    <category term="Live2D" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
+    <category term="Live2D" />
     <entry>
         <id>https://smilin.net/2021/12/14/racingScript-worldFlipper/</id>
         <title>競速疊屍腳本 - 台版彈射世界</title>
