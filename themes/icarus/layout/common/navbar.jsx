@@ -18,6 +18,7 @@ class Navbar extends Component {
         const {
             logo,
             logoUrl,
+            logoUrlNight,
             siteUrl,
             siteTitle,
             menu,
@@ -33,7 +34,10 @@ class Navbar extends Component {
             if (logo.text) {
                 navbarLogo = logo.text;
             } else {
-                navbarLogo = <img src={logoUrl} alt={siteTitle} height="28" />;
+                navbarLogo = <div>
+                    <img class="logo-img" src={logoUrl} alt={siteTitle} height="28" />
+                    <img class="logo-img-dark" src={logoUrlNight} alt={siteTitle} height="28"/>
+                </div>;
             }
         } else {
             navbarLogo = siteTitle;
@@ -110,7 +114,8 @@ module.exports = cacheComponent(Navbar, 'common.navbar', props => {
 
     return {
         logo,
-        logoUrl: url_for(logo),
+        logoUrl: url_for(logo.light),
+        logoUrlNight: url_for(logo.dark),
         siteUrl: url_for('/'),
         siteTitle: title,
         menu,

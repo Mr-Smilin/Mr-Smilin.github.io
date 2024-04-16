@@ -6,6 +6,7 @@ class Footer extends Component {
         const {
             logo,
             logoUrl,
+            logoUrlNight,
             siteUrl,
             siteTitle,
             siteYear,
@@ -29,7 +30,11 @@ class Footer extends Component {
             if (logo.text) {
                 footerLogo = logo.text;
             } else {
-                footerLogo = <img src={logoUrl} alt={siteTitle} height="28" />;
+                footerLogo = 
+                <div>
+                <img class="logo-img" src={logoUrl} alt={siteTitle} height="28" />
+                <img class="logo-img-dark" src={logoUrlNight} alt={siteTitle} height="28" />
+                </div>;
             }
         } else {
             footerLogo = siteTitle;
@@ -128,7 +133,8 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         registeredNo: footer_registered_no,
         my_cdn: my_cdn,
         logo,
-        logoUrl: url_for(logo),
+        logoUrl: url_for(logo.light),
+        logoUrlNight: url_for(logo.dark),
         siteUrl: url_for('/'),
         siteTitle: title,
         siteYear: date(new Date(), 'YYYY'),

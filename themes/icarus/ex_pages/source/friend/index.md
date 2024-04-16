@@ -9,8 +9,8 @@ date: 2022-01-03 15:00:00
 - 排名不分先後，刷新後重排，更新信息後請留言告知。
 - 本站不存儲友鏈圖片，如果友鏈圖片換了無法更新。圖片裂了的會替換成默認圖，需要更換的請留言告知。
 - 本站友鏈信息如下，申請友鏈前請先添加本站信息：  
-  網站圖標：[點我取得](https://avatars.githubusercontent.com/u/62000156)  
-  網站名稱：微笑工房  
+  網站圖標：[點我取得](https://smilin.net/img/avatar.png)  
+  網站名稱：貓工坊  
   網站地址：https://smilin.net  
   網站簡介：Code · Thinking · ACG
 

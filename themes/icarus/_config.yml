@@ -3,7 +3,9 @@ version: 4.0.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: /img/logo.png #/img/logo.svg
+logo:
+  light: /img/logo/logo_light.svg #/img/logo.svg
+  dark: /img/logo/logo_night.svg
 # Page metadata configurations
 head:
   # URL or path to the website's icon
@@ -13,7 +15,7 @@ head:
   open_graph:
     # Page title (og:title) (optional)
     # You should leave this blank for most of the time
-    title: 微笑工房
+    title: 貓工坊
     # Page type (og:type) (optional)
     # You should leave this blank for most of the time
     type: blog
@@ -25,7 +27,7 @@ head:
     image: https://smilin.net/img/avatar.png
     # Site name (og:site_name) (optional)
     # You should leave this blank for most of the time
-    site_name: 微笑工房
+    site_name: 貓工坊
     # Page author (article:author) (optional)
     # You should leave this blank for most of the time
     author: Mr.S
@@ -156,7 +158,7 @@ comment:
 #     avatar: 'mp'
 #     placeholder: '留下您的高见！'
 #     has_latest_comment: true #是否有最新评论 true-有，false-无
-#     owner: 微笑工房 #博主名 最新评论标注[博主]
+#     owner: 貓工坊 #博主名 最新评论标注[博主]
 #     required_fields: ['nick', 'mail', 'link']
 #     lang: en #zh-CN zh-TW en ja
 
@@ -238,11 +240,12 @@ widgets:
     # Author name
     author: 微笑
     # Author title
-    author_title: 崩潰之鍊金術師
+    author_title: NekoAtelier
     # Author's current location
     location: 台灣
     # URL or path to the avatar image
-    avatar: https://avatars.githubusercontent.com/u/62000156
+    # avatar: https://avatars.githubusercontent.com/u/62000156
+    avatar: /img/avatar.png
     # Whether show the rounded avatar image
     avatar_rounded: true
     # Email address for the Gravatar
