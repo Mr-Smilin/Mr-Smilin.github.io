@@ -15,7 +15,7 @@ head:
   open_graph:
     # Page title (og:title) (optional)
     # You should leave this blank for most of the time
-    title: 貓工坊
+    title:
     # Page type (og:type) (optional)
     # You should leave this blank for most of the time
     type: blog
@@ -27,7 +27,7 @@ head:
     image: https://smilin.net/img/avatar.png
     # Site name (og:site_name) (optional)
     # You should leave this blank for most of the time
-    site_name: 貓工坊
+    site_name:
     # Page author (article:author) (optional)
     # You should leave this blank for most of the time
     author: Mr.S
