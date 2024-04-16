@@ -4,7 +4,9 @@
     "src": "https://www.chanshiyu.com/avatar.jpg",
     "name": "@蝉時雨",
     "desc": "蝉鸣如雨，花宵道中",
-    "url": "https://chanshiyu.com/"
+    "url": "https://chanshiyu.com/",
+    "valid": false,
+    "stopTime": "2024.04.01"
   },
   {
     "date": "2023.10.11",
