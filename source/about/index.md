@@ -58,6 +58,13 @@ layout: about
 - 巴哈姆特 - 巴友紀錄插件
   - [介紹文章](https://home.gamer.com.tw/artwork.php?sn=5800119)
   - [下載點](https://greasyfork.org/zh-TW/scripts/475916)
+- 巴哈姆特 - IP 紀錄插件
+  - [介紹文章](https://home.gamer.com.tw/creationDetail.php?sn=5853466)
+  - [下載點](https://greasyfork.org/zh-TW/scripts/483109-%E5%B7%B4%E5%8F%8Bip%E7%B4%80%E9%8C%84)
+- Pixai 爬蟲領取獎勵
+  - [介紹文章](https://smilin.net/2024/04/13/autoPixai/)
+  - [Github](https://github.com/Mr-Smilin/auto-pixai)
+  - [DockerHub](https://hub.docker.com/r/smile0301/auto-pixai)
 
 ## 時光機 rememeber
 
