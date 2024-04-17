@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>貓工坊</title>
+        <title>貓謎工坊</title>
         <link>https://smilin.net</link>
         <description>Code · Thinking · ACG</description>
         <language>zh-TW</language>
@@ -17,17 +17,17 @@
         <category>Alist</category>
         <category>Cloudflare</category>
         <category>docker</category>
+        <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
-        <category>javascript</category>
+        <category>Live2D</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>Live2D</category>
+        <category>Rust</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
-        <category>Rust</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2024/04/13/autoPixai/</guid>
             <title>自動領取 Pixai 每日獎勵</title>
