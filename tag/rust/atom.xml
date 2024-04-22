@@ -13,18 +13,18 @@
     <category term="日記" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="docker" />
-    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
+    <category term="docker" />
+    <category term="javascript" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
+    <category term="Live2D" />
+    <category term="Rust" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
-    <category term="Live2D" />
-    <category term="Rust" />
     <entry>
         <id>https://smilin.net/2023/10/27/rust_learning_02/</id>
         <title>Rust 學習紀錄[2] = Rust 的 NPM</title>

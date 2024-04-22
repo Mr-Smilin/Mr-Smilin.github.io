@@ -515,6 +515,16 @@ function loadTipsMessage(result) {
 						referrer_message.google[0] +
 						document.title.split(referrer_message.google[2])[0] +
 						referrer_message.google[1];
+				else if (domain == "gamer")
+					text =
+						referrer_message.gamer[0] +
+						document.title.split(referrer_message.gamer[2])[0] +
+						referrer_message.gamer[1];
+				else if (domain == "imaegoo")
+					text =
+						referrer_message.imaegoo[0] +
+						document.title.split(referrer_message.imaegoo[2])[0] +
+						referrer_message.imaegoo[1];
 				else {
 					$.each(result.waifu.referrer_hostname, function (i, val) {
 						if (i == referrer.hostname) referrer.hostname = getRandText(val);
