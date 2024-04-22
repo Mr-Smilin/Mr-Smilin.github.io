@@ -69,7 +69,8 @@ module.exports = class extends Component {
             elements: "a",//代表点击链接就更新
             selectors: [  //代表要更新的节点
                 ".section",
-                "title"
+                "title",
+                "#twikoo"
             ],
             cache: true,
             cacheBust:false

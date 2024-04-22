@@ -136,19 +136,19 @@ search:
 #    shortname: ''
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-comment:
-  type: gitalk
-  language: zh-TW #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
-  owner: Mr-Smilin # (required) GitHub user name
-  repo: Mr-Smilin.github.io # (required) GitHub repository name
-  client_id: 9a33a548232178c23121 # (required) OAuth application client id
-  client_secret: bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6 # (required) OAuth application client secret
-  admin: ["Mr-Smilin"]
-  create_issue_manually: true
-  distraction_free_mode: false
-  has_hot_recommend: true # 是否有热门推荐
-  has_latest_comment: true #是否有最新评论
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token #解决登录后403问题
+# comment:
+#   type: gitalk
+#   language: zh-TW #zh-CN #Localization language key, en, zh-CN and zh-TW are currently available.
+#   owner: Mr-Smilin # (required) GitHub user name
+#   repo: Mr-Smilin.github.io # (required) GitHub repository name
+#   client_id: 9a33a548232178c23121 # (required) OAuth application client id
+#   client_secret: bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6 # (required) OAuth application client secret
+#   admin: ["Mr-Smilin"]
+#   create_issue_manually: true
+#   distraction_free_mode: false
+#   has_hot_recommend: true # 是否有热门推荐
+#   has_latest_comment: true #是否有最新评论
+#   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token #解决登录后403问题
 # comment:
 #     type: valine
 #     app_id: rOtVIhvG3kd7QkMKe3naSU9R-gzGzoHsz
@@ -161,6 +161,10 @@ comment:
 #     owner: 貓謎工坊 #博主名 最新评论标注[博主]
 #     required_fields: ['nick', 'mail', 'link']
 #     lang: en #zh-CN zh-TW en ja
+comment:
+  type: twikoo
+  envId: https://twikoo-db.netlify.app/.netlify/functions/twikoo
+  jsUrl: https://cdn.jsdelivr.net/npm/twikoo@1.6.32/dist/twikoo.all.min.js
 
 # utteranc site: https://utteranc.es/
 # comment:
