@@ -7,14 +7,14 @@ categories:
   - [程式簡記]
 ---
 
-![title](/img/post/autoPixai_01.jpg)
+![title](/img/post/autoPixai/01.jpg)
 
 工程網址  
 [Github](https://github.com/Mr-Smilin/auto-pixai)  
 [Docker Hub](https://hub.docker.com/r/smile0301/auto-pixai)
 
 近幾年 AI 工具日新月異  
-我也有幸接觸了 AI 繪圖的一鱗半爪  
+我也有幸接觸了 AI 繪圖的一鱗半爪
 
 其中 [pixai](https://pixai.art) 是少有的雲端免費算圖網站
 
@@ -34,7 +34,7 @@ categories:
 而點數除了透過付費與活動取得以外  
 pixai 每日都有一萬點數可供會員領取，也就是每日獎勵
 
-![每日獎勵](/img/post/autoPixai_02.jpg)
+![每日獎勵](/img/post/autoPixai/02.jpg)
 
 只要每天領取就可以免費算圖了，整個佛心來著對吧
 
