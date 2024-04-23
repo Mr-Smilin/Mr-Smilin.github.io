@@ -5,29 +5,82 @@
         <link>https://smilin.net</link>
         <description>Code · Thinking · ACG</description>
         <language>zh-TW</language>
-        <pubDate>Sat, 13 Apr 2024 19:00:00 +0800</pubDate>
-        <lastBuildDate>Sat, 13 Apr 2024 19:00:00 +0800</lastBuildDate>
+        <pubDate>Tue, 23 Apr 2024 11:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 23 Apr 2024 11:00:00 +0800</lastBuildDate>
         <category>node.js</category>
         <category>bot</category>
         <category>discord</category>
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
+        <category>日記</category>
+        <category>docker</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>docker</category>
-        <category>日記</category>
         <category>hexo</category>
         <category>fluid</category>
         <category>javascript</category>
-        <category>Live2D</category>
-        <category>Rust</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
+        <category>Rust</category>
+        <category>Live2D</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2024/04/23/twikoo1/</guid>
+            <title>最近想更換評論系統</title>
+            <link>https://smilin.net/2024/04/23/twikoo1/</link>
+            <category>日記</category>
+            <category>hexo</category>
+            <pubDate>Tue, 23 Apr 2024 11:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/twikoo-logo-home.png&#34; alt=&#34;logo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最近想把 blog 的評論系統換了&lt;/p&gt;
+&lt;p&gt;原本的 gittalk 免費，開源&lt;br&gt;巧妙利用 github 的 issue，在靜態網站上也能加入評論系統&lt;/p&gt;
+&lt;p&gt;存在些許不方便，仍瑕不掩瑜。&lt;/p&gt;
+&lt;p&gt;不過既然存在限制，總有人會想開發更好的工具&lt;br&gt;twikoo 就挺符合 blog 需求的&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;gittalk&#34;&gt;&lt;a href=&#34;#gittalk&#34; class=&#34;headerlink&#34; title=&#34;gittalk&#34;&gt;&lt;/a&gt;gittalk&lt;/h1&gt;&lt;p&gt;既然原本是用 gittalk，先說說 gittalk 的優點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;與 github page 的高度適配&lt;/li&gt;
+&lt;li&gt;基於 issue 特性，綁定 github 帳戶，防止小白&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩邊都有的優點不提，大概是這些&lt;br&gt;至於缺點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因為綁在 issue，評論必須先註冊 github&lt;/li&gt;
+&lt;li&gt;對中國使用者的支援較差(疑似)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/01.jpg&#34; alt=&#34;01&#34;&gt;&lt;/p&gt;
+&lt;p&gt;而且本站基於 gittalk ，魔改了許多功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;撈取最新留言&lt;/li&gt;
+&lt;li&gt;撈取熱門留言&lt;/li&gt;
+&lt;li&gt;從外部撈取文章留言數&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;替換評論系統，不只是舊有的評論會消失&lt;br&gt;也代表著這些功能都需要重新適配，或是棄用。&lt;/p&gt;
+&lt;h1 id=&#34;twikoo&#34;&gt;&lt;a href=&#34;#twikoo&#34; class=&#34;headerlink&#34; title=&#34;twikoo&#34;&gt;&lt;/a&gt;twikoo&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://twikoo.js.org/&#34;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;twikoo 與 gittalk 不同，資料存放於 MongoDB&lt;br&gt;意味著我們需要自行架設 DB 跟 API Server&lt;/p&gt;
+&lt;p&gt;不過兩者在網路上都有許多免費資源可用，用來支持一個 blog 的運作綽綽有餘&lt;/p&gt;
+&lt;p&gt;說說這個評論系統的優點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;無須登入即可留言&lt;/li&gt;
+&lt;li&gt;避免騷擾留言，分別配有多種自動偵測垃圾留言的接口，也能開啟人工審核&lt;/li&gt;
+&lt;li&gt;暱稱&amp;amp;信箱&amp;amp;網址 的填寫方式，很有幾十年前，傳統 blog 那味，我超愛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;至於缺點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比起 gittalk，由於個人資料是自由填寫，相對難以得知發文者的背景&lt;/li&gt;
+&lt;li&gt;與依附著 github issue 的 gittalk 相比，twikoo 於第三方架設 DB 跟 API Server 環境，長遠來看需要消耗更多的維護成本&lt;/li&gt;
+&lt;li&gt;以前的評論會全部消失，嗚嗚嗚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;基本的配置已經做好了，只是還在猶豫是否該使用&lt;/p&gt;
+&lt;p&gt;個人 blog 要提高評論數還是比較難的，至少沒辦法跟社群平台競爭&lt;br&gt;在這個前提下，評論門檻相對高的 gittalk，這份缺點也會被不斷放大&lt;/p&gt;
+&lt;p&gt;但 gittalk 同樣有著他本身天然的優勢在——&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://smilin.net/2024/04/13/autoPixai/</guid>
             <title>自動領取 Pixai 每日獎勵</title>
@@ -36,9 +89,9 @@
             <category>教學</category>
             <category>docker</category>
             <pubDate>Sat, 13 Apr 2024 19:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/autoPixai_01.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/autoPixai/01.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
 &lt;p&gt;工程網址&lt;br&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;Github&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://hub.docker.com/r/smile0301/auto-pixai&#34;&gt;Docker Hub&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;近幾年 AI 工具日新月異&lt;br&gt;我也有幸接觸了 AI 繪圖的一鱗半爪  &lt;/p&gt;
+&lt;p&gt;近幾年 AI 工具日新月異&lt;br&gt;我也有幸接觸了 AI 繪圖的一鱗半爪&lt;/p&gt;
 &lt;p&gt;其中 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 是少有的雲端免費算圖網站&lt;/p&gt;
 &lt;p&gt;在 pixai 如果對產出來的圖感到滿意的話&lt;br&gt;可以透過 AI 進一步運算，產出會動的圖&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
@@ -49,7 +102,7 @@
 &lt;p&gt;說是免費，其實還是有些限制的&lt;/p&gt;
 &lt;p&gt;在網站上的運算行為都需要消耗點數，無論是靜態或動態&lt;/p&gt;
 &lt;p&gt;而點數除了透過付費與活動取得以外&lt;br&gt;pixai 每日都有一萬點數可供會員領取，也就是每日獎勵&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/post/autoPixai_02.jpg&#34; alt=&#34;每日獎勵&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/autoPixai/02.jpg&#34; alt=&#34;每日獎勵&#34;&gt;&lt;/p&gt;
 &lt;p&gt;只要每天領取就可以免費算圖了，整個佛心來著對吧&lt;/p&gt;
 &lt;p&gt;不過筆者最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x&lt;/p&gt;
 &lt;hr&gt;
@@ -1333,53 +1386,6 @@ $ hexo d #上傳git
 &lt;p&gt;在此 blog 前，也有其他 微笑家 建起，之後因為各種原因又廢棄掉&lt;/p&gt;
 &lt;p&gt;最近因為 discord.js 的更新，希望有一個可以紀錄 side project 的地方，此站便應運而生&lt;/p&gt;
 &lt;p&gt;希望這次能堅持下去，這也是創建 blog 的初衷。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://smilin.net/2020/09/30/12thDayEnd/</guid>
-            <title>沉沉入睡的回憶小姐，匆匆揚帆的時間先生</title>
-            <link>https://smilin.net/2020/09/30/12thDayEnd/</link>
-            <category>node.js</category>
-            <category>bot</category>
-            <category>discord</category>
-            <category>discord.js</category>
-            <category>12th鐵人賽</category>
-            <category>日記</category>
-            <pubDate>Wed, 30 Sep 2020 10:20:37 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;最初看到鐵人賽是大學二年級的時候，距離現在也就兩年，其實還挺短的&lt;/p&gt;
-&lt;p&gt;因為早早為專題做準備…需要查資料？造訪了這個地方&lt;/p&gt;
-&lt;p&gt;當時想都沒想過自己會寫鐵人賽(笑&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;hr&gt;
-&lt;p&gt;都說大學的人生是最多采多姿的&lt;/p&gt;
-&lt;p&gt;中間遇到了許多事情&lt;/p&gt;
-&lt;p&gt;時常為了專題留校&lt;/p&gt;
-&lt;p&gt;遇到可以一起努力的人&lt;/p&gt;
-&lt;p&gt;偶而一起吃午餐&lt;/p&gt;
-&lt;p&gt;每天都感到充實&lt;/p&gt;
-&lt;p&gt;雖然不全是快樂的事情&lt;/p&gt;
-&lt;p&gt;有許多寶貴的回憶呀&lt;/p&gt;
-&lt;p&gt;想必有更多有趣的事情沒有去挖掘&lt;/p&gt;
-&lt;p&gt;有更多的日子可以去揮霍&lt;/p&gt;
-&lt;p&gt;不過也畢業了&lt;/p&gt;
-&lt;p&gt;也有許多事是已經錯過的&lt;/p&gt;
-&lt;p&gt;不會有機會再去嘗試了&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;最初參加鐵人賽的契機，表面上是想分享機器人的寫法，想增加自己履歷上的談資&lt;/p&gt;
-&lt;p&gt;現在想來，只是希望可以嘗試更多事情吧&lt;/p&gt;
-&lt;p&gt;想著也許這樣子做，我也會有甚麼改變&lt;/p&gt;
-&lt;p&gt;雖然到後來，鐵人賽真的讓我感覺蠻辛苦的&lt;/p&gt;
-&lt;p&gt;時常覺得，反正也不會有人來看我的文章&lt;/p&gt;
-&lt;p&gt;並不是說不努力，我花了很多時間來想要教甚麼才好&lt;/p&gt;
-&lt;p&gt;但就像自暴自棄一般的寫起流水帳了&lt;/p&gt;
-&lt;p&gt;十分抱歉&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;那麼，時間也差不多到了&lt;/p&gt;
-&lt;p&gt;有許多事情都還沒做&lt;/p&gt;
-&lt;p&gt;有得必有失，想必之後也會繼續過著得一失一的日子吧&lt;/p&gt;
-&lt;p&gt;儘管如此，我也會努力的&lt;/p&gt;
-&lt;p&gt;因為想變得比現在更好。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

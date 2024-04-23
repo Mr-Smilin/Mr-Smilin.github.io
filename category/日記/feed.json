@@ -5,6 +5,17 @@
     "home_page_url": "https://smilin.net",
     "items": [
         {
+            "id": "https://smilin.net/2024/04/23/twikoo1/",
+            "url": "https://smilin.net/2024/04/23/twikoo1/",
+            "title": "最近想更換評論系統",
+            "date_published": "2024-04-23T03:00:00.000Z",
+            "content_html": "<p><img src=\"/img/post/twikoo1/twikoo-logo-home.png\" alt=\"logo\"></p>\n<p>最近想把 blog 的評論系統換了</p>\n<p>原本的 gittalk 免費，開源<br>巧妙利用 github 的 issue，在靜態網站上也能加入評論系統</p>\n<p>存在些許不方便，仍瑕不掩瑜。</p>\n<p>不過既然存在限制，總有人會想開發更好的工具<br>twikoo 就挺符合 blog 需求的</p>\n<span id=\"more\"></span>\n\n<h1 id=\"gittalk\"><a href=\"#gittalk\" class=\"headerlink\" title=\"gittalk\"></a>gittalk</h1><p>既然原本是用 gittalk，先說說 gittalk 的優點</p>\n<ul>\n<li>與 github page 的高度適配</li>\n<li>基於 issue 特性，綁定 github 帳戶，防止小白</li>\n</ul>\n<p>兩邊都有的優點不提，大概是這些<br>至於缺點</p>\n<ul>\n<li>因為綁在 issue，評論必須先註冊 github</li>\n<li>對中國使用者的支援較差(疑似)</li>\n</ul>\n<p><img src=\"/img/post/twikoo1/01.jpg\" alt=\"01\"></p>\n<p>而且本站基於 gittalk ，魔改了許多功能</p>\n<ul>\n<li>撈取最新留言</li>\n<li>撈取熱門留言</li>\n<li>從外部撈取文章留言數</li>\n</ul>\n<p>替換評論系統，不只是舊有的評論會消失<br>也代表著這些功能都需要重新適配，或是棄用。</p>\n<h1 id=\"twikoo\"><a href=\"#twikoo\" class=\"headerlink\" title=\"twikoo\"></a>twikoo</h1><p><a href=\"https://twikoo.js.org/\">官方文檔</a></p>\n<p>twikoo 與 gittalk 不同，資料存放於 MongoDB<br>意味著我們需要自行架設 DB 跟 API Server</p>\n<p>不過兩者在網路上都有許多免費資源可用，用來支持一個 blog 的運作綽綽有餘</p>\n<p>說說這個評論系統的優點</p>\n<ul>\n<li>無須登入即可留言</li>\n<li>避免騷擾留言，分別配有多種自動偵測垃圾留言的接口，也能開啟人工審核</li>\n<li>暱稱&amp;信箱&amp;網址 的填寫方式，很有幾十年前，傳統 blog 那味，我超愛</li>\n</ul>\n<p>至於缺點</p>\n<ul>\n<li>比起 gittalk，由於個人資料是自由填寫，相對難以得知發文者的背景</li>\n<li>與依附著 github issue 的 gittalk 相比，twikoo 於第三方架設 DB 跟 API Server 環境，長遠來看需要消耗更多的維護成本</li>\n<li>以前的評論會全部消失，嗚嗚嗚</li>\n</ul>\n<hr>\n<p>基本的配置已經做好了，只是還在猶豫是否該使用</p>\n<p>個人 blog 要提高評論數還是比較難的，至少沒辦法跟社群平台競爭<br>在這個前提下，評論門檻相對高的 gittalk，這份缺點也會被不斷放大</p>\n<p>但 gittalk 同樣有著他本身天然的優勢在——</p>\n",
+            "tags": [
+                "日記",
+                "hexo"
+            ]
+        },
+        {
             "id": "https://smilin.net/2024/04/11/giveUp/",
             "url": "https://smilin.net/2024/04/11/giveUp/",
             "title": "我的人生不需要英文",

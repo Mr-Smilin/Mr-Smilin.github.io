@@ -5,11 +5,22 @@
     "home_page_url": "https://smilin.net",
     "items": [
         {
+            "id": "https://smilin.net/2024/04/23/twikoo1/",
+            "url": "https://smilin.net/2024/04/23/twikoo1/",
+            "title": "最近想更換評論系統",
+            "date_published": "2024-04-23T03:00:00.000Z",
+            "content_html": "<p><img src=\"/img/post/twikoo1/twikoo-logo-home.png\" alt=\"logo\"></p>\n<p>最近想把 blog 的評論系統換了</p>\n<p>原本的 gittalk 免費，開源<br>巧妙利用 github 的 issue，在靜態網站上也能加入評論系統</p>\n<p>存在些許不方便，仍瑕不掩瑜。</p>\n<p>不過既然存在限制，總有人會想開發更好的工具<br>twikoo 就挺符合 blog 需求的</p>\n<span id=\"more\"></span>\n\n<h1 id=\"gittalk\"><a href=\"#gittalk\" class=\"headerlink\" title=\"gittalk\"></a>gittalk</h1><p>既然原本是用 gittalk，先說說 gittalk 的優點</p>\n<ul>\n<li>與 github page 的高度適配</li>\n<li>基於 issue 特性，綁定 github 帳戶，防止小白</li>\n</ul>\n<p>兩邊都有的優點不提，大概是這些<br>至於缺點</p>\n<ul>\n<li>因為綁在 issue，評論必須先註冊 github</li>\n<li>對中國使用者的支援較差(疑似)</li>\n</ul>\n<p><img src=\"/img/post/twikoo1/01.jpg\" alt=\"01\"></p>\n<p>而且本站基於 gittalk ，魔改了許多功能</p>\n<ul>\n<li>撈取最新留言</li>\n<li>撈取熱門留言</li>\n<li>從外部撈取文章留言數</li>\n</ul>\n<p>替換評論系統，不只是舊有的評論會消失<br>也代表著這些功能都需要重新適配，或是棄用。</p>\n<h1 id=\"twikoo\"><a href=\"#twikoo\" class=\"headerlink\" title=\"twikoo\"></a>twikoo</h1><p><a href=\"https://twikoo.js.org/\">官方文檔</a></p>\n<p>twikoo 與 gittalk 不同，資料存放於 MongoDB<br>意味著我們需要自行架設 DB 跟 API Server</p>\n<p>不過兩者在網路上都有許多免費資源可用，用來支持一個 blog 的運作綽綽有餘</p>\n<p>說說這個評論系統的優點</p>\n<ul>\n<li>無須登入即可留言</li>\n<li>避免騷擾留言，分別配有多種自動偵測垃圾留言的接口，也能開啟人工審核</li>\n<li>暱稱&amp;信箱&amp;網址 的填寫方式，很有幾十年前，傳統 blog 那味，我超愛</li>\n</ul>\n<p>至於缺點</p>\n<ul>\n<li>比起 gittalk，由於個人資料是自由填寫，相對難以得知發文者的背景</li>\n<li>與依附著 github issue 的 gittalk 相比，twikoo 於第三方架設 DB 跟 API Server 環境，長遠來看需要消耗更多的維護成本</li>\n<li>以前的評論會全部消失，嗚嗚嗚</li>\n</ul>\n<hr>\n<p>基本的配置已經做好了，只是還在猶豫是否該使用</p>\n<p>個人 blog 要提高評論數還是比較難的，至少沒辦法跟社群平台競爭<br>在這個前提下，評論門檻相對高的 gittalk，這份缺點也會被不斷放大</p>\n<p>但 gittalk 同樣有著他本身天然的優勢在——</p>\n",
+            "tags": [
+                "日記",
+                "hexo"
+            ]
+        },
+        {
             "id": "https://smilin.net/2024/04/13/autoPixai/",
             "url": "https://smilin.net/2024/04/13/autoPixai/",
             "title": "自動領取 Pixai 每日獎勵",
             "date_published": "2024-04-13T11:00:00.000Z",
-            "content_html": "<p><img src=\"/img/post/autoPixai_01.jpg\" alt=\"title\"></p>\n<p>工程網址<br><a href=\"https://github.com/Mr-Smilin/auto-pixai\">Github</a><br><a href=\"https://hub.docker.com/r/smile0301/auto-pixai\">Docker Hub</a></p>\n<p>近幾年 AI 工具日新月異<br>我也有幸接觸了 AI 繪圖的一鱗半爪  </p>\n<p>其中 <a href=\"https://pixai.art/\">pixai</a> 是少有的雲端免費算圖網站</p>\n<p>在 pixai 如果對產出來的圖感到滿意的話<br>可以透過 AI 進一步運算，產出會動的圖</p>\n<span id=\"more\"></span>\n\n<hr>\n<br>\n\n<p>說是免費，其實還是有些限制的</p>\n<p>在網站上的運算行為都需要消耗點數，無論是靜態或動態</p>\n<p>而點數除了透過付費與活動取得以外<br>pixai 每日都有一萬點數可供會員領取，也就是每日獎勵</p>\n<p><img src=\"/img/post/autoPixai_02.jpg\" alt=\"每日獎勵\"></p>\n<p>只要每天領取就可以免費算圖了，整個佛心來著對吧</p>\n<p>不過筆者最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x</p>\n<hr>\n<br>\n\n<p><a href=\"https://github.com/Mr-Smilin/auto-pixai\">auto-pixai</a></p>\n<p>輸入帳號跟密碼，該腳本執行一次就會自動進網站領取每日獎勵</p>\n<p>使用 node.js 撰寫，另有 Docker 容器化，開箱即用</p>\n<pre><code>docker pull smile0301/auto-pixai\ndocker run -e LOGINNAME=&lt;你的帳號&gt; -e PASSWORD=&lt;你的密碼&gt; --name &lt;container-name&gt; smile0301/auto-pixai\n</code></pre>\n",
+            "content_html": "<p><img src=\"/img/post/autoPixai/01.jpg\" alt=\"title\"></p>\n<p>工程網址<br><a href=\"https://github.com/Mr-Smilin/auto-pixai\">Github</a><br><a href=\"https://hub.docker.com/r/smile0301/auto-pixai\">Docker Hub</a></p>\n<p>近幾年 AI 工具日新月異<br>我也有幸接觸了 AI 繪圖的一鱗半爪</p>\n<p>其中 <a href=\"https://pixai.art/\">pixai</a> 是少有的雲端免費算圖網站</p>\n<p>在 pixai 如果對產出來的圖感到滿意的話<br>可以透過 AI 進一步運算，產出會動的圖</p>\n<span id=\"more\"></span>\n\n<hr>\n<br>\n\n<p>說是免費，其實還是有些限制的</p>\n<p>在網站上的運算行為都需要消耗點數，無論是靜態或動態</p>\n<p>而點數除了透過付費與活動取得以外<br>pixai 每日都有一萬點數可供會員領取，也就是每日獎勵</p>\n<p><img src=\"/img/post/autoPixai/02.jpg\" alt=\"每日獎勵\"></p>\n<p>只要每天領取就可以免費算圖了，整個佛心來著對吧</p>\n<p>不過筆者最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x</p>\n<hr>\n<br>\n\n<p><a href=\"https://github.com/Mr-Smilin/auto-pixai\">auto-pixai</a></p>\n<p>輸入帳號跟密碼，該腳本執行一次就會自動進網站領取每日獎勵</p>\n<p>使用 node.js 撰寫，另有 Docker 容器化，開箱即用</p>\n<pre><code>docker pull smile0301/auto-pixai\ndocker run -e LOGINNAME=&lt;你的帳號&gt; -e PASSWORD=&lt;你的密碼&gt; --name &lt;container-name&gt; smile0301/auto-pixai\n</code></pre>\n",
             "tags": [
                 "node.js",
                 "教學",
@@ -224,21 +235,6 @@
             "date_published": "2021-09-16T05:57:00.000Z",
             "content_html": "<h2 id=\"20210916\"><a href=\"#20210916\" class=\"headerlink\" title=\"20210916\"></a><em>20210916</em></h2><p>這是這個 blog 創建的第一天</p>\n<p>眾所周知，”Hello World”是所有程序猿最開始學習的第一句話語</p>\n<p>結合我自己的名字，我想把 blog 的第一篇文章標題寫成 Hello Smilin，我覺得這樣挺有意思的。</p>\n<span id=\"more\"></span>\n\n<hr>\n<p>你好，我是微笑，GitHub 的名字是 Mr.Smilin</p>\n<p>基於方便，叫我微笑就好了</p>\n<p>身為台灣廉價碼農的一員，工作上會需要爬文，參考大神的文章</p>\n<p>時常看到其他碼農會寫自己的 blog，不管是熱門的，或是門可羅雀的</p>\n<p>也因此，創建 blog 的想法從在學期間就醞釀著</p>\n<p>在此 blog 前，也有其他 微笑家 建起，之後因為各種原因又廢棄掉</p>\n<p>最近因為 discord.js 的更新，希望有一個可以紀錄 side project 的地方，此站便應運而生</p>\n<p>希望這次能堅持下去，這也是創建 blog 的初衷。</p>\n",
             "tags": [
-                "日記"
-            ]
-        },
-        {
-            "id": "https://smilin.net/2020/09/30/12thDayEnd/",
-            "url": "https://smilin.net/2020/09/30/12thDayEnd/",
-            "title": "沉沉入睡的回憶小姐，匆匆揚帆的時間先生",
-            "date_published": "2020-09-30T02:20:37.000Z",
-            "content_html": "<p>最初看到鐵人賽是大學二年級的時候，距離現在也就兩年，其實還挺短的</p>\n<p>因為早早為專題做準備…需要查資料？造訪了這個地方</p>\n<p>當時想都沒想過自己會寫鐵人賽(笑</p>\n<span id=\"more\"></span>\n\n<hr>\n<p>都說大學的人生是最多采多姿的</p>\n<p>中間遇到了許多事情</p>\n<p>時常為了專題留校</p>\n<p>遇到可以一起努力的人</p>\n<p>偶而一起吃午餐</p>\n<p>每天都感到充實</p>\n<p>雖然不全是快樂的事情</p>\n<p>有許多寶貴的回憶呀</p>\n<p>想必有更多有趣的事情沒有去挖掘</p>\n<p>有更多的日子可以去揮霍</p>\n<p>不過也畢業了</p>\n<p>也有許多事是已經錯過的</p>\n<p>不會有機會再去嘗試了</p>\n<hr>\n<p>最初參加鐵人賽的契機，表面上是想分享機器人的寫法，想增加自己履歷上的談資</p>\n<p>現在想來，只是希望可以嘗試更多事情吧</p>\n<p>想著也許這樣子做，我也會有甚麼改變</p>\n<p>雖然到後來，鐵人賽真的讓我感覺蠻辛苦的</p>\n<p>時常覺得，反正也不會有人來看我的文章</p>\n<p>並不是說不努力，我花了很多時間來想要教甚麼才好</p>\n<p>但就像自暴自棄一般的寫起流水帳了</p>\n<p>十分抱歉</p>\n<hr>\n<p>那麼，時間也差不多到了</p>\n<p>有許多事情都還沒做</p>\n<p>有得必有失，想必之後也會繼續過著得一失一的日子吧</p>\n<p>儘管如此，我也會努力的</p>\n<p>因為想變得比現在更好。</p>\n",
-            "tags": [
-                "node.js",
-                "bot",
-                "discord",
-                "discord.js",
-                "12th鐵人賽",
                 "日記"
             ]
         }
