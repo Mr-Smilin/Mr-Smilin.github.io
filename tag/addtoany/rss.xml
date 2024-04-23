@@ -20,10 +20,10 @@
         <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
-        <category>Live2D</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
+        <category>Live2D</category>
         <category>Rust</category>
         <category>彈射世界</category>
         <category>遊戲</category>
@@ -38,8 +38,8 @@
             <pubDate>Tue, 23 Apr 2024 18:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/01.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;網站之前有配置分享箱的系統，使用 &lt;a href=&#34;https://github.com/overtrue/share.js&#34;&gt;sharejs&lt;/a&gt; 依賴&lt;br&gt;該依賴只要套上預設即可，十分方便&lt;/p&gt;
-&lt;p&gt;不過最新的 release 已經是 2016 年的事了…&lt;/p&gt;
-&lt;p&gt;實際也有些按鈕已經過時，無法使用&lt;/p&gt;
+&lt;p&gt;不過 sharejs 最新的 release 已經是 2016 年的事了…&lt;/p&gt;
+&lt;p&gt;實際上有些按鈕已經過時，無法使用&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE&#34;&gt;關於本主題的分享箱適配&lt;/a&gt;&lt;/p&gt;
@@ -49,20 +49,20 @@
 &lt;hr&gt;
 &lt;h1 id=&#34;AddToAny&#34;&gt;&lt;a href=&#34;#AddToAny&#34; class=&#34;headerlink&#34; title=&#34;AddToAny&#34;&gt;&lt;/a&gt;AddToAny&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/addtoany_logo.svg&#34; alt=&#34;addtoany&#34;&gt;&lt;/p&gt;
 &lt;p&gt;看了一圈，決定改用 &lt;a href=&#34;https://www.addtoany.com/&#34;&gt;AddToAny&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其一是因為該插件支援的社群足夠多，也有持續在維護&lt;/p&gt;
+&lt;p&gt;其一是因為該插件支援的社群足夠多，有持續在維護&lt;/p&gt;
 &lt;p&gt;與 blog 代碼沒甚麼交集，自定義客製方便&lt;/p&gt;
 &lt;br&gt;
 
 &lt;hr&gt;
 &lt;h1 id=&#34;踩雷過程&#34;&gt;&lt;a href=&#34;#踩雷過程&#34; class=&#34;headerlink&#34; title=&#34;踩雷過程&#34;&gt;&lt;/a&gt;踩雷過程&lt;/h1&gt;&lt;p&gt;簡單選一下想要的按鈕，產出代碼後，扔進 jsx 內&lt;/p&gt;
-&lt;p&gt;到此應該就搞定了，簡單 build 看下輸出&lt;/p&gt;
+&lt;p&gt;到此就搞定了(超快~)，build 看下輸出&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/02.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;hmmm…為什麼會是一片空白呢？&lt;/p&gt;
 &lt;br&gt;
 
 &lt;hr&gt;
-&lt;h2 id=&#34;沒有-CSS&#34;&gt;&lt;a href=&#34;#沒有-CSS&#34; class=&#34;headerlink&#34; title=&#34;沒有 CSS ?&#34;&gt;&lt;/a&gt;沒有 CSS ?&lt;/h2&gt;&lt;p&gt;看了下原始碼，似乎是 css 沒有載入&lt;/p&gt;
-&lt;p&gt;不過 css 這些內容應該會隨著 js 懶加載一併輸出才對&lt;/p&gt;
+&lt;h2 id=&#34;沒有-CSS&#34;&gt;&lt;a href=&#34;#沒有-CSS&#34; class=&#34;headerlink&#34; title=&#34;沒有 CSS ?&#34;&gt;&lt;/a&gt;沒有 CSS ?&lt;/h2&gt;&lt;p&gt;看了一下，似乎是 css 沒有載入&lt;/p&gt;
+&lt;p&gt;不過 css 這些內容應該會隨著 js 一併輸出才對&lt;/p&gt;
 &lt;p&gt;花了些時間尋找問題，之後發現&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/03.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;原來是被瀏覽器擋住了，會被瀏覽器攔截主要有幾個可能性&lt;/p&gt;
@@ -73,7 +73,7 @@
 &lt;li&gt;廣告攔截器:&lt;br&gt;一些廣告攔截器或安全相關的瀏覽器擴充功能可能會阻止諸如 AddToAny 這樣的第三方服務。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;由於我們網站跟 AddToAny 都是 https，第一點可以排除&lt;br&gt;本站並沒有設置 CSP (目前沒有)&lt;br&gt;AddToAny 這類插件沒處理好 CORS 的機率是很低的&lt;/p&gt;
-&lt;p&gt;簡單排除一下，比較有可能的是被廣告攔截器擋住了&lt;/p&gt;
+&lt;p&gt;簡單排除後，比較有可能的是被廣告攔截器擋住了&lt;/p&gt;
 &lt;br&gt;
 
 &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/04.jpg&#34;&gt;&lt;/p&gt;
@@ -81,17 +81,17 @@
 &lt;br&gt;
 
 &lt;hr&gt;
-&lt;h2 id=&#34;廣告攔截器&#34;&gt;&lt;a href=&#34;#廣告攔截器&#34; class=&#34;headerlink&#34; title=&#34;廣告攔截器&#34;&gt;&lt;/a&gt;廣告攔截器&lt;/h2&gt;&lt;p&gt;試了一下分享功能正常，就是按鈕有點多&lt;br&gt;可能減少一些..style 之後客製一下…&lt;/p&gt;
-&lt;p&gt;恩..不過這樣其實還沒有解決阿？&lt;/p&gt;
-&lt;p&gt;根據統計，全世界有至少&lt;strong&gt;四成&lt;/strong&gt;的人口，常駐開啟廣告攔截器在上網&lt;/p&gt;
+&lt;h2 id=&#34;廣告攔截器&#34;&gt;&lt;a href=&#34;#廣告攔截器&#34; class=&#34;headerlink&#34; title=&#34;廣告攔截器&#34;&gt;&lt;/a&gt;廣告攔截器&lt;/h2&gt;&lt;p&gt;試了分享功能正常，就是按鈕有點多&lt;br&gt;可能減少一些..之後客製 style…&lt;/p&gt;
+&lt;p&gt;恩..不過這樣好像沒有解決問題阿？&lt;/p&gt;
+&lt;p&gt;根據統計，全世界有至少&lt;strong&gt;四成&lt;/strong&gt;的人口，常駐廣告攔截器在上網&lt;/p&gt;
 &lt;p&gt;只是我看的到而已，如果其他人看不到的話就沒意義了 qq&lt;/p&gt;
-&lt;p&gt;不過攔截的問題其實也好解決，只要讓他不會被攔截就好了嗎！(廢話)&lt;/p&gt;
-&lt;p&gt;方法有很多，最簡單的是將原本被攔截的檔案納入網域下&lt;br&gt;載入原本就是同域名下的資源，通常就能繞過限制了。&lt;/p&gt;
+&lt;p&gt;不過攔截的問題還算好解決，只要讓他不會被攔截就好了！(廢話)&lt;/p&gt;
+&lt;p&gt;方法很多，最簡單的是將原本被攔截的檔案納入網域下&lt;br&gt;載入原本就是同域名下的資源，通常就能繞過限制了。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script async src=&amp;quot;https://static.addtoany.com/menu/page.js&amp;quot; defer=&amp;#123;true&amp;#125;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;根據產出的代碼來看，主要是這個檔案需要拉進 blog&lt;/p&gt;
+&lt;p&gt;根據產出的代碼來看，主要是這個檔案需要拉進來&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/05.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;整理一下格式，創建一個 addtoany.js 放進去&lt;br&gt;以 hexo 來說就是將 js 檔案放在 &lt;code&gt;themes/&amp;#123;theme_name&amp;#125;/source/js&lt;/code&gt; 底下&lt;/p&gt;
+&lt;p&gt;整理格式，創建一個 addtoany.js 放進去&lt;br&gt;以 hexo 來說就是將 js 檔案放在 &lt;code&gt;themes/&amp;#123;theme_name&amp;#125;/source/js&lt;/code&gt; 底下&lt;/p&gt;
 &lt;p&gt;之後回到 addtoany.jsx 修改來源&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script async src=&amp;quot;/js/addtoany.js&amp;quot; defer=&amp;#123;true&amp;#125;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -103,11 +103,11 @@
 &lt;br&gt;
 
 &lt;hr&gt;
-&lt;h2 id=&#34;更多的廣告&#34;&gt;&lt;a href=&#34;#更多的廣告&#34; class=&#34;headerlink&#34; title=&#34;更多的廣告&#34;&gt;&lt;/a&gt;更多的廣告&lt;/h2&gt;&lt;p&gt;稍微看了下失敗的內容，來源都是出自 addtoany.js，也就是剛剛新增的檔案&lt;/p&gt;
-&lt;p&gt;回頭翻一下代碼…&lt;/p&gt;
+&lt;h2 id=&#34;更多的廣告&#34;&gt;&lt;a href=&#34;#更多的廣告&#34; class=&#34;headerlink&#34; title=&#34;更多的廣告&#34;&gt;&lt;/a&gt;更多的廣告&lt;/h2&gt;&lt;p&gt;看了下失敗的內容，來源都是出自 addtoany.js，也就是剛剛新增的檔案&lt;/p&gt;
+&lt;p&gt;回頭翻代碼…&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/07.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/08.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;看來是原本的 page.js 又引入了其他檔案&lt;br&gt;然後其他檔案又被攔截了…&lt;/p&gt;
+&lt;p&gt;看來是原本的 page.js 引入了其他檔案&lt;br&gt;然後其他檔案又被攔截了…&lt;/p&gt;
 &lt;p&gt;雖然有點亂，但還是好解決的&lt;/p&gt;
 &lt;p&gt;首先在 &lt;code&gt;source&lt;/code&gt; 目錄新增 &lt;code&gt;addtoany&lt;/code&gt; 資料夾&lt;br&gt;將 &lt;code&gt;addtoany.js&lt;/code&gt; 改名回 &lt;code&gt;page.js&lt;/code&gt; ，放進 &lt;code&gt;addtoany&lt;/code&gt; 資料夾&lt;br&gt;原本 &lt;code&gt;addtoany.jsx&lt;/code&gt; 的 script 也要修改&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script async src=&amp;quot;/addtoany/page.js&amp;quot; defer=&amp;#123;true&amp;#125;&amp;gt;&amp;lt;/script&amp;gt;
@@ -121,7 +121,7 @@
 &lt;br&gt;
 
 &lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/09.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;重新看了 &lt;code&gt;core.js&lt;/code&gt; 的代碼，進行修改，最終是成功了&lt;/p&gt;
+&lt;p&gt;重新修改 &lt;code&gt;core.js&lt;/code&gt; 的代碼，最終是成功了&lt;/p&gt;
 &lt;p&gt;但是&lt;br&gt;修改已經壓縮過的代碼，過程是麻煩且沒營養的&lt;br&gt;處理方法相當於暴力破解，也不排除往後產生其他 ERROR 的可能，故這邊不多贅述———&lt;/p&gt;
 &lt;br&gt;
 
