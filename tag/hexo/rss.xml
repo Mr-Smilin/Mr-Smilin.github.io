@@ -13,9 +13,9 @@
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
+        <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>日記</category>
         <category>docker</category>
         <category>javascript</category>
         <category>hexo</category>
@@ -24,15 +24,17 @@
         <category>render</category>
         <category>render.com</category>
         <category>Live2D</category>
-        <category>Rust</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
+        <category>Rust</category>
+        <category>addtoany</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2024/04/23/shareButton1/</guid>
-            <title>更新 addtoany 分享箱，踩雷過程</title>
+            <title>使用 addtoany 分享箱，踩雷過程</title>
             <link>https://smilin.net/2024/04/23/shareButton1/</link>
             <category>hexo</category>
+            <category>addtoany</category>
             <pubDate>Tue, 23 Apr 2024 18:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/01.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;網站之前有配置分享箱的系統，使用 &lt;a href=&#34;https://github.com/overtrue/share.js&#34;&gt;sharejs&lt;/a&gt; 依賴&lt;br&gt;該依賴只要套上預設即可，十分方便&lt;/p&gt;

@@ -13,9 +13,9 @@
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
+        <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>日記</category>
         <category>docker</category>
         <category>javascript</category>
         <category>hexo</category>
@@ -24,10 +24,11 @@
         <category>render</category>
         <category>render.com</category>
         <category>Live2D</category>
-        <category>Rust</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
+        <category>Rust</category>
+        <category>addtoany</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_02/</guid>
             <title>Rust 學習紀錄[2] = Rust 的 NPM</title>

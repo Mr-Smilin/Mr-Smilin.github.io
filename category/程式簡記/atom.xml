@@ -10,9 +10,9 @@
     <category term="discord.js" />
     <category term="教學" />
     <category term="12th鐵人賽" />
+    <category term="日記" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="日記" />
     <category term="docker" />
     <category term="javascript" />
     <category term="hexo" />
@@ -21,13 +21,14 @@
     <category term="render" />
     <category term="render.com" />
     <category term="Live2D" />
-    <category term="Rust" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
+    <category term="Rust" />
+    <category term="addtoany" />
     <entry>
         <id>https://smilin.net/2024/04/23/shareButton1/</id>
-        <title>更新 addtoany 分享箱，踩雷過程</title>
+        <title>使用 addtoany 分享箱，踩雷過程</title>
         <link rel="alternate" href="https://smilin.net/2024/04/23/shareButton1/"/>
         <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/01.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;網站之前有配置分享箱的系統，使用 &lt;a href=&#34;https://github.com/overtrue/share.js&#34;&gt;sharejs&lt;/a&gt; 依賴&lt;br&gt;該依賴只要套上預設即可，十分方便&lt;/p&gt;
@@ -125,6 +126,7 @@
 &lt;p&gt;MD5: &lt;code&gt;9538bd7a7e38e69b473780f6e8b647ea&lt;/code&gt;&lt;br&gt;SHA1: &lt;code&gt;7ae1581db69d7ae27698fa979988d7a02ddb9f90&lt;/code&gt;&lt;/p&gt;
 </content>
         <category term="hexo" />
+        <category term="addtoany" />
         <updated>2024-04-23T10:00:00.000Z</updated>
     </entry>
     <entry>
