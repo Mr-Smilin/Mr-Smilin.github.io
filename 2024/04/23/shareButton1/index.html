@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>更新 addtoany 分享箱，踩雷過程 - 貓謎工坊</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="貓謎工坊"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="貓謎工坊"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="網站之前有配置分享箱的系統，使用 sharejs 依賴該依賴只要套上預設即可，十分方便 不過最新的 release 已經是 2016 年的事了… 實際也有些按鈕已經過時，無法使用"><meta property="og:type" content="blog"><meta property="og:title" content="更新 addtoany 分享箱，踩雷過程"><meta property="og:url" content="https://smilin.net/"><meta property="og:site_name" content="貓謎工坊"><meta property="og:description" content="網站之前有配置分享箱的系統，使用 sharejs 依賴該依賴只要套上預設即可，十分方便 不過最新的 release 已經是 2016 年的事了… 實際也有些按鈕已經過時，無法使用"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://smilin.net/img/avatar.png"><meta property="article:published_time" content="2024-04-23T10:00:00.000Z"><meta property="article:modified_time" content="2024-04-23T08:18:33.702Z"><meta property="article:author" content="Mr.S"><meta property="article:tag" content="hexo"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://smilin.net/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://smilin.net/2024/04/23/shareButton1/"},"headline":"貓謎工坊","image":["https://smilin.net/img/post/shareButton1/01.jpg","https://smilin.net/img/post/shareButton1/02.jpg","https://smilin.net/img/post/shareButton1/03.jpg","https://smilin.net/img/post/shareButton1/04.jpg","https://smilin.net/img/post/shareButton1/05.jpg","https://smilin.net/img/post/shareButton1/02.jpg","https://smilin.net/img/post/shareButton1/06.jpg","https://smilin.net/img/post/shareButton1/07.jpg","https://smilin.net/img/post/shareButton1/08.jpg","https://smilin.net/img/post/shareButton1/09.jpg"],"datePublished":"2024-04-23T10:00:00.000Z","dateModified":"2024-04-23T08:18:33.702Z","author":{"@type":"Person","name":"Smilin"},"description":"網站之前有配置分享箱的系統，使用 sharejs 依賴該依賴只要套上預設即可，十分方便 不過最新的 release 已經是 2016 年的事了… 實際也有些按鈕已經過時，無法使用"}</script><link rel="canonical" href="https://smilin.net/2024/04/23/shareButton1/"><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><script src="/js/animation.js"></script><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="貓謎工坊" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><div style="margin-top: 8px;"><img class="logo-img" src="/img/logo/logo_light.svg" alt="貓謎工坊" height="28"><img class="logo-img-dark" src="/img/logo/logo_night.svg" alt="貓謎工坊" height="28"></div></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首頁</a><a class="navbar-item" target="_blank" rel="noopener" href="https://drive.smilin.net/">雲端</a><a class="navbar-item" href="/message/">留言</a><a class="navbar-item" href="/friend/">友鏈</a><a class="navbar-item" href="/about/">自述</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目錄" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><canvas id="universe" width="smilin" height="blog"></canvas><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-04-23  <a class="commentCountImg" href="/2024/04/23/shareButton1/#comment-container"><span class="display-none-class">ab4eb24c04b4fe96076680a47a09ae46</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="ab4eb24c04b4fe96076680a47a09ae46">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>8 分鐘  <i class="fas fa-pencil-alt"> </i>1.3 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次訪問</span></div></div><h1 class="title is-3 is-size-4-mobile">更新 addtoany 分享箱，踩雷過程</h1><div class="content"><p><img src="/img/post/shareButton1/01.jpg"></p>
+<p>網站之前有配置分享箱的系統，使用 <a target="_blank" rel="noopener" href="https://github.com/overtrue/share.js">sharejs</a> 依賴<br>該依賴只要套上預設即可，十分方便</p>
+<p>不過最新的 release 已經是 2016 年的事了…</p>
+<p>實際也有些按鈕已經過時，無法使用</p>
+<span id="more"></span>
+
+<p><a target="_blank" rel="noopener" href="https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE">關於本主題的分享箱適配</a></p>
+<p>icarus 本身是支援多種分享功能的，由於 sharejs 停止維護，官方也建議採用別的分享功能</p>
+<br>
+
+<hr>
+<h1 id="addtoany"><a href="#addtoany" class="headerlink" title="addtoany"></a>addtoany</h1><p><img src="/img/post/shareButton1/addtoany_logo.svg" alt="addtoany"></p>
+<p>看了一圈，決定改用 <a target="_blank" rel="noopener" href="https://www.addtoany.com/">addtoany</a></p>
+<p>其一是因為該插件支援的社群足夠多，也有持續在維護</p>
+<p>與 blog 代碼沒甚麼交集，自定義客製方便</p>
+<br>
+
+<hr>
+<h1 id="踩雷過程"><a href="#踩雷過程" class="headerlink" title="踩雷過程"></a>踩雷過程</h1><p>簡單選一下想要的按鈕，產出代碼後，扔進 jsx 內</p>
+<p>到此應該就搞定了，簡單 build 看下輸出</p>
+<p><img src="/img/post/shareButton1/02.jpg"></p>
+<p>hmmm…為什麼會是一片空白呢？</p>
+<br>
+
+<hr>
+<h2 id="沒有-CSS"><a href="#沒有-CSS" class="headerlink" title="沒有 CSS ?"></a>沒有 CSS ?</h2><p>看了下原始碼，似乎是 css 沒有載入</p>
+<p>不過 css 這些內容應該會隨著 js 懶加載一併輸出才對</p>
+<p>花了些時間尋找問題，之後發現</p>
+<p><img src="/img/post/shareButton1/03.jpg"></p>
+<p>原來是被瀏覽器擋住了，會被瀏覽器攔截主要有幾個可能性</p>
+<ul>
+<li>混和內容(Mixed Content):<br>如果網站是透過 HTTPS 協定提供服務的，而嘗試載入的資源（如 page.js）使用的是 HTTP 鏈接，那麼這種「混合內容」可能會被現代瀏覽器封鎖。 確保所有外部載入的資源都使用 HTTPS 來避免這種問題。</li>
+<li>安全策略(CSP):<br>瀏覽器可能會因為安全策略(Content Security Policy)而阻止某些腳本的載入。</li>
+<li>跨域問題(CORS):<br>服務商有可能因為沒有提供適當的跨域策略(Cross-Origin Resource Sharing)，導致資源無法載入</li>
+<li>廣告攔截器:<br>一些廣告攔截器或安全相關的瀏覽器擴充功能可能會阻止諸如 AddToAny 這樣的第三方服務。</li>
+</ul>
+<p>由於我們網站跟 addtoany 都是 https，第一點可以排除<br>本站並沒有設置 CSP (目前沒有)<br>addtoany 這類插件沒處理好 CORS 的機率是很低的</p>
+<p>簡單排除一下，比較有可能的是被廣告攔截器擋住了</p>
+<br>
+
+<p><img src="/img/post/shareButton1/04.jpg"></p>
+<p>喔喔喔！總算出來了！</p>
+<br>
+
+<hr>
+<h2 id="廣告攔截器"><a href="#廣告攔截器" class="headerlink" title="廣告攔截器"></a>廣告攔截器</h2><p>試了一下分享功能正常，就是按鈕有點多<br>可能減少一些..style 之後客製一下…</p>
+<p>恩..不過這樣其實還沒有解決阿？</p>
+<p>根據統計，全世界有四成的人常駐開啟著廣告攔截器在上網</p>
+<p>只是我看的到而已，如果其他人看不到的話就沒意義了 qq</p>
+<p>不過攔截的問題其實也好解決，只要讓他不會被攔截就好了嗎！(廢話)</p>
+<p>方法有很多，不過最簡單的應該是將原本被攔截的檔案納入網域下<br>載入原本就是同域名下的資源，通常就能繞過限制了。</p>
+<pre><code>&lt;script async src=&quot;https://static.addtoany.com/menu/page.js&quot; defer=&#123;true&#125;&gt;&lt;/script&gt;
+</code></pre>
+<p>根據產出的代碼來看，主要是這個檔案需要拉進 blog</p>
+<p><img src="/img/post/shareButton1/05.jpg"></p>
+<p>整理一下格式，創建一個 addtoany.js 放進去<br>以 hexo 來說就是將 js 檔案放在 <code>themes/&#123;theme_name&#125;/source/js</code> 底下</p>
+<p>之後回到 addtoany.jsx 修改來源</p>
+<pre><code>&lt;script async src=&quot;/js/addtoany.js&quot; defer=&#123;true&#125;&gt;&lt;/script&gt;
+</code></pre>
+<p>RUN！</p>
+<p><img src="/img/post/shareButton1/02.jpg"></p>
+<p>失敗了！</p>
+<p><img src="/img/post/shareButton1/06.jpg"></p>
+<p>載入失敗的檔案反而變多了！</p>
+<br>
+
+<hr>
+<h2 id="更多的廣告"><a href="#更多的廣告" class="headerlink" title="更多的廣告"></a>更多的廣告</h2><p>稍微看了下失敗的內容，來源都是出自 addtoany.js，也就是剛剛新增的檔案</p>
+<p>回頭翻一下代碼…</p>
+<p><img src="/img/post/shareButton1/07.jpg"></p>
+<p><img src="/img/post/shareButton1/08.jpg"></p>
+<p>看來是原本的 page.js 又引入了其他檔案<br>然後其他檔案又被攔截了…</p>
+<p>雖然有點亂，但還是好解決的</p>
+<p>首先在 <code>source</code> 目錄新增 <code>addtoany</code> 資料夾<br>將 <code>addtoany.js</code> 改名回 <code>page.js</code> ，放進 <code>addtoany</code> 資料夾<br>原本 <code>addtoany.jsx</code> 的 script 也要修改</p>
+<pre><code>&lt;script async src=&quot;/addtoany/page.js&quot; defer=&#123;true&#125;&gt;&lt;/script&gt;
+</code></pre>
+<p>之後將三個攔截的檔案拷貝整理後，在 <code>source/addtoany</code> 創建同名檔案</p>
+<p>然後..然後…<br>然後在 <code>core.js</code> 引用了更多的 url…</p>
+<p>估計是進行一些第三方 icon 的載入等等…</p>
+<br>
+
+<hr>
+<br>
+
+<h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p><img src="/img/post/shareButton1/09.jpg"></p>
+<p>重新看了 <code>core.js</code> 的代碼，進行修改，最終是成功了</p>
+<p>但是<br>修改已經壓縮過的代碼，過程是麻煩且沒營養的<br>處理方法相當於暴力破解，也不排除往後產生其他 ERROR 的可能，故這邊不多贅述———</p>
+<br>
+
+<hr>
+<p>如果有幸你也在想辦法處理 addtoany 的問題，又懶得架 cdn 等方式</p>
+<p>這邊提供整理後的檔案，歡迎參考。</p>
+<p><a href="/share_file/shareButton1/addtoany.7z">addtoany.7z</a></p>
+<p>MD5: <code>9538bd7a7e38e69b473780f6e8b647ea</code><br>SHA1: <code>7ae1581db69d7ae27698fa979988d7a02ddb9f90</code></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>更新 addtoany 分享箱，踩雷過程</p><p><a href="https://smilin.net/2024/04/23/shareButton1/">https://smilin.net/2024/04/23/shareButton1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://smilin.net"><p>Smilin</p></a></div></div><div class="level-item is-narrow"><div><h6>發佈於</h6><p>2024-04-23</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2024-04-23</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相關文章</span><br><span>  1.<a class="is-size-6" href="/2024/04/13/autoPixai/" target="_blank">自動領取 Pixai 每日獎勵</a><br></span><span>  2.<a class="is-size-6" href="/2023/06/01/discordJs14-1/" target="_blank">discord.js 升上 14 版，架構說明</a><br></span></div></div><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-title="貓謎工坊"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_copy_link"></a><a class="a2a_button_email"></a><a class="a2a_button_facebook"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_telegram"></a><a class="a2a_button_line"></a><a class="a2a_button_twitter"></a><a class="a2a_button_linkedin"></a><a class="a2a_button_bluesky"></a><a class="a2a_button_reddit"></a><a class="a2a_button_plurk"></a><a class="a2a_button_threads"></a><a class="a2a_button_trello"></a><a class="a2a_button_microsoft_teams"></a><a class="a2a_button_wechat"></a><a class="a2a_button_douban"></a><a class="a2a_button_sina_weibo"></a><a class="a2a_button_evernote"></a></div><script>var a2a_config = a2a_config || ; a2a_config.locale = &quot;zh-TW&quot;;</script><script async src="/addtoany/page.js" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/04/23/twikoo1/"><span class="level-item">最近想更換評論系統</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">評論</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-TW',
+            id: 'ab4eb24c04b4fe96076680a47a09ae46',
+            repo: 'Mr-Smilin.github.io',
+            owner: 'Mr-Smilin',
+            clientID: '9a33a548232178c23121',
+            clientSecret: 'bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6',
+            admin: ["Mr-Smilin"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目錄</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#addtoany"><span>addtoany</span></a></li><li><a class="is-flex is-mobile" href="#踩雷過程"><span>踩雷過程</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#沒有-CSS"><span>沒有 CSS ?</span></a></li><li><a class="is-flex is-mobile" href="#廣告攔截器"><span>廣告攔截器</span></a></li><li><a class="is-flex is-mobile" href="#更多的廣告"><span>更多的廣告</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#結語"><span>結語</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><div><img class="logo-img" src="/img/logo/logo_light.svg" alt="貓謎工坊" height="28"><img class="logo-img-dark" src="/img/logo/logo_night.svg" alt="貓謎工坊" height="28"></div></a><p class="size-small"><span>&copy; 2024 Smilin</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> <br><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 起運行了 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小時 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒 ";
+        }var now = new Date();setInterval("createTime('2021/09/15 18:00:00')", 250,"");</script><br></span><div class="size-small"><span>共 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 位訪客</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="/dist/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="/dist/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script></div><script type="text/javascript" color="0,205,205" opacity="0.7" zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到頂端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);})</script><script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什麼..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什麼...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title",
+                "#twikoo"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/js/universe.js"></script></body></html>
