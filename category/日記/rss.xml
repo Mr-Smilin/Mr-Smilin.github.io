@@ -17,9 +17,9 @@
         <category>docker</category>
         <category>Alist</category>
         <category>Cloudflare</category>
+        <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
-        <category>javascript</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
@@ -42,6 +42,7 @@
 &lt;p&gt;不過既然存在限制，總有人會想開發更好的工具&lt;br&gt;twikoo 就挺符合 blog 需求的&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 
+&lt;hr&gt;
 &lt;h1 id=&#34;gittalk&#34;&gt;&lt;a href=&#34;#gittalk&#34; class=&#34;headerlink&#34; title=&#34;gittalk&#34;&gt;&lt;/a&gt;gittalk&lt;/h1&gt;&lt;p&gt;既然原本是用 gittalk，先說說 gittalk 的優點&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;與 github page 的高度適配&lt;/li&gt;
@@ -60,6 +61,7 @@
 &lt;li&gt;從外部撈取文章留言數&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;替換評論系統，不只是舊有的評論會消失&lt;br&gt;也代表著這些功能都需要重新適配，或是棄用。&lt;/p&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;twikoo&#34;&gt;&lt;a href=&#34;#twikoo&#34; class=&#34;headerlink&#34; title=&#34;twikoo&#34;&gt;&lt;/a&gt;twikoo&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://twikoo.js.org/&#34;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;twikoo 與 gittalk 不同，資料存放於 MongoDB&lt;br&gt;意味著我們需要自行架設 DB 跟 API Server&lt;/p&gt;
 &lt;p&gt;不過兩者在網路上都有許多免費資源可用，用來支持一個 blog 的運作綽綽有餘&lt;/p&gt;
@@ -76,6 +78,7 @@
 &lt;li&gt;以前的評論會全部消失，嗚嗚嗚&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/02.jpg&#34; alt=&#34;02&#34;&gt;&lt;/p&gt;
 &lt;p&gt;基本的配置已經做好了，只是還在猶豫是否該使用&lt;/p&gt;
 &lt;p&gt;個人 blog 要提高評論數還是比較難的，至少沒辦法跟社群平台競爭&lt;br&gt;在這個前提下，評論門檻相對高的 gittalk，這份缺點也會被不斷放大&lt;/p&gt;
 &lt;p&gt;但 gittalk 同樣有著他本身天然的優勢在——&lt;/p&gt;
