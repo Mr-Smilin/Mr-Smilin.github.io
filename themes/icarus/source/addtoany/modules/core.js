@@ -2285,32 +2285,32 @@ const s = {
 		},
 	},
 	c = function (a) {
-		var e, t, n, o, i, r, l;
-		(c.a2a = c.a2a || {}),
-			c.a2a[a] ||
-				((e = "&domain=" + encodeURIComponent(location.href.split("/")[2])),
-				(t = (r = f.has()) && r.as ? "&as=1" : ""),
-				(n = r && r.dc ? "&dc=1" : ""),
-				r && r.vl,
-				(o = r && r.sl ? "&sl=1" : ""),
-				(i = r && r.az ? "&az=1" : ""),
-				(r = r ? "&ad=1" : ""),
-				(l = new XMLHttpRequest()).open(
-					"POST",
-					"https://stats.addtoany.com/menu"
-				),
-				l.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"),
-				(l.timeout = 3e3),
-				(l.ontimeout = function (e) {
-					l.abort(), "post" === a && f.set();
-				}),
-				"post" === a &&
-					(l.onload = function (e) {
-						var a = this.responseText;
-						200 === this.status && a && "1" === a ? f.set(!0) : f.set();
-					}),
-				l.send("view=" + a + e + r + t + n + o + i),
-				(c.a2a[a] = 1));
+		// var e, t, n, o, i, r, l;
+		// (c.a2a = c.a2a || {}),
+		// 	c.a2a[a] ||
+		// 		((e = "&domain=" + encodeURIComponent(location.href.split("/")[2])),
+		// 		(t = (r = f.has()) && r.as ? "&as=1" : ""),
+		// 		(n = r && r.dc ? "&dc=1" : ""),
+		// 		r && r.vl,
+		// 		(o = r && r.sl ? "&sl=1" : ""),
+		// 		(i = r && r.az ? "&az=1" : ""),
+		// 		(r = r ? "&ad=1" : ""),
+		// 		(l = new XMLHttpRequest()).open(
+		// 			"POST",
+		// 			"https://stats.addtoany.com/menu"
+		// 		),
+		// 		l.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"),
+		// 		(l.timeout = 3e3),
+		// 		(l.ontimeout = function (e) {
+		// 			l.abort(), "post" === a && f.set();
+		// 		}),
+		// 		"post" === a &&
+		// 			(l.onload = function (e) {
+		// 				var a = this.responseText;
+		// 				200 === this.status && a && "1" === a ? f.set(!0) : f.set();
+		// 			}),
+		// 		l.send("view=" + a + e + r + t + n + o + i),
+		// 		(c.a2a[a] = 1));
 	},
 	re = () => {
 		const o = w,
@@ -2939,7 +2939,7 @@ const ia = {
 						i +
 						"}.a2a_wide a{display:block;margin-top:3px;border-top:1px solid #" +
 						t +
-						";text-align:center}.a2a_label{position:absolute!important;clip-path:polygon(0px 0px,0px 0px,0px 0px);-webkit-clip-path:polygon(0px 0px,0px 0px,0px 0px);overflow:hidden;height:1px;width:1px}.a2a_kit,.a2a_menu,.a2a_modal,.a2a_overlay{-ms-touch-action:manipulation;touch-action:manipulation;outline:0}.a2a_dd{-webkit-user-drag:none}.a2a_dd img{border:0}.a2a_button_facebook_like iframe{max-width:none}"),
+						";text-align:center}.a2a_label{position:absolute!important;clip-path:polygon(0px 0px,0px 0px,0px 0px);-webkit-clip-path:polygon(0px 0px,0px 0px,0px 0px);overflow:hidden;height:1px;width:1px}.a2a_kit,.a2a_menu,.a2a_modal,.a2a_overlay{-ms-touch-action:manipulation;touch-action:manipulation;outline:0;}.a2a_dd{-webkit-user-drag:none}.a2a_dd img{border:0}.a2a_button_facebook_like iframe{max-width:none}"),
 					(_ = K.createTextNode(l)),
 					S.appendChild(_)),
 				(g = p.localize =

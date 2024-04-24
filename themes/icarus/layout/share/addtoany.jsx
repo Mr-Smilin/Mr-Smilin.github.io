@@ -17,7 +17,6 @@ class AddToAny extends Component {
         return <Fragment>
             <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
                 <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                <a class="a2a_button_copy_link"></a>
                 <a class="a2a_button_facebook"></a>
                 <a class="a2a_button_line"></a>
                 <a class="a2a_button_x"></a>
@@ -25,12 +24,9 @@ class AddToAny extends Component {
                 <a class="a2a_button_reddit"></a>
                 <a class="a2a_button_threads"></a>
                 <a class="a2a_button_sina_weibo"></a>
-            </div>
-            <script>
-                var a2a_config = a2a_config || {};
-                a2a_config.locale = "zh-TW";
-            </script>
+            </div>    
             <script async src="/addtoany/page.js" defer={true}></script>
+            {/* <script async src="https://static.addtoany.com/menu/page.js" defer={true}></script> */}
         </Fragment>;
     }
 }
