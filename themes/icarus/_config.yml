@@ -214,7 +214,7 @@ donates:
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
-  type: sharejs
+  type: addtoany
   # URL to the ShareThis share plugin script
   install_url: ""
 # Sidebar configurations.
@@ -327,9 +327,9 @@ widgets:
     type: adsense
 
 # AdSense client ID
-adsense_client_id: #'ca-pub-6343805421927634'
+adsense_client_id: #ca-pub-6118312021004697
 # AdSense AD unit ID
-adsense_slot_id: "5134765588"
+adsense_slot_id: #"5134765588"
 # article head ad
 article_head_has_ad: true
 # comment head ad
