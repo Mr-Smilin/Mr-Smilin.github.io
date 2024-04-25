@@ -327,7 +327,7 @@ widgets:
     type: adsense
 
 # AdSense client ID
-adsense_client_id: #ca-pub-6118312021004697
+adsense_client_id: ca-pub-6118312021004697
 # AdSense AD unit ID
 adsense_slot_id: #"5134765588"
 # article head ad
