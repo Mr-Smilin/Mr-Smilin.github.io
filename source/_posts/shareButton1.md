@@ -195,5 +195,5 @@ RUN！
 
 [addtoany.7z](/share_file/shareButton1/addtoany.7z)
 
-MD5: `9538bd7a7e38e69b473780f6e8b647ea`
-SHA1: `7ae1581db69d7ae27698fa979988d7a02ddb9f90`
+MD5: `e4c6ac982c223e6449d1d962be077bfb`
+SHA1: `a9cc39cc5e9a7d0854d63b15a4801829c1718efb`
