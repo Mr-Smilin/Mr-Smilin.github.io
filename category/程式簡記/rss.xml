@@ -13,13 +13,13 @@
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
-        <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
+        <category>日記</category>
         <category>docker</category>
+        <category>javascript</category>
         <category>github</category>
         <category>CI/CD</category>
-        <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
         <category>heroku</category>
@@ -74,8 +74,7 @@
 &lt;li&gt;緩存儲存 &lt;code&gt;node_modules&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;緩存加載 &lt;code&gt;node_modules&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;根據&lt;a href=&#34;https://docs.github.com/zh/actions/using-workflows/caching-dependencies-to-speed-up-workflows&#34;&gt;官方文檔&lt;/a&gt;所述，&lt;br&gt;7 天沒使用的 cache 會自動回收，&lt;br&gt;並且一個 repository 的所有 cache 加總不可超出 10GB&lt;/p&gt;
-&lt;p&gt;除此以外，緩存沒有任何限制&lt;/p&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://docs.github.com/zh/actions/using-workflows/caching-dependencies-to-speed-up-workflows&#34;&gt;官方文檔&lt;/a&gt;所述，&lt;br&gt;7 天沒使用的 cache 會自動回收，&lt;br&gt;並且一個 repository 的所有 cache 加總不可超出 10GB  &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;- name: Cache node modules
         id: cache-node-modules
         uses: actions/cache@v3
