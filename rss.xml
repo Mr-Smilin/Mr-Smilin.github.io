@@ -17,19 +17,19 @@
         <category>Alist</category>
         <category>Cloudflare</category>
         <category>docker</category>
-        <category>hexo</category>
-        <category>fluid</category>
-        <category>javascript</category>
         <category>github</category>
         <category>CI/CD</category>
+        <category>javascript</category>
+        <category>hexo</category>
+        <category>fluid</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>Live2D</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
         <category>Rust</category>
+        <category>Live2D</category>
         <category>addtoany</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2024/04/30/githubAction1/</guid>
@@ -39,7 +39,7 @@
             <category>CI/CD</category>
             <pubDate>Tue, 30 Apr 2024 15:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Auto-Pixai&#34;&gt;&lt;a href=&#34;#Auto-Pixai&#34; class=&#34;headerlink&#34; title=&#34;Auto-Pixai&#34;&gt;&lt;/a&gt;Auto-Pixai&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Mr-Smilin/Auto-Pixai/main/public/pic/logo.png&#34; alt=&#34;auto-pixai&#34;&gt;&lt;/p&gt;
-&lt;p&gt;之前撰寫的 &lt;a href=&#34;https://smilin.net/2024/04/13/autoPixai/&#34;&gt;auto-pixai&lt;/a&gt;&lt;br&gt;經過多次調整，基本修復了大部分的 bug&lt;/p&gt;
+&lt;p&gt;之前撰寫的 &lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;auto-pixai&lt;/a&gt;&lt;br&gt;經過多次調整，基本修復了大部分的 bug&lt;/p&gt;
 &lt;p&gt;該專案透過爬蟲，&lt;br&gt;提供自動在 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 簽到的功能&lt;/p&gt;
 &lt;p&gt;考量到便利性，&lt;br&gt;將專案打包成 docker image，&lt;br&gt;實現無狀態的部屬環境，&lt;br&gt;最後透過 github tag 控制版本歷程。&lt;/p&gt;
 &lt;br&gt;
