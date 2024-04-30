@@ -3,7 +3,7 @@
     <id>https://smilin.net</id>
     <title>貓謎工坊 • Posts by &#34;程式簡記&#34; category</title>
     <link href="https://smilin.net" />
-    <updated>2024-04-23T10:00:00.000Z</updated>
+    <updated>2024-04-30T07:00:00.000Z</updated>
     <category term="node.js" />
     <category term="bot" />
     <category term="discord" />
@@ -14,18 +14,105 @@
     <category term="Alist" />
     <category term="Cloudflare" />
     <category term="docker" />
-    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
+    <category term="javascript" />
+    <category term="github" />
+    <category term="CI/CD" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="Rust" />
     <category term="Live2D" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
+    <category term="Rust" />
     <category term="addtoany" />
+    <entry>
+        <id>https://smilin.net/2024/04/30/githubAction1/</id>
+        <title>Github Action 學習紀錄</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/30/githubAction1/"/>
+        <content type="html">&lt;h1 id=&#34;Auto-Pixai&#34;&gt;&lt;a href=&#34;#Auto-Pixai&#34; class=&#34;headerlink&#34; title=&#34;Auto-Pixai&#34;&gt;&lt;/a&gt;Auto-Pixai&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Mr-Smilin/Auto-Pixai/main/public/pic/logo.png&#34; alt=&#34;auto-pixai&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之前撰寫的 &lt;a href=&#34;https://smilin.net/2024/04/13/autoPixai/&#34;&gt;auto-pixai&lt;/a&gt;&lt;br&gt;經過多次調整，基本修復了大部分的 bug&lt;/p&gt;
+&lt;p&gt;該專案透過爬蟲，&lt;br&gt;提供自動在 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 簽到的功能&lt;/p&gt;
+&lt;p&gt;考量到便利性，&lt;br&gt;將專案打包成 docker image，&lt;br&gt;實現無狀態的部屬環境，&lt;br&gt;最後透過 github tag 控制版本歷程。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;整合部屬需求&#34;&gt;&lt;a href=&#34;#整合部屬需求&#34; class=&#34;headerlink&#34; title=&#34;整合部屬需求&#34;&gt;&lt;/a&gt;整合部屬需求&lt;/h2&gt;&lt;p&gt;雖然 User 用起來是方便了，&lt;br&gt;但每次開發部版都需要進行複雜的手續..&lt;/p&gt;
+&lt;p&gt;CI&amp;#x2F;CD …好..好想要 CI&amp;#x2F;CD 阿..&lt;br&gt;就在這麼想著的時候，想起了..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Github Action!&lt;/strong&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;Github-Action&#34;&gt;&lt;a href=&#34;#Github-Action&#34; class=&#34;headerlink&#34; title=&#34;Github Action&#34;&gt;&lt;/a&gt;Github Action&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/githubAction1/01.png&#34; alt=&#34;Github Action!&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Github Action 是 Github 提供的 CI&amp;#x2F;CD 方案&lt;/p&gt;
+&lt;p&gt;由 Github 提供整合環境，&lt;br&gt;在統一的無狀態環境下進行整合&lt;/p&gt;
+&lt;p&gt;最重要的是，它對於 public repository 完全免費!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.github.com/zh/actions/quickstart&#34;&gt;Github Action 官方簡中文檔&lt;/a&gt;&lt;br&gt;在學習 github action 的過程，&lt;br&gt;官方文檔幫助了我許多&lt;/p&gt;
+&lt;p&gt;因為有官方翻譯，在專有名詞的學習上也不容易被混淆。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;需求&#34;&gt;&lt;a href=&#34;#需求&#34; class=&#34;headerlink&#34; title=&#34;需求?&#34;&gt;&lt;/a&gt;需求?&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/githubAction1/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;做為 CI&amp;#x2F;CD (自動整合&amp;#x2F;自動部屬) 的角色，&lt;br&gt;我希望他可以在我推送 release 的時候，去做幾件事——&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根據 package.json 檢查版本&lt;/li&gt;
+&lt;li&gt;自動創建新版本代號&lt;/li&gt;
+&lt;li&gt;根據 Dockerfile 產出 Docker image&lt;/li&gt;
+&lt;li&gt;將 image 標上版號，推至 Docker Hub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;並且由於 Github Action 還提供緩存功能，&lt;br&gt;如果將 &lt;code&gt;npm install&lt;/code&gt; 拉到 Github Action，&lt;br&gt;搭配緩存可以有效縮短 Dockerfile 的產出時間與大小！&lt;/p&gt;
+&lt;p&gt;配上 Github Action 的一些格式後，我們還需要——&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指定 &lt;code&gt;node&lt;/code&gt; 版本&lt;/li&gt;
+&lt;li&gt;緩存儲存 &lt;code&gt;node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;緩存加載 &lt;code&gt;node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://docs.github.com/zh/actions/using-workflows/caching-dependencies-to-speed-up-workflows&#34;&gt;官方文檔&lt;/a&gt;所述，&lt;br&gt;7 天沒使用的 cache 會自動回收，&lt;br&gt;並且一個 repository 的所有 cache 加總不可超出 10GB&lt;/p&gt;
+&lt;p&gt;除此以外，緩存沒有任何限制&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-node-$&amp;#123;&amp;#123; hashFiles(&#39;**/package-lock.json&#39;) &amp;#125;&amp;#125;
+          restore-keys: |
+            $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-node-
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根據 package-lock.json 的變動來決定是否新建緩存，&lt;br&gt;否則就取出原本的 node_modules，&lt;br&gt;以此加速 CD 流程。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;過程&#34;&gt;&lt;a href=&#34;#過程&#34; class=&#34;headerlink&#34; title=&#34;過程&#34;&gt;&lt;/a&gt;過程&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/githubAction1/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;搭啷，經過整理後，&lt;br&gt;這是目前的 CI&amp;#x2F;CD 流程&lt;/p&gt;
+&lt;p&gt;由於沒有實作測試，&lt;br&gt;僅有 release 被推送時需要 CI&amp;#x2F;CD&lt;/p&gt;
+&lt;p&gt;執行首先檢查 tag ，&lt;br&gt;若 package 版號有變動則創建新版本&lt;/p&gt;
+&lt;p&gt;同時進行 cache 的載入，&lt;br&gt;若是找不到 cache 則重新 &lt;code&gt;npm install&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;兩邊都做完後，&lt;br&gt;進行 Dockerfile 的 building 與 pushing。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;結果&#34;&gt;&lt;a href=&#34;#結果&#34; class=&#34;headerlink&#34; title=&#34;結果&#34;&gt;&lt;/a&gt;結果&lt;/h2&gt;&lt;p&gt;大功告成！原本繁瑣的整合部屬流程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Push New Version&lt;/li&gt;
+&lt;li&gt;Dockerfile build&lt;/li&gt;
+&lt;li&gt;Docker image tag&lt;/li&gt;
+&lt;li&gt;Docker push tag&lt;/li&gt;
+&lt;li&gt;Docker push latest&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上面列的事情 &lt;strong&gt;通通不用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;只要在 main 寫完代碼，&lt;br&gt;要推送版本的時候合併到 release，&lt;br&gt;最後再用自動產生的 tag 生成 Release 說明即可。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;怎麼說呢…好爽&lt;/p&gt;
+&lt;p&gt;不過所謂爬蟲簽到甚麼的，&lt;br&gt;說白了只是個小工具&lt;/p&gt;
+&lt;p&gt;藉著這次 project，&lt;br&gt;心血來潮地想把 repository 弄得有模有樣&lt;/p&gt;
+&lt;p&gt;結果就是，&lt;br&gt;花在打扮(?)外觀的時間遠遠超出了爬蟲本身的開發時間&lt;/p&gt;
+&lt;p&gt;感覺對 CICD 有了更深刻的了解；&lt;br&gt;美中不足的大概是爬蟲的測試並不好寫，&lt;br&gt;沒能在這次 action 中寫入自動測試，是比較可惜的。&lt;/p&gt;
+</content>
+        <category term="github" />
+        <category term="CI/CD" />
+        <updated>2024-04-30T07:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://smilin.net/2024/04/23/shareButton1/</id>
         <title>使用 AddToAny 分享箱，踩雷過程</title>

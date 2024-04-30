@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Github Action 學習紀錄 - 貓謎工坊</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="貓謎工坊"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="貓謎工坊"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="Auto-Pixai 之前撰寫的 auto-pixai經過多次調整，基本修復了大部分的 bug 該專案透過爬蟲，提供自動在 pixai 簽到的功能 考量到便利性，將專案打包成 docker image，實現無狀態的部屬環境，最後透過 github tag 控制版本歷程。   整合部屬需求雖然 User 用起來是方便了，但每次開發部版都需要進行複雜的手續.. CI&amp;#x2F;CD …好..好想要 C"><meta property="og:type" content="blog"><meta property="og:title" content="Github Action 學習紀錄"><meta property="og:url" content="https://smilin.net/"><meta property="og:site_name" content="貓謎工坊"><meta property="og:description" content="Auto-Pixai 之前撰寫的 auto-pixai經過多次調整，基本修復了大部分的 bug 該專案透過爬蟲，提供自動在 pixai 簽到的功能 考量到便利性，將專案打包成 docker image，實現無狀態的部屬環境，最後透過 github tag 控制版本歷程。   整合部屬需求雖然 User 用起來是方便了，但每次開發部版都需要進行複雜的手續.. CI&amp;#x2F;CD …好..好想要 C"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://smilin.net/img/avatar.png"><meta property="article:published_time" content="2024-04-30T07:00:00.000Z"><meta property="article:modified_time" content="2024-04-30T06:23:31.536Z"><meta property="article:author" content="Mr.S"><meta property="article:tag" content="github"><meta property="article:tag" content="CI/CD"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://smilin.net/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://smilin.net/2024/04/30/githubAction1/"},"headline":"貓謎工坊","image":["https://raw.githubusercontent.com/Mr-Smilin/Auto-Pixai/main/public/pic/logo.png","https://smilin.net/img/post/githubAction1/01.png","https://smilin.net/img/post/githubAction1/02.jpg","https://smilin.net/img/post/githubAction1/03.jpg"],"datePublished":"2024-04-30T07:00:00.000Z","dateModified":"2024-04-30T06:23:31.536Z","author":{"@type":"Person","name":"Smilin"},"description":"Auto-Pixai 之前撰寫的 auto-pixai經過多次調整，基本修復了大部分的 bug 該專案透過爬蟲，提供自動在 pixai 簽到的功能 考量到便利性，將專案打包成 docker image，實現無狀態的部屬環境，最後透過 github tag 控制版本歷程。   整合部屬需求雖然 User 用起來是方便了，但每次開發部版都需要進行複雜的手續.. CI&#x2F;CD …好..好想要 C"}</script><link rel="canonical" href="https://smilin.net/2024/04/30/githubAction1/"><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><script src="/js/animation.js" defer></script><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><script async data-ad-client="ca-pub-6118312021004697" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="貓謎工坊" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><div style="margin-top: 8px;"><img class="logo-img" src="/img/logo/logo_light.svg" alt="貓謎工坊" height="28"><img class="logo-img-dark" src="/img/logo/logo_night.svg" alt="貓謎工坊" height="28"></div></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首頁</a><a class="navbar-item" target="_blank" rel="noopener" href="https://drive.smilin.net/">雲端</a><a class="navbar-item" href="/message/">留言</a><a class="navbar-item" href="/friend/">友鏈</a><a class="navbar-item" href="/about/">自述</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目錄" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><canvas id="universe" width="smilin" height="blog"></canvas><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-04-30  <a class="commentCountImg" href="/2024/04/30/githubAction1/#comment-container"><span class="display-none-class">12bc0a902fab8d42ad9b6775ecabbdaf</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="12bc0a902fab8d42ad9b6775ecabbdaf">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>6 分鐘  <i class="fas fa-pencil-alt"> </i>0.9 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次訪問</span></div></div><h1 class="title is-3 is-size-4-mobile">Github Action 學習紀錄</h1><div class="content"><h1 id="Auto-Pixai"><a href="#Auto-Pixai" class="headerlink" title="Auto-Pixai"></a>Auto-Pixai</h1><p><img src="https://raw.githubusercontent.com/Mr-Smilin/Auto-Pixai/main/public/pic/logo.png" alt="auto-pixai"></p>
+<p>之前撰寫的 <a href="https://smilin.net/2024/04/13/autoPixai/">auto-pixai</a><br>經過多次調整，基本修復了大部分的 bug</p>
+<p>該專案透過爬蟲，<br>提供自動在 <a target="_blank" rel="noopener" href="https://pixai.art/">pixai</a> 簽到的功能</p>
+<p>考量到便利性，<br>將專案打包成 docker image，<br>實現無狀態的部屬環境，<br>最後透過 github tag 控制版本歷程。</p>
+<br>
+
+<h2 id="整合部屬需求"><a href="#整合部屬需求" class="headerlink" title="整合部屬需求"></a>整合部屬需求</h2><p>雖然 User 用起來是方便了，<br>但每次開發部版都需要進行複雜的手續..</p>
+<p>CI&#x2F;CD …好..好想要 CI&#x2F;CD 阿..<br>就在這麼想著的時候，想起了..</p>
+<p><strong>Github Action!</strong></p>
+<span id="more"></span>
+
+<br>
+
+<h1 id="Github-Action"><a href="#Github-Action" class="headerlink" title="Github Action"></a>Github Action</h1><p><img src="/img/post/githubAction1/01.png" alt="Github Action!"></p>
+<p>Github Action 是 Github 提供的 CI&#x2F;CD 方案</p>
+<p>由 Github 提供整合環境，<br>在統一的無狀態環境下進行整合</p>
+<p>最重要的是，它對於 public repository 完全免費!</p>
+<p><a target="_blank" rel="noopener" href="https://docs.github.com/zh/actions/quickstart">Github Action 官方簡中文檔</a><br>在學習 github action 的過程，<br>官方文檔幫助了我許多</p>
+<p>因為有官方翻譯，在專有名詞的學習上也不容易被混淆。</p>
+<br>
+
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求?"></a>需求?</h2><p><img src="/img/post/githubAction1/02.jpg"></p>
+<p>做為 CI&#x2F;CD (自動整合&#x2F;自動部屬) 的角色，<br>我希望他可以在我推送 release 的時候，去做幾件事——</p>
+<ul>
+<li>根據 package.json 檢查版本</li>
+<li>自動創建新版本代號</li>
+<li>根據 Dockerfile 產出 Docker image</li>
+<li>將 image 標上版號，推至 Docker Hub</li>
+</ul>
+<p>並且由於 Github Action 還提供緩存功能，<br>如果將 <code>npm install</code> 拉到 Github Action，<br>搭配緩存可以有效縮短 Dockerfile 的產出時間與大小！</p>
+<p>配上 Github Action 的一些格式後，我們還需要——</p>
+<ul>
+<li>指定 <code>node</code> 版本</li>
+<li>緩存儲存 <code>node_modules</code></li>
+<li>緩存加載 <code>node_modules</code></li>
+</ul>
+<p>根據<a target="_blank" rel="noopener" href="https://docs.github.com/zh/actions/using-workflows/caching-dependencies-to-speed-up-workflows">官方文檔</a>所述，<br>7 天沒使用的 cache 會自動回收，<br>並且一個 repository 的所有 cache 加總不可超出 10GB</p>
+<p>除此以外，緩存沒有任何限制</p>
+<pre><code>- name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: $&#123;&#123; runner.os &#125;&#125;-node-$&#123;&#123; hashFiles('**/package-lock.json') &#125;&#125;
+          restore-keys: |
+            $&#123;&#123; runner.os &#125;&#125;-node-
+</code></pre>
+<p>根據 package-lock.json 的變動來決定是否新建緩存，<br>否則就取出原本的 node_modules，<br>以此加速 CD 流程。</p>
+<br>
+
+<h2 id="過程"><a href="#過程" class="headerlink" title="過程"></a>過程</h2><p><img src="/img/post/githubAction1/03.jpg"></p>
+<p>搭啷，經過整理後，<br>這是目前的 CI&#x2F;CD 流程</p>
+<p>由於沒有實作測試，<br>僅有 release 被推送時需要 CI&#x2F;CD</p>
+<p>執行首先檢查 tag ，<br>若 package 版號有變動則創建新版本</p>
+<p>同時進行 cache 的載入，<br>若是找不到 cache 則重新 <code>npm install</code></p>
+<p>兩邊都做完後，<br>進行 Dockerfile 的 building 與 pushing。</p>
+<br>
+
+<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><p>大功告成！原本繁瑣的整合部屬流程</p>
+<ul>
+<li>Push New Version</li>
+<li>Dockerfile build</li>
+<li>Docker image tag</li>
+<li>Docker push tag</li>
+<li>Docker push latest</li>
+<li>…</li>
+</ul>
+<p>上面列的事情 <strong>通通不用</strong></p>
+<p>只要在 main 寫完代碼，<br>要推送版本的時候合併到 release，<br>最後再用自動產生的 tag 生成 Release 說明即可。</p>
+<br>
+
+<h1 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h1><p>怎麼說呢…好爽</p>
+<p>不過所謂爬蟲簽到甚麼的，<br>說白了只是個小工具</p>
+<p>藉著這次 project，<br>心血來潮地想把 repository 弄得有模有樣</p>
+<p>結果就是，<br>花在打扮(?)外觀的時間遠遠超出了爬蟲本身的開發時間</p>
+<p>感覺對 CICD 有了更深刻的了解；<br>美中不足的大概是爬蟲的測試並不好寫，<br>沒能在這次 action 中寫入自動測試，是比較可惜的。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Github Action 學習紀錄</p><p><a href="https://smilin.net/2024/04/30/githubAction1/">https://smilin.net/2024/04/30/githubAction1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://smilin.net"><p>Smilin</p></a></div></div><div class="level-item is-narrow"><div><h6>發佈於</h6><p>2024-04-30</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2024-04-30</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相關文章</span><br><span>  1.<a class="is-size-6" href="/2024/04/23/shareButton1/" target="_blank">使用 AddToAny 分享箱，踩雷過程</a><br></span><span>  2.<a class="is-size-6" href="/2024/04/13/autoPixai/" target="_blank">自動領取 Pixai 每日獎勵</a><br></span><span>  3.<a class="is-size-6" href="/2023/06/01/discordJs14-1/" target="_blank">discord.js 升上 14 版，架構說明</a><br></span></div></div><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_line"></a><a class="a2a_button_x"></a><a class="a2a_button_linkedin"></a><a class="a2a_button_reddit"></a><a class="a2a_button_threads"></a><a class="a2a_button_sina_weibo"></a></div><script async src="/addtoany/page.js" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/04/23/shareButton1/"><span class="level-item">使用 AddToAny 分享箱，踩雷過程</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">評論</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-TW',
+            id: '12bc0a902fab8d42ad9b6775ecabbdaf',
+            repo: 'Mr-Smilin.github.io',
+            owner: 'Mr-Smilin',
+            clientID: '9a33a548232178c23121',
+            clientSecret: 'bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6',
+            admin: ["Mr-Smilin"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目錄</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#Auto-Pixai"><span>Auto-Pixai</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#整合部屬需求"><span>整合部屬需求</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#Github-Action"><span>Github Action</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#需求"><span>需求?</span></a></li><li><a class="is-flex is-mobile" href="#過程"><span>過程</span></a></li><li><a class="is-flex is-mobile" href="#結果"><span>結果</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#結語"><span>結語</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><div><img class="logo-img" src="/img/logo/logo_light.svg" alt="貓謎工坊" height="28"><img class="logo-img-dark" src="/img/logo/logo_night.svg" alt="貓謎工坊" height="28"></div></a><p class="size-small"><span>&copy; 2024 Smilin</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> <br><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 起運行了 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小時 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒 ";
+        }var now = new Date();setInterval("createTime('2021/09/15 18:00:00')", 250,"");</script><br></span><div class="size-small"><span>共 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 位訪客</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="/dist/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="/dist/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script></div><script type="text/javascript" color="0,205,205" opacity="0.7" zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js" defer></script><a id="back-to-top" title="回到頂端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);})</script><script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什麼..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什麼...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title",
+                "#twikoo"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/js/universe.js"></script></body></html>
