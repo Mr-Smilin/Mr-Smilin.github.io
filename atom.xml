@@ -12,8 +12,8 @@
     <category term="12th鐵人賽" />
     <category term="日記" />
     <category term="Alist" />
-    <category term="docker" />
     <category term="Cloudflare" />
+    <category term="docker" />
     <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
@@ -23,16 +23,16 @@
     <category term="render" />
     <category term="render.com" />
     <category term="Live2D" />
+    <category term="Rust" />
+    <category term="addtoany" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
-    <category term="Rust" />
-    <category term="addtoany" />
     <entry>
         <id>https://smilin.net/2024/05/03/useTheme1/</id>
         <title>前幾天有人詢問我用的啥主題</title>
         <link rel="alternate" href="https://smilin.net/2024/05/03/useTheme1/"/>
-        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/ai/letter.png&#34;&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/ai/letter_circle.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;前幾天收到信，信中詢問使用的主題&lt;br&gt;想了下的確從沒寫過，索性紀錄一下。&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 

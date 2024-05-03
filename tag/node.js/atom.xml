@@ -12,8 +12,8 @@
     <category term="12th鐵人賽" />
     <category term="日記" />
     <category term="Alist" />
-    <category term="docker" />
     <category term="Cloudflare" />
+    <category term="docker" />
     <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
@@ -23,11 +23,11 @@
     <category term="render" />
     <category term="render.com" />
     <category term="Live2D" />
+    <category term="Rust" />
+    <category term="addtoany" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
-    <category term="Rust" />
-    <category term="addtoany" />
     <entry>
         <id>https://smilin.net/2024/04/13/autoPixai/</id>
         <title>自動領取 Pixai 每日獎勵</title>
