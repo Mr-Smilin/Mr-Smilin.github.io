@@ -5,8 +5,8 @@
         <link>https://smilin.net</link>
         <description>Code · Thinking · ACG</description>
         <language>zh-TW</language>
-        <pubDate>Tue, 30 Apr 2024 15:00:00 +0800</pubDate>
-        <lastBuildDate>Tue, 30 Apr 2024 15:00:00 +0800</lastBuildDate>
+        <pubDate>Fri, 03 May 2024 15:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 03 May 2024 15:00:00 +0800</lastBuildDate>
         <category>node.js</category>
         <category>bot</category>
         <category>discord</category>
@@ -14,23 +14,134 @@
         <category>教學</category>
         <category>12th鐵人賽</category>
         <category>日記</category>
+        <category>docker</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>docker</category>
         <category>hexo</category>
         <category>fluid</category>
         <category>javascript</category>
         <category>github</category>
         <category>CI/CD</category>
         <category>Live2D</category>
-        <category>heroku</category>
-        <category>render</category>
-        <category>render.com</category>
+        <category>Rust</category>
         <category>彈射世界</category>
         <category>遊戲</category>
         <category>腳本</category>
-        <category>Rust</category>
         <category>addtoany</category>
+        <category>heroku</category>
+        <category>render</category>
+        <category>render.com</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2024/05/03/useTheme1/</guid>
+            <title>前幾天有人詢問我用的啥主題</title>
+            <link>https://smilin.net/2024/05/03/useTheme1/</link>
+            <category>日記</category>
+            <category>hexo</category>
+            <pubDate>Fri, 03 May 2024 15:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ai/reading.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;前幾天收到信，信中詢問使用的主題&lt;br&gt;想了下的確從沒寫過，索性紀錄一下。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Hexo&#34;&gt;&lt;a href=&#34;#Hexo&#34; class=&#34;headerlink&#34; title=&#34;Hexo&#34;&gt;&lt;/a&gt;Hexo&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/hexo.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首先本站使用模板為 &lt;a href=&#34;https://hexo.io/zh-tw/&#34;&gt;Hexo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;該模板提供靜態網頁生成，&lt;br&gt;搭配 Github Page，或是其他免費架設平台，&lt;br&gt;可以輕易實現無開銷環境的長期 blog 支持&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hexo&lt;/code&gt; 從 2013 年開發至今，&lt;br&gt;筆者發文的 2 周前推出 v7.2.0 版本的 &lt;code&gt;Hexo&lt;/code&gt;，&lt;br&gt;有著優秀的基底與長期穩定的維護&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Icarus&#34;&gt;&lt;a href=&#34;#Icarus&#34; class=&#34;headerlink&#34; title=&#34;Icarus&#34;&gt;&lt;/a&gt;Icarus&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/Icarus.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;除了默認的設置以外，&lt;br&gt;&lt;code&gt;Hexo&lt;/code&gt; 提供自行開發主題(THEME)的接口&lt;/p&gt;
+&lt;p&gt;本站使用主題為 &lt;a href=&#34;https://github.com/ppoffice/hexo-theme-icarus&#34;&gt;Icarus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;該主題默認提供 default(白色) 跟 cyberpunk(黃色) 主題可供選用&lt;/p&gt;
+&lt;p&gt;由於 Icarus 後來也經過多次更迭，&lt;br&gt;加上筆者自己對 blog 有諸多修改，&lt;br&gt;如今已與原本的 Icarus 有很多差異，&lt;br&gt;不過仍看得出排版等元素皆承襲自 Icarus。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;星空&#34;&gt;&lt;a href=&#34;#星空&#34; class=&#34;headerlink&#34; title=&#34;星空&#34;&gt;&lt;/a&gt;星空&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;黑暗主題的星空背景，參考&lt;a href=&#34;https://github.com/imaegoo/hexo-theme-icarus&#34;&gt;imaegoo&lt;/a&gt;大大的開源代碼&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;imaegoo&lt;/code&gt; 的開源代碼同樣是從 &lt;code&gt;Icarus&lt;/code&gt; 改進而來&lt;br&gt;如果喜歡星空背景，該開源代碼可以直接套來用&lt;/p&gt;
+&lt;p&gt;不過由於筆者在此之前，已經對 blog 做過諸多修改&lt;br&gt;最終是自行研究該代碼後，另外自己寫 css，&lt;br&gt;想辦法移植過來的。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;PJAX&#34;&gt;&lt;a href=&#34;#PJAX&#34; class=&#34;headerlink&#34; title=&#34;PJAX&#34;&gt;&lt;/a&gt;PJAX&lt;/h1&gt;&lt;p&gt;另外本站的局部加載使用 PJAX，&lt;br&gt;同樣是另外加寫的&lt;/p&gt;
+&lt;p&gt;原本網站是使用 &lt;a href=&#34;https://github.com/fluid-dev/hexo-theme-fluid&#34;&gt;Fluid&lt;/a&gt; 這套 &lt;code&gt;Hexo&lt;/code&gt; 主題&lt;/p&gt;
+&lt;p&gt;但因為 &lt;code&gt;Fluid&lt;/code&gt; 並不支援局部加載，&lt;br&gt;自己想辦法實作後發現基底的確不適合，&lt;br&gt;無奈之下只好棄用。&lt;/p&gt;
+&lt;p&gt;當時為了魔改 &lt;code&gt;Fluid&lt;/code&gt; 還寫了篇&lt;a href=&#34;https://smilin.net/2021/11/16/fluidThemeShare/&#34;&gt;紀錄&lt;/a&gt;，&lt;br&gt;有興趣可以看看。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Live-2D&#34;&gt;&lt;a href=&#34;#Live-2D&#34; class=&#34;headerlink&#34; title=&#34;Live 2D&#34;&gt;&lt;/a&gt;Live 2D&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;本站的 Live 2D 小人，&lt;br&gt;使用 &lt;a href=&#34;https://github.com/fghrsh/live2d_demo&#34;&gt;fghrsh&lt;/a&gt; 大大撰寫的開源工具&lt;/p&gt;
+&lt;p&gt;該專案主要負責 live 2d 的加載，&lt;br&gt;與針對網頁元素互動的邏輯撰寫&lt;/p&gt;
+&lt;p&gt;得益於開源專案的優勢，該工具有著許多變種，&lt;br&gt;同時支持多項設定自定義&lt;/p&gt;
+&lt;p&gt;像本站是使用了原本的前端工具 + 後端 API 本地靜態化&lt;br&gt;以此來避免 憑證過期 &amp;amp; 後端額外開銷 等等問題。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Gittalk-熱門評論-最新評論&#34;&gt;&lt;a href=&#34;#Gittalk-熱門評論-最新評論&#34; class=&#34;headerlink&#34; title=&#34;Gittalk &amp;amp; 熱門評論 &amp;amp; 最新評論&#34;&gt;&lt;/a&gt;Gittalk &amp;amp; 熱門評論 &amp;amp; 最新評論&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/04.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Gittalk 一直都是本站的評論系統&lt;br&gt;他主要依賴於 Github Issue 與其 API&lt;br&gt;讓原本靜態的網站，彷彿支援動態的評論系統一般&lt;/p&gt;
+&lt;p&gt;如果 blog 原本是使用 Github Page 架設，&lt;br&gt;懶一點的話可以架在同一個 Repository，&lt;br&gt;如此便不需花費額外的維護成本。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;除了 Gittalk 原本的功能，&lt;br&gt;熱門&amp;amp;最新評論的 API 串接則是參考&lt;a href=&#34;https://removeif.github.io/theme/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%88%86%E4%BA%AB.html&#34;&gt;辣椒的醬&lt;/a&gt;大大&lt;/p&gt;
+&lt;p&gt;由於過於方便，並沒有多加修改，&lt;/p&gt;
+&lt;p&gt;就是那個評論數統計，&lt;br&gt;當時看代碼會偷偷灌水，所以改回了原始數值。&lt;/p&gt;
+&lt;p&gt;另外由於辣椒的醬大大的 blog 已經多年未有更新，&lt;br&gt;考慮到 &lt;code&gt;hexo&lt;/code&gt;&amp;amp;&lt;code&gt;Icarus&lt;/code&gt; 在之後有多次版本更迭&lt;br&gt;以剛起步來說，會更加推薦直接使用官方模板來做修改。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;明亮主題的粒子特效&#34;&gt;&lt;a href=&#34;#明亮主題的粒子特效&#34; class=&#34;headerlink&#34; title=&#34;明亮主題的粒子特效&#34;&gt;&lt;/a&gt;明亮主題的粒子特效&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這部份使用 &lt;a href=&#34;https://github.com/hustcc/canvas-nest.js/&#34;&gt;canvas-nest&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用非常簡單，在網頁引入 js 即可&lt;br&gt;網路教學不少&lt;/p&gt;
+&lt;p&gt;由於跟夜晚主題適配性差，&lt;br&gt;根據個人需求不同，要稍微調整 css。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;音樂箱&#34;&gt;&lt;a href=&#34;#音樂箱&#34; class=&#34;headerlink&#34; title=&#34;音樂箱&#34;&gt;&lt;/a&gt;音樂箱&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/05.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;音樂箱功能使用 &lt;a href=&#34;https://github.com/DIYgod/APlayer&#34;&gt;Aplayer&lt;/a&gt; 播放器&lt;/p&gt;
+&lt;p&gt;非常低調地摺疊收納在網站角落，&lt;br&gt;按照預想，就算是多次瀏覽本站的旅客也不一定能發現&lt;/p&gt;
+&lt;p&gt;畢竟音樂箱只需要服務需要聽音樂的人即可，&lt;br&gt;大多人瀏覽網站時也有自己在背景播放的歌曲，&lt;br&gt;這時候若太過強調網站自帶的音樂，顯得不識趣了些。&lt;/p&gt;
+&lt;p&gt;值得一提的是，&lt;br&gt;本站的音樂箱，在手機可以當作歌曲列表自動播放。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;RSS&#34;&gt;&lt;a href=&#34;#RSS&#34; class=&#34;headerlink&#34; title=&#34;RSS&#34;&gt;&lt;/a&gt;RSS&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/06.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;本站 RSS 提供三種格式&lt;br&gt;分別是預設的 RSS、ATOM 與 Json Feed&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/07.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用 RSS 訂閱，便可即時知道網站更新了文章&lt;/p&gt;
+&lt;p&gt;對筆者來說，就像是提醒自己一直都沒在更新文章&lt;/p&gt;
+&lt;p&gt;看到一排去年的文章，&lt;br&gt;彷彿說著「再不更新就要死了！」這樣。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;寫在後面&#34;&gt;&lt;a href=&#34;#寫在後面&#34; class=&#34;headerlink&#34; title=&#34;寫在後面&#34;&gt;&lt;/a&gt;寫在後面&lt;/h1&gt;&lt;p&gt;列一列大概是這些，如果有甚麼缺漏，&lt;br&gt;或是未來更新沒寫在這，想問的&lt;/p&gt;
+&lt;p&gt;歡迎提出來，有時間便會回覆。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://smilin.net/2024/04/30/githubAction1/</guid>
             <title>Github Action 學習紀錄</title>
@@ -1383,142 +1494,6 @@ $ hexo d #上傳git
 &lt;p&gt;不過 fluid 因為其框架的侷限，其致命傷便是無法支援 pjax(ajax)做局部頁面更新&lt;br&gt;從 issues 上可以看到，對於 pjax 的開發目前是不了了之&lt;/p&gt;
 &lt;p&gt;但這並非是 fluid 無法支援 pjax，而是因為引入 pjax 會破壞 fluid 既有框架&lt;br&gt;也因此這些改動要改進正式版本是十分困難的，但如果只是魔改的話，儘管是像筆者對前端並不精熟，也能試著修改(code 不保證好看就是了 xD)&lt;/p&gt;
 &lt;p&gt;因為筆者最近可能會試著替換成其他主題，故想記錄下使用版本，算是分享。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://smilin.net/2021/11/16/live2DShareList/</guid>
-            <title>公開Live2D模型蒐集分享</title>
-            <link>https://smilin.net/2021/11/16/live2DShareList/</link>
-            <category>Live2D</category>
-            <pubDate>Tue, 16 Nov 2021 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;此文章來源來自 &lt;a href=&#34;https://www.cnblogs.com/strengthen/p/11112215.html&#34;&gt;https://www.cnblogs.com/strengthen/p/11112215.html&lt;/a&gt;&lt;br&gt;此文章僅用於教學，不進行任何營利行為&lt;br&gt;引用時間 2021-11-16&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-epsilon2_1@1.0.5/assets/epsilon2_1.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-gf@1.0.5/assets/gf.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-haru/01@1.0.5/assets/haru/01.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-haru/02@1.0.5/assets/haru/02.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145737099-1995701915.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145755122-1250198826.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;8&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145808171-1134873927.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-izumi@1.0.5/assets/izumi.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145820786-1515142054.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;10&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145837395-2129851551.png&#34; alt=&#34;10&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;11&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145854892-1189973297.png&#34; alt=&#34;11&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;12&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-ni-j@1.0.5/assets/ni.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;13&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nico@1.0.5/assets/nico.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145946543-386246366.png&#34; alt=&#34;13&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;14&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nietzsche@1.0.5/assets/nietzsche.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;15&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705145958186-1073145583.png&#34; alt=&#34;15&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;16&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-nito@1.0.5/assets/nito.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150012305-869512378.png&#34; alt=&#34;16&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;17&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150021685-1723203157.png&#34; alt=&#34;17&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;18&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150030436-2105740210.png&#34; alt=&#34;18&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;19&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-tsumiki@1.0.5/assets/tsumiki.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150044063-1455978557.png&#34; alt=&#34;19&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;20&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150055987-2049508002.png&#34; alt=&#34;20&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;21&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150106688-127892585.png&#34; alt=&#34;21&#34;&gt;&lt;/p&gt;
-&lt;ol start=&#34;22&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://img2018.cnblogs.com/blog/960222/201907/960222-20190705150115397-624103248.png&#34; alt=&#34;22&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
