@@ -10,7 +10,7 @@ const Search = require('./common/search');
 module.exports = class extends Component {
     render() {
         const { site, config, page, helper, body } = this.props;
-        const { comment, use_pjax, has_banner, use_universe } = config;
+        const { comment, share, use_pjax, has_banner, use_universe } = config;
         const { __, my_cdn, url_for } = helper;
 
         // 默认不加载公式，文中头部开启mathJax:true才加载
@@ -19,6 +19,7 @@ module.exports = class extends Component {
         const columnCount = Widgets.getColumnCount(config.widgets);
         const hasComment = comment != undefined && comment.type != undefined && (comment.type == 'gitalk' || comment.type == 'valine')
             && (comment.has_hot_recommend || comment.has_latest_comment);
+        const hasAddtoany = share != undefined && share.type == 'addtoany';
         var appKey;
         var appId;
         var userName;
@@ -69,8 +70,7 @@ module.exports = class extends Component {
             elements: "a",//代表点击链接就更新
             selectors: [  //代表要更新的节点
                 ".section",
-                "title",
-                "#twikoo"
+                "title"
             ],
             cache: true,
             cacheBust:false
@@ -101,6 +101,9 @@ module.exports = class extends Component {
             if(${isMath}){
                 loadMathJax();
             }
+            if(${hasAddtoany}){
+                a2a.init_all();
+            }
             loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
             loadBackTop();
             loadBusuanzi();
@@ -108,7 +111,7 @@ module.exports = class extends Component {
                 loadBanner();
             }
         });`;
-
+        // $.getScript('${my_cdn(url_for('/addtoany/page.js'))}',function(){initializeA2A(true);});
         if (comment == undefined || comment.type == undefined
             || comment.type != 'gitalk'
             || comment.has_hot_recommend == undefined
