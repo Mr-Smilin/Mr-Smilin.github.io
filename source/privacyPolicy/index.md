@@ -6,7 +6,6 @@ comments: false
 
 [Click here for the English](/privacyPolicyEn)
 
-<h1>隱私政策</h1>
 <p>最後更新：2024年5月3日</p>
 <p>本隱私政策描述了我們在您使用服務時對信息的收集、使用和披露的政策和程序，並告知您有關您的隱私權利及法律如何保護您。</p>
 <p>我們使用您的個人數據來提供和改善服務。使用該服務即表示您同意根據本隱私政策收集和使用信息。本隱私政策是借助<a href="https://www.privacypolicies.com/privacy-policy-generator/" target="_blank">隱私政策生成器</a>創建的。</p>
