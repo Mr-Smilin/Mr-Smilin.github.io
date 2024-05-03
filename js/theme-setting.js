@@ -4,13 +4,15 @@
 function isNightFun() {
 	var isNightTemp = localStorage.getExpire("night");
 
-	// 第一次进来判断是白天还是晚上
+	// 第一次近來判斷是白天還是晚上
 	if (isNightTemp == null || isNightTemp == undefined) {
-		if (isNightRange("19:00", "23:59") || isNightRange("00:00", "07:00")) {
-			isNightTemp = "true";
-		} else {
-			isNightTemp = "false";
-		}
+		// if (isNightRange("19:00", "23:59") || isNightRange("00:00", "07:00")) {
+		// 	isNightTemp = "true";
+		// } else {
+		// 	isNightTemp = "false";
+		// }
+		// 默認夜晚主題
+		isNightTemp = "true";
 		localStorage.setExpire("night", isNightTemp, expireTime1H);
 	}
 	return isNightTemp;
