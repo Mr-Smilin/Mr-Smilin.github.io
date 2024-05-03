@@ -90,8 +90,7 @@
             elements: "a",//代表点击链接就更新
             selectors: [  //代表要更新的节点
                 ".section",
-                "title",
-                "#twikoo"
+                "title"
             ],
             cache: true,
             cacheBust:false
@@ -121,6 +120,9 @@
             }
             if(false){
                 loadMathJax();
+            }
+            if(true){
+                $.getScript('/addtoany/page.js',function(){});
             }
             loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
             loadBackTop();

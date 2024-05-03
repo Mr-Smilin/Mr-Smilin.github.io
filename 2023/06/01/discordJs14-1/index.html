@@ -183,8 +183,7 @@ MASTER_ID=&quot;your client ID&quot;
             elements: "a",//代表点击链接就更新
             selectors: [  //代表要更新的节点
                 ".section",
-                "title",
-                "#twikoo"
+                "title"
             ],
             cache: true,
             cacheBust:false
@@ -214,6 +213,9 @@ MASTER_ID=&quot;your client ID&quot;
             }
             if(false){
                 loadMathJax();
+            }
+            if(true){
+                $.getScript('/addtoany/page.js',function(){});
             }
             loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
             loadBackTop();
