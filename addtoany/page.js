@@ -158,3 +158,24 @@
 				: (o.addEventListener("readystatechange", v),
 				  o.addEventListener("DOMContentLoaded", v))));
 })(document, window);
+
+// 重置並初始化全局 a2a 對象
+function initializeA2A(force = false) {
+	console.log("test reset a2a");
+	if (window.a2a_initialized && !force) {
+		return; // 如果已经初始化过，且不是强制初始化，则直接返回
+	}
+	window.a2a = window.a2a || {};
+	window.a2a_config = window.a2a_config || {};
+	window.a2a_initialized = true;
+
+	// 清理可能已存在的 a2a 元素
+	const existingButtons = document.querySelectorAll(".a2a_kit");
+	existingButtons.forEach((button) => button.remove());
+
+	// 此处调用 AddToAny 的初始化代码
+	window.a2a.init("page", {
+		linkurl: window.a2a_config.linkurl,
+		linkname: window.a2a_config.linkname,
+	});
+}
