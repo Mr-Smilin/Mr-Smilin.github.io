@@ -22,8 +22,8 @@
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="Rust" />
     <category term="Live2D" />
+    <category term="Rust" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
@@ -41,7 +41,8 @@
 &lt;hr&gt;
 &lt;br&gt;
 
-&lt;h1 id=&#34;Hexo&#34;&gt;&lt;a href=&#34;#Hexo&#34; class=&#34;headerlink&#34; title=&#34;Hexo&#34;&gt;&lt;/a&gt;Hexo&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/hexo.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Hexo&#34;&gt;&lt;a href=&#34;#Hexo&#34; class=&#34;headerlink&#34; title=&#34;Hexo&#34;&gt;&lt;/a&gt;Hexo&lt;/h1&gt;&lt;img width=&#34;128&#34; src=&#34;/img/post/useTheme1/hexo.png&#34;&gt;
+
 &lt;p&gt;首先本站使用模板為 &lt;a href=&#34;https://hexo.io/zh-tw/&#34;&gt;Hexo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;該模板提供靜態網頁生成，&lt;br&gt;搭配 Github Page，或是其他免費架設平台，&lt;br&gt;可以輕易實現無開銷環境的長期 blog 支持&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Hexo&lt;/code&gt; 從 2013 年開發至今，&lt;br&gt;筆者發文的 2 周前推出 v7.2.0 版本的 &lt;code&gt;Hexo&lt;/code&gt;，&lt;br&gt;有著優秀的基底與長期穩定的維護&lt;/p&gt;
