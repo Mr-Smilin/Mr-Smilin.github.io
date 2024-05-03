@@ -10,24 +10,24 @@
     <category term="discord.js" />
     <category term="教學" />
     <category term="12th鐵人賽" />
-    <category term="日記" />
-    <category term="docker" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="hexo" />
-    <category term="fluid" />
+    <category term="日記" />
+    <category term="docker" />
     <category term="javascript" />
     <category term="github" />
     <category term="CI/CD" />
-    <category term="Live2D" />
-    <category term="Rust" />
-    <category term="彈射世界" />
-    <category term="遊戲" />
-    <category term="腳本" />
-    <category term="addtoany" />
+    <category term="hexo" />
+    <category term="fluid" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
+    <category term="彈射世界" />
+    <category term="遊戲" />
+    <category term="腳本" />
+    <category term="Rust" />
+    <category term="Live2D" />
+    <category term="addtoany" />
     <entry>
         <id>https://smilin.net/2020/09/30/12thDayEnd/</id>
         <title>沉沉入睡的回憶小姐，匆匆揚帆的時間先生</title>
@@ -3135,7 +3135,7 @@ exports.getBaseExcel = function(userTalk, callback) &amp;#123;
 &lt;p&gt;&lt;img src=&#34;https://i.imgur.com/cG2Rs1B.png&#34; alt=&#34;14-22&#34;&gt;&lt;/p&gt;
 &lt;p&gt;失敗的話，除了版本問題以外，有可能是PATH檔不正確，可以拿這個keyword去排除問題試試看&lt;/p&gt;
 &lt;p&gt;都沒問題的話，我們輸入以下兩個指令&lt;/p&gt;
-&lt;p&gt;git config –global user.name “smile”&lt;br&gt;git config –global user.email “&lt;a href=&#34;mailto:&amp;#x61;&amp;#50;&amp;#x38;&amp;#56;&amp;#x32;&amp;#54;&amp;#50;&amp;#53;&amp;#50;&amp;#x32;&amp;#53;&amp;#x32;&amp;#64;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&#34;&gt;&amp;#x61;&amp;#50;&amp;#x38;&amp;#56;&amp;#x32;&amp;#54;&amp;#50;&amp;#53;&amp;#50;&amp;#x32;&amp;#53;&amp;#x32;&amp;#64;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;“&lt;/p&gt;
+&lt;p&gt;git config –global user.name “smile”&lt;br&gt;git config –global user.email “&lt;a href=&#34;mailto:&amp;#x61;&amp;#50;&amp;#x38;&amp;#56;&amp;#x32;&amp;#x36;&amp;#x32;&amp;#53;&amp;#x32;&amp;#x32;&amp;#53;&amp;#x32;&amp;#64;&amp;#x67;&amp;#109;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&#34;&gt;&amp;#x61;&amp;#50;&amp;#x38;&amp;#56;&amp;#x32;&amp;#x36;&amp;#x32;&amp;#53;&amp;#x32;&amp;#x32;&amp;#53;&amp;#x32;&amp;#64;&amp;#x67;&amp;#109;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;“&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://i.imgur.com/VMeScbF.png&#34; alt=&#34;14-23&#34;&gt;&lt;/p&gt;
 &lt;p&gt;這是設定你的使用者名稱與信箱&lt;br&gt;我的名稱是smile，你要改成你自己的稱呼，信箱與heroku一樣就可以了&lt;/p&gt;
 &lt;p&gt;之後透過git推送時，都會以這個稱呼與信箱來識別&lt;br&gt;這樣Heroku跟Git的前置作業都做好了，明天將專案推上Heroku&lt;/p&gt;
