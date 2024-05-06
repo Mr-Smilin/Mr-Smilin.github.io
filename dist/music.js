@@ -6,7 +6,7 @@ const ap = new APlayer({
 	loop: "all",
 	volume: 0.7,
 	listFolded: true,
-	listMaxHeight: 60,
+	listMaxHeight: "250px",
 	audio: [
 		{
 			name: "最近在聽的歌",
