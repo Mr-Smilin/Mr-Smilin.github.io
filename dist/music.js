@@ -27,9 +27,9 @@ const ap = new APlayer({
 			cover: "/img/avatar.png",
 		},
 		{
-			name: "Couple N & Flay",
+			name: "Couple N & Flay!",
 			artist: "Natsumeku",
-			url: "/music/Couple N & Flay - Natsumeku.mp3",
+			url: "/music/Couple N & Flay! - Natsumeku.mp3",
 			cover: "/img/avatar.png",
 		},
 		{
