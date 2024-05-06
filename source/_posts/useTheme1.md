@@ -7,7 +7,7 @@ categories:
   - [日記]
 ---
 
-![](/img/ai/letter.png)
+![](/img/ai/letter_circle.png)
 
 前幾天收到信，信中詢問使用的主題  
 想了下的確從沒寫過，索性紀錄一下。
