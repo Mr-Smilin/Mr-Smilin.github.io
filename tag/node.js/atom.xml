@@ -3,31 +3,133 @@
     <id>https://smilin.net</id>
     <title>貓謎工坊 • Posts by &#34;node.js&#34; tag</title>
     <link href="https://smilin.net" />
-    <updated>2024-04-13T11:00:00.000Z</updated>
+    <updated>2024-08-12T09:00:00.000Z</updated>
     <category term="node.js" />
     <category term="bot" />
     <category term="discord" />
     <category term="discord.js" />
     <category term="教學" />
     <category term="12th鐵人賽" />
+    <category term="vitepress" />
+    <category term="algolia" />
+    <category term="活俠傳" />
     <category term="日記" />
+    <category term="docker" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="docker" />
+    <category term="hexo" />
+    <category term="fluid" />
     <category term="javascript" />
     <category term="github" />
     <category term="CI/CD" />
-    <category term="hexo" />
-    <category term="fluid" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
     <category term="Live2D" />
+    <category term="Rust" />
     <category term="彈射世界" />
     <category term="遊戲" />
     <category term="腳本" />
-    <category term="Rust" />
     <category term="addtoany" />
+    <entry>
+        <id>https://smilin.net/2024/08/12/algoliaOnVitepress/</id>
+        <title>關於 algolia 在 vitepress 集成，踩雷過程</title>
+        <link rel="alternate" href="https://smilin.net/2024/08/12/algoliaOnVitepress/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;因為想增強網站的搜尋力度，希望連文章的內文都可以搜索到&lt;br&gt;剛好 &lt;code&gt;vitepress&lt;/code&gt; 是支援 &lt;code&gt;algolia&lt;/code&gt; 的，試著配置&lt;br&gt;不料遇到的問題比想像的多，網路上的教學像是缺了幾塊拼圖似的&lt;br&gt;索性趁著剛完成腦袋還熱呼的現在，記錄一下遇到的問題。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;官方文檔&#34;&gt;&lt;a href=&#34;#官方文檔&#34; class=&#34;headerlink&#34; title=&#34;官方文檔&#34;&gt;&lt;/a&gt;官方文檔&lt;/h2&gt;&lt;p&gt;首先我們看到 &lt;a href=&#34;https://vitepress.dev/zh/reference/default-theme-search#algolia-search&#34;&gt;vitepress 的文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;去 &lt;code&gt;Algolia&lt;/code&gt; 申請 &lt;code&gt;api&lt;/code&gt;，然後填入，完成&lt;br&gt;恩，看起來挺簡單的，再看看 &lt;a href=&#34;https://docsearch.algolia.com/apply&#34;&gt;Algolia 怎麼說&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;註冊完後，我們審核完畢就會寄信到你的信箱，裡面可以拿到 &lt;code&gt;apikey&lt;/code&gt;&lt;br&gt;恩…這邊也很方便阿，註冊完等大概五分鐘就收到信了&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;Markdown&#34;&gt;Hi there 👋
+
+Thanks for your interest and trust in Algolia DocSearch.
+ We&amp;#39;ve received your request for https://smilin.net/LoM-wiki/, and will get back to you soon.
+
+DocSearch is built in two parts:
+- A crawler which we run in our own infrastructure every week (configurable). It follows every link in your website and extracts content from every page it traverses. It then pushes this content to an Algolia index. (Read more: https://www.algolia.com/doc/tools/crawler/getting-started/overview/ )
+- A JavaScript snippet to be inserted in your website that will bind this Algolia index to your search input and display its results in a modal UI. (Read more: https://github.com/algolia/docsearch )
+
+If you want to find more details on how DocSearch works, take a look at the docs: https://docsearch.algolia.com/
+
+Meanwhile, let us know if you have any other questions.
+
+Have a great day,
+The DocSearch team.
+
+DocSearch is powered by Algolia. See more at https://www.algolia.com/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;大意是說 &lt;code&gt;algolia&lt;/code&gt; 分成兩個部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;他們會配置爬蟲，每周瀏覽網站&lt;/li&gt;
+&lt;li&gt;為了使用 &lt;code&gt;algolia&lt;/code&gt;，必須在網站配置他們的 &lt;code&gt;js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第一部份 &lt;code&gt;algolia&lt;/code&gt; 會協助，第二部份也有 &lt;code&gt;vitepress&lt;/code&gt; 集成，一切看起來都很美好&lt;/p&gt;
+&lt;p&gt;但是去 &lt;code&gt;algolia&lt;/code&gt; 後台要拿 &lt;code&gt;api&lt;/code&gt; 的時候，問題來了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;問題？&#34;&gt;&lt;a href=&#34;#問題？&#34; class=&#34;headerlink&#34; title=&#34;問題？&#34;&gt;&lt;/a&gt;問題？&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/04.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;(註：由於筆者已經踩完雷了，圖中是已解決的樣子)&lt;/p&gt;
+&lt;p&gt;只要進入後台，他就會彈出 &lt;code&gt;Get Start&lt;/code&gt;&lt;br&gt;大意是要求我們自己寫爬蟲讀取自己網站的資料，然後透過他們的工具上傳給 &lt;code&gt;algolia&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不對呀？爬蟲的部份&lt;code&gt;algolia&lt;/code&gt;不是幫我們做好了嗎？&lt;br&gt;上網找了下，其他人似乎沒有遇到這個狀況，甚至可以在後台要求 &lt;code&gt;algolia&lt;/code&gt; 主動重爬&lt;/p&gt;
+&lt;p&gt;恩…回頭去看信中的第一點，點進他提供的網址，看看爬蟲相關的問題&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/05.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;痾，原來你們家的爬蟲不支援免費仔了啊&lt;/p&gt;
+&lt;p&gt;那沒辦法，畢竟爬蟲也是要資源的，只好自己搞。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;github-action&#34;&gt;&lt;a href=&#34;#github-action&#34; class=&#34;headerlink&#34; title=&#34;github action&#34;&gt;&lt;/a&gt;github action&lt;/h2&gt;&lt;p&gt;由於筆者的網站放在 &lt;code&gt;github&lt;/code&gt; 上&lt;br&gt;想到要寫 for 網站的爬蟲後，第一時間想到的就是 &lt;code&gt;action&lt;/code&gt; 啦&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;name: Algolia DocSearch Scraper
+on:
+  push:
+    branches: [release-algolia]
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare Algolia DocSearch config
+        run: |
+          echo &amp;#39;$&amp;#123;&amp;#123; secrets.ALGOLIA_CONFIG &amp;#125;&amp;#125;&amp;#39; &amp;gt; config.json
+          cat config.json
+
+      - name: Run DocSearch Scraper
+        env:
+          APPLICATION_ID: $&amp;#123;&amp;#123; secrets.ALGOLIA_ID &amp;#125;&amp;#125;
+          API_KEY: $&amp;#123;&amp;#123; secrets.ALGOLIA_KEY &amp;#125;&amp;#125;
+        run: |
+          docker run \
+            -e APPLICATION_ID=$APPLICATION_ID \
+            -e API_KEY=$API_KEY \
+            -e CONFIG=&amp;quot;$(cat config.json | jq -c .)&amp;quot; \
+            algolia/docsearch-scraper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;透過 &lt;code&gt;action&lt;/code&gt; 執行 &lt;code&gt;algolia/docsearch-scraper&lt;/code&gt;&lt;br&gt;&lt;code&gt;id&lt;/code&gt;跟&lt;code&gt;key&lt;/code&gt;可以在前面的&lt;code&gt;algolia後台&lt;/code&gt;獲得&lt;br&gt;&lt;code&gt;ALGOLIA_CONFIG&lt;/code&gt; 則是爬蟲的相關 &lt;code&gt;config&lt;/code&gt;，設置方式可以&lt;a href=&#34;https://docsearch.algolia.com/docs/legacy/config-file/&#34;&gt;參考這裡&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;全都必須放在 &lt;code&gt;Repository secrets&lt;/code&gt;，根據使用的環境不同，載入環境變量的方式略有差異&lt;/p&gt;
+&lt;p&gt;以上做完，&lt;code&gt;action&lt;/code&gt;成功執行後，&lt;code&gt;algolia&lt;/code&gt;上就會有資料囉&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;後續步驟&#34;&gt;&lt;a href=&#34;#後續步驟&#34; class=&#34;headerlink&#34; title=&#34;後續步驟&#34;&gt;&lt;/a&gt;後續步驟&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/06.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;前面爬完資料，第一步會自動打勾&lt;br&gt;由於我們的前端都由 &lt;code&gt;vitepress&lt;/code&gt; 自動配置好了，剩下三步驟並不需要設定，一直送出讓他打勾就好&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/07.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;終於來到後台，依序點選 Search -&amp;gt; CONFIGURE -&amp;gt; Index&lt;br&gt;找到 &lt;code&gt;Create Index&lt;/code&gt; ，輸入 &lt;code&gt;IndexName&lt;/code&gt;&lt;br&gt;這裡設定的，就是最前面&lt;code&gt;vitepress&lt;/code&gt;要求輸入的第三個參數&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;都設定完畢，網頁的搜尋功能連內文都可以搜到，更加強大囉～&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;閒談&#34;&gt;&lt;a href=&#34;#閒談&#34; class=&#34;headerlink&#34; title=&#34;閒談&#34;&gt;&lt;/a&gt;閒談&lt;/h2&gt;&lt;p&gt;文中提到使用 &lt;code&gt;vitepress&lt;/code&gt; 的網站是 &lt;a href=&#34;https://smilin.net/LoM-wiki/&#34;&gt;活俠傳 wiki&lt;/a&gt;，也是最近筆者在休息時間把玩的小專案&lt;br&gt;網站在 &lt;code&gt;2024-07-01&lt;/code&gt; 建立，當時是打算在這寫點文章的，恰巧近期工作也忙，沒甚麼時間更新這邊&lt;br&gt;其實連這篇文都更新的很吃力，不過想了想，過幾天恐怕連怎麼寫這篇文都不知道，還是寫吧 xD&lt;/p&gt;
+&lt;p&gt;建立這個網站，一方面是我自己對&lt;code&gt;vue + vite&lt;/code&gt;體系全家桶不太熟悉，趁機學習&lt;br&gt;另一方面是活俠傳真的很好玩，這邊推薦大家都可以去玩。&lt;/p&gt;
+&lt;p&gt;關於&lt;code&gt;wiki&lt;/code&gt;的建立心路歷程甚麼的，之後會再另外寫一篇的&lt;br&gt;很感謝同樣喜歡活俠傳的朋友，願意一同維護這個 &lt;code&gt;wiki&lt;/code&gt;，也歡迎志同道合的新夥伴加入。&lt;/p&gt;
+&lt;br&gt;
+</content>
+        <category term="node.js" />
+        <category term="vitepress" />
+        <category term="algolia" />
+        <category term="活俠傳" />
+        <updated>2024-08-12T09:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://smilin.net/2024/04/13/autoPixai/</id>
         <title>自動領取 Pixai 每日獎勵</title>
@@ -3210,46 +3312,5 @@ function GetBaseExcelData(msg) &amp;#123;
         <category term="教學" />
         <category term="12th鐵人賽" />
         <updated>2020-09-20T02:26:24.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://smilin.net/2020/09/19/12thDay19/</id>
-        <title>Day19 - GAS抓表(3)</title>
-        <link rel="alternate" href="https://smilin.net/2020/09/19/12thDay19/"/>
-        <content type="html">&lt;p&gt;昨天我們的程式成功抓到API的資料並且對他做分析了&lt;br&gt;現在要串回主程序(bot.js)上&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/lLXAqcN.png&#34; alt=&#34;19-1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;請幫我在bot.js引用GetGas.js&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/mwE3NRg.png&#34; alt=&#34;19-2&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/xMGI9Fa.png&#34; alt=&#34;19-3&#34;&gt; &lt;/p&gt;
-&lt;p&gt;然後之前的文字回應系統，跟音樂系統一樣用一個function包起來，比較好看&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/uvfVZ2Q.png&#34; alt=&#34;19-4&#34;&gt;&lt;/p&gt;
-&lt;p&gt;我們希望當訊息不符合任一前綴系統的情況，就要拿字串跟資料庫比對&lt;br&gt;所以我們把function放在default(默認)，只要前面的case都沒進去就會到default&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/N0R0NAW.png&#34; alt=&#34;19-5&#34;&gt; &lt;/p&gt;
-&lt;p&gt;之後新增BaseExcelFunction方法&lt;br&gt;內容是執行GetGas底下的getBaseExcel元素&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/lg1t1wq.png&#34; alt=&#34;19-6&#34;&gt;&lt;/p&gt;
-&lt;p&gt;回來看GetGas的getBaseExcel&lt;br&gt;getBaseExcel元素指向一callback方法&lt;br&gt;帶了一個參數userTalk，callback方法使用callback代表方法的結束，呼叫方會在callback欄位宣告function，其帶回參數(messageED)就是getBaseExcel的方法中callback的值&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/XXBAW5u.png&#34; alt=&#34;19-7&#34;&gt;&lt;/p&gt;
-&lt;p&gt;這樣寫完，機器人就能做簡單的回話了!&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;雖然功能做好了，但有許多問題&lt;/p&gt;
-&lt;p&gt;依嚴重性依序列舉的話&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;   bot每從discord收到一則訊息就會使用一次API&lt;/li&gt;
-&lt;li&gt;   使用JsonObject做迴圈查詢十分沒有效率&lt;/li&gt;
-&lt;li&gt;   缺乏防呆&amp;amp;參數替換&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;理論上，機器人對對應的詞句回話這個動作是即時的，透過這個寫法，我們每次查詢API都必須等待2~3秒的時間，API才會將結果反饋給bot&lt;br&gt;而且多次傳送API不僅降低了程序的穩定，也要考慮GAS提供的每日配額&lt;br&gt;如果bot所在的群組一天訊息超過2萬筆，API就一定會被花光，而一天兩萬筆訊息、對於一個支援多群組的bot來說其實並不困難&lt;/p&gt;
-&lt;p&gt;GetGas中對於data的處理方式也是極其低效的，雖然在捨棄SQL這種專為優化資料存取的系統時，就難以追求最高效的方法，但目前的做法也仍是相對低效的&lt;/p&gt;
-&lt;p&gt;以及程序目前只是簡單的判A給B，功能十分單一&lt;br&gt;我沒辦法針對特定群組，有該群組專屬的詞彙，或是對特定回應帶tag等&lt;/p&gt;
-&lt;p&gt;明天我們會將程序做一次翻新&lt;/p&gt;
-</content>
-        <category term="node.js" />
-        <category term="bot" />
-        <category term="discord" />
-        <category term="discord.js" />
-        <category term="教學" />
-        <category term="12th鐵人賽" />
-        <updated>2020-09-19T12:00:43.000Z</updated>
     </entry>
 </feed>
