@@ -14,22 +14,22 @@
     <category term="algolia" />
     <category term="活俠傳" />
     <category term="日記" />
-    <category term="docker" />
     <category term="Alist" />
     <category term="Cloudflare" />
+    <category term="docker" />
+    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
-    <category term="javascript" />
     <category term="github" />
     <category term="CI/CD" />
+    <category term="彈射世界" />
+    <category term="遊戲" />
+    <category term="腳本" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
     <category term="Live2D" />
     <category term="Rust" />
-    <category term="彈射世界" />
-    <category term="遊戲" />
-    <category term="腳本" />
     <category term="addtoany" />
     <entry>
         <id>https://smilin.net/2024/08/12/algoliaOnVitepress/</id>
@@ -77,8 +77,11 @@ DocSearch is powered by Algolia. See more at https://www.algolia.com/
 &lt;p&gt;不對呀？爬蟲的部份&lt;code&gt;algolia&lt;/code&gt;不是幫我們做好了嗎？&lt;br&gt;上網找了下，其他人似乎沒有遇到這個狀況，甚至可以在後台要求 &lt;code&gt;algolia&lt;/code&gt; 主動重爬&lt;/p&gt;
 &lt;p&gt;恩…回頭去看信中的第一點，點進他提供的網址，看看爬蟲相關的問題&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/05.jpg&#34;&gt;&lt;/p&gt;
-&lt;p&gt;痾，原來你們家的爬蟲不支援免費仔了啊&lt;/p&gt;
-&lt;p&gt;那沒辦法，畢竟爬蟲也是要資源的，只好自己搞。&lt;/p&gt;
+&lt;p&gt;痾，不知道為什麼，我的帳戶不能使用他們家的爬蟲服務&lt;br&gt;難怪進後台就要求我主動提供資料，那沒辦法，只好自己來&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;隔天-8-13-更新：&#34;&gt;&lt;a href=&#34;#隔天-8-13-更新：&#34; class=&#34;headerlink&#34; title=&#34;隔天(8&amp;#x2F;13)更新：&#34;&gt;&lt;/a&gt;隔天(8&amp;#x2F;13)更新：&lt;/h3&gt;&lt;p&gt;今天收到審核通過的信件，可以使用他們家的爬蟲了，&lt;br&gt;應該是筆者當天查看時，還在審核網站是否符合他們的免費支援對象&lt;/p&gt;
+&lt;p&gt;往下就是自行串接爬蟲的部份了，如果還能利用他們家的爬蟲的話，以下的方案就不是必要的&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;github-action&#34;&gt;&lt;a href=&#34;#github-action&#34; class=&#34;headerlink&#34; title=&#34;github action&#34;&gt;&lt;/a&gt;github action&lt;/h2&gt;&lt;p&gt;由於筆者的網站放在 &lt;code&gt;github&lt;/code&gt; 上&lt;br&gt;想到要寫 for 網站的爬蟲後，第一時間想到的就是 &lt;code&gt;action&lt;/code&gt; 啦&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;name: Algolia DocSearch Scraper
@@ -119,9 +122,13 @@ jobs:
 &lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/01.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;都設定完畢，網頁的搜尋功能連內文都可以搜到，更加強大囉～&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;閒談&#34;&gt;&lt;a href=&#34;#閒談&#34; class=&#34;headerlink&#34; title=&#34;閒談&#34;&gt;&lt;/a&gt;閒談&lt;/h2&gt;&lt;p&gt;文中提到使用 &lt;code&gt;vitepress&lt;/code&gt; 的網站是 &lt;a href=&#34;https://smilin.net/LoM-wiki/&#34;&gt;活俠傳 wiki&lt;/a&gt;，也是最近筆者在休息時間把玩的小專案&lt;br&gt;網站在 &lt;code&gt;2024-07-01&lt;/code&gt; 建立，當時是打算在這寫點文章的，恰巧近期工作也忙，沒甚麼時間更新這邊&lt;br&gt;其實連這篇文都更新的很吃力，不過想了想，過幾天恐怕連怎麼寫這篇文都不知道，還是寫吧 xD&lt;/p&gt;
-&lt;p&gt;建立這個網站，一方面是我自己對&lt;code&gt;vue + vite&lt;/code&gt;體系全家桶不太熟悉，趁機學習&lt;br&gt;另一方面是活俠傳真的很好玩，這邊推薦大家都可以去玩。&lt;/p&gt;
-&lt;p&gt;關於&lt;code&gt;wiki&lt;/code&gt;的建立心路歷程甚麼的，之後會再另外寫一篇的&lt;br&gt;很感謝同樣喜歡活俠傳的朋友，願意一同維護這個 &lt;code&gt;wiki&lt;/code&gt;，也歡迎志同道合的新夥伴加入。&lt;/p&gt;
+&lt;h2 id=&#34;閒談&#34;&gt;&lt;a href=&#34;#閒談&#34; class=&#34;headerlink&#34; title=&#34;閒談&#34;&gt;&lt;/a&gt;閒談&lt;/h2&gt;&lt;p&gt;文中提到使用 &lt;code&gt;vitepress&lt;/code&gt; 的網站是 &lt;a href=&#34;https://smilin.net/LoM-wiki/&#34;&gt;活俠傳 wiki&lt;/a&gt;，&lt;br&gt;也是最近筆者在休息時間把玩的小專案&lt;/p&gt;
+&lt;p&gt;網站在 &lt;code&gt;2024-07-01&lt;/code&gt; 建立，&lt;br&gt;當時是打算在這寫點文章的，&lt;br&gt;恰巧近期工作也忙，&lt;br&gt;沒甚麼時間更新這邊&lt;/p&gt;
+&lt;p&gt;其實連這篇文都更新的很吃力，&lt;br&gt;不過想了想，&lt;br&gt;過幾天恐怕連這篇文怎麼動筆都不知道，&lt;br&gt;還是寫吧 xD&lt;/p&gt;
+&lt;p&gt;建立這個網站，&lt;br&gt;一方面是我自己對&lt;code&gt;vue + vite&lt;/code&gt;體系全家桶不太熟悉，&lt;br&gt;趁機學習&lt;/p&gt;
+&lt;p&gt;另一方面是活俠傳真的很好玩，&lt;br&gt;這邊推薦大家都可以去玩。&lt;/p&gt;
+&lt;p&gt;關於&lt;code&gt;wiki&lt;/code&gt;的建立心路歷程甚麼的，&lt;br&gt;之後會再另外寫一篇的&lt;/p&gt;
+&lt;p&gt;很感謝同樣喜歡活俠傳的朋友，&lt;br&gt;願意一同維護這個 &lt;code&gt;wiki&lt;/code&gt;，&lt;br&gt;也歡迎志同道合的新夥伴加入。&lt;/p&gt;
 &lt;br&gt;
 </content>
         <category term="node.js" />
