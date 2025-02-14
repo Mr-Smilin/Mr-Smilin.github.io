@@ -14,26 +14,26 @@
         <category>教學</category>
         <category>12th鐵人賽</category>
         <category>日記</category>
+        <category>Alist</category>
+        <category>Cloudflare</category>
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
         <category>docker</category>
-        <category>Alist</category>
-        <category>Cloudflare</category>
         <category>javascript</category>
+        <category>hexo</category>
+        <category>fluid</category>
         <category>getamped</category>
         <category>遊戲</category>
         <category>github</category>
         <category>CI/CD</category>
-        <category>hexo</category>
-        <category>fluid</category>
-        <category>Live2D</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>Rust</category>
+        <category>Live2D</category>
         <category>彈射世界</category>
         <category>腳本</category>
+        <category>Rust</category>
         <category>addtoany</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2025/02/14/getampedUpdateHistory/</guid>
@@ -91,7 +91,7 @@
 &lt;p&gt;↑ 可以很清楚的看到每個招式跟 tips&lt;/p&gt;
 &lt;h2 id=&#34;目前實現：&#34;&gt;&lt;a href=&#34;#目前實現：&#34; class=&#34;headerlink&#34; title=&#34;目前實現：&#34;&gt;&lt;/a&gt;目前實現：&lt;/h2&gt;&lt;p&gt;根據指定 ID 爬取子元素資料&lt;br&gt;根據指定 class 爬取子元素資料&lt;br&gt;根據官方更新歷程 API 遍歷更新頁面 url&lt;br&gt;紀錄已收錄 url，避免重複爬取&lt;br&gt;盡可能還原官網 style&lt;br&gt;爬取圖片另存至專案避免來源過期&lt;br&gt;建立簡易入口網站，方便閱覽&lt;br&gt;建立搜尋引擎，根據頁面文本查詢內容(空格可多條件)&lt;br&gt;透過 express.js 建置動態網站&lt;br&gt;土法煉鋼產生靜態網站&lt;br&gt;前綴域名支持&lt;/p&gt;
 &lt;p&gt;入口網站可以根據 UX 做調整，之後應該就會放著不動了&lt;br&gt;代碼是開源的，所以誰都可以拿去用&lt;br&gt;只要有一點基礎知識，照著說明文件下幾行命令就可以執行了&lt;br&gt;執行完以後可以隨時從本機查閱裝備資料&lt;/p&gt;
-&lt;p&gt;公開服務的部分目前並沒有計畫&lt;br&gt;一是我沒找到適合長期運行的免費資源&lt;br&gt;二是我要花時間去維護 活俠傳的 wiki&lt;/p&gt;
+&lt;p&gt;公開服務的部分目前並沒有計畫&lt;br&gt;一是沒找到適合長期運行的免費資源&lt;br&gt;二是目前另外還有在維護&lt;a href=&#34;https://smilin.net/LoM-wiki/&#34;&gt;活俠傳的 wiki&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;也許等哪天就會開放了吧，到時候我想會再發一篇文&lt;br&gt;當然也歡迎有熱情的小夥伴自行架設&lt;br&gt;因為可以編譯成靜態網站，架設的部分很容易&lt;br&gt;使用上有遇到問題也可以問我，那就這樣。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/Getamped-update-history&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
  ]]></description>
