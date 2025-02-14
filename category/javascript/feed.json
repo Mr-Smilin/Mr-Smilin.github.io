@@ -5,6 +5,17 @@
     "home_page_url": "https://smilin.net",
     "items": [
         {
+            "id": "https://smilin.net/2025/02/14/getampedUpdateHistory/",
+            "url": "https://smilin.net/2025/02/14/getampedUpdateHistory/",
+            "title": "【百變恰吉】幫GA寫了一個更新情報爬蟲",
+            "date_published": "2025-02-14T11:00:00.000Z",
+            "content_html": "<p><img src=\"/img/post/getampedUpdateHistory/logo_ga.png\" alt=\"logo_ga\"></p>\n<p><a href=\"https://getamped.cyberstep.com.tw/\">遊戲官網</a></p>\n<p>2004 年，百變恰吉由當時的遊戲橘子營運<br>做為當時鮮少，放到現今也稀有的八方位線上多人格鬥遊戲，百變恰吉在當年捲起了一陣不小的風潮<br>儘管後來人氣逐漸走入下坡，遊戲並沒有消失，台服由原廠 CyberStep 接手，在韓&#x2F;陸服更是有著不少的玩家基數</p>\n<p>算算時間，GA 走過的歷史，不算橘子時期有 11 年了<br>全部加起來的話超過 21 年，C 社經營的百變恰吉不知不覺超過了前代的時間</p>\n<p>因為太過漫長，許多圖片跟文字已經走入了回憶<br>官網的更新資訊，隨著時間流逝，在無人注意的角落也逐漸消弭</p>\n<span id=\"more\"></span>\n\n<br>\n\n<p><img src=\"/img/post/getampedUpdateHistory/01.jpg\" alt=\"從資料庫被刪除的圖片\"></p>\n<br>\n\n<p>↑ 在我以前搬運更新紀錄的時候就有發現<br>官網比較舊的圖片默默從資料庫被刪除</p>\n<br>\n\n<p><img src=\"/img/post/getampedUpdateHistory/02.jpg\" alt=\"更新日期有很大的斷層\"></p>\n<br>\n\n<p>↑ 有些甚至整個文章已經找不到了</p>\n<p>這遊戲在網路上的資料很少<br>由於韓服的玩家不少，如果看得懂韓文的話，其實都還是有文檔可以爬<br>中文圈就比較慘了，比較新的裝備基本上不會有人介紹<br>台陸兩服的譯名又不同，從裝備乃至術語都有差異，情報流通挺困難的</p>\n<p>官網的更新內容因此變得很重要，關於新裝備的技能組與隱藏效果，大多都只能依賴更新資訊</p>\n<p>我希望這遊戲能變得更好，所以也希望能從力所能及的地方努力。</p>\n<br>\n\n<p><img src=\"/img/post/getampedUpdateHistory/03.jpg\" alt=\"入口網站\"></p>\n<br>\n\n<p>↑ 這是目前寫的網站雛形，基本依賴官網的 API 獲得更新列表<br>搭配爬蟲代碼將未收錄的更新網站備份</p>\n<br>\n\n<p><img src=\"/img/post/getampedUpdateHistory/04.jpg\" alt=\"備份後的更新資料\"></p>\n<br>\n\n<p>↑ 目前的效果</p>\n<p>如果我想找某個裝備的技能表，但早就忘記是哪一篇更新情報了</p>\n<br>\n\n<p><img src=\"/img/post/getampedUpdateHistory/05.jpg\" alt=\"搜尋引擎\"></p>\n<br>\n\n<p>↑ 喔～原來不諧和元素是 2022 年 9 月出的</p>\n<br>\n\n<p><img src=\"/img/post/getampedUpdateHistory/06.jpg\" alt=\"技能表\"></p>\n<br>\n\n<p>↑ 可以很清楚的看到每個招式跟 tips</p>\n<h2 id=\"目前實現：\"><a href=\"#目前實現：\" class=\"headerlink\" title=\"目前實現：\"></a>目前實現：</h2><p>根據指定 ID 爬取子元素資料<br>根據指定 class 爬取子元素資料<br>根據官方更新歷程 API 遍歷更新頁面 url<br>紀錄已收錄 url，避免重複爬取<br>盡可能還原官網 style<br>爬取圖片另存至專案避免來源過期<br>建立簡易入口網站，方便閱覽<br>建立搜尋引擎，根據頁面文本查詢內容(空格可多條件)<br>透過 express.js 建置動態網站<br>土法煉鋼產生靜態網站<br>前綴域名支持</p>\n<p>入口網站可以根據 UX 做調整，之後應該就會放著不動了<br>代碼是開源的，所以誰都可以拿去用<br>只要有一點基礎知識，照著說明文件下幾行命令就可以執行了<br>執行完以後可以隨時從本機查閱裝備資料</p>\n<p>公開服務的部分目前並沒有計畫<br>一是我沒找到適合長期運行的免費資源<br>二是我要花時間去維護 活俠傳的 wiki</p>\n<p>也許等哪天就會開放了吧，到時候我想會再發一篇文<br>當然也歡迎有熱情的小夥伴自行架設<br>因為可以編譯成靜態網站，架設的部分很容易<br>使用上有遇到問題也可以問我，那就這樣。</p>\n<p><a href=\"https://github.com/Mr-Smilin/Getamped-update-history\">Github</a></p>\n",
+            "tags": [
+                "getamped",
+                "遊戲"
+            ]
+        },
+        {
             "id": "https://smilin.net/2023/09/15/deepCopyAndShallowCopy/",
             "url": "https://smilin.net/2023/09/15/deepCopyAndShallowCopy/",
             "title": "淺談 js 深拷貝與淺拷貝的差異",

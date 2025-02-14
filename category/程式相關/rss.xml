@@ -5,8 +5,8 @@
         <link>https://smilin.net</link>
         <description>Code · Thinking · ACG</description>
         <language>zh-TW</language>
-        <pubDate>Fri, 27 Oct 2023 21:00:00 +0800</pubDate>
-        <lastBuildDate>Fri, 27 Oct 2023 21:00:00 +0800</lastBuildDate>
+        <pubDate>Fri, 14 Feb 2025 19:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 14 Feb 2025 19:00:00 +0800</lastBuildDate>
         <category>node.js</category>
         <category>bot</category>
         <category>discord</category>
@@ -17,23 +17,85 @@
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
+        <category>docker</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>docker</category>
         <category>javascript</category>
+        <category>getamped</category>
+        <category>遊戲</category>
         <category>github</category>
         <category>CI/CD</category>
         <category>hexo</category>
         <category>fluid</category>
+        <category>Live2D</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>彈射世界</category>
-        <category>遊戲</category>
-        <category>腳本</category>
-        <category>Live2D</category>
         <category>Rust</category>
+        <category>彈射世界</category>
+        <category>腳本</category>
         <category>addtoany</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2025/02/14/getampedUpdateHistory/</guid>
+            <title>【百變恰吉】幫GA寫了一個更新情報爬蟲</title>
+            <link>https://smilin.net/2025/02/14/getampedUpdateHistory/</link>
+            <category>getamped</category>
+            <category>遊戲</category>
+            <pubDate>Fri, 14 Feb 2025 19:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/logo_ga.png&#34; alt=&#34;logo_ga&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://getamped.cyberstep.com.tw/&#34;&gt;遊戲官網&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2004 年，百變恰吉由當時的遊戲橘子營運&lt;br&gt;做為當時鮮少，放到現今也稀有的八方位線上多人格鬥遊戲，百變恰吉在當年捲起了一陣不小的風潮&lt;br&gt;儘管後來人氣逐漸走入下坡，遊戲並沒有消失，台服由原廠 CyberStep 接手，在韓&amp;#x2F;陸服更是有著不少的玩家基數&lt;/p&gt;
+&lt;p&gt;算算時間，GA 走過的歷史，不算橘子時期有 11 年了&lt;br&gt;全部加起來的話超過 21 年，C 社經營的百變恰吉不知不覺超過了前代的時間&lt;/p&gt;
+&lt;p&gt;因為太過漫長，許多圖片跟文字已經走入了回憶&lt;br&gt;官網的更新資訊，隨著時間流逝，在無人注意的角落也逐漸消弭&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/01.jpg&#34; alt=&#34;從資料庫被刪除的圖片&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 在我以前搬運更新紀錄的時候就有發現&lt;br&gt;官網比較舊的圖片默默從資料庫被刪除&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/02.jpg&#34; alt=&#34;更新日期有很大的斷層&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 有些甚至整個文章已經找不到了&lt;/p&gt;
+&lt;p&gt;這遊戲在網路上的資料很少&lt;br&gt;由於韓服的玩家不少，如果看得懂韓文的話，其實都還是有文檔可以爬&lt;br&gt;中文圈就比較慘了，比較新的裝備基本上不會有人介紹&lt;br&gt;台陸兩服的譯名又不同，從裝備乃至術語都有差異，情報流通挺困難的&lt;/p&gt;
+&lt;p&gt;官網的更新內容因此變得很重要，關於新裝備的技能組與隱藏效果，大多都只能依賴更新資訊&lt;/p&gt;
+&lt;p&gt;我希望這遊戲能變得更好，所以也希望能從力所能及的地方努力。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/03.jpg&#34; alt=&#34;入口網站&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 這是目前寫的網站雛形，基本依賴官網的 API 獲得更新列表&lt;br&gt;搭配爬蟲代碼將未收錄的更新網站備份&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/04.jpg&#34; alt=&#34;備份後的更新資料&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 目前的效果&lt;/p&gt;
+&lt;p&gt;如果我想找某個裝備的技能表，但早就忘記是哪一篇更新情報了&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/05.jpg&#34; alt=&#34;搜尋引擎&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 喔～原來不諧和元素是 2022 年 9 月出的&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/06.jpg&#34; alt=&#34;技能表&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 可以很清楚的看到每個招式跟 tips&lt;/p&gt;
+&lt;h2 id=&#34;目前實現：&#34;&gt;&lt;a href=&#34;#目前實現：&#34; class=&#34;headerlink&#34; title=&#34;目前實現：&#34;&gt;&lt;/a&gt;目前實現：&lt;/h2&gt;&lt;p&gt;根據指定 ID 爬取子元素資料&lt;br&gt;根據指定 class 爬取子元素資料&lt;br&gt;根據官方更新歷程 API 遍歷更新頁面 url&lt;br&gt;紀錄已收錄 url，避免重複爬取&lt;br&gt;盡可能還原官網 style&lt;br&gt;爬取圖片另存至專案避免來源過期&lt;br&gt;建立簡易入口網站，方便閱覽&lt;br&gt;建立搜尋引擎，根據頁面文本查詢內容(空格可多條件)&lt;br&gt;透過 express.js 建置動態網站&lt;br&gt;土法煉鋼產生靜態網站&lt;br&gt;前綴域名支持&lt;/p&gt;
+&lt;p&gt;入口網站可以根據 UX 做調整，之後應該就會放著不動了&lt;br&gt;代碼是開源的，所以誰都可以拿去用&lt;br&gt;只要有一點基礎知識，照著說明文件下幾行命令就可以執行了&lt;br&gt;執行完以後可以隨時從本機查閱裝備資料&lt;/p&gt;
+&lt;p&gt;公開服務的部分目前並沒有計畫&lt;br&gt;一是我沒找到適合長期運行的免費資源&lt;br&gt;二是我要花時間去維護 活俠傳的 wiki&lt;/p&gt;
+&lt;p&gt;也許等哪天就會開放了吧，到時候我想會再發一篇文&lt;br&gt;當然也歡迎有熱情的小夥伴自行架設&lt;br&gt;因為可以編譯成靜態網站，架設的部分很容易&lt;br&gt;使用上有遇到問題也可以問我，那就這樣。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/Getamped-update-history&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/10/27/rust_learning_02/</guid>
             <title>Rust 學習紀錄[2] = Rust 的 NPM</title>

@@ -17,22 +17,23 @@
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
+        <category>docker</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>docker</category>
         <category>javascript</category>
+        <category>getamped</category>
+        <category>遊戲</category>
         <category>github</category>
         <category>CI/CD</category>
         <category>hexo</category>
         <category>fluid</category>
+        <category>Live2D</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>彈射世界</category>
-        <category>遊戲</category>
-        <category>腳本</category>
-        <category>Live2D</category>
         <category>Rust</category>
+        <category>彈射世界</category>
+        <category>腳本</category>
         <category>addtoany</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2024/04/13/autoPixai/</guid>
@@ -320,8 +321,8 @@ docker run -e LOGINNAME=&amp;lt;你的帳號&amp;gt; -e PASSWORD=&amp;lt;你的�
             <title>競速疊屍腳本 - 台版彈射世界</title>
             <link>https://smilin.net/2021/12/14/racingScript-worldFlipper/</link>
             <category>教學</category>
-            <category>彈射世界</category>
             <category>遊戲</category>
+            <category>彈射世界</category>
             <category>腳本</category>
             <pubDate>Tue, 14 Dec 2021 12:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;腳本運作環境&#34;&gt;&lt;a href=&#34;#腳本運作環境&#34; class=&#34;headerlink&#34; title=&#34;腳本運作環境&#34;&gt;&lt;/a&gt;腳本運作環境&lt;/h2&gt;&lt;p&gt;型號&lt;br&gt;redmi note 8 pro&lt;/p&gt;

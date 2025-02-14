@@ -14,22 +14,23 @@
     <category term="vitepress" />
     <category term="algolia" />
     <category term="活俠傳" />
+    <category term="docker" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="docker" />
     <category term="javascript" />
+    <category term="getamped" />
+    <category term="遊戲" />
     <category term="github" />
     <category term="CI/CD" />
     <category term="hexo" />
     <category term="fluid" />
+    <category term="Live2D" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="彈射世界" />
-    <category term="遊戲" />
-    <category term="腳本" />
-    <category term="Live2D" />
     <category term="Rust" />
+    <category term="彈射世界" />
+    <category term="腳本" />
     <category term="addtoany" />
     <entry>
         <id>https://smilin.net/2024/04/13/autoPixai/</id>
@@ -397,8 +398,8 @@ docker run -e LOGINNAME=&amp;lt;你的帳號&amp;gt; -e PASSWORD=&amp;lt;你的�
 &lt;/code&gt;&lt;/pre&gt;
 </content>
         <category term="教學" />
-        <category term="彈射世界" />
         <category term="遊戲" />
+        <category term="彈射世界" />
         <category term="腳本" />
         <updated>2021-12-14T04:00:00.000Z</updated>
     </entry>
