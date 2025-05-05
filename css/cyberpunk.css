@@ -12671,6 +12671,99 @@ hr {
 #aplayer {
   z-index: 101;
 }
+.inspiration-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1em 0;
+}
+.inspiration-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: rgba(255,255,255,0.75);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, background-color 0.5s ease;
+}
+.inspiration-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.inspiration-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  color: #7a7a7a;
+}
+.inspiration-date {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+.inspiration-content {
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #8186e9;
+}
+.night .inspiration-card {
+  background-color: rgba(40,44,52,0.5);
+  border-color: #333;
+  color: #ddd;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+.night .inspiration-card:hover {
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+.night .inspiration-date {
+  color: #aaa;
+}
+.night .inspiration-content {
+  color: #ddd;
+}
+.inspiration-card-inner {
+  animation: fadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@-moz-keyframes fadeUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes fadeUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   counter-reset: card;
 }

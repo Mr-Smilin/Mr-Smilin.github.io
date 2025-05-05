@@ -5,8 +5,8 @@
         <link>https://smilin.net</link>
         <description>Code · Thinking · ACG</description>
         <language>zh-TW</language>
-        <pubDate>Tue, 16 Nov 2021 12:00:00 +0800</pubDate>
-        <lastBuildDate>Tue, 16 Nov 2021 12:00:00 +0800</lastBuildDate>
+        <pubDate>Mon, 05 May 2025 12:00:00 +0800</pubDate>
+        <lastBuildDate>Mon, 05 May 2025 12:00:00 +0800</lastBuildDate>
         <category>node.js</category>
         <category>bot</category>
         <category>discord</category>
@@ -16,25 +16,226 @@
         <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>vitepress</category>
-        <category>algolia</category>
-        <category>活俠傳</category>
         <category>docker</category>
-        <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
-        <category>getamped</category>
-        <category>遊戲</category>
         <category>github</category>
         <category>CI/CD</category>
+        <category>getamped</category>
+        <category>遊戲</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>Live2D</category>
+        <category>vitepress</category>
+        <category>algolia</category>
+        <category>活俠傳</category>
+        <category>icarus</category>
         <category>彈射世界</category>
         <category>腳本</category>
+        <category>Live2D</category>
         <category>Rust</category>
         <category>addtoany</category>
+        <category>javascript</category>
+        <item>
+            <guid isPermalink="true">https://smilin.net/2025/05/05/hexoInspirationPage/</guid>
+            <title>網站新增靈感頁面心得</title>
+            <link>https://smilin.net/2025/05/05/hexoInspirationPage/</link>
+            <category>日記</category>
+            <category>hexo</category>
+            <category>icarus</category>
+            <pubDate>Mon, 05 May 2025 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/title.png&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;寫網誌其實是一件很麻煩的事情&lt;br&gt;如果希望網站的文章保持相同的分類，就會更加麻煩&lt;/p&gt;
+&lt;p&gt;有時想寫點日記，或是分享生活上遇到的瑣事&lt;br&gt;「只打一句話會不會太短了？」「感覺這不適合分享在網站上欸..」&lt;br&gt;加上寫網誌本身並不是不需要消耗時間，一來一往也就不了了之&lt;/p&gt;
+&lt;p&gt;「如果有個頁面能專門放一些瑣碎的事情就好了」&lt;/p&gt;
+&lt;p&gt;忽然想到這點的我，幫網誌加了個『靈感』頁面———&lt;/p&gt;
+&lt;br&gt;
+
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;目前實現&#34;&gt;&lt;a href=&#34;#目前實現&#34; class=&#34;headerlink&#34; title=&#34;目前實現&#34;&gt;&lt;/a&gt;目前實現&lt;/h1&gt;&lt;p&gt;他可以實現的效果目前有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 方便記錄，取代網誌這類相對嚴謹的形式&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 根據日期在首頁順序刷出&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 從首頁點擊跳轉靈感頁面(未來可能會換成其他目標)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未來希望&amp;#x2F;可能會有的功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 添加日期樓層電梯，根據輸入日期尋找最接近的靈感&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 整合本地管理套件，自動創建文檔&amp;amp;building 靈感頁面&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 狀態根據靈感隨機刷新&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 給予靈感加權，影響各式配套功能的顯示機率&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 隨機賦予首頁靈感不同 style&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;etc…&lt;/p&gt;
+&lt;h1 id=&#34;展示&#34;&gt;&lt;a href=&#34;#展示&#34; class=&#34;headerlink&#34; title=&#34;展示&#34;&gt;&lt;/a&gt;展示&lt;/h1&gt;&lt;p&gt;在靈感頁面的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/01.jpg&#34; alt=&#34;01&#34;&gt;&lt;br&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/02.jpg&#34; alt=&#34;02&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;在首頁的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/03.jpg&#34; alt=&#34;03&#34;&gt;&lt;br&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/04.jpg&#34; alt=&#34;04&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;思路過程&#34;&gt;&lt;a href=&#34;#思路過程&#34; class=&#34;headerlink&#34; title=&#34;思路過程&#34;&gt;&lt;/a&gt;思路過程&lt;/h1&gt;&lt;p&gt;具體可參考本次 Git 提交&lt;/p&gt;
+&lt;h2 id=&#34;MD-檔部份&#34;&gt;&lt;a href=&#34;#MD-檔部份&#34; class=&#34;headerlink&#34; title=&#34;MD 檔部份&#34;&gt;&lt;/a&gt;MD 檔部份&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;source/_inspirations/&lt;/code&gt; 資料夾&lt;br&gt;創建 &lt;code&gt;source/inspiration/&lt;/code&gt; 資料夾&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_inspirations&lt;/code&gt; - 靈感檔案放置&lt;/p&gt;
+&lt;p&gt;文檔範例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+date: 2025-05-05
+layout: inspiration
+---
+
+靈感內容
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;inspiration&lt;/code&gt; - 靈感頁面(透過 &lt;code&gt;generate_inspirations.js&lt;/code&gt; 生成)&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;產生靈感頁面&#34;&gt;&lt;a href=&#34;#產生靈感頁面&#34; class=&#34;headerlink&#34; title=&#34;產生靈感頁面&#34;&gt;&lt;/a&gt;產生靈感頁面&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;scripts/generate_inspirations.js&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const fs = require(&amp;quot;fs&amp;quot;);
+const path = require(&amp;quot;path&amp;quot;);
+const moment = require(&amp;quot;moment&amp;quot;);
+
+hexo.extend.generator.register(&amp;quot;generate_inspirations&amp;quot;, function (locals) &amp;#123;
+    const sourceDir = path.join(hexo.source_dir, &amp;quot;_inspirations&amp;quot;);
+    const outputFile = path.join(hexo.source_dir, &amp;quot;inspiration/index.md&amp;quot;);
+
+    const files = fs
+        .readdirSync(sourceDir)
+        .filter((file) =&amp;gt; file.endsWith(&amp;quot;.md&amp;quot;));
+
+    let inspirations = [];
+
+    files.forEach((file) =&amp;gt; &amp;#123;
+        const content = fs.readFileSync(path.join(sourceDir, file), &amp;quot;utf8&amp;quot;);
+        const match = content.match(/---\s*([\s\S]*?)---\s*([\s\S]*)/);
+
+        if (match) &amp;#123;
+            const metaBlock = match[1];
+            const body = match[2].trim();
+            const dateMatch = metaBlock.match(/date:\s*(\d&amp;#123;4&amp;#125;-\d&amp;#123;2&amp;#125;-\d&amp;#123;2&amp;#125;)/);
+
+            if (dateMatch) &amp;#123;
+                inspirations.push(&amp;#123;
+                    date: dateMatch[1],
+                    content: body,
+                &amp;#125;);
+            &amp;#125;
+        &amp;#125;
+    &amp;#125;);
+
+    // 依照日期排序（新到舊）
+    inspirations.sort((a, b) =&amp;gt; new Date(b.date) - new Date(a.date));
+
+    const indexContent =
+        `---\ntitle: 靈感\nlayout: page\n---\n\n` +
+        &amp;#39;&amp;lt;div class=&amp;quot;inspiration-list&amp;quot;&amp;gt;\n&amp;#39; +
+        inspirations
+            .map(
+                (item) =&amp;gt;
+                    `&amp;lt;div class=&amp;quot;inspiration-card&amp;quot;&amp;gt;
+                &amp;lt;div class=&amp;quot;inspiration-card-inner&amp;quot;&amp;gt;
+      &amp;lt;div class=&amp;quot;inspiration-date&amp;quot;&amp;gt;$&amp;#123;item.date&amp;#125;&amp;lt;/div&amp;gt;
+      &amp;lt;div class=&amp;quot;inspiration-content&amp;quot;&amp;gt;$&amp;#123;item.content.replace(
+                /\n/g,
+                &amp;quot;&amp;lt;br&amp;gt;&amp;quot;
+            )&amp;#125;&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;`
+            )
+            .join(&amp;quot;\n&amp;quot;) +
+        &amp;quot;\n&amp;lt;/div&amp;gt;&amp;quot;;
+
+    fs.writeFileSync(outputFile, indexContent);
+
+    return []; // 這是 generator 的需求（不回傳任何 page）
+&amp;#125;);
+
+hexo.extend.filter.register(&amp;quot;inspiration_date_filter&amp;quot;, function (text) &amp;#123;
+    return moment(text).format(&amp;quot;YYYY-MM-DD&amp;quot;);
+&amp;#125;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;添加-CSS&#34;&gt;&lt;a href=&#34;#添加-CSS&#34; class=&#34;headerlink&#34; title=&#34;添加 CSS&#34;&gt;&lt;/a&gt;添加 CSS&lt;/h2&gt;&lt;p&gt;這部份僅供參考，實際 style 根據個人 theme 而定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.inspiration-list &amp;#123;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1em 0;
+&amp;#125;
+
+.inspiration-card &amp;#123;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: rgba(255,255,255,0.75);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, background-color 0.5s ease;
+&amp;#125;
+
+.inspiration-card:hover &amp;#123;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+&amp;#125;
+
+.inspiration-title-wrap&amp;#123;
+  display: flex;
+  justify-content space-between;
+  color: #7a7a7a;
+&amp;#125;
+
+.inspiration-date &amp;#123;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+&amp;#125;
+
+.inspiration-content &amp;#123;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #8186e9;
+&amp;#125;
+
+.night .inspiration-card &amp;#123;
+  background-color: rgba(40,44,52,0.5);
+  border-color: #333;
+  color: #ddd;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+&amp;#125;
+
+.night .inspiration-card:hover &amp;#123;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+&amp;#125;
+
+.night .inspiration-date &amp;#123;
+  color: #aaa;
+&amp;#125;
+
+.night .inspiration-content &amp;#123;
+  color: #ddd;
+&amp;#125;
+
+@keyframes fadeUpSmooth &amp;#123;
+  from &amp;#123;
+    opacity: 0;
+    transform: translateY(60px);
+  &amp;#125;
+  to &amp;#123;
+    opacity: 1;
+    transform: translateY(0);
+  &amp;#125;
+&amp;#125;
+
+.inspiration-card-inner &amp;#123;
+  animation: fadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;以上，就是這麼一個小功能&lt;/p&gt;
+&lt;p&gt;很長一段時間，寧願在論壇分享自己的事情&lt;br&gt;網誌卻幾個月不去動他，只因為分享日常瑣事並非我建立這個網站的初衷&lt;/p&gt;
+&lt;p&gt;然而，網誌應該是可以更加自由的&lt;br&gt;我希望他可以接納我的生活&lt;/p&gt;
+&lt;p&gt;希望這個功能在未來可以活用。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://smilin.net/2021/11/16/fluidThemeShare/</guid>
             <title>fluid支持pjax主題源碼分享</title>
