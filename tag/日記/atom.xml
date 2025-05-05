@@ -17,22 +17,22 @@
     <category term="Alist" />
     <category term="Cloudflare" />
     <category term="docker" />
+    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
     <category term="getamped" />
     <category term="遊戲" />
+    <category term="github" />
+    <category term="CI/CD" />
+    <category term="Live2D" />
+    <category term="icarus" />
+    <category term="Rust" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="icarus" />
+    <category term="addtoany" />
     <category term="彈射世界" />
     <category term="腳本" />
-    <category term="javascript" />
-    <category term="github" />
-    <category term="CI/CD" />
-    <category term="Rust" />
-    <category term="addtoany" />
-    <category term="Live2D" />
     <entry>
         <id>https://smilin.net/2025/05/05/hexoInspirationPage/</id>
         <title>網站新增靈感頁面心得</title>
