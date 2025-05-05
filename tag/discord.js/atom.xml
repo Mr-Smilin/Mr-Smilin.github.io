@@ -14,25 +14,25 @@
     <category term="vitepress" />
     <category term="algolia" />
     <category term="活俠傳" />
-    <category term="Alist" />
-    <category term="Cloudflare" />
     <category term="docker" />
+    <category term="Alist" />
     <category term="javascript" />
+    <category term="Cloudflare" />
     <category term="hexo" />
     <category term="fluid" />
     <category term="getamped" />
     <category term="遊戲" />
     <category term="github" />
     <category term="CI/CD" />
-    <category term="Live2D" />
-    <category term="icarus" />
-    <category term="Rust" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="addtoany" />
+    <category term="Live2D" />
+    <category term="icarus" />
+    <category term="Rust" />
     <category term="彈射世界" />
     <category term="腳本" />
+    <category term="addtoany" />
     <entry>
         <id>https://smilin.net/2023/06/01/discordJs14-1/</id>
         <title>discord.js 升上 14 版，架構說明</title>
