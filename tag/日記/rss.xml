@@ -13,9 +13,13 @@
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
-        <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
+        <category>vitepress</category>
+        <category>algolia</category>
+        <category>活俠傳</category>
+        <category>日記</category>
+        <category>javascript</category>
         <category>docker</category>
         <category>hexo</category>
         <category>fluid</category>
@@ -26,16 +30,12 @@
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>vitepress</category>
-        <category>algolia</category>
-        <category>活俠傳</category>
-        <category>icarus</category>
+        <category>Rust</category>
         <category>彈射世界</category>
         <category>腳本</category>
-        <category>Live2D</category>
-        <category>Rust</category>
+        <category>icarus</category>
         <category>addtoany</category>
-        <category>javascript</category>
+        <category>Live2D</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2025/05/05/hexoInspirationPage/</guid>
             <title>網站新增靈感頁面心得</title>
@@ -74,8 +74,7 @@
 
 &lt;p&gt;在首頁的效果&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/03.jpg&#34; alt=&#34;03&#34;&gt;&lt;br&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/04.jpg&#34; alt=&#34;04&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;思路過程&#34;&gt;&lt;a href=&#34;#思路過程&#34; class=&#34;headerlink&#34; title=&#34;思路過程&#34;&gt;&lt;/a&gt;思路過程&lt;/h1&gt;&lt;p&gt;具體可參考本次 Git 提交&lt;/p&gt;
-&lt;h2 id=&#34;MD-檔部份&#34;&gt;&lt;a href=&#34;#MD-檔部份&#34; class=&#34;headerlink&#34; title=&#34;MD 檔部份&#34;&gt;&lt;/a&gt;MD 檔部份&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;source/_inspirations/&lt;/code&gt; 資料夾&lt;br&gt;創建 &lt;code&gt;source/inspiration/&lt;/code&gt; 資料夾&lt;/p&gt;
+&lt;h1 id=&#34;思路過程&#34;&gt;&lt;a href=&#34;#思路過程&#34; class=&#34;headerlink&#34; title=&#34;思路過程&#34;&gt;&lt;/a&gt;思路過程&lt;/h1&gt;&lt;h2 id=&#34;Markdown-檔&#34;&gt;&lt;a href=&#34;#Markdown-檔&#34; class=&#34;headerlink&#34; title=&#34;Markdown 檔&#34;&gt;&lt;/a&gt;Markdown 檔&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;source/_inspirations/&lt;/code&gt; 資料夾&lt;br&gt;創建 &lt;code&gt;source/inspiration/&lt;/code&gt; 資料夾&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;_inspirations&lt;/code&gt; - 靈感檔案放置&lt;/p&gt;
 &lt;p&gt;文檔範例&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;---
@@ -88,7 +87,7 @@ layout: inspiration
 &lt;p&gt;&lt;code&gt;inspiration&lt;/code&gt; - 靈感頁面(透過 &lt;code&gt;generate_inspirations.js&lt;/code&gt; 生成)&lt;/p&gt;
 &lt;br&gt;
 
-&lt;h2 id=&#34;產生靈感頁面&#34;&gt;&lt;a href=&#34;#產生靈感頁面&#34; class=&#34;headerlink&#34; title=&#34;產生靈感頁面&#34;&gt;&lt;/a&gt;產生靈感頁面&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;scripts/generate_inspirations.js&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;產生頁面-JS&#34;&gt;&lt;a href=&#34;#產生頁面-JS&#34; class=&#34;headerlink&#34; title=&#34;產生頁面 JS&#34;&gt;&lt;/a&gt;產生頁面 JS&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;scripts/generate_inspirations.js&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;const fs = require(&amp;quot;fs&amp;quot;);
 const path = require(&amp;quot;path&amp;quot;);
 const moment = require(&amp;quot;moment&amp;quot;);
