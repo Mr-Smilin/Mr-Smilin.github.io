@@ -61,10 +61,20 @@ layout: about
 - 巴哈姆特 - IP 紀錄插件
   - [介紹文章](https://home.gamer.com.tw/creationDetail.php?sn=5853466)
   - [下載點](https://greasyfork.org/zh-TW/scripts/483109-%E5%B7%B4%E5%8F%8Bip%E7%B4%80%E9%8C%84)
+- 巴哈姆特 - 網址圖片預覽
+  - [介紹文章](https://home.gamer.com.tw/creationDetail.php?sn=5988203)
+  - [下載點](https://greasyfork.org/zh-TW/scripts/504221-%E5%B7%B4%E5%93%88%E5%9C%96%E7%89%87%E9%A0%90%E8%A6%BD)
 - Pixai 爬蟲領取獎勵
   - [介紹文章](https://smilin.net/2024/04/13/autoPixai/)
   - [Github](https://github.com/Mr-Smilin/auto-pixai)
   - [DockerHub](https://hub.docker.com/r/smile0301/auto-pixai)
+- LOM-WIKI (活俠傳 WIKI)
+  - [介紹文章](https://forum.gamer.com.tw/C.php?bsn=73317&snA=1486)
+  - [Github](https://github.com/Mr-Smilin/LoM-wiki)
+  - [wiki 首頁](https://smilin.net/LoM-wiki/)
+- 百變恰吉更新情報爬蟲
+  - [介紹文章](https://smilin.net/2025/02/14/getampedUpdateHistory/)
+  - [Github](https://github.com/Mr-Smilin/Getamped-update-history)
 
 ## 時光機 rememeber
 
