@@ -17,22 +17,22 @@
     <category term="Alist" />
     <category term="Cloudflare" />
     <category term="docker" />
-    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
     <category term="getamped" />
     <category term="遊戲" />
-    <category term="github" />
-    <category term="CI/CD" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
     <category term="icarus" />
-    <category term="Live2D" />
     <category term="彈射世界" />
     <category term="腳本" />
+    <category term="javascript" />
+    <category term="github" />
+    <category term="CI/CD" />
     <category term="Rust" />
     <category term="addtoany" />
+    <category term="Live2D" />
     <entry>
         <id>https://smilin.net/2022/10/25/herokuToRender/</id>
         <title>將專案從heroku轉到render過程思路</title>
