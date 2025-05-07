@@ -17,25 +17,25 @@
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
-        <category>Alist</category>
-        <category>Cloudflare</category>
         <category>docker</category>
+        <category>Alist</category>
         <category>javascript</category>
+        <category>Cloudflare</category>
         <category>hexo</category>
         <category>fluid</category>
         <category>getamped</category>
         <category>遊戲</category>
-        <category>github</category>
-        <category>CI/CD</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
         <category>icarus</category>
-        <category>Live2D</category>
+        <category>github</category>
+        <category>CI/CD</category>
         <category>彈射世界</category>
         <category>腳本</category>
-        <category>addtoany</category>
         <category>Rust</category>
+        <category>addtoany</category>
+        <category>Live2D</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/06/01/discordJs14-1/</guid>
             <title>discord.js 升上 14 版，架構說明</title>

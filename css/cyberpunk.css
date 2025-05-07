@@ -11934,29 +11934,29 @@ body.night {
   display: inline-block;
 }
 .night .navbar-highlight {
-  background-color: rgba(40,44,52,0.8) !important;
+  background-color: rgba(76,93,125,0.5) !important;
 }
 .night .content blockquote {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .button.is-light {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .tag:not(body) {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night strong {
   color: #fff;
 }
 .night .time-axis-main .time-axis-achievement,
 .night .time-axis-main .time-axis-title {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
   color: #fff;
 }
 .night .pagination .pagination-link:not(.is-current),
 .night .pagination .pagination-previous,
 .night .pagination .pagination-next {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .button.is-white {
   color: #fff;
@@ -11968,7 +11968,7 @@ body.night {
   color: #fff;
 }
 .night hr {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .menu-list a:hover {
   background-color: #7a7a7a;
@@ -11984,7 +11984,7 @@ body.night {
   color: #fff !important;
 }
 .night .level .level-item.is-marginless:hover {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
   color: #3273dc;
 }
 .night .level .level-item.is-link:hover {
@@ -11994,7 +11994,7 @@ body.night {
   color: #3273dc;
 }
 .night .post-copyright {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night #back-to-top:hover {
   color: #3273dc;
@@ -12052,25 +12052,25 @@ body.night {
   color: #c0c0c0;
 }
 .night .music-container #musiclist {
-  background: rgba(40,44,52,0.8);
+  background: rgba(76,93,125,0.5);
 }
 .night .meplayer-container {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .navbar {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .card {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .footer {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .button.is-white {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .cardm {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .waifu-tips {
   background-color: rgba(40,44,52,0.9);
@@ -12083,7 +12083,7 @@ body.night {
   color: #3273dc !important;
 }
 .night .timeline .media:last-child:after {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .level-item.tag.is-danger,
 .night .button:not(.is-white),
@@ -12148,7 +12148,7 @@ body.night {
   box-shadow: 0 0.625em 3.75em 0 #000;
 }
 .night textarea {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
   color: #fff;
 }
 .night .gt-container .gt-header-textarea:hover {
@@ -12158,11 +12158,11 @@ body.night {
   background-color: #000;
 }
 .night .ins-section-container {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
   color: #c0c0c0;
 }
 .night .searchbox .searchbox-input-wrapper .searchbox-input {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .cardm {
   color: unset;
@@ -12279,7 +12279,7 @@ body.night {
 .night .navbar,
 .night footer.footer,
 .night .card {
-  background-color: rgba(40,44,52,0.5);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .navbar,
 .night footer.footer,
@@ -12287,7 +12287,7 @@ body.night {
   background-color: rgba(40,44,52,0.8);
 }
 .night .searchbox-container {
-  background-color: rgba(40,44,52,0.8);
+  background-color: rgba(76,93,125,0.5);
 }
 .night .searchbox-result-section {
   border-color: #7a7a7a;
@@ -12311,6 +12311,22 @@ body.night {
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+.night .inspiration-card {
+  background-color: rgba(76,93,125,0.5);
+  border-color: #333;
+  color: #ddd;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+.night .inspiration-card:hover {
+  background-color: rgba(40,44,52,0.8);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+.night .inspiration-date {
+  color: #aaa;
+}
+.night .inspiration-content {
+  color: #ddd;
 }
 #universe {
   display: none;
@@ -12705,21 +12721,6 @@ hr {
   font-weight: bold;
   line-height: 1.6;
   color: #8186e9;
-}
-.night .inspiration-card {
-  background-color: rgba(40,44,52,0.5);
-  border-color: #333;
-  color: #ddd;
-  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
-}
-.night .inspiration-card:hover {
-  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-}
-.night .inspiration-date {
-  color: #aaa;
-}
-.night .inspiration-content {
-  color: #ddd;
 }
 .rotating {
   animation: fadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
