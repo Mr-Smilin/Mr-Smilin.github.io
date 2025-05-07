@@ -24,15 +24,15 @@
     <category term="遊戲" />
     <category term="github" />
     <category term="CI/CD" />
-    <category term="Live2D" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="Rust" />
+    <category term="icarus" />
+    <category term="Live2D" />
     <category term="彈射世界" />
     <category term="腳本" />
-    <category term="icarus" />
     <category term="addtoany" />
+    <category term="Rust" />
     <entry>
         <id>https://smilin.net/2021/12/14/racingScript-worldFlipper/</id>
         <title>競速疊屍腳本 - 台版彈射世界</title>

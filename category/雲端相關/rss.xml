@@ -27,15 +27,15 @@
         <category>遊戲</category>
         <category>github</category>
         <category>CI/CD</category>
-        <category>Live2D</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>Rust</category>
+        <category>icarus</category>
+        <category>Live2D</category>
         <category>彈射世界</category>
         <category>腳本</category>
-        <category>icarus</category>
         <category>addtoany</category>
+        <category>Rust</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/09/11/alist-file-error/</guid>
             <title>Alist 單檔太大上傳失敗，思路整理</title>

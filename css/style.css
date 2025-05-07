@@ -12720,7 +12720,7 @@ hr {
 .night .inspiration-content {
   color: #ddd;
 }
-.inspiration-card-inner {
+.rotating {
   animation: fadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @-moz-keyframes fadeUpSmooth {
