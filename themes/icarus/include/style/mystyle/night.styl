@@ -4,8 +4,9 @@
 
 // night Mode
 // author by smilin
-// https://mr-smilin.github.io/
-night-color = rgba(40,44,52,0.8)
+// https://mr-smilin.github.io/ rgb(76 93 125 / 50%)
+night-color = rgba(76,93,125,0.5)
+night-background-hover = rgba(40,44,52,0.8)
 waifu-night-color = rgba(40,44,52,0.9)
 // night-color-hover = #7a7a7a
 night-color-hover = #7a7a7a
@@ -442,11 +443,11 @@ body.night {
   }
 
   .navbar, footer.footer, .card {
-    background-color: rgba(40,44,52,0.5);
+    background-color: night-color;
   }
 
   .navbar, footer.footer, .card:hover {
-    background-color: rgba(40,44,52,0.8);
+    background-color: night-background-hover;
   }
 
   .searchbox-container {
@@ -476,6 +477,26 @@ body.night {
     width: 100%;
     height: 100%;
     pointer-events: none;
+  }
+
+  .inspiration-card {
+    background-color: night-color;
+    border-color: #333;
+    color: #ddd;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  }
+
+  .inspiration-card:hover {
+    background-color: night-background-hover;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+
+  .inspiration-date {
+    color: #aaa;
+  }
+
+  .inspiration-content {
+    color: #ddd;
   }
 }
 
