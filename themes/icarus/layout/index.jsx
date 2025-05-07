@@ -48,7 +48,7 @@ module.exports = class extends Component {
 
 							if (
 								Math.abs(inspirations[i]?.date?.unix() - post?.date?.unix()) >
-								7 * 24 * 60 * 60
+								30 * 24 * 60 * 60
 							) {
 								inspirations.shift();
 								continue;
