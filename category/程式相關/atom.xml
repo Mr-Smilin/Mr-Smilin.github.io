@@ -13,28 +13,28 @@
     <category term="vitepress" />
     <category term="algolia" />
     <category term="活俠傳" />
+    <category term="docker" />
+    <category term="日記" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="docker" />
     <category term="javascript" />
-    <category term="hexo" />
-    <category term="fluid" />
     <category term="getamped" />
     <category term="遊戲" />
-    <category term="日記" />
-    <category term="github" />
-    <category term="CI/CD" />
+    <category term="hexo" />
+    <category term="fluid" />
+    <category term="Legend of Mortal" />
+    <category term="wiki" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="icarus" />
     <category term="Live2D" />
     <category term="Rust" />
     <category term="彈射世界" />
     <category term="腳本" />
+    <category term="icarus" />
     <category term="addtoany" />
-    <category term="Legend of Mortal" />
-    <category term="wiki" />
+    <category term="github" />
+    <category term="CI/CD" />
     <entry>
         <id>https://smilin.net/2025/02/14/getampedUpdateHistory/</id>
         <title>【百變恰吉】幫GA寫了一個更新情報爬蟲</title>

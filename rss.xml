@@ -16,28 +16,28 @@
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
+        <category>docker</category>
+        <category>日記</category>
         <category>Alist</category>
         <category>Cloudflare</category>
-        <category>docker</category>
         <category>javascript</category>
-        <category>hexo</category>
-        <category>fluid</category>
         <category>getamped</category>
         <category>遊戲</category>
-        <category>日記</category>
-        <category>github</category>
-        <category>CI/CD</category>
+        <category>hexo</category>
+        <category>fluid</category>
+        <category>Legend of Mortal</category>
+        <category>wiki</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
-        <category>icarus</category>
         <category>Live2D</category>
         <category>Rust</category>
         <category>彈射世界</category>
         <category>腳本</category>
+        <category>icarus</category>
         <category>addtoany</category>
-        <category>Legend of Mortal</category>
-        <category>wiki</category>
+        <category>github</category>
+        <category>CI/CD</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2025/08/29/diary-about-lom/</guid>
             <title>關於活俠傳wiki至今與現狀</title>
@@ -58,11 +58,11 @@
 &lt;p&gt;&lt;a href=&#34;https://forum.gamer.com.tw/C.php?bsn=73317&amp;snA=1453&#34;&gt;【討論】活俠傳有 wiki 嗎？&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2024 年 07 月 01 日，基於一個小小的疑問，巴哈上的幾個人一同建立了 wiki 網站&lt;/p&gt;
 &lt;p&gt;期間陸續有許多人加入，裡面有許多人共編的心血，&lt;br&gt;網站內容有轉載也有原創，基於 CC BY-NC-SA-4.0 Licence，確保編輯者的權益。&lt;/p&gt;
-&lt;p&gt;截至 2025&amp;#x2F;08&amp;#x2F;29，共有 15 位夥伴在 LoM-wiki 上貢獻自己的經驗與紀錄。&lt;/p&gt;
+&lt;p&gt;截至 2025&amp;#x2F;08&amp;#x2F;29，共有 15 位夥伴在 LoM-wiki 上貢獻自己的經驗與心血。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/03.jpg&#34; alt=&#34;貢獻者們&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 
-&lt;h1 id=&#34;近期狀況&#34;&gt;&lt;a href=&#34;#近期狀況&#34; class=&#34;headerlink&#34; title=&#34;近期狀況&#34;&gt;&lt;/a&gt;近期狀況&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/04.jpg&#34; alt=&#34;推送紀錄&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;近期更新&#34;&gt;&lt;a href=&#34;#近期更新&#34; class=&#34;headerlink&#34; title=&#34;近期更新&#34;&gt;&lt;/a&gt;近期更新&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/04.jpg&#34; alt=&#34;推送紀錄&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;添加了各種鳥熊在粉專透露的設定(例如角色年齡)&lt;/li&gt;
 &lt;li&gt;避免未來文本混淆，對於默認留學的文本提前加註”崆峒派”(如有遺漏歡迎直接在留言板回報)&lt;/li&gt;
@@ -71,23 +71,25 @@
 &lt;/ul&gt;
 &lt;br&gt;
 
-&lt;h1 id=&#34;開銷&#34;&gt;&lt;a href=&#34;#開銷&#34; class=&#34;headerlink&#34; title=&#34;開銷&#34;&gt;&lt;/a&gt;開銷&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/05.jpg&#34; alt=&#34;開銷紀錄&#34;&gt;&lt;/p&gt;
-&lt;p&gt;原本 wiki 的設計初衷是圍繞著長時間免費部屬為核心設計必要的技術棧，&lt;br&gt;儘管如此，維持 wiki 每個月的成本開銷大約是 25 美元。&lt;/p&gt;
+&lt;h1 id=&#34;關於開銷&#34;&gt;&lt;a href=&#34;#關於開銷&#34; class=&#34;headerlink&#34; title=&#34;關於開銷&#34;&gt;&lt;/a&gt;關於開銷&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/05.jpg&#34; alt=&#34;開銷紀錄&#34;&gt;&lt;/p&gt;
+&lt;p&gt;wiki 的設計初衷，圍繞著長時間免費部屬為核心設計必要的技術棧，&lt;br&gt;儘管如此，維持 wiki 每個月的成本開銷大約是 25 美元。&lt;/p&gt;
 &lt;p&gt;原因是花費在留言板的資料庫成本上，前後花了 350 美元左右，&lt;br&gt;搜尋引擎原本也是要錢的，但因為我們自己搞爬蟲製作深度 searchMap，節省了不少開銷。&lt;/p&gt;
 &lt;p&gt;說這些並不是要賣慘或怎樣的，&lt;br&gt;只是想趁這個機會，好好敘述 LoM-wiki 的狀況給大家知道，&lt;br&gt;LoM-wiki 免費開放給需要他的大俠，未來也是如此。&lt;/p&gt;
 &lt;br&gt;
 
 &lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;如果你偶然到訪，歡迎坐坐，在這裡可以任意查詢你要的資料，&lt;br&gt;若發現內容存在出入，也請務必不吝於在留言板提供您的所知。&lt;/p&gt;
 &lt;p&gt;如果想加入我們，那更好了！&lt;br&gt;因為遊戲更新，wiki 勢必會有許多需要打點更新的地方，&lt;br&gt;我們的文檔需要翻新，英文文檔也缺人整理字典檔跟鳥熊討論…&lt;/p&gt;
-&lt;p&gt;不求功利，不忘初心，&lt;br&gt;活俠傳 wiki，隨時歡迎大俠加入共筆。&lt;/p&gt;
+&lt;p&gt;編輯文檔可以直接在頁面上找到編輯按鈕，&lt;br&gt;我們有&lt;a href=&#34;https://smilin.net/LoM-wiki/develop/1-start.html&#34;&gt;完整的教學資源&lt;/a&gt;，有任何不懂的也可以隨時到&lt;a href=&#34;https://discord.gg/P4kePy6qmc&#34;&gt;Discord 群組&lt;/a&gt;發問討論、聊天；&lt;/p&gt;
+&lt;p&gt;不求功利，不忘初心，&lt;br&gt;我們絕對需要你的那份熱忱，歡迎大俠加入共筆。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki&#34;&gt;LoM-wiki 網址&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki/develop/1-start.html&#34;&gt;協作教學起點&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://discord.gg/P4kePy6qmc&#34;&gt;Discord&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://smilin.net/2025/05/05/hexoInspirationPage/</guid>
             <title>網站新增靈感頁面心得</title>
             <link>https://smilin.net/2025/05/05/hexoInspirationPage/</link>
-            <category>hexo</category>
             <category>日記</category>
+            <category>hexo</category>
             <category>icarus</category>
             <pubDate>Mon, 05 May 2025 12:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/title.png&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
@@ -452,8 +454,8 @@ jobs:
             <guid isPermalink="true">https://smilin.net/2024/05/03/useTheme1/</guid>
             <title>前幾天有人詢問我用的啥主題</title>
             <link>https://smilin.net/2024/05/03/useTheme1/</link>
-            <category>hexo</category>
             <category>日記</category>
+            <category>hexo</category>
             <pubDate>Fri, 03 May 2024 15:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ai/letter_circle.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;前幾天收到信，信中詢問使用的主題&lt;br&gt;想了下的確從沒寫過，索性紀錄一下。&lt;/p&gt;
@@ -751,8 +753,8 @@ jobs:
             <guid isPermalink="true">https://smilin.net/2024/04/23/twikoo1/</guid>
             <title>最近想更換評論系統</title>
             <link>https://smilin.net/2024/04/23/twikoo1/</link>
-            <category>hexo</category>
             <category>日記</category>
+            <category>hexo</category>
             <pubDate>Tue, 23 Apr 2024 11:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/twikoo-logo-home.png&#34; alt=&#34;logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最近想把 blog 的評論系統換了&lt;/p&gt;

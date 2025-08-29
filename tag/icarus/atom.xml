@@ -13,28 +13,28 @@
     <category term="vitepress" />
     <category term="algolia" />
     <category term="活俠傳" />
+    <category term="docker" />
+    <category term="日記" />
     <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="docker" />
     <category term="javascript" />
-    <category term="hexo" />
-    <category term="fluid" />
     <category term="getamped" />
     <category term="遊戲" />
-    <category term="日記" />
-    <category term="github" />
-    <category term="CI/CD" />
+    <category term="hexo" />
+    <category term="fluid" />
+    <category term="Legend of Mortal" />
+    <category term="wiki" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
-    <category term="icarus" />
     <category term="Live2D" />
     <category term="Rust" />
     <category term="彈射世界" />
     <category term="腳本" />
+    <category term="icarus" />
     <category term="addtoany" />
-    <category term="Legend of Mortal" />
-    <category term="wiki" />
+    <category term="github" />
+    <category term="CI/CD" />
     <entry>
         <id>https://smilin.net/2025/05/05/hexoInspirationPage/</id>
         <title>網站新增靈感頁面心得</title>
@@ -229,8 +229,8 @@ hexo.extend.filter.register(&amp;quot;inspiration_date_filter&amp;quot;, functio
 &lt;p&gt;然而，網誌應該是可以更加自由的&lt;br&gt;我希望他可以接納我的生活&lt;/p&gt;
 &lt;p&gt;希望這個功能在未來可以活用。&lt;/p&gt;
 </content>
-        <category term="hexo" />
         <category term="日記" />
+        <category term="hexo" />
         <category term="icarus" />
         <updated>2025-05-05T04:00:00.000Z</updated>
     </entry>
