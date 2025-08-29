@@ -3,36 +3,82 @@
     <id>https://smilin.net</id>
     <title>貓謎工坊 • Posts by &#34;活俠傳&#34; tag</title>
     <link href="https://smilin.net" />
-    <updated>2024-08-12T09:00:00.000Z</updated>
+    <updated>2025-08-29T07:00:00.000Z</updated>
     <category term="node.js" />
     <category term="bot" />
     <category term="discord" />
     <category term="discord.js" />
     <category term="教學" />
     <category term="12th鐵人賽" />
-    <category term="日記" />
     <category term="vitepress" />
     <category term="algolia" />
     <category term="活俠傳" />
-    <category term="docker" />
     <category term="Alist" />
-    <category term="javascript" />
     <category term="Cloudflare" />
+    <category term="docker" />
+    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
     <category term="getamped" />
     <category term="遊戲" />
+    <category term="日記" />
+    <category term="github" />
+    <category term="CI/CD" />
     <category term="heroku" />
     <category term="render" />
     <category term="render.com" />
     <category term="icarus" />
-    <category term="github" />
-    <category term="CI/CD" />
+    <category term="Live2D" />
+    <category term="Rust" />
     <category term="彈射世界" />
     <category term="腳本" />
-    <category term="Rust" />
     <category term="addtoany" />
-    <category term="Live2D" />
+    <category term="Legend of Mortal" />
+    <category term="wiki" />
+    <entry>
+        <id>https://smilin.net/2025/08/29/diary-about-lom/</id>
+        <title>關於活俠傳wiki至今與現狀</title>
+        <link rel="alternate" href="https://smilin.net/2025/08/29/diary-about-lom/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/01.jpg&#34; alt=&#34;封面&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安安，我微笑&lt;/p&gt;
+&lt;p&gt;活俠傳近期大型更新，混世魔王重出江湖，而醜俠終得解藥。&lt;/p&gt;
+&lt;p&gt;趁著這個時間，想跟更多人介紹這遊戲的 wiki 網站。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;緣起&#34;&gt;&lt;a href=&#34;#緣起&#34; class=&#34;headerlink&#34; title=&#34;緣起&#34;&gt;&lt;/a&gt;緣起&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/02.jpg&#34; alt=&#34;wiki首頁&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://forum.gamer.com.tw/C.php?bsn=73317&amp;snA=1453&#34;&gt;【討論】活俠傳有 wiki 嗎？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2024 年 07 月 01 日，基於一個小小的疑問，巴哈上的幾個人一同建立了 wiki 網站&lt;/p&gt;
+&lt;p&gt;期間陸續有許多人加入，裡面有許多人共編的心血，&lt;br&gt;網站內容有轉載也有原創，基於 CC BY-NC-SA-4.0 Licence，確保編輯者的權益。&lt;/p&gt;
+&lt;p&gt;截至 2025&amp;#x2F;08&amp;#x2F;29，共有 15 位夥伴在 LoM-wiki 上貢獻自己的經驗與紀錄。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/03.jpg&#34; alt=&#34;貢獻者們&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;近期狀況&#34;&gt;&lt;a href=&#34;#近期狀況&#34; class=&#34;headerlink&#34; title=&#34;近期狀況&#34;&gt;&lt;/a&gt;近期狀況&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/04.jpg&#34; alt=&#34;推送紀錄&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加了各種鳥熊在粉專透露的設定(例如角色年齡)&lt;/li&gt;
+&lt;li&gt;避免未來文本混淆，對於默認留學的文本提前加註”崆峒派”(如有遺漏歡迎直接在留言板回報)&lt;/li&gt;
+&lt;li&gt;添加了 90%的英文文本頁面，目前大部份可正常瀏覽&lt;/li&gt;
+&lt;li&gt;添加丹藥效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;開銷&#34;&gt;&lt;a href=&#34;#開銷&#34; class=&#34;headerlink&#34; title=&#34;開銷&#34;&gt;&lt;/a&gt;開銷&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/05.jpg&#34; alt=&#34;開銷紀錄&#34;&gt;&lt;/p&gt;
+&lt;p&gt;原本 wiki 的設計初衷是圍繞著長時間免費部屬為核心設計必要的技術棧，&lt;br&gt;儘管如此，維持 wiki 每個月的成本開銷大約是 25 美元。&lt;/p&gt;
+&lt;p&gt;原因是花費在留言板的資料庫成本上，前後花了 350 美元左右，&lt;br&gt;搜尋引擎原本也是要錢的，但因為我們自己搞爬蟲製作深度 searchMap，節省了不少開銷。&lt;/p&gt;
+&lt;p&gt;說這些並不是要賣慘或怎樣的，&lt;br&gt;只是想趁這個機會，好好敘述 LoM-wiki 的狀況給大家知道，&lt;br&gt;LoM-wiki 免費開放給需要他的大俠，未來也是如此。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;如果你偶然到訪，歡迎坐坐，在這裡可以任意查詢你要的資料，&lt;br&gt;若發現內容存在出入，也請務必不吝於在留言板提供您的所知。&lt;/p&gt;
+&lt;p&gt;如果想加入我們，那更好了！&lt;br&gt;因為遊戲更新，wiki 勢必會有許多需要打點更新的地方，&lt;br&gt;我們的文檔需要翻新，英文文檔也缺人整理字典檔跟鳥熊討論…&lt;/p&gt;
+&lt;p&gt;不求功利，不忘初心，&lt;br&gt;活俠傳 wiki，隨時歡迎大俠加入共筆。&lt;/p&gt;
+</content>
+        <category term="活俠傳" />
+        <category term="Legend of Mortal" />
+        <category term="wiki" />
+        <updated>2025-08-29T07:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://smilin.net/2024/08/12/algoliaOnVitepress/</id>
         <title>關於 algolia 在 vitepress 集成，踩雷過程</title>

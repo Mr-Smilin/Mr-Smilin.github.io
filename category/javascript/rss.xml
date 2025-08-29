@@ -13,29 +13,31 @@
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
-        <category>日記</category>
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
-        <category>docker</category>
         <category>Alist</category>
-        <category>javascript</category>
         <category>Cloudflare</category>
+        <category>docker</category>
+        <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
         <category>getamped</category>
         <category>遊戲</category>
+        <category>日記</category>
+        <category>github</category>
+        <category>CI/CD</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
         <category>icarus</category>
-        <category>github</category>
-        <category>CI/CD</category>
+        <category>Live2D</category>
+        <category>Rust</category>
         <category>彈射世界</category>
         <category>腳本</category>
-        <category>Rust</category>
         <category>addtoany</category>
-        <category>Live2D</category>
+        <category>Legend of Mortal</category>
+        <category>wiki</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2025/02/14/getampedUpdateHistory/</guid>
             <title>【百變恰吉】幫GA寫了一個更新情報爬蟲</title>

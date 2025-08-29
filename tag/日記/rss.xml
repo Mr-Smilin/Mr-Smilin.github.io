@@ -13,35 +13,37 @@
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
-        <category>日記</category>
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
-        <category>docker</category>
         <category>Alist</category>
-        <category>javascript</category>
         <category>Cloudflare</category>
+        <category>docker</category>
+        <category>javascript</category>
         <category>hexo</category>
         <category>fluid</category>
         <category>getamped</category>
         <category>遊戲</category>
+        <category>日記</category>
+        <category>github</category>
+        <category>CI/CD</category>
         <category>heroku</category>
         <category>render</category>
         <category>render.com</category>
         <category>icarus</category>
-        <category>github</category>
-        <category>CI/CD</category>
+        <category>Live2D</category>
+        <category>Rust</category>
         <category>彈射世界</category>
         <category>腳本</category>
-        <category>Rust</category>
         <category>addtoany</category>
-        <category>Live2D</category>
+        <category>Legend of Mortal</category>
+        <category>wiki</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2025/05/05/hexoInspirationPage/</guid>
             <title>網站新增靈感頁面心得</title>
             <link>https://smilin.net/2025/05/05/hexoInspirationPage/</link>
-            <category>日記</category>
             <category>hexo</category>
+            <category>日記</category>
             <category>icarus</category>
             <pubDate>Mon, 05 May 2025 12:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/title.png&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
@@ -239,8 +241,8 @@ hexo.extend.filter.register(&amp;quot;inspiration_date_filter&amp;quot;, functio
             <guid isPermalink="true">https://smilin.net/2024/05/03/useTheme1/</guid>
             <title>前幾天有人詢問我用的啥主題</title>
             <link>https://smilin.net/2024/05/03/useTheme1/</link>
-            <category>日記</category>
             <category>hexo</category>
+            <category>日記</category>
             <pubDate>Fri, 03 May 2024 15:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ai/letter_circle.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;前幾天收到信，信中詢問使用的主題&lt;br&gt;想了下的確從沒寫過，索性紀錄一下。&lt;/p&gt;
@@ -351,8 +353,8 @@ hexo.extend.filter.register(&amp;quot;inspiration_date_filter&amp;quot;, functio
             <guid isPermalink="true">https://smilin.net/2024/04/23/twikoo1/</guid>
             <title>最近想更換評論系統</title>
             <link>https://smilin.net/2024/04/23/twikoo1/</link>
-            <category>日記</category>
             <category>hexo</category>
+            <category>日記</category>
             <pubDate>Tue, 23 Apr 2024 11:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/twikoo-logo-home.png&#34; alt=&#34;logo&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最近想把 blog 的評論系統換了&lt;/p&gt;
