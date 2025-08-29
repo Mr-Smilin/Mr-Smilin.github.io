@@ -13,31 +13,31 @@
         <category>discord.js</category>
         <category>教學</category>
         <category>12th鐵人賽</category>
-        <category>日記</category>
-        <category>Alist</category>
-        <category>Cloudflare</category>
         <category>vitepress</category>
         <category>algolia</category>
         <category>活俠傳</category>
+        <category>Alist</category>
+        <category>Cloudflare</category>
+        <category>日記</category>
         <category>docker</category>
         <category>javascript</category>
         <category>Legend of Mortal</category>
         <category>wiki</category>
+        <category>heroku</category>
+        <category>render</category>
+        <category>render.com</category>
         <category>hexo</category>
         <category>fluid</category>
         <category>getamped</category>
         <category>遊戲</category>
-        <category>github</category>
-        <category>CI/CD</category>
-        <category>heroku</category>
-        <category>render</category>
-        <category>render.com</category>
-        <category>icarus</category>
-        <category>Live2D</category>
         <category>彈射世界</category>
         <category>腳本</category>
+        <category>github</category>
+        <category>CI/CD</category>
         <category>Rust</category>
+        <category>Live2D</category>
         <category>addtoany</category>
+        <category>icarus</category>
         <item>
             <guid isPermalink="true">https://smilin.net/2023/06/01/discordJs14-1/</guid>
             <title>discord.js 升上 14 版，架構說明</title>
