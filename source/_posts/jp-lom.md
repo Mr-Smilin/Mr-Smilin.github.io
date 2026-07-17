@@ -7,7 +7,7 @@ categories:
   - [活俠傳]
 ---
 
-![封面](/img/post/jpLom/01.jpg)
+![封面](/img/post/jpLom/001.jpg)
 
 [LoM-wiki 日文版網址](https://smilin.net/LoM-wiki/ja/)
 
@@ -25,7 +25,7 @@ categories:
 
 # 日文版更新
 
-![wiki首頁](/img/post/jpLom/02.png)
+![wiki首頁](/img/post/jpLom/002.png)
 
 [pr內容](https://github.com/Mr-Smilin/LoM-wiki/pull/243)
 
@@ -82,8 +82,8 @@ categories:
 我希望這份 wiki 能幫助到需要他的大俠，
 也希望大家將 wiki 分享出去，讓 wiki 被更多需要他的人看到。
 
-至今 wiki 仍歡迎大俠加入共筆
-我們有完整的教學資源，有任何不懂的也可以隨時到Discord群組發問討論、聊天；
+至今 wiki 仍歡迎大俠加入
+我們有完整的教學資源，有任何不懂的可以隨時到Discord群組發問討論、聊天；
 
 不求功利，不忘初心，  
 我們絕對需要你的那份熱忱，歡迎大俠加入共筆。
