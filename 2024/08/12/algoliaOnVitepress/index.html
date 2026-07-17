@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>關於 algolia 在 vitepress 集成，踩雷過程 - 貓謎工坊</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="貓謎工坊"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="貓謎工坊"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="因為想增強網站的搜尋力度，希望連文章的內文都可以搜索到剛好 vitepress 是支援 algolia 的，試著配置不料遇到的問題比想像的多，網路上的教學像是缺了幾塊拼圖似的索性趁著剛完成腦袋還熱呼的現在，記錄一下遇到的問題。"><meta property="og:type" content="blog"><meta property="og:title" content="關於 algolia 在 vitepress 集成，踩雷過程"><meta property="og:url" content="https://smilin.net/"><meta property="og:site_name" content="貓謎工坊"><meta property="og:description" content="因為想增強網站的搜尋力度，希望連文章的內文都可以搜索到剛好 vitepress 是支援 algolia 的，試著配置不料遇到的問題比想像的多，網路上的教學像是缺了幾塊拼圖似的索性趁著剛完成腦袋還熱呼的現在，記錄一下遇到的問題。"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://smilin.net/img/avatar.png"><meta property="article:published_time" content="2024-08-12T09:00:00.000Z"><meta property="article:modified_time" content="2026-07-17T07:39:10.206Z"><meta property="article:author" content="Mr.S"><meta property="article:tag" content="node.js"><meta property="article:tag" content="vitepress"><meta property="article:tag" content="algolia"><meta property="article:tag" content="活俠傳"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://smilin.net/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://smilin.net/2024/08/12/algoliaOnVitepress/"},"headline":"貓謎工坊","image":["https://smilin.net/img/post/algoliaOnVitepress/01.jpg","https://smilin.net/img/post/algoliaOnVitepress/02.jpg","https://smilin.net/img/post/algoliaOnVitepress/03.jpg","https://smilin.net/img/post/algoliaOnVitepress/04.jpg","https://smilin.net/img/post/algoliaOnVitepress/05.jpg","https://smilin.net/img/post/algoliaOnVitepress/06.jpg","https://smilin.net/img/post/algoliaOnVitepress/07.jpg","https://smilin.net/img/post/algoliaOnVitepress/01.jpg"],"datePublished":"2024-08-12T09:00:00.000Z","dateModified":"2026-07-17T07:39:10.206Z","author":{"@type":"Person","name":"Smilin"},"description":"因為想增強網站的搜尋力度，希望連文章的內文都可以搜索到剛好 vitepress 是支援 algolia 的，試著配置不料遇到的問題比想像的多，網路上的教學像是缺了幾塊拼圖似的索性趁著剛完成腦袋還熱呼的現在，記錄一下遇到的問題。"}</script><link rel="canonical" href="https://smilin.net/2024/08/12/algoliaOnVitepress/"><link rel="icon" href="/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><script defer></script><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><script async data-ad-client="ca-pub-6118312021004697" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="貓謎工坊" type="application/atom+xml">
+</head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><div style="margin-top: 8px;"><img class="logo-img" src="/img/logo/logo_light.svg" alt="貓謎工坊" height="28"><img class="logo-img-dark" src="/img/logo/logo_night.svg" alt="貓謎工坊" height="28"></div></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首頁</a><a class="navbar-item" target="_blank" rel="noopener" href="https://drive.smilin.net/">雲端</a><a class="navbar-item" href="/inspiration/">靈感</a><a class="navbar-item" href="/message/">留言</a><a class="navbar-item" href="/friend/">友鏈</a><a class="navbar-item" href="/about/">自述</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目錄" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><canvas id="universe" width="smilin" height="blog"></canvas><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2024-08-12  <a class="commentCountImg" href="/2024/08/12/algoliaOnVitepress/#comment-container"><span class="display-none-class">e3041d841ed9103541cc7207e4f8219e</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="e3041d841ed9103541cc7207e4f8219e">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>9 分鐘  <i class="fas fa-pencil-alt"> </i>1.4 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次訪問</span></div></div><h1 class="title is-3 is-size-4-mobile">關於 algolia 在 vitepress 集成，踩雷過程</h1><div class="content"><p><img src="/img/post/algoliaOnVitepress/01.jpg"></p>
+<p>因為想增強網站的搜尋力度，希望連文章的內文都可以搜索到<br>剛好 <code>vitepress</code> 是支援 <code>algolia</code> 的，試著配置<br>不料遇到的問題比想像的多，網路上的教學像是缺了幾塊拼圖似的<br>索性趁著剛完成腦袋還熱呼的現在，記錄一下遇到的問題。</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="官方文檔"><a href="#官方文檔" class="headerlink" title="官方文檔"></a>官方文檔</h2><p>首先我們看到 <a target="_blank" rel="noopener" href="https://vitepress.dev/zh/reference/default-theme-search#algolia-search">vitepress 的文檔</a></p>
+<p><img src="/img/post/algoliaOnVitepress/02.jpg"></p>
+<p>去 <code>Algolia</code> 申請 <code>api</code>，然後填入，完成<br>恩，看起來挺簡單的，再看看 <a target="_blank" rel="noopener" href="https://docsearch.algolia.com/apply">Algolia 怎麼說</a></p>
+<p><img src="/img/post/algoliaOnVitepress/03.jpg"></p>
+<p>註冊完後，我們審核完畢就會寄信到你的信箱，裡面可以拿到 <code>apikey</code><br>恩…這邊也很方便阿，註冊完等大概五分鐘就收到信了</p>
+<pre><code class="Markdown">Hi there 👋
+
+Thanks for your interest and trust in Algolia DocSearch.
+ We&#39;ve received your request for https://smilin.net/LoM-wiki/, and will get back to you soon.
+
+DocSearch is built in two parts:
+- A crawler which we run in our own infrastructure every week (configurable). It follows every link in your website and extracts content from every page it traverses. It then pushes this content to an Algolia index. (Read more: https://www.algolia.com/doc/tools/crawler/getting-started/overview/ )
+- A JavaScript snippet to be inserted in your website that will bind this Algolia index to your search input and display its results in a modal UI. (Read more: https://github.com/algolia/docsearch )
+
+If you want to find more details on how DocSearch works, take a look at the docs: https://docsearch.algolia.com/
+
+Meanwhile, let us know if you have any other questions.
+
+Have a great day,
+The DocSearch team.
+
+DocSearch is powered by Algolia. See more at https://www.algolia.com/
+</code></pre>
+<p>大意是說 <code>algolia</code> 分成兩個部分</p>
+<ul>
+<li>他們會配置爬蟲，每周瀏覽網站</li>
+<li>為了使用 <code>algolia</code>，必須在網站配置他們的 <code>js</code></li>
+</ul>
+<p>第一部份 <code>algolia</code> 會協助，第二部份也有 <code>vitepress</code> 集成，一切看起來都很美好</p>
+<p>但是去 <code>algolia</code> 後台要拿 <code>api</code> 的時候，問題來了。</p>
+<hr>
+<h2 id="問題？"><a href="#問題？" class="headerlink" title="問題？"></a>問題？</h2><p><img src="/img/post/algoliaOnVitepress/04.jpg"></p>
+<p>(註：由於筆者已經踩完雷了，圖中是已解決的樣子)</p>
+<p>只要進入後台，他就會彈出 <code>Get Start</code><br>大意是要求我們自己寫爬蟲讀取自己網站的資料，然後透過他們的工具上傳給 <code>algolia</code></p>
+<p>不對呀？爬蟲的部份<code>algolia</code>不是幫我們做好了嗎？<br>上網找了下，其他人似乎沒有遇到這個狀況，甚至可以在後台要求 <code>algolia</code> 主動重爬</p>
+<p>恩…回頭去看信中的第一點，點進他提供的網址，看看爬蟲相關的問題</p>
+<p><img src="/img/post/algoliaOnVitepress/05.jpg"></p>
+<p>痾，不知道為什麼，我的帳戶不能使用他們家的爬蟲服務<br>難怪進後台就要求我主動提供資料，那沒辦法，只好自己來</p>
+<br>
+
+<h3 id="隔天-8-13-更新："><a href="#隔天-8-13-更新：" class="headerlink" title="隔天(8&#x2F;13)更新："></a>隔天(8&#x2F;13)更新：</h3><p>今天收到審核通過的信件，可以使用他們家的爬蟲了，<br>應該是筆者當天查看時，還在審核網站是否符合他們的免費支援對象</p>
+<p>往下就是自行串接爬蟲的部份了，如果還能利用他們家的爬蟲的話，以下的方案就不是必要的</p>
+<hr>
+<h2 id="github-action"><a href="#github-action" class="headerlink" title="github action"></a>github action</h2><p>由於筆者的網站放在 <code>github</code> 上<br>想到要寫 for 網站的爬蟲後，第一時間想到的就是 <code>action</code> 啦</p>
+<pre><code class="yml">name: Algolia DocSearch Scraper
+on:
+  push:
+    branches: [release-algolia]
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare Algolia DocSearch config
+        run: |
+          echo &#39;$&#123;&#123; secrets.ALGOLIA_CONFIG &#125;&#125;&#39; &gt; config.json
+          cat config.json
+
+      - name: Run DocSearch Scraper
+        env:
+          APPLICATION_ID: $&#123;&#123; secrets.ALGOLIA_ID &#125;&#125;
+          API_KEY: $&#123;&#123; secrets.ALGOLIA_KEY &#125;&#125;
+        run: |
+          docker run \
+            -e APPLICATION_ID=$APPLICATION_ID \
+            -e API_KEY=$API_KEY \
+            -e CONFIG=&quot;$(cat config.json | jq -c .)&quot; \
+            algolia/docsearch-scraper
+</code></pre>
+<p>透過 <code>action</code> 執行 <code>algolia/docsearch-scraper</code><br><code>id</code>跟<code>key</code>可以在前面的<code>algolia後台</code>獲得<br><code>ALGOLIA_CONFIG</code> 則是爬蟲的相關 <code>config</code>，設置方式可以<a target="_blank" rel="noopener" href="https://docsearch.algolia.com/docs/legacy/config-file/">參考這裡</a></p>
+<p>全都必須放在 <code>Repository secrets</code>，根據使用的環境不同，載入環境變量的方式略有差異</p>
+<p>以上做完，<code>action</code>成功執行後，<code>algolia</code>上就會有資料囉</p>
+<hr>
+<h2 id="後續步驟"><a href="#後續步驟" class="headerlink" title="後續步驟"></a>後續步驟</h2><p><img src="/img/post/algoliaOnVitepress/06.jpg"></p>
+<p>前面爬完資料，第一步會自動打勾<br>由於我們的前端都由 <code>vitepress</code> 自動配置好了，剩下三步驟並不需要設定，一直送出讓他打勾就好</p>
+<p><img src="/img/post/algoliaOnVitepress/07.jpg"></p>
+<p>終於來到後台，依序點選 Search -&gt; CONFIGURE -&gt; Index<br>找到 <code>Create Index</code> ，輸入 <code>IndexName</code><br>這裡設定的，就是最前面<code>vitepress</code>要求輸入的第三個參數</p>
+<p><img src="/img/post/algoliaOnVitepress/01.jpg"></p>
+<p>都設定完畢，網頁的搜尋功能連內文都可以搜到，更加強大囉～</p>
+<hr>
+<h2 id="閒談"><a href="#閒談" class="headerlink" title="閒談"></a>閒談</h2><p>文中提到使用 <code>vitepress</code> 的網站是 <a href="https://smilin.net/LoM-wiki/">活俠傳 wiki</a>，<br>也是最近筆者在休息時間把玩的小專案</p>
+<p>網站在 <code>2024-07-01</code> 建立，<br>當時是打算在這寫點文章的，<br>恰巧近期工作也忙，<br>沒甚麼時間更新這邊</p>
+<p>其實連這篇文都更新的很吃力，<br>不過想了想，<br>過幾天恐怕連這篇文怎麼動筆都不知道，<br>還是寫吧 xD</p>
+<p>建立這個網站，<br>一方面是我自己對<code>vue + vite</code>體系全家桶不太熟悉，<br>趁機學習</p>
+<p>另一方面是活俠傳真的很好玩，<br>這邊推薦大家都可以去玩。</p>
+<p>關於<code>wiki</code>的建立心路歷程甚麼的，<br>之後會再另外寫一篇的</p>
+<p>很感謝同樣喜歡活俠傳的朋友，<br>願意一同維護這個 <code>wiki</code>，<br>也歡迎志同道合的新夥伴加入。</p>
+<br>
+</div><div class="article-licensing box"><div class="licensing-title"><p>關於 algolia 在 vitepress 集成，踩雷過程</p><p><a href="https://smilin.net/2024/08/12/algoliaOnVitepress/">https://smilin.net/2024/08/12/algoliaOnVitepress/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://smilin.net"><p>Smilin</p></a></div></div><div class="level-item is-narrow"><div><h6>發佈於</h6><p>2024-08-12</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2026-07-17</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"></div><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_line"></a><a class="a2a_button_x"></a><a class="a2a_button_linkedin"></a><a class="a2a_button_reddit"></a><a class="a2a_button_threads"></a><a class="a2a_button_sina_weibo"></a></div><script async src="/addtoany/page.js" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2025/02/14/getampedUpdateHistory/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">【百變恰吉】幫GA寫了一個更新情報爬蟲</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/05/03/useTheme1/"><span class="level-item">前幾天有人詢問我用的啥主題</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">評論</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-TW',
+            id: 'e3041d841ed9103541cc7207e4f8219e',
+            repo: 'Mr-Smilin.github.io',
+            owner: 'Mr-Smilin',
+            clientID: '9a33a548232178c23121',
+            clientSecret: 'bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6',
+            admin: ["Mr-Smilin"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目錄</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#官方文檔"><span>官方文檔</span></a></li><li><a class="is-flex is-mobile" href="#問題？"><span>問題？</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#隔天-8-13-更新："><span>隔天(8/13)更新：</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#github-action"><span>github action</span></a></li><li><a class="is-flex is-mobile" href="#後續步驟"><span>後續步驟</span></a></li><li><a class="is-flex is-mobile" href="#閒談"><span>閒談</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><div><img class="logo-img" src="/img/logo/logo_light.svg" alt="貓謎工坊" height="28"><img class="logo-img-dark" src="/img/logo/logo_night.svg" alt="貓謎工坊" height="28"></div></a><p class="size-small"><span>&copy; 2026 Smilin</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> <br><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 起運行了 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小時 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒 ";
+        }var now = new Date();setInterval("createTime('2021/09/15 18:00:00')", 250,"");</script><br></span><div class="size-small"><span>共 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 位訪客</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="/dist/APlayer.min.css"><div id="aplayer"></div><script type="text/javascript" src="/dist/APlayer.min.js"></script><script type="text/javascript" src="/dist/music.js"></script></div><script type="text/javascript" color="0,205,205" opacity="0.7" zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script defer></script><a id="back-to-top" title="回到頂端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);})</script><script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什麼..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什麼...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('9a33a548232178c23121','bbdfbe2d45288ac4b37a315cb1aa7c1a50dd9fa6','Mr-Smilin','Mr-Smilin.github.io',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            if(true){
+                a2a.init_all();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script><script src="/js/universe.js"></script></body></html>

@@ -1,0 +1,1575 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://smilin.net</id>
+    <title>貓謎工坊</title>
+    <link href="https://smilin.net" />
+    <updated>2026-07-17T07:00:00.000Z</updated>
+    <category term="node.js" />
+    <category term="bot" />
+    <category term="discord" />
+    <category term="discord.js" />
+    <category term="教學" />
+    <category term="12th鐵人賽" />
+    <category term="vitepress" />
+    <category term="algolia" />
+    <category term="活俠傳" />
+    <category term="Alist" />
+    <category term="Cloudflare" />
+    <category term="日記" />
+    <category term="docker" />
+    <category term="Legend of Mortal" />
+    <category term="wiki" />
+    <category term="javascript" />
+    <category term="hexo" />
+    <category term="fluid" />
+    <category term="getamped" />
+    <category term="遊戲" />
+    <category term="github" />
+    <category term="CI/CD" />
+    <category term="heroku" />
+    <category term="render" />
+    <category term="render.com" />
+    <category term="icarus" />
+    <category term="Live2D" />
+    <category term="彈射世界" />
+    <category term="腳本" />
+    <category term="Rust" />
+    <category term="addtoany" />
+    <entry>
+        <id>https://smilin.net/2026/07/17/jp-lom/</id>
+        <title>活俠傳 wiki 日文版上線！</title>
+        <link rel="alternate" href="https://smilin.net/2026/07/17/jp-lom/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/01.jpg&#34; alt=&#34;封面&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki/ja/&#34;&gt;LoM-wiki 日文版網址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;梅線要上啦我好興奮呀梅線要上啦我好興奮呀梅線要上啦我好興奮呀(拖走)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;嗨嗨，上次見面還是在上次，大家好久不見了&lt;br&gt;大型更新前夕，活俠傳在日文圈爆火，日本也成了唐門薪火傳遞之處&lt;br&gt;這次發文不為別的，是來跟各位捎一聲好消息&lt;/p&gt;
+&lt;p&gt;活俠傳wiki日文版翻譯於本日正式上線！！(感謝 NEXTAltair 開發)&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;日文版更新&#34;&gt;&lt;a href=&#34;#日文版更新&#34; class=&#34;headerlink&#34; title=&#34;日文版更新&#34;&gt;&lt;/a&gt;日文版更新&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/02.png&#34; alt=&#34;wiki首頁&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/LoM-wiki/pull/243&#34;&gt;pr內容&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;目前日文版由 NEXTAltair 以活俠傳日文化 MOD 字典為輔，透過 ai 翻譯而成&lt;br&gt;總共 509 頁，我們這兩天有大致閱讀一下，確認沒有大問題才更新&lt;/p&gt;
+&lt;p&gt;但仍不排除存在語意問題，因為文本真的很龐大，實在不是一朝一夕可以認真校對的&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;關於未來更新的文本同步&#34;&gt;&lt;a href=&#34;#關於未來更新的文本同步&#34; class=&#34;headerlink&#34; title=&#34;關於未來更新的文本同步&#34;&gt;&lt;/a&gt;關於未來更新的文本同步&lt;/h1&gt;&lt;p&gt;其實早在日文版，這邊就有製作過英文版的多語系wiki&lt;br&gt;當時就有發現，wiki持續更新的話，多語系維護的開銷也是一大問題&lt;/p&gt;
+&lt;p&gt;這邊正在著手計畫開發定時比對差異與同步的 ai 工程，以此來保證基本的更新作業&lt;br&gt;原本是打算透過這個工程來完善日文版，沒想到有人先做了，所以說唐門弟子人人都有著赤誠之心&lt;/p&gt;
+&lt;p&gt;總之日後也會想辦法讓中文的更新同步到多語系上面的，&lt;br&gt;語意可能難免有些問題，屆時都非常歡迎直接在論壇留言提出&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;關於大型更新&#34;&gt;&lt;a href=&#34;#關於大型更新&#34; class=&#34;headerlink&#34; title=&#34;關於大型更新&#34;&gt;&lt;/a&gt;關於大型更新&lt;/h1&gt;&lt;p&gt;以下比較傾向於筆者個人的想法，如果感到不適，十分不好意思&lt;/p&gt;
+&lt;p&gt;活俠傳準備要迎來大型更新，說不高興那肯定是騙人的&lt;br&gt;更何況筆者本來就是梅毒患者，這個世界線已經盼了好久&lt;/p&gt;
+&lt;p&gt;就如同大家所知，活俠傳是一款文字遊戲，說文字就是活俠傳的魂也毫不誇張&lt;br&gt;這樣的遊戲，我認為是需要經過時間打磨的，而成品也值得我花錢去支持他&lt;/p&gt;
+&lt;p&gt;然而事實是，本次更新距離上次只隔了一年，雖然我知道這對於大部分玩家，包括我而言都是十分漫長的，&lt;br&gt;但理性上我仍然願意給鳥熊更多時間，只為求保證文本品質，不愧對於活俠傳，乃至其中人物的形形色色。&lt;/p&gt;
+&lt;p&gt;再來是價格的部分，相信許多人跟我一樣，對於活俠傳的更新，是十分願意掏錢購買的&lt;br&gt;然而活俠傳的兩次大型更新都是做為免費更新推出，想來這是源自於鳥熊最初的承諾&lt;/p&gt;
+&lt;p&gt;不過就算更新是免費的，鳥熊也有在嘗試透過各種管道維持經濟&lt;br&gt;從幾次活俠傳線下週邊的人潮來看，看的出來有許多的唐門弟子都願意花錢支持鳥熊&lt;br&gt;真的是很美好的景象&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;身為唐門弟子，因為機緣巧合與一腔熱血，跟許多人一同建立了活俠傳的 wiki ，並維護，&lt;br&gt;有認識的，有不認識的，&lt;br&gt;他們或許是在 wiki 上面評論分享知識，或許是親自下來編輯，&lt;br&gt;許多的人在上面無償貢獻著自己的熱愛，&lt;br&gt;我希望這份 wiki 能幫助到需要他的大俠，&lt;br&gt;也希望大家將 wiki 分享出去，讓 wiki 被更多需要他的人看到。&lt;/p&gt;
+&lt;p&gt;至今 wiki 仍歡迎大俠加入共筆&lt;br&gt;我們有完整的教學資源，有任何不懂的也可以隨時到Discord群組發問討論、聊天；&lt;/p&gt;
+&lt;p&gt;不求功利，不忘初心，&lt;br&gt;我們絕對需要你的那份熱忱，歡迎大俠加入共筆。&lt;/p&gt;
+</content>
+        <category term="活俠傳" />
+        <category term="Legend of Mortal" />
+        <category term="wiki" />
+        <updated>2026-07-17T07:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2025/08/29/diary-about-lom/</id>
+        <title>關於活俠傳wiki至今與現狀</title>
+        <link rel="alternate" href="https://smilin.net/2025/08/29/diary-about-lom/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/01.jpg&#34; alt=&#34;封面&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安安，我微笑&lt;/p&gt;
+&lt;p&gt;活俠傳近期大型更新，混世魔王重出江湖，醜俠們終得解藥。&lt;/p&gt;
+&lt;p&gt;雖然我自己六日才有時間玩，趁著這個時間，想跟更多人介紹這遊戲的 wiki 網站。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;緣起&#34;&gt;&lt;a href=&#34;#緣起&#34; class=&#34;headerlink&#34; title=&#34;緣起&#34;&gt;&lt;/a&gt;緣起&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/02.jpg&#34; alt=&#34;wiki首頁&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://forum.gamer.com.tw/C.php?bsn=73317&amp;snA=1453&#34;&gt;【討論】活俠傳有 wiki 嗎？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2024 年 07 月 01 日，基於一個小小的疑問，巴哈上的幾個人一同建立了 wiki 網站&lt;/p&gt;
+&lt;p&gt;期間陸續有許多人加入，裡面有許多人共編的心血，&lt;br&gt;網站內容有轉載也有原創，採用 CC BY-NC-SA-4.0 Licence，確保編輯者的權益。&lt;/p&gt;
+&lt;p&gt;截至 2025&amp;#x2F;08&amp;#x2F;29，共有 15 位夥伴在 LoM-wiki 上貢獻自己的經驗與見聞。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/03.jpg&#34; alt=&#34;貢獻者們&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;近期更新&#34;&gt;&lt;a href=&#34;#近期更新&#34; class=&#34;headerlink&#34; title=&#34;近期更新&#34;&gt;&lt;/a&gt;近期更新&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/04.jpg&#34; alt=&#34;推送紀錄&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加了各種鳥熊在粉專透露的設定(例如角色年齡)&lt;/li&gt;
+&lt;li&gt;避免未來文本混淆，對於默認留學的文本提前加註”崆峒派”(如有遺漏歡迎直接在留言板回報)&lt;/li&gt;
+&lt;li&gt;添加了 90%的英文文本頁面，目前大部份可正常瀏覽&lt;/li&gt;
+&lt;li&gt;添加丹藥效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;關於開銷&#34;&gt;&lt;a href=&#34;#關於開銷&#34; class=&#34;headerlink&#34; title=&#34;關於開銷&#34;&gt;&lt;/a&gt;關於開銷&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/05.jpg&#34; alt=&#34;開銷紀錄&#34;&gt;&lt;/p&gt;
+&lt;p&gt;wiki 的設計初衷，圍繞著長時間免費部屬為核心設計必要的技術棧，&lt;br&gt;儘管如此，維持 wiki 每個月的成本開銷大約是 25 美元。&lt;/p&gt;
+&lt;p&gt;原因是花費在留言板的資料庫成本上，前後花了 350 美元左右，&lt;br&gt;搜尋引擎原本也是要錢的，但因為我們自己搞爬蟲製作深度 searchMap，節省了不少開銷。&lt;/p&gt;
+&lt;p&gt;說這些並不是要賣慘或怎樣的，&lt;br&gt;只是想趁這個機會，好好敘述 LoM-wiki 的狀況給大家知道，&lt;br&gt;不管是查資料還是共筆，LoM-wiki 免費開放給需要他的大俠，&lt;br&gt;抱持著這份初衷，未來也是如此。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;如果你偶然到訪，歡迎坐坐，在這裡可以任意查詢你要的資料，&lt;br&gt;若發現內容存在出入，也請務必不吝於在留言板提供您的所知。&lt;/p&gt;
+&lt;p&gt;如果想加入我們，那更好了！&lt;br&gt;因為遊戲更新，wiki 勢必會有許多需要打點更新的地方，&lt;br&gt;我們的文檔需要翻新，英文文檔也缺人整理字典檔跟鳥熊討論…&lt;/p&gt;
+&lt;p&gt;編輯文檔可以直接在頁面上找到編輯按鈕，&lt;br&gt;我們有&lt;a href=&#34;https://smilin.net/LoM-wiki/develop/1-start.html&#34;&gt;完整的教學資源&lt;/a&gt;，有任何不懂的也可以隨時到&lt;a href=&#34;https://discord.gg/P4kePy6qmc&#34;&gt;Discord 群組&lt;/a&gt;發問討論、聊天；&lt;/p&gt;
+&lt;p&gt;不求功利，不忘初心，&lt;br&gt;我們絕對需要你的那份熱忱，歡迎大俠加入共筆。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki&#34;&gt;LoM-wiki 網址&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki/develop/1-start.html&#34;&gt;協作教學起點&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://discord.gg/P4kePy6qmc&#34;&gt;Discord&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="活俠傳" />
+        <category term="Legend of Mortal" />
+        <category term="wiki" />
+        <updated>2025-08-29T07:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2025/05/05/hexoInspirationPage/</id>
+        <title>網站新增靈感頁面心得</title>
+        <link rel="alternate" href="https://smilin.net/2025/05/05/hexoInspirationPage/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/title.png&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;寫網誌其實是一件很麻煩的事情&lt;br&gt;如果希望網站的文章保持相同的分類，就會更加麻煩&lt;/p&gt;
+&lt;p&gt;有時想寫點日記，或是分享生活上遇到的瑣事&lt;br&gt;「只打一句話會不會太短了？」「感覺這不適合分享在網站上欸..」&lt;br&gt;加上寫網誌本身並不是不需要消耗時間，一來一往也就不了了之&lt;/p&gt;
+&lt;p&gt;「如果有個頁面能專門放一些瑣碎的事情就好了」&lt;/p&gt;
+&lt;p&gt;忽然想到這點的我，幫網誌加了個『靈感』頁面———&lt;/p&gt;
+&lt;br&gt;
+
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;目前實現&#34;&gt;&lt;a href=&#34;#目前實現&#34; class=&#34;headerlink&#34; title=&#34;目前實現&#34;&gt;&lt;/a&gt;目前實現&lt;/h1&gt;&lt;p&gt;他可以實現的效果目前有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 方便記錄，取代網誌這類相對嚴謹的形式&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 根據日期在首頁順序刷出&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 從首頁點擊跳轉靈感頁面(未來可能會換成其他目標)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未來希望&amp;#x2F;可能會有的功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 添加日期樓層電梯，根據輸入日期尋找最接近的靈感&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 整合本地管理套件，自動創建文檔&amp;amp;building 靈感頁面&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 狀態根據靈感隨機刷新&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 給予靈感加權，影響各式配套功能的顯示機率&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 隨機賦予首頁靈感不同 style&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;etc…&lt;/p&gt;
+&lt;h1 id=&#34;展示&#34;&gt;&lt;a href=&#34;#展示&#34; class=&#34;headerlink&#34; title=&#34;展示&#34;&gt;&lt;/a&gt;展示&lt;/h1&gt;&lt;p&gt;在靈感頁面的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/01.jpg&#34; alt=&#34;01&#34;&gt;&lt;br&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/02.jpg&#34; alt=&#34;02&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;在首頁的效果&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/03.jpg&#34; alt=&#34;03&#34;&gt;&lt;br&gt;&lt;img src=&#34;/img/post/hexoInspirationPage/04.jpg&#34; alt=&#34;04&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;思路過程&#34;&gt;&lt;a href=&#34;#思路過程&#34; class=&#34;headerlink&#34; title=&#34;思路過程&#34;&gt;&lt;/a&gt;思路過程&lt;/h1&gt;&lt;h2 id=&#34;Markdown-檔&#34;&gt;&lt;a href=&#34;#Markdown-檔&#34; class=&#34;headerlink&#34; title=&#34;Markdown 檔&#34;&gt;&lt;/a&gt;Markdown 檔&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;source/_inspirations/&lt;/code&gt; 資料夾&lt;br&gt;創建 &lt;code&gt;source/inspiration/&lt;/code&gt; 資料夾&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_inspirations&lt;/code&gt; - 靈感檔案放置&lt;/p&gt;
+&lt;p&gt;文檔範例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+date: 2025-05-05
+layout: inspiration
+---
+
+靈感內容
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;inspiration&lt;/code&gt; - 靈感頁面(透過 &lt;code&gt;generate_inspirations.js&lt;/code&gt; 生成)&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;產生頁面-JS&#34;&gt;&lt;a href=&#34;#產生頁面-JS&#34; class=&#34;headerlink&#34; title=&#34;產生頁面 JS&#34;&gt;&lt;/a&gt;產生頁面 JS&lt;/h2&gt;&lt;p&gt;創建 &lt;code&gt;scripts/generate_inspirations.js&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const fs = require(&amp;quot;fs&amp;quot;);
+const path = require(&amp;quot;path&amp;quot;);
+const moment = require(&amp;quot;moment&amp;quot;);
+
+hexo.extend.generator.register(&amp;quot;generate_inspirations&amp;quot;, function (locals) &amp;#123;
+    const sourceDir = path.join(hexo.source_dir, &amp;quot;_inspirations&amp;quot;);
+    const outputFile = path.join(hexo.source_dir, &amp;quot;inspiration/index.md&amp;quot;);
+
+    const files = fs
+        .readdirSync(sourceDir)
+        .filter((file) =&amp;gt; file.endsWith(&amp;quot;.md&amp;quot;));
+
+    let inspirations = [];
+
+    files.forEach((file) =&amp;gt; &amp;#123;
+        const content = fs.readFileSync(path.join(sourceDir, file), &amp;quot;utf8&amp;quot;);
+        const match = content.match(/---\s*([\s\S]*?)---\s*([\s\S]*)/);
+
+        if (match) &amp;#123;
+            const metaBlock = match[1];
+            const body = match[2].trim();
+            const dateMatch = metaBlock.match(/date:\s*(\d&amp;#123;4&amp;#125;-\d&amp;#123;2&amp;#125;-\d&amp;#123;2&amp;#125;)/);
+
+            if (dateMatch) &amp;#123;
+                inspirations.push(&amp;#123;
+                    date: dateMatch[1],
+                    content: body,
+                &amp;#125;);
+            &amp;#125;
+        &amp;#125;
+    &amp;#125;);
+
+    // 依照日期排序（新到舊）
+    inspirations.sort((a, b) =&amp;gt; new Date(b.date) - new Date(a.date));
+
+    const indexContent =
+        `---\ntitle: 靈感\nlayout: page\n---\n\n` +
+        &amp;#39;&amp;lt;div class=&amp;quot;inspiration-list&amp;quot;&amp;gt;\n&amp;#39; +
+        inspirations
+            .map(
+                (item) =&amp;gt;
+                    `&amp;lt;div class=&amp;quot;inspiration-card&amp;quot;&amp;gt;
+                &amp;lt;div class=&amp;quot;inspiration-card-inner&amp;quot;&amp;gt;
+      &amp;lt;div class=&amp;quot;inspiration-date&amp;quot;&amp;gt;$&amp;#123;item.date&amp;#125;&amp;lt;/div&amp;gt;
+      &amp;lt;div class=&amp;quot;inspiration-content&amp;quot;&amp;gt;$&amp;#123;item.content.replace(
+                /\n/g,
+                &amp;quot;&amp;lt;br&amp;gt;&amp;quot;
+            )&amp;#125;&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;`
+            )
+            .join(&amp;quot;\n&amp;quot;) +
+        &amp;quot;\n&amp;lt;/div&amp;gt;&amp;quot;;
+
+    fs.writeFileSync(outputFile, indexContent);
+
+    return []; // 這是 generator 的需求（不回傳任何 page）
+&amp;#125;);
+
+hexo.extend.filter.register(&amp;quot;inspiration_date_filter&amp;quot;, function (text) &amp;#123;
+    return moment(text).format(&amp;quot;YYYY-MM-DD&amp;quot;);
+&amp;#125;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;添加-CSS&#34;&gt;&lt;a href=&#34;#添加-CSS&#34; class=&#34;headerlink&#34; title=&#34;添加 CSS&#34;&gt;&lt;/a&gt;添加 CSS&lt;/h2&gt;&lt;p&gt;這部份僅供參考，實際 style 根據個人 theme 而定&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.inspiration-list &amp;#123;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 1em 0;
+&amp;#125;
+
+.inspiration-card &amp;#123;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: rgba(255,255,255,0.75);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, background-color 0.5s ease;
+&amp;#125;
+
+.inspiration-card:hover &amp;#123;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+&amp;#125;
+
+.inspiration-title-wrap&amp;#123;
+  display: flex;
+  justify-content space-between;
+  color: #7a7a7a;
+&amp;#125;
+
+.inspiration-date &amp;#123;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+&amp;#125;
+
+.inspiration-content &amp;#123;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #8186e9;
+&amp;#125;
+
+.night .inspiration-card &amp;#123;
+  background-color: rgba(40,44,52,0.5);
+  border-color: #333;
+  color: #ddd;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+&amp;#125;
+
+.night .inspiration-card:hover &amp;#123;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+&amp;#125;
+
+.night .inspiration-date &amp;#123;
+  color: #aaa;
+&amp;#125;
+
+.night .inspiration-content &amp;#123;
+  color: #ddd;
+&amp;#125;
+
+@keyframes fadeUpSmooth &amp;#123;
+  from &amp;#123;
+    opacity: 0;
+    transform: translateY(60px);
+  &amp;#125;
+  to &amp;#123;
+    opacity: 1;
+    transform: translateY(0);
+  &amp;#125;
+&amp;#125;
+
+.inspiration-card-inner &amp;#123;
+  animation: fadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;以上，就是這麼一個小功能&lt;/p&gt;
+&lt;p&gt;很長一段時間，寧願在論壇分享自己的事情&lt;br&gt;網誌卻幾個月不去動他，只因為分享日常瑣事並非我建立這個網站的初衷&lt;/p&gt;
+&lt;p&gt;然而，網誌應該是可以更加自由的&lt;br&gt;我希望他可以接納我的生活&lt;/p&gt;
+&lt;p&gt;希望這個功能在未來可以活用。&lt;/p&gt;
+</content>
+        <category term="日記" />
+        <category term="hexo" />
+        <category term="icarus" />
+        <updated>2025-05-05T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2025/02/14/getampedUpdateHistory/</id>
+        <title>【百變恰吉】幫GA寫了一個更新情報爬蟲</title>
+        <link rel="alternate" href="https://smilin.net/2025/02/14/getampedUpdateHistory/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/logo_ga.png&#34; alt=&#34;logo_ga&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://getamped.cyberstep.com.tw/&#34;&gt;遊戲官網&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2004 年，百變恰吉由當時的遊戲橘子營運&lt;br&gt;做為當時鮮少，放到現今也稀有的八方位線上多人格鬥遊戲，百變恰吉在當年捲起了一陣不小的風潮&lt;br&gt;儘管後來人氣逐漸走入下坡，遊戲並沒有消失，台服由原廠 CyberStep 接手，在韓&amp;#x2F;陸服更是有著不少的玩家基數&lt;/p&gt;
+&lt;p&gt;算算時間，GA 走過的歷史，不算橘子時期有 11 年了&lt;br&gt;全部加起來的話超過 21 年，C 社經營的百變恰吉不知不覺超過了前代的時間&lt;/p&gt;
+&lt;p&gt;因為太過漫長，許多圖片跟文字已經走入了回憶&lt;br&gt;官網的更新資訊，隨著時間流逝，在無人注意的角落也逐漸消弭&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/01.jpg&#34; alt=&#34;從資料庫被刪除的圖片&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 在我以前搬運更新紀錄的時候就有發現&lt;br&gt;官網比較舊的圖片默默從資料庫被刪除&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/02.jpg&#34; alt=&#34;更新日期有很大的斷層&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 有些甚至整個文章已經找不到了&lt;/p&gt;
+&lt;p&gt;這遊戲在網路上的資料很少&lt;br&gt;由於韓服的玩家不少，如果看得懂韓文的話，其實都還是有文檔可以爬&lt;br&gt;中文圈就比較慘了，比較新的裝備基本上不會有人介紹&lt;br&gt;台陸兩服的譯名又不同，從裝備乃至術語都有差異，情報流通挺困難的&lt;/p&gt;
+&lt;p&gt;官網的更新內容因此變得很重要，關於新裝備的技能組與隱藏效果，大多都只能依賴更新資訊&lt;/p&gt;
+&lt;p&gt;我希望這遊戲能變得更好，所以也希望能從力所能及的地方努力。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/03.jpg&#34; alt=&#34;入口網站&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 這是目前寫的網站雛形，基本依賴官網的 API 獲得更新列表&lt;br&gt;搭配爬蟲代碼將未收錄的更新網站備份&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/04.jpg&#34; alt=&#34;備份後的更新資料&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 目前的效果&lt;/p&gt;
+&lt;p&gt;如果我想找某個裝備的技能表，但早就忘記是哪一篇更新情報了&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/05.jpg&#34; alt=&#34;搜尋引擎&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 喔～原來不諧和元素是 2022 年 9 月出的&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/getampedUpdateHistory/06.jpg&#34; alt=&#34;技能表&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;↑ 可以很清楚的看到每個招式跟 tips&lt;/p&gt;
+&lt;h2 id=&#34;目前實現：&#34;&gt;&lt;a href=&#34;#目前實現：&#34; class=&#34;headerlink&#34; title=&#34;目前實現：&#34;&gt;&lt;/a&gt;目前實現：&lt;/h2&gt;&lt;p&gt;根據指定 ID 爬取子元素資料&lt;br&gt;根據指定 class 爬取子元素資料&lt;br&gt;根據官方更新歷程 API 遍歷更新頁面 url&lt;br&gt;紀錄已收錄 url，避免重複爬取&lt;br&gt;盡可能還原官網 style&lt;br&gt;爬取圖片另存至專案避免來源過期&lt;br&gt;建立簡易入口網站，方便閱覽&lt;br&gt;建立搜尋引擎，根據頁面文本查詢內容(空格可多條件)&lt;br&gt;透過 express.js 建置動態網站&lt;br&gt;土法煉鋼產生靜態網站&lt;br&gt;前綴域名支持&lt;/p&gt;
+&lt;p&gt;入口網站可以根據 UX 做調整，之後應該就會放著不動了&lt;br&gt;代碼是開源的，所以誰都可以拿去用&lt;br&gt;只要有一點基礎知識，照著說明文件下幾行命令就可以執行了&lt;br&gt;執行完以後可以隨時從本機查閱裝備資料&lt;/p&gt;
+&lt;p&gt;公開服務的部分目前並沒有計畫&lt;br&gt;一是沒找到適合長期運行的免費資源&lt;br&gt;二是目前另外還有在維護&lt;a href=&#34;https://smilin.net/LoM-wiki/&#34;&gt;活俠傳的 wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;也許等哪天就會開放了吧，到時候我想會再發一篇文&lt;br&gt;當然也歡迎有熱情的小夥伴自行架設&lt;br&gt;因為可以編譯成靜態網站，架設的部分很容易&lt;br&gt;使用上有遇到問題也可以問我，那就這樣。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/Getamped-update-history&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="getamped" />
+        <category term="遊戲" />
+        <updated>2025-02-14T11:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2024/08/12/algoliaOnVitepress/</id>
+        <title>關於 algolia 在 vitepress 集成，踩雷過程</title>
+        <link rel="alternate" href="https://smilin.net/2024/08/12/algoliaOnVitepress/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;因為想增強網站的搜尋力度，希望連文章的內文都可以搜索到&lt;br&gt;剛好 &lt;code&gt;vitepress&lt;/code&gt; 是支援 &lt;code&gt;algolia&lt;/code&gt; 的，試著配置&lt;br&gt;不料遇到的問題比想像的多，網路上的教學像是缺了幾塊拼圖似的&lt;br&gt;索性趁著剛完成腦袋還熱呼的現在，記錄一下遇到的問題。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;官方文檔&#34;&gt;&lt;a href=&#34;#官方文檔&#34; class=&#34;headerlink&#34; title=&#34;官方文檔&#34;&gt;&lt;/a&gt;官方文檔&lt;/h2&gt;&lt;p&gt;首先我們看到 &lt;a href=&#34;https://vitepress.dev/zh/reference/default-theme-search#algolia-search&#34;&gt;vitepress 的文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;去 &lt;code&gt;Algolia&lt;/code&gt; 申請 &lt;code&gt;api&lt;/code&gt;，然後填入，完成&lt;br&gt;恩，看起來挺簡單的，再看看 &lt;a href=&#34;https://docsearch.algolia.com/apply&#34;&gt;Algolia 怎麼說&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;註冊完後，我們審核完畢就會寄信到你的信箱，裡面可以拿到 &lt;code&gt;apikey&lt;/code&gt;&lt;br&gt;恩…這邊也很方便阿，註冊完等大概五分鐘就收到信了&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;Markdown&#34;&gt;Hi there 👋
+
+Thanks for your interest and trust in Algolia DocSearch.
+ We&amp;#39;ve received your request for https://smilin.net/LoM-wiki/, and will get back to you soon.
+
+DocSearch is built in two parts:
+- A crawler which we run in our own infrastructure every week (configurable). It follows every link in your website and extracts content from every page it traverses. It then pushes this content to an Algolia index. (Read more: https://www.algolia.com/doc/tools/crawler/getting-started/overview/ )
+- A JavaScript snippet to be inserted in your website that will bind this Algolia index to your search input and display its results in a modal UI. (Read more: https://github.com/algolia/docsearch )
+
+If you want to find more details on how DocSearch works, take a look at the docs: https://docsearch.algolia.com/
+
+Meanwhile, let us know if you have any other questions.
+
+Have a great day,
+The DocSearch team.
+
+DocSearch is powered by Algolia. See more at https://www.algolia.com/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;大意是說 &lt;code&gt;algolia&lt;/code&gt; 分成兩個部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;他們會配置爬蟲，每周瀏覽網站&lt;/li&gt;
+&lt;li&gt;為了使用 &lt;code&gt;algolia&lt;/code&gt;，必須在網站配置他們的 &lt;code&gt;js&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第一部份 &lt;code&gt;algolia&lt;/code&gt; 會協助，第二部份也有 &lt;code&gt;vitepress&lt;/code&gt; 集成，一切看起來都很美好&lt;/p&gt;
+&lt;p&gt;但是去 &lt;code&gt;algolia&lt;/code&gt; 後台要拿 &lt;code&gt;api&lt;/code&gt; 的時候，問題來了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;問題？&#34;&gt;&lt;a href=&#34;#問題？&#34; class=&#34;headerlink&#34; title=&#34;問題？&#34;&gt;&lt;/a&gt;問題？&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/04.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;(註：由於筆者已經踩完雷了，圖中是已解決的樣子)&lt;/p&gt;
+&lt;p&gt;只要進入後台，他就會彈出 &lt;code&gt;Get Start&lt;/code&gt;&lt;br&gt;大意是要求我們自己寫爬蟲讀取自己網站的資料，然後透過他們的工具上傳給 &lt;code&gt;algolia&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不對呀？爬蟲的部份&lt;code&gt;algolia&lt;/code&gt;不是幫我們做好了嗎？&lt;br&gt;上網找了下，其他人似乎沒有遇到這個狀況，甚至可以在後台要求 &lt;code&gt;algolia&lt;/code&gt; 主動重爬&lt;/p&gt;
+&lt;p&gt;恩…回頭去看信中的第一點，點進他提供的網址，看看爬蟲相關的問題&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/05.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;痾，不知道為什麼，我的帳戶不能使用他們家的爬蟲服務&lt;br&gt;難怪進後台就要求我主動提供資料，那沒辦法，只好自己來&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;隔天-8-13-更新：&#34;&gt;&lt;a href=&#34;#隔天-8-13-更新：&#34; class=&#34;headerlink&#34; title=&#34;隔天(8&amp;#x2F;13)更新：&#34;&gt;&lt;/a&gt;隔天(8&amp;#x2F;13)更新：&lt;/h3&gt;&lt;p&gt;今天收到審核通過的信件，可以使用他們家的爬蟲了，&lt;br&gt;應該是筆者當天查看時，還在審核網站是否符合他們的免費支援對象&lt;/p&gt;
+&lt;p&gt;往下就是自行串接爬蟲的部份了，如果還能利用他們家的爬蟲的話，以下的方案就不是必要的&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;github-action&#34;&gt;&lt;a href=&#34;#github-action&#34; class=&#34;headerlink&#34; title=&#34;github action&#34;&gt;&lt;/a&gt;github action&lt;/h2&gt;&lt;p&gt;由於筆者的網站放在 &lt;code&gt;github&lt;/code&gt; 上&lt;br&gt;想到要寫 for 網站的爬蟲後，第一時間想到的就是 &lt;code&gt;action&lt;/code&gt; 啦&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;yml&#34;&gt;name: Algolia DocSearch Scraper
+on:
+  push:
+    branches: [release-algolia]
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare Algolia DocSearch config
+        run: |
+          echo &amp;#39;$&amp;#123;&amp;#123; secrets.ALGOLIA_CONFIG &amp;#125;&amp;#125;&amp;#39; &amp;gt; config.json
+          cat config.json
+
+      - name: Run DocSearch Scraper
+        env:
+          APPLICATION_ID: $&amp;#123;&amp;#123; secrets.ALGOLIA_ID &amp;#125;&amp;#125;
+          API_KEY: $&amp;#123;&amp;#123; secrets.ALGOLIA_KEY &amp;#125;&amp;#125;
+        run: |
+          docker run \
+            -e APPLICATION_ID=$APPLICATION_ID \
+            -e API_KEY=$API_KEY \
+            -e CONFIG=&amp;quot;$(cat config.json | jq -c .)&amp;quot; \
+            algolia/docsearch-scraper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;透過 &lt;code&gt;action&lt;/code&gt; 執行 &lt;code&gt;algolia/docsearch-scraper&lt;/code&gt;&lt;br&gt;&lt;code&gt;id&lt;/code&gt;跟&lt;code&gt;key&lt;/code&gt;可以在前面的&lt;code&gt;algolia後台&lt;/code&gt;獲得&lt;br&gt;&lt;code&gt;ALGOLIA_CONFIG&lt;/code&gt; 則是爬蟲的相關 &lt;code&gt;config&lt;/code&gt;，設置方式可以&lt;a href=&#34;https://docsearch.algolia.com/docs/legacy/config-file/&#34;&gt;參考這裡&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;全都必須放在 &lt;code&gt;Repository secrets&lt;/code&gt;，根據使用的環境不同，載入環境變量的方式略有差異&lt;/p&gt;
+&lt;p&gt;以上做完，&lt;code&gt;action&lt;/code&gt;成功執行後，&lt;code&gt;algolia&lt;/code&gt;上就會有資料囉&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;後續步驟&#34;&gt;&lt;a href=&#34;#後續步驟&#34; class=&#34;headerlink&#34; title=&#34;後續步驟&#34;&gt;&lt;/a&gt;後續步驟&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/06.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;前面爬完資料，第一步會自動打勾&lt;br&gt;由於我們的前端都由 &lt;code&gt;vitepress&lt;/code&gt; 自動配置好了，剩下三步驟並不需要設定，一直送出讓他打勾就好&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/07.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;終於來到後台，依序點選 Search -&amp;gt; CONFIGURE -&amp;gt; Index&lt;br&gt;找到 &lt;code&gt;Create Index&lt;/code&gt; ，輸入 &lt;code&gt;IndexName&lt;/code&gt;&lt;br&gt;這裡設定的，就是最前面&lt;code&gt;vitepress&lt;/code&gt;要求輸入的第三個參數&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/algoliaOnVitepress/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;都設定完畢，網頁的搜尋功能連內文都可以搜到，更加強大囉～&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;閒談&#34;&gt;&lt;a href=&#34;#閒談&#34; class=&#34;headerlink&#34; title=&#34;閒談&#34;&gt;&lt;/a&gt;閒談&lt;/h2&gt;&lt;p&gt;文中提到使用 &lt;code&gt;vitepress&lt;/code&gt; 的網站是 &lt;a href=&#34;https://smilin.net/LoM-wiki/&#34;&gt;活俠傳 wiki&lt;/a&gt;，&lt;br&gt;也是最近筆者在休息時間把玩的小專案&lt;/p&gt;
+&lt;p&gt;網站在 &lt;code&gt;2024-07-01&lt;/code&gt; 建立，&lt;br&gt;當時是打算在這寫點文章的，&lt;br&gt;恰巧近期工作也忙，&lt;br&gt;沒甚麼時間更新這邊&lt;/p&gt;
+&lt;p&gt;其實連這篇文都更新的很吃力，&lt;br&gt;不過想了想，&lt;br&gt;過幾天恐怕連這篇文怎麼動筆都不知道，&lt;br&gt;還是寫吧 xD&lt;/p&gt;
+&lt;p&gt;建立這個網站，&lt;br&gt;一方面是我自己對&lt;code&gt;vue + vite&lt;/code&gt;體系全家桶不太熟悉，&lt;br&gt;趁機學習&lt;/p&gt;
+&lt;p&gt;另一方面是活俠傳真的很好玩，&lt;br&gt;這邊推薦大家都可以去玩。&lt;/p&gt;
+&lt;p&gt;關於&lt;code&gt;wiki&lt;/code&gt;的建立心路歷程甚麼的，&lt;br&gt;之後會再另外寫一篇的&lt;/p&gt;
+&lt;p&gt;很感謝同樣喜歡活俠傳的朋友，&lt;br&gt;願意一同維護這個 &lt;code&gt;wiki&lt;/code&gt;，&lt;br&gt;也歡迎志同道合的新夥伴加入。&lt;/p&gt;
+&lt;br&gt;
+</content>
+        <category term="node.js" />
+        <category term="vitepress" />
+        <category term="algolia" />
+        <category term="活俠傳" />
+        <updated>2024-08-12T09:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2024/05/03/useTheme1/</id>
+        <title>前幾天有人詢問我用的啥主題</title>
+        <link rel="alternate" href="https://smilin.net/2024/05/03/useTheme1/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/ai/letter_circle.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;前幾天收到信，信中詢問使用的主題&lt;br&gt;想了下的確從沒寫過，索性紀錄一下。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Hexo&#34;&gt;&lt;a href=&#34;#Hexo&#34; class=&#34;headerlink&#34; title=&#34;Hexo&#34;&gt;&lt;/a&gt;Hexo&lt;/h1&gt;&lt;img width=&#34;128&#34; src=&#34;/img/post/useTheme1/hexo.png&#34;&gt;
+
+&lt;p&gt;首先本站使用模板為 &lt;a href=&#34;https://hexo.io/zh-tw/&#34;&gt;Hexo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;該模板提供靜態網頁生成，&lt;br&gt;搭配 Github Page，或是其他免費架設平台，&lt;br&gt;可以輕易實現無開銷環境的長期 blog 支持&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hexo&lt;/code&gt; 從 2013 年開發至今，&lt;br&gt;筆者發文的 2 周前推出 v7.2.0 版本的 &lt;code&gt;Hexo&lt;/code&gt;，&lt;br&gt;有著優秀的基底與長期穩定的維護。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Icarus&#34;&gt;&lt;a href=&#34;#Icarus&#34; class=&#34;headerlink&#34; title=&#34;Icarus&#34;&gt;&lt;/a&gt;Icarus&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/Icarus.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;除了默認的設置以外，&lt;br&gt;&lt;code&gt;Hexo&lt;/code&gt; 提供自行開發主題(THEME)的接口&lt;/p&gt;
+&lt;p&gt;本站使用主題為 &lt;a href=&#34;https://github.com/ppoffice/hexo-theme-icarus&#34;&gt;Icarus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;該主題默認提供 default(白色) 跟 cyberpunk(黃色) 主題可供選用&lt;/p&gt;
+&lt;p&gt;由於 Icarus 後來經過多次更迭，&lt;br&gt;加上筆者自己對 blog 有諸多修改，&lt;br&gt;如今已與原本的 Icarus 有很多差異，&lt;br&gt;不過仍看得出排版等元素皆承襲自 Icarus。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;星空&#34;&gt;&lt;a href=&#34;#星空&#34; class=&#34;headerlink&#34; title=&#34;星空&#34;&gt;&lt;/a&gt;星空&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;黑暗主題的星空背景，參考&lt;a href=&#34;https://github.com/imaegoo/hexo-theme-icarus&#34;&gt;imaegoo&lt;/a&gt;大大的開源代碼&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;imaegoo&lt;/code&gt; 的開源代碼同樣是從 &lt;code&gt;Icarus&lt;/code&gt; 改進而來&lt;br&gt;如果喜歡星空背景，該開源代碼可以直接套來用&lt;/p&gt;
+&lt;p&gt;不過由於筆者在此之前，已經對 blog 做過諸多修改&lt;br&gt;最終是自行研究該代碼後，另外自己寫 css，&lt;br&gt;想辦法移植過來的。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;PJAX&#34;&gt;&lt;a href=&#34;#PJAX&#34; class=&#34;headerlink&#34; title=&#34;PJAX&#34;&gt;&lt;/a&gt;PJAX&lt;/h1&gt;&lt;p&gt;本站的局部加載使用 PJAX，&lt;br&gt;同樣是另外加寫的&lt;/p&gt;
+&lt;p&gt;原本網站是使用 &lt;a href=&#34;https://github.com/fluid-dev/hexo-theme-fluid&#34;&gt;Fluid&lt;/a&gt; 這套 &lt;code&gt;Hexo&lt;/code&gt; 主題&lt;/p&gt;
+&lt;p&gt;但因為 &lt;code&gt;Fluid&lt;/code&gt; 並不支援局部加載，&lt;br&gt;自己想辦法實作後發現基底的確不適合，&lt;br&gt;無奈之下只好棄用。&lt;/p&gt;
+&lt;p&gt;當時為了魔改 &lt;code&gt;Fluid&lt;/code&gt; 還寫了篇&lt;a href=&#34;https://smilin.net/2021/11/16/fluidThemeShare/&#34;&gt;紀錄&lt;/a&gt;，&lt;br&gt;有興趣可以看看。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Live-2D&#34;&gt;&lt;a href=&#34;#Live-2D&#34; class=&#34;headerlink&#34; title=&#34;Live 2D&#34;&gt;&lt;/a&gt;Live 2D&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;本站的 Live 2D 小人，&lt;br&gt;使用 &lt;a href=&#34;https://github.com/fghrsh/live2d_demo&#34;&gt;fghrsh&lt;/a&gt; 大大撰寫的開源工具&lt;/p&gt;
+&lt;p&gt;該專案主要負責 live 2d 的加載，&lt;br&gt;與針對網頁元素互動的邏輯撰寫&lt;/p&gt;
+&lt;p&gt;得益於開源專案的優勢，該工具有著許多變種，&lt;br&gt;同時支持多項設定自定義&lt;/p&gt;
+&lt;p&gt;像本站是使用了原本的前端工具 + 後端 API 本地靜態化&lt;br&gt;以此來避免 憑證過期 &amp;amp; 後端額外開銷 等等問題。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;Gittalk-熱門評論-最新評論&#34;&gt;&lt;a href=&#34;#Gittalk-熱門評論-最新評論&#34; class=&#34;headerlink&#34; title=&#34;Gittalk &amp;amp; 熱門評論 &amp;amp; 最新評論&#34;&gt;&lt;/a&gt;Gittalk &amp;amp; 熱門評論 &amp;amp; 最新評論&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/04.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Gittalk 一直都是本站的評論系統&lt;br&gt;他主要依賴於 Github Issue 與其 API&lt;br&gt;讓原本靜態的網站，彷彿支援動態的評論系統一般&lt;/p&gt;
+&lt;p&gt;如果 blog 原本是使用 Github Page 架設，&lt;br&gt;懶一點的話可以架在同一個 Repository，&lt;br&gt;如此便不需花費額外的維護成本。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;除了 Gittalk 原本的功能，&lt;br&gt;熱門&amp;amp;最新評論的 API 串接則是參考&lt;a href=&#34;https://removeif.github.io/theme/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%88%86%E4%BA%AB.html&#34;&gt;辣椒的醬&lt;/a&gt;大大&lt;/p&gt;
+&lt;p&gt;由於過於方便，並沒有多加修改，&lt;/p&gt;
+&lt;p&gt;就是那個評論數統計，&lt;br&gt;當時看代碼會偷偷灌水，所以改回了原始數值。&lt;/p&gt;
+&lt;p&gt;另外由於辣椒的醬大大的 blog 已經多年未有更新，&lt;br&gt;考慮到 &lt;code&gt;hexo&lt;/code&gt;&amp;amp;&lt;code&gt;Icarus&lt;/code&gt; 在之後有多次版本更迭&lt;br&gt;以剛起步來說，會更加推薦直接使用官方模板來做修改。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;明亮主題的粒子特效&#34;&gt;&lt;a href=&#34;#明亮主題的粒子特效&#34; class=&#34;headerlink&#34; title=&#34;明亮主題的粒子特效&#34;&gt;&lt;/a&gt;明亮主題的粒子特效&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這部份使用 &lt;a href=&#34;https://github.com/hustcc/canvas-nest.js/&#34;&gt;canvas-nest&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用非常簡單，在網頁引入 js 即可&lt;br&gt;網路教學不少&lt;/p&gt;
+&lt;p&gt;由於跟夜晚主題適配性差，&lt;br&gt;根據個人需求不同，要稍微調整 css。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;音樂箱&#34;&gt;&lt;a href=&#34;#音樂箱&#34; class=&#34;headerlink&#34; title=&#34;音樂箱&#34;&gt;&lt;/a&gt;音樂箱&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/05.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;音樂箱功能使用 &lt;a href=&#34;https://github.com/DIYgod/APlayer&#34;&gt;Aplayer&lt;/a&gt; 播放器&lt;/p&gt;
+&lt;p&gt;非常低調地摺疊收納在網站角落，&lt;br&gt;按照預想，就算是多次瀏覽本站的旅客也不一定能發現&lt;/p&gt;
+&lt;p&gt;畢竟音樂箱只需要服務需要聽音樂的人即可，&lt;br&gt;大多人瀏覽網站時也有自己在背景播放的歌曲，&lt;br&gt;這時候若太過強調網站自帶的音樂，顯得不識趣了些。&lt;/p&gt;
+&lt;p&gt;值得一提的是，&lt;br&gt;本站的音樂箱，在手機可以當作歌曲列表自動播放。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;RSS&#34;&gt;&lt;a href=&#34;#RSS&#34; class=&#34;headerlink&#34; title=&#34;RSS&#34;&gt;&lt;/a&gt;RSS&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/06.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;本站 RSS 提供三種格式&lt;br&gt;分別是預設的 RSS、ATOM 與 Json Feed&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/useTheme1/07.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用 RSS 訂閱，便可即時知道網站更新了文章&lt;/p&gt;
+&lt;p&gt;對筆者來說，就像是提醒自己一直都沒在更新文章&lt;/p&gt;
+&lt;p&gt;看到一排去年的文章，&lt;br&gt;彷彿說著「再不更新就要死了！」這樣。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;寫在後面&#34;&gt;&lt;a href=&#34;#寫在後面&#34; class=&#34;headerlink&#34; title=&#34;寫在後面&#34;&gt;&lt;/a&gt;寫在後面&lt;/h1&gt;&lt;p&gt;列一列大概是這些，如果有甚麼缺漏，&lt;br&gt;或是未來更新沒寫在這，想問的&lt;/p&gt;
+&lt;p&gt;歡迎提出來，有時間便會回覆。&lt;/p&gt;
+</content>
+        <category term="日記" />
+        <category term="hexo" />
+        <updated>2024-05-03T07:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2024/04/30/githubAction1/</id>
+        <title>Github Action 學習紀錄</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/30/githubAction1/"/>
+        <content type="html">&lt;h1 id=&#34;Auto-Pixai&#34;&gt;&lt;a href=&#34;#Auto-Pixai&#34; class=&#34;headerlink&#34; title=&#34;Auto-Pixai&#34;&gt;&lt;/a&gt;Auto-Pixai&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Mr-Smilin/Auto-Pixai/main/public/pic/logo.png&#34; alt=&#34;auto-pixai&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之前撰寫的 &lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;auto-pixai&lt;/a&gt;&lt;br&gt;經過多次調整，基本修復了大部分的 bug&lt;/p&gt;
+&lt;p&gt;該專案透過爬蟲，&lt;br&gt;提供自動在 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 簽到的功能&lt;/p&gt;
+&lt;p&gt;考量到便利性，&lt;br&gt;將專案打包成 docker image，&lt;br&gt;實現無狀態的部屬環境，&lt;br&gt;最後透過 github tag 控制版本歷程。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;整合部屬需求&#34;&gt;&lt;a href=&#34;#整合部屬需求&#34; class=&#34;headerlink&#34; title=&#34;整合部屬需求&#34;&gt;&lt;/a&gt;整合部屬需求&lt;/h2&gt;&lt;p&gt;雖然 User 用起來是方便了，&lt;br&gt;但每次開發部版都需要進行複雜的手續..&lt;/p&gt;
+&lt;p&gt;CI&amp;#x2F;CD …好..好想要 CI&amp;#x2F;CD 阿..&lt;br&gt;就在這麼想著的時候，想起了..&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Github Action!&lt;/strong&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;Github-Action&#34;&gt;&lt;a href=&#34;#Github-Action&#34; class=&#34;headerlink&#34; title=&#34;Github Action&#34;&gt;&lt;/a&gt;Github Action&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/githubAction1/01.png&#34; alt=&#34;Github Action!&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Github Action 是 Github 提供的 CI&amp;#x2F;CD 方案&lt;/p&gt;
+&lt;p&gt;由 Github 提供整合環境，&lt;br&gt;在統一的無狀態環境下進行整合&lt;/p&gt;
+&lt;p&gt;最重要的是，它對於 public repository 完全免費!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.github.com/zh/actions/quickstart&#34;&gt;Github Action 官方簡中文檔&lt;/a&gt;&lt;br&gt;在學習 github action 的過程，&lt;br&gt;官方文檔幫助了我許多&lt;/p&gt;
+&lt;p&gt;因為有官方翻譯，在專有名詞的學習上也不容易被混淆。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;需求&#34;&gt;&lt;a href=&#34;#需求&#34; class=&#34;headerlink&#34; title=&#34;需求?&#34;&gt;&lt;/a&gt;需求?&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/githubAction1/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;做為 CI&amp;#x2F;CD (自動整合&amp;#x2F;自動部屬) 的角色，&lt;br&gt;我希望他可以在我推送 release 的時候，去做幾件事——&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根據 package.json 檢查版本&lt;/li&gt;
+&lt;li&gt;自動創建新版本代號&lt;/li&gt;
+&lt;li&gt;根據 Dockerfile 產出 Docker image&lt;/li&gt;
+&lt;li&gt;將 image 標上版號，推至 Docker Hub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;並且由於 Github Action 還提供緩存功能，&lt;br&gt;如果將 &lt;code&gt;npm install&lt;/code&gt; 拉到 Github Action，&lt;br&gt;搭配緩存可以有效縮短 Dockerfile 的產出時間與大小！&lt;/p&gt;
+&lt;p&gt;配上 Github Action 的一些格式後，我們還需要——&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指定 &lt;code&gt;node&lt;/code&gt; 版本&lt;/li&gt;
+&lt;li&gt;緩存儲存 &lt;code&gt;node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;緩存加載 &lt;code&gt;node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根據&lt;a href=&#34;https://docs.github.com/zh/actions/using-workflows/caching-dependencies-to-speed-up-workflows&#34;&gt;官方文檔&lt;/a&gt;所述，&lt;br&gt;7 天沒使用的 cache 會自動回收，&lt;br&gt;並且一個 repository 的所有 cache 加總不可超出 10GB  &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-node-$&amp;#123;&amp;#123; hashFiles(&#39;**/package-lock.json&#39;) &amp;#125;&amp;#125;
+          restore-keys: |
+            $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-node-
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根據 package-lock.json 的變動來決定是否新建緩存，&lt;br&gt;否則就取出原本的 node_modules，&lt;br&gt;以此加速 CD 流程。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;過程&#34;&gt;&lt;a href=&#34;#過程&#34; class=&#34;headerlink&#34; title=&#34;過程&#34;&gt;&lt;/a&gt;過程&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;/img/post/githubAction1/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;搭啷，經過整理後，&lt;br&gt;這是目前的 CI&amp;#x2F;CD 流程&lt;/p&gt;
+&lt;p&gt;由於沒有實作測試，&lt;br&gt;僅有 release 被推送時需要 CI&amp;#x2F;CD&lt;/p&gt;
+&lt;p&gt;執行首先檢查 tag ，&lt;br&gt;若 package 版號有變動則創建新版本&lt;/p&gt;
+&lt;p&gt;同時進行 cache 的載入，&lt;br&gt;若是找不到 cache 則重新 &lt;code&gt;npm install&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;兩邊都做完後，&lt;br&gt;進行 Dockerfile 的 building 與 pushing。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;結果&#34;&gt;&lt;a href=&#34;#結果&#34; class=&#34;headerlink&#34; title=&#34;結果&#34;&gt;&lt;/a&gt;結果&lt;/h2&gt;&lt;p&gt;大功告成！原本繁瑣的整合部屬流程&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Push New Version&lt;/li&gt;
+&lt;li&gt;Dockerfile build&lt;/li&gt;
+&lt;li&gt;Docker image tag&lt;/li&gt;
+&lt;li&gt;Docker push tag&lt;/li&gt;
+&lt;li&gt;Docker push latest&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上面列的事情 &lt;strong&gt;通通不用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;只要在 main 寫完代碼，&lt;br&gt;要推送版本的時候合併到 release，&lt;br&gt;最後再用自動產生的 tag 生成 Release 說明即可。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;怎麼說呢…好爽&lt;/p&gt;
+&lt;p&gt;不過所謂爬蟲簽到甚麼的，&lt;br&gt;說白了只是個小工具&lt;/p&gt;
+&lt;p&gt;藉著這次 project，&lt;br&gt;心血來潮地想把 repository 弄得有模有樣&lt;/p&gt;
+&lt;p&gt;結果就是，&lt;br&gt;花在打扮(?)外觀的時間遠遠超出了爬蟲本身的開發時間&lt;/p&gt;
+&lt;p&gt;感覺對 CICD 有了更深刻的了解；&lt;br&gt;美中不足的大概是爬蟲的測試並不好寫，&lt;br&gt;沒能在這次 action 中寫入自動測試，是比較可惜的。&lt;/p&gt;
+</content>
+        <category term="github" />
+        <category term="CI/CD" />
+        <updated>2024-04-30T07:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2024/04/23/shareButton1/</id>
+        <title>使用 AddToAny 分享箱，踩雷過程</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/23/shareButton1/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/01.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;網站之前有配置分享箱的系統，使用 &lt;a href=&#34;https://github.com/overtrue/share.js&#34;&gt;sharejs&lt;/a&gt; 依賴&lt;br&gt;該依賴只要套上預設即可，十分方便&lt;/p&gt;
+&lt;p&gt;不過 sharejs 最新的 release 已經是 2016 年的事了…&lt;/p&gt;
+&lt;p&gt;實際上有些按鈕已經過時，無法使用&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ppoffice.github.io/hexo-theme-icarus/Plugins/Share/icarus%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97-%E5%88%86%E4%BA%AB%E6%8C%89%E9%92%AE&#34;&gt;關於本主題的分享箱適配&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;icarus 本身是支援多種分享功能的&lt;br&gt;由於 sharejs 停止維護，官方建議採用別的分享功能&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h1 id=&#34;AddToAny&#34;&gt;&lt;a href=&#34;#AddToAny&#34; class=&#34;headerlink&#34; title=&#34;AddToAny&#34;&gt;&lt;/a&gt;AddToAny&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/addtoany_logo.svg&#34; alt=&#34;addtoany&#34;&gt;&lt;/p&gt;
+&lt;p&gt;看了一圈，決定改用 &lt;a href=&#34;https://www.addtoany.com/&#34;&gt;AddToAny&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其一是因為該插件支援的社群足夠多，有持續在維護&lt;/p&gt;
+&lt;p&gt;與 blog 代碼沒甚麼交集，自定義客製方便&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h1 id=&#34;踩雷過程&#34;&gt;&lt;a href=&#34;#踩雷過程&#34; class=&#34;headerlink&#34; title=&#34;踩雷過程&#34;&gt;&lt;/a&gt;踩雷過程&lt;/h1&gt;&lt;p&gt;簡單選一下想要的按鈕，產出代碼後，扔進 jsx 內&lt;/p&gt;
+&lt;p&gt;到此就搞定了(超快~)，build 看下輸出&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;hmmm…為什麼會是一片空白呢？&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;沒有-CSS&#34;&gt;&lt;a href=&#34;#沒有-CSS&#34; class=&#34;headerlink&#34; title=&#34;沒有 CSS ?&#34;&gt;&lt;/a&gt;沒有 CSS ?&lt;/h2&gt;&lt;p&gt;看了一下，似乎是 css 沒有載入&lt;/p&gt;
+&lt;p&gt;不過 css 這些內容應該會隨著 js 一併輸出才對&lt;/p&gt;
+&lt;p&gt;花了些時間尋找問題，之後發現&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/03.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;原來是被瀏覽器擋住了，會被瀏覽器攔截主要有幾個可能性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;混和內容(Mixed Content):&lt;br&gt;如果網站是透過 HTTPS 協定提供服務的，而嘗試載入的資源（如 page.js）使用的是 HTTP 鏈接，那麼這種「混合內容」可能會被現代瀏覽器封鎖。 確保所有外部載入的資源都使用 HTTPS 來避免這種問題。&lt;/li&gt;
+&lt;li&gt;安全策略(CSP):&lt;br&gt;瀏覽器可能會因為安全策略(Content Security Policy)而阻止某些腳本的載入。&lt;/li&gt;
+&lt;li&gt;跨域問題(CORS):&lt;br&gt;服務商有可能因為沒有提供適當的跨域策略(Cross-Origin Resource Sharing)，導致資源無法載入&lt;/li&gt;
+&lt;li&gt;廣告攔截器:&lt;br&gt;一些廣告攔截器或安全相關的瀏覽器擴充功能可能會阻止諸如 AddToAny 這樣的第三方服務。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;由於我們網站跟 AddToAny 都是 https，第一點可以排除&lt;br&gt;本站並沒有設置 CSP (目前沒有)&lt;br&gt;AddToAny 這類插件沒處理好 CORS 的機率是很低的&lt;/p&gt;
+&lt;p&gt;簡單排除後，比較有可能的是被廣告攔截器擋住了&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/04.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;喔喔喔！總算出來了！&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;廣告攔截器&#34;&gt;&lt;a href=&#34;#廣告攔截器&#34; class=&#34;headerlink&#34; title=&#34;廣告攔截器&#34;&gt;&lt;/a&gt;廣告攔截器&lt;/h2&gt;&lt;p&gt;試了分享功能正常，就是按鈕有點多&lt;br&gt;可能減少一些..之後客製 style…&lt;/p&gt;
+&lt;p&gt;恩..不過這樣好像沒有解決問題阿？&lt;/p&gt;
+&lt;p&gt;根據統計，全世界有至少&lt;strong&gt;四成&lt;/strong&gt;的人口，常駐廣告攔截器在上網&lt;/p&gt;
+&lt;p&gt;只是我看的到而已，如果其他人看不到的話就沒意義了 qq&lt;/p&gt;
+&lt;p&gt;不過攔截的問題還算好解決，只要讓他不會被攔截就好了！(廢話)&lt;/p&gt;
+&lt;p&gt;方法很多，最簡單的是將原本被攔截的檔案納入網域下&lt;br&gt;載入原本就是同域名下的資源，通常就能繞過限制了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script async src=&amp;quot;https://static.addtoany.com/menu/page.js&amp;quot; defer=&amp;#123;true&amp;#125;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根據產出的代碼來看，主要是這個檔案需要拉進來&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/05.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;整理格式，創建一個 addtoany.js 放進去&lt;br&gt;以 hexo 來說就是將 js 檔案放在 &lt;code&gt;themes/&amp;#123;theme_name&amp;#125;/source/js&lt;/code&gt; 底下&lt;/p&gt;
+&lt;p&gt;之後回到 addtoany.jsx 修改來源&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script async src=&amp;quot;/js/addtoany.js&amp;quot; defer=&amp;#123;true&amp;#125;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;RUN！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/02.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;失敗了！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/06.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;載入失敗的檔案反而變多了！&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;更多的廣告&#34;&gt;&lt;a href=&#34;#更多的廣告&#34; class=&#34;headerlink&#34; title=&#34;更多的廣告&#34;&gt;&lt;/a&gt;更多的廣告&lt;/h2&gt;&lt;p&gt;看了下失敗的內容，來源都是出自 addtoany.js，也就是剛剛新增的檔案&lt;/p&gt;
+&lt;p&gt;回頭翻代碼…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/07.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/08.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;看來是原本的 page.js 引入了其他檔案&lt;br&gt;然後其他檔案又被攔截了…&lt;/p&gt;
+&lt;p&gt;雖然有點亂，但還是好解決的&lt;/p&gt;
+&lt;p&gt;首先在 &lt;code&gt;source&lt;/code&gt; 目錄新增 &lt;code&gt;addtoany&lt;/code&gt; 資料夾&lt;br&gt;將 &lt;code&gt;addtoany.js&lt;/code&gt; 改名回 &lt;code&gt;page.js&lt;/code&gt; ，放進 &lt;code&gt;addtoany&lt;/code&gt; 資料夾&lt;br&gt;原本 &lt;code&gt;addtoany.jsx&lt;/code&gt; 的 script 也要修改&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script async src=&amp;quot;/addtoany/page.js&amp;quot; defer=&amp;#123;true&amp;#125;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;之後將三個攔截的檔案拷貝整理後，在 &lt;code&gt;source/addtoany&lt;/code&gt; 創建同名檔案&lt;/p&gt;
+&lt;p&gt;然後..然後…&lt;br&gt;然後在 &lt;code&gt;core.js&lt;/code&gt; 引用了更多會被攔截的 url…&lt;/p&gt;
+&lt;p&gt;估計是進行一些第三方 icon 的載入等等…&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/shareButton1/09.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;重新修改 &lt;code&gt;core.js&lt;/code&gt; 的代碼，最終是成功了&lt;/p&gt;
+&lt;p&gt;但是&lt;br&gt;修改已經壓縮過的代碼，過程是麻煩且沒營養的&lt;br&gt;處理方法相當於暴力破解，也不排除往後產生其他 ERROR 的可能，故這邊不多贅述———&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;p&gt;如果有幸你也在想辦法處理 AddToAny 的問題，又懶得架 cdn 等方式&lt;/p&gt;
+&lt;p&gt;這邊提供整理後的檔案，歡迎參考。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/share_file/shareButton1/addtoany.7z&#34;&gt;addtoany.7z&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MD5: &lt;code&gt;e4c6ac982c223e6449d1d962be077bfb&lt;/code&gt;&lt;br&gt;SHA1: &lt;code&gt;a9cc39cc5e9a7d0854d63b15a4801829c1718efb&lt;/code&gt;&lt;/p&gt;
+</content>
+        <category term="hexo" />
+        <category term="addtoany" />
+        <updated>2024-04-23T10:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2024/04/23/twikoo1/</id>
+        <title>最近想更換評論系統</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/23/twikoo1/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/twikoo-logo-home.png&#34; alt=&#34;logo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最近想把 blog 的評論系統換了&lt;/p&gt;
+&lt;p&gt;原本的 gittalk 免費，開源&lt;br&gt;巧妙利用 github 的 issue，在靜態網站上也能加入評論系統&lt;/p&gt;
+&lt;p&gt;存在些許不方便，仍瑕不掩瑜。&lt;/p&gt;
+&lt;p&gt;不過既然存在限制，總有人會想開發更好的工具&lt;br&gt;twikoo 就挺符合 blog 需求的&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;h1 id=&#34;gittalk&#34;&gt;&lt;a href=&#34;#gittalk&#34; class=&#34;headerlink&#34; title=&#34;gittalk&#34;&gt;&lt;/a&gt;gittalk&lt;/h1&gt;&lt;p&gt;既然原本是用 gittalk，先說說 gittalk 的優點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;與 github page 的高度適配&lt;/li&gt;
+&lt;li&gt;基於 issue 特性，綁定 github 帳戶，防止小白&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;兩邊都有的優點不提，大概是這些&lt;br&gt;至於缺點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因為綁在 issue，評論必須先註冊 github&lt;/li&gt;
+&lt;li&gt;對中國使用者的支援較差(疑似)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/01.jpg&#34; alt=&#34;01&#34;&gt;&lt;/p&gt;
+&lt;p&gt;而且本站基於 gittalk ，魔改了許多功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;撈取最新留言&lt;/li&gt;
+&lt;li&gt;撈取熱門留言&lt;/li&gt;
+&lt;li&gt;從外部撈取文章留言數&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;替換評論系統，不只是舊有的評論會消失&lt;br&gt;也代表著這些功能都需要重新適配，或是棄用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;twikoo&#34;&gt;&lt;a href=&#34;#twikoo&#34; class=&#34;headerlink&#34; title=&#34;twikoo&#34;&gt;&lt;/a&gt;twikoo&lt;/h1&gt;&lt;p&gt;&lt;a href=&#34;https://twikoo.js.org/&#34;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;twikoo 與 gittalk 不同，資料存放於 MongoDB&lt;br&gt;意味著我們需要自行架設 DB 跟 API Server&lt;/p&gt;
+&lt;p&gt;不過兩者在網路上都有許多免費資源可用，用來支持一個 blog 的運作綽綽有餘&lt;/p&gt;
+&lt;p&gt;說說這個評論系統的優點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;無須登入即可留言&lt;/li&gt;
+&lt;li&gt;避免騷擾留言，分別配有多種自動偵測垃圾留言的接口，也能開啟人工審核&lt;/li&gt;
+&lt;li&gt;暱稱&amp;amp;信箱&amp;amp;網址 的填寫方式，很有幾十年前，傳統 blog 那味，我超愛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;至於缺點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比起 gittalk，由於個人資料是自由填寫，相對難以得知發文者的背景&lt;/li&gt;
+&lt;li&gt;與依附著 github issue 的 gittalk 相比，twikoo 於第三方架設 DB 跟 API Server 環境，長遠來看需要消耗更多的維護成本&lt;/li&gt;
+&lt;li&gt;以前的評論會全部消失，嗚嗚嗚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/twikoo1/02.jpg&#34; alt=&#34;02&#34;&gt;&lt;/p&gt;
+&lt;p&gt;基本的配置已經做好了，只是還在猶豫是否該使用&lt;/p&gt;
+&lt;p&gt;個人 blog 要提高評論數還是比較難的，至少沒辦法跟社群平台競爭&lt;br&gt;在這個前提下，評論門檻相對高的 gittalk，這份缺點也會被不斷放大&lt;/p&gt;
+&lt;p&gt;但 gittalk 同樣有著他本身天然的優勢在——&lt;/p&gt;
+</content>
+        <category term="日記" />
+        <category term="hexo" />
+        <updated>2024-04-23T03:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2024/04/13/autoPixai/</id>
+        <title>自動領取 Pixai 每日獎勵</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/13/autoPixai/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/autoPixai/01.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;工程網址&lt;br&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;Github&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://hub.docker.com/r/smile0301/auto-pixai&#34;&gt;Docker Hub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;近幾年 AI 工具日新月異&lt;br&gt;我也有幸接觸了 AI 繪圖的一鱗半爪&lt;/p&gt;
+&lt;p&gt;其中 &lt;a href=&#34;https://pixai.art/&#34;&gt;pixai&lt;/a&gt; 是少有的雲端免費算圖網站&lt;/p&gt;
+&lt;p&gt;在 pixai 如果對產出來的圖感到滿意的話&lt;br&gt;可以透過 AI 進一步運算，產出會動的圖&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;說是免費，其實還是有些限制的&lt;/p&gt;
+&lt;p&gt;在網站上的運算行為都需要消耗點數，無論是靜態或動態&lt;/p&gt;
+&lt;p&gt;而點數除了透過付費與活動取得以外&lt;br&gt;pixai 每日都有一萬點數可供會員領取，也就是每日獎勵&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/autoPixai/02.jpg&#34; alt=&#34;每日獎勵&#34;&gt;&lt;/p&gt;
+&lt;p&gt;只要每天領取就可以免費算圖了，整個佛心來著對吧&lt;/p&gt;
+&lt;p&gt;不過筆者最喜歡花費幾個小時來搞定原本一分鐘可以做到的事情(x&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/auto-pixai&#34;&gt;auto-pixai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;輸入帳號跟密碼，該腳本執行一次就會自動進網站領取每日獎勵&lt;/p&gt;
+&lt;p&gt;使用 node.js 撰寫，另有 Docker 容器化，開箱即用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull smile0301/auto-pixai
+docker run -e LOGINNAME=&amp;lt;你的帳號&amp;gt; -e PASSWORD=&amp;lt;你的密碼&amp;gt; --name &amp;lt;container-name&amp;gt; smile0301/auto-pixai
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="node.js" />
+        <category term="教學" />
+        <category term="docker" />
+        <updated>2024-04-13T11:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2024/04/11/giveUp/</id>
+        <title>我的人生不需要英文</title>
+        <link rel="alternate" href="https://smilin.net/2024/04/11/giveUp/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/gwL59EQ.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;p&gt;學不會，沒動力學，沒必要學&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;最近，大概半年，持續沒甚麼動力學習&lt;br&gt;只是乏味的原地踏步，工作著&lt;/p&gt;
+&lt;p&gt;以前明明每天都會抽空看一點知識的&lt;/p&gt;
+&lt;p&gt;原本覺得為了找到更好的工作，我應該開始加強英文，補回我以前怠惰學習的債務&lt;/p&gt;
+&lt;p&gt;事實是我對這東西真的完全沒有興趣&lt;/p&gt;
+&lt;p&gt;這幾天放棄學習英文後，逐漸找回了那個可以繼續對學習程式有熱忱的自己&lt;/p&gt;
+&lt;p&gt;感覺有點悲哀，但又很歡喜&lt;/p&gt;
+&lt;p&gt;也許這個人就是如此，既然沒辦法揠苗助長，那就順其自然吧。&lt;/p&gt;
+</content>
+        <category term="日記" />
+        <updated>2024-04-11T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/10/27/rust_learning_02/</id>
+        <title>Rust 學習紀錄[2] = Rust 的 NPM</title>
+        <link rel="alternate" href="https://smilin.net/2023/10/27/rust_learning_02/"/>
+        <content type="html">&lt;p&gt;讓我們接著原本的進度繼續&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;Cargo&#34;&gt;&lt;a href=&#34;#Cargo&#34; class=&#34;headerlink&#34; title=&#34;Cargo&#34;&gt;&lt;/a&gt;Cargo&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;Cargo&lt;/code&gt; 是 &lt;code&gt;Rust&lt;/code&gt; 的專案建置工具以及套件管理器&lt;br&gt;恩..聽起來是個 &lt;code&gt;npm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;我們在安裝 &lt;code&gt;rustup&lt;/code&gt; 時已經一併安裝了 &lt;code&gt;Cargo&lt;/code&gt;&lt;br&gt;使用 &lt;code&gt;cargo --version&lt;/code&gt; 來確認是否正確安裝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo --version // cargo 1.73.0 (9c4383fb5 2023-08-26)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;沒問題的話，接著使用 &lt;code&gt;Cargo&lt;/code&gt; 創建跟昨天相似的專案。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;創建專案&#34;&gt;&lt;a href=&#34;#創建專案&#34; class=&#34;headerlink&#34; title=&#34;創建專案&#34;&gt;&lt;/a&gt;創建專案&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;在專案目錄(rust_project)下輸入創建專案的指令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo new _02_hello_cargo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;現在我們有名為 &lt;code&gt;_02_hello_cargo&lt;/code&gt; 的資料夾，裡面結構如下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;src
+  main.rs
+.gitignore
+Cargo.toml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;src&lt;/code&gt; - 常見程式開發檔案目錄，看就知道&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;src\main.rs&lt;/code&gt; - 主程式&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.gitignore&lt;/code&gt; - git 的描述文件，主要功能是防止裡面提到的檔案在 git 傳輸時被包進去(Ex:log&amp;#x2F;target)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Cargo.toml&lt;/code&gt; - 打開來看了下，應該是專案描述文件，對應 node 的 &lt;code&gt;package.json&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;編譯-build&#34;&gt;&lt;a href=&#34;#編譯-build&#34; class=&#34;headerlink&#34; title=&#34;編譯(build)&#34;&gt;&lt;/a&gt;編譯(build)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;試著 build 起這個專案看看&lt;br&gt;&lt;code&gt;cargo build&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;執行後，專案內多出了幾個檔案&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;target
+  debug
+    _02_hello_cargo.exe
+    more debug files...
+  .rustc_info.json
+  CACHEDIR.TAG
+Cargo.lock
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Cargo.lock&lt;/code&gt; - 對應 node 的 &lt;code&gt;package-lock.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;target\debug\_02_hello_cargo.exe&lt;/code&gt; - 我們產出的執行檔，debug 大概是 building 的默認方式，之後應該會有相對嚴謹的方法&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\target\debug\_02_hello_cargo // Hello, world!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;編譯並運行-run&#34;&gt;&lt;a href=&#34;#編譯並運行-run&#34; class=&#34;headerlink&#34; title=&#34;編譯並運行(run)&#34;&gt;&lt;/a&gt;編譯並運行(run)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;Cargo 有提供一種命令，可以將編譯與運行合併成一個指令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo run // Hello, world!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果開發檔案沒有修改，&lt;code&gt;cargo run&lt;/code&gt; 不會重建 target&lt;br&gt;加上合併兩個步驟，比 &lt;code&gt;cargo build&lt;/code&gt; 方便許多。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;檢查-check&#34;&gt;&lt;a href=&#34;#檢查-check&#34; class=&#34;headerlink&#34; title=&#34;檢查(check)&#34;&gt;&lt;/a&gt;檢查(check)&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;除了編譯與運行，Cargo 當然也提供了檢查命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo check
+  /**
+    Checking _02_hello_cargo v0.1.0(C:\my\01\git\rust\_02_hello_cargo)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.07s
+  **/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;單純的 &lt;code&gt;check&lt;/code&gt; 比 &lt;code&gt;build&lt;/code&gt; 快上許多&lt;br&gt;在自動化部屬等一類場景中廣泛運用。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;正式編譯-release&#34;&gt;&lt;a href=&#34;#正式編譯-release&#34; class=&#34;headerlink&#34; title=&#34;正式編譯(release)&#34;&gt;&lt;/a&gt;正式編譯(release)&lt;/h2&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;code&gt;cargo build --release
+  /**
+    Compiling _02_hello_cargo v0.1.0 (C:\my\01\git\rust\_02_hello_cargo)
+        Finished release [optimized] target(s) in 0.36s
+  **/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 &lt;code&gt;--release&lt;/code&gt; building 的檔案會放在 &lt;code&gt;target\release&lt;/code&gt;&lt;br&gt;與 debug 版本不同，release 的編譯過程比較久，但會最佳化產出的結果&lt;/p&gt;
+&lt;p&gt;因此，使用 debug 開發可以有效降低等待編譯的時間&lt;br&gt;需要發佈檔案時，再使用 release。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;今日小結&#34;&gt;&lt;a href=&#34;#今日小結&#34; class=&#34;headerlink&#34; title=&#34;今日小結&#34;&gt;&lt;/a&gt;今日小結&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;cargo --version&lt;/code&gt; 驗證版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo new &amp;#123;project_name&amp;#125;&lt;/code&gt; 創建專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo build&lt;/code&gt; 編譯專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo run&lt;/code&gt; 編譯&amp;amp;運行專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo check&lt;/code&gt; 驗證專案&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cargo build --release&lt;/code&gt; 正式版本的編譯&lt;/p&gt;
+</content>
+        <category term="Rust" />
+        <updated>2023-10-27T13:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/10/27/rust_learning_01/</id>
+        <title>Rust 學習紀錄[1] = 日誌中的教學</title>
+        <link rel="alternate" href="https://smilin.net/2023/10/27/rust_learning_01/"/>
+        <content type="html">&lt;p&gt;工欲善其事，必先利其器&lt;br&gt;想學一門語言，要從一篇教學文檔找起&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://doc.rust-lang.org/book/&#34;&gt;官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;恩，官方文檔看起來挺不錯的，就這個吧&lt;/p&gt;
+&lt;p&gt;這篇文撰寫當下，文檔對應 Rust 版本為 &lt;code&gt;Rust 1.67.1 (released 2023-02-09) or later&lt;/code&gt;&lt;br&gt;如果因為版本不同造成閱讀的困擾的話，可以在學會安裝 Rust 後自行降版學習。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;安裝&#34;&gt;&lt;a href=&#34;#安裝&#34; class=&#34;headerlink&#34; title=&#34;安裝&#34;&gt;&lt;/a&gt;安裝&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;說是 Rust，其實第一個遇到的是 &lt;code&gt;rustup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/tools/install&#34;&gt;Window 安裝 rustup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安裝過程一直 Enter 就好，之後在 cmd 下 &lt;code&gt;rustc --version&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;得到版本號 &lt;code&gt;rustc 1.73.0 (cc66ad468 2023-10-03)&lt;/code&gt;，表示安裝成功&lt;/p&gt;
+&lt;p&gt;其他比較常用的指令還有&lt;/p&gt;
+&lt;p&gt;更新 Rust 版本 - &lt;code&gt;rustup update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;卸載 Rust 跟 rustup - &lt;code&gt;rustup self uninstall&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查看 Rust Doc 本機離線版 - &lt;code&gt;rustup doc&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;根據 Rust 自己的說明，約莫每兩周會有一次小版更新&lt;br&gt;也因此，除非目標是維護專案，理論上更新版本 &amp;amp; 追蹤文檔改動會很頻繁。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;HELLO-RUST！&#34;&gt;&lt;a href=&#34;#HELLO-RUST！&#34; class=&#34;headerlink&#34; title=&#34;HELLO RUST！&#34;&gt;&lt;/a&gt;HELLO RUST！&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;首先讓我們創建一個資料夾&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rust_project&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;往後任何的 Rust 程式都會放在這個資料夾下&lt;br&gt;現在在專案資料夾下新增我們要製作的第一個 Rust 程式&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rust_project\_01_hello_rust\main.rs&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fn main() &amp;#123;
+    println!(&amp;quot;Hello, Rust!&amp;quot;);
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;之後打開 cmd ，輸入以下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rustc main.rs
+.\main.exe // 印出 Hello, Rust!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如此，我們完成了第一隻 Rust 程式。&lt;br&gt;&lt;del&gt;超快！！&lt;/del&gt;&lt;br&gt;&lt;del&gt;嘛、畢竟是 Hello World 嘛&lt;/del&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;感想&#34;&gt;&lt;a href=&#34;#感想&#34; class=&#34;headerlink&#34; title=&#34;感想&#34;&gt;&lt;/a&gt;感想&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;首先注意到的，是執行的指令拆成了兩個&lt;br&gt;分別是 &lt;strong&gt;編譯&lt;/strong&gt; 的行為與 &lt;strong&gt;執行&lt;/strong&gt; 的行為&lt;/p&gt;
+&lt;p&gt;編譯出來的檔案是 &lt;code&gt;.exe&lt;/code&gt;，意味著寫好的程式不需要借助 Rust 就能運行&lt;br&gt;這在筆者之前的經驗中是比較少見的&lt;/p&gt;
+&lt;p&gt;同樣被編譯出來的還有一個 &lt;code&gt;main.pdb&lt;/code&gt;&lt;br&gt;暫時不知道是做甚麼用的，之後學到再回來更新&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;println!();&lt;/code&gt;&lt;br&gt;在這段酷似 JAVASCRIPT 風格的 JAVA 式命名輸出語法上，突兀的出現了個 &lt;code&gt;!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;這是 Rust 的 &lt;code&gt;macro&lt;/code&gt;&lt;br&gt;比起 Rust 的 &lt;code&gt;function&lt;/code&gt;，&lt;code&gt;macro&lt;/code&gt; 更接近 JAVASCRIPT 的 &lt;code&gt;function&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Rust 中，存在 &lt;code&gt;fn(function)&lt;/code&gt; 跟 &lt;code&gt;macro_rules(macro)&lt;/code&gt;&lt;br&gt;他們的差別主要在於 &lt;code&gt;function(函式)&lt;/code&gt; 的參數數量是固定的&lt;br&gt;而 &lt;code&gt;macro(巨集)&lt;/code&gt; 則可以動態傳入參數&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;println&lt;/code&gt; 預期要能夠傳入多個參數，當他要做格式化傳輸時&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;println!(&amp;quot;Hello, Macro! My name is &amp;#123;&amp;#125;!&amp;quot;, &amp;quot;Smilin&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;比起 &lt;code&gt;fn&lt;/code&gt;，&lt;code&gt;macro_rules&lt;/code&gt; 顯然更符合需求。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;今日小結&#34;&gt;&lt;a href=&#34;#今日小結&#34; class=&#34;headerlink&#34; title=&#34;今日小結&#34;&gt;&lt;/a&gt;今日小結&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;rustc --version&lt;/code&gt; 驗證版本&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup update&lt;/code&gt; 更新 Rust&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup self uninstall&lt;/code&gt; 反安裝 Rust&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustup doc&lt;/code&gt; 運行 Rust Local Doc&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rustc main.rs&lt;/code&gt; 編譯 rs 檔&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.pdb&lt;/code&gt; ???&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;macro&lt;/code&gt; 巨集 &amp;#x2F; 宏，可以傳入動態參數&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;function&lt;/code&gt; 函式 &amp;#x2F; 方法，宣告時就要規範好參數數量與型別&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;資料參考&#34;&gt;&lt;a href=&#34;#資料參考&#34; class=&#34;headerlink&#34; title=&#34;資料參考&#34;&gt;&lt;/a&gt;資料參考&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://doc.rust-lang.org/book/&#34;&gt;Rust 官方文檔&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/tools/install&#34;&gt;Window 安裝 rustup&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="Rust" />
+        <updated>2023-10-27T10:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/10/27/rust_learning_00/</id>
+        <title>Rust 學習紀錄[0] = 前言</title>
+        <link rel="alternate" href="https://smilin.net/2023/10/27/rust_learning_00/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/216px-Rust_programming_language_black_logo.svg.png&#34; alt=&#34;Rust&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;2021 年 2 月，Rust 基金會成立&lt;/p&gt;
+&lt;p&gt;以 AWS、GOOGLE 等多家資訊巨頭為首&lt;br&gt;因為看好 Rust 兼顧了高效能 &amp;amp; 安全性而投資&lt;br&gt;使得 Rust 這兩年有了巨大的成長。&lt;/p&gt;
+&lt;p&gt;這也是為什麼，近幾年工程師無論如何不願意&lt;br&gt;多少也會聽過 Rust 的名號，隱隱有與 C++ 並駕齊驅的勢頭。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;筆者平常習慣 node.js or java 的開發，接觸 Rust 算是偶然&lt;br&gt;剛好想嘗試所謂能真正實現高效能程式碼(沒碰過 C++)&lt;/p&gt;
+&lt;p&gt;做為學習動力，一方面會將自己的學習過程發布在 blog&lt;br&gt;另一方面打算在學到一個階段後，試著用 Rust 構建一個微型社群平台，當作目標。&lt;/p&gt;
+&lt;p&gt;本次系列與其說是教學，更像是日記一類的東西，如果能激起看這篇文的你的興趣的話，我會很高興的。&lt;/p&gt;
+</content>
+        <category term="Rust" />
+        <updated>2023-10-27T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/09/15/deepCopyAndShallowCopy/</id>
+        <title>淺談 js 深拷貝與淺拷貝的差異</title>
+        <link rel="alternate" href="https://smilin.net/2023/09/15/deepCopyAndShallowCopy/"/>
+        <content type="html">&lt;h1 id=&#34;Deep-copy-和-Shallow-copy&#34;&gt;&lt;a href=&#34;#Deep-copy-和-Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy 和 Shallow copy&#34;&gt;&lt;/a&gt;Deep copy 和 Shallow copy&lt;/h1&gt;&lt;br&gt;
+
+&lt;p&gt;先來個考題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = a;
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+baz
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;下一題：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;quot;bar&amp;quot; &amp;#125;;
+b = structuredClone(a); // 深拷貝
+b.foo = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo); // 印出?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;答案&lt;/summary&gt;
+&lt;br&gt;
+bar  
+&lt;br&gt;&lt;br&gt;
+深拷貝(Deep Copy) 可以將內層對象一併拷貝  
+&lt;/details&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Shallow-copy&#34;&gt;&lt;a href=&#34;#Shallow-copy&#34; class=&#34;headerlink&#34; title=&#34;Shallow copy&#34;&gt;&lt;/a&gt;Shallow copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;淺拷貝(Shallow Copy) 與深拷貝同樣是用來拷貝物件層級，避免指向同一記憶體位置&lt;/p&gt;
+&lt;p&gt;與深拷貝不同的是，淺拷貝只會複製第一層的對象，如果是 &lt;code&gt;Object.Object&lt;/code&gt; 的結構就沒轍。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;Object-assign&#34;&gt;&lt;a href=&#34;#Object-assign&#34; class=&#34;headerlink&#34; title=&#34;Object.assign&#34;&gt;&lt;/a&gt;Object.assign&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;Object.assign&lt;/code&gt; 屬於淺拷貝(Shallow Copy)&lt;br&gt;在上述案例中，可以得到跟深拷貝一樣的結果&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;a = &amp;#123; foo: &amp;#123; fpp: &amp;quot;bar&amp;quot; &amp;#125; &amp;#125;;
+b = Object.assign(&amp;#123;&amp;#125;, a);
+b.foo.fpp = &amp;quot;baz&amp;quot;;
+
+console.log(a.foo.fpp); // 印出baz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;解構賦值&#34;&gt;&lt;a href=&#34;#解構賦值&#34; class=&#34;headerlink&#34; title=&#34;解構賦值&#34;&gt;&lt;/a&gt;解構賦值&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;解構賦值是 &lt;code&gt;ES6&lt;/code&gt; 以後的語法糖，同樣屬於淺拷貝&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const a = &amp;#123; b: 1 &amp;#125;;
+const c = &amp;#123; ...a &amp;#125;; // 解構賦值
+c.b = 2;
+console.log(a); // &amp;#123; b: 1 &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;得益於其精簡的代碼，實務上很常使用。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Deep-copy&#34;&gt;&lt;a href=&#34;#Deep-copy&#34; class=&#34;headerlink&#34; title=&#34;Deep copy&#34;&gt;&lt;/a&gt;Deep copy&lt;/h2&gt;&lt;br&gt;
+
+&lt;p&gt;與前面提到的淺拷貝不同，深拷貝對於深層結構也能一併複製&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;早期的深拷貝&#34;&gt;&lt;a href=&#34;#早期的深拷貝&#34; class=&#34;headerlink&#34; title=&#34;早期的深拷貝&#34;&gt;&lt;/a&gt;早期的深拷貝&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;JSON.parse(JSON.stringify());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;這個寫法大致上有以下缺點：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;忽略 &lt;code&gt;function&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;忽略原形鏈&lt;/li&gt;
+&lt;li&gt;忽略 &lt;code&gt;undefined&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;子層太多會導致 &lt;code&gt;stack overflow&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;儘管如此，由於已經可以處理大多狀況&lt;br&gt;如果不是為了性能或是特殊邏輯，此寫法已經夠用，是常見的深拷貝實現。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;structuredClone&#34;&gt;&lt;a href=&#34;#structuredClone&#34; class=&#34;headerlink&#34; title=&#34;structuredClone&#34;&gt;&lt;/a&gt;structuredClone&lt;/h3&gt;&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 是 &lt;code&gt;node.js&lt;/code&gt; 17 版以後支援的官方深拷貝實現&lt;/p&gt;
+&lt;p&gt;目前各大瀏覽器默認支援此語法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/tPXjO1o.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;code&gt;structuredClone&lt;/code&gt; 存在一些限制&lt;/p&gt;
+&lt;p&gt;不允許結構中存在 &lt;code&gt;Error&lt;/code&gt; 、 &lt;code&gt;Function&lt;/code&gt; 以及 &lt;code&gt;DOM&lt;/code&gt; 對象&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;RegExp&lt;/code&gt; 對象的 &lt;code&gt;lastIndex&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留 &lt;code&gt;read-only&lt;/code&gt; 等描述符，即無法限制 &lt;code&gt;setters&lt;/code&gt; &lt;code&gt;getters&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不保留原形鏈&lt;/p&gt;
+</content>
+        <category term="javascript" />
+        <updated>2023-09-15T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/09/11/alist-file-error/</id>
+        <title>Alist 單檔太大上傳失敗，思路整理</title>
+        <link rel="alternate" href="https://smilin.net/2023/09/11/alist-file-error/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;註：本文並沒有完全解決遇到的上傳問題&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;筆者只想到替代方案，曲線救國&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;筆者是自建雲端的愛用者，目前使用 Alist&lt;/p&gt;
+&lt;p&gt;前一陣子因為自身需求，添加了 Cloudflare 反向代理&lt;/p&gt;
+&lt;p&gt;原本一切看起來都很美好，但某天上傳檔案時才發現不對，只要檔案大於 100 MB 就有機會遇到 413 問題。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/rNNhTq5.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://alist.nn.ci/zh/guide/install/reverse-proxy.html&#34;&gt;官方的反向代理配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，文檔下大多也是哀鴻遍野，看來只要配置了反代很容易就會碰到這個問題&lt;/p&gt;
+&lt;p&gt;尤其文檔不支援 Cloudflare，實在頭痛..&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;問題排查&#34;&gt;&lt;a href=&#34;#問題排查&#34; class=&#34;headerlink&#34; title=&#34;問題排查&#34;&gt;&lt;/a&gt;問題排查&lt;/h1&gt;&lt;h2 id=&#34;NGINX-設定-client-max-body-size&#34;&gt;&lt;a href=&#34;#NGINX-設定-client-max-body-size&#34; class=&#34;headerlink&#34; title=&#34;NGINX 設定 client_max_body_size&#34;&gt;&lt;/a&gt;NGINX 設定 client_max_body_size&lt;/h2&gt;&lt;p&gt;參考資料時，大多資料都指向是 NGINX 設定的問題&lt;br&gt;只要將 &lt;code&gt;client_max_body_size&lt;/code&gt; 上限拉高即可解決&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;server &amp;#123;
+    ．．．．．．．．．
+    location / &amp;#123;
+    ．．．．
+        client_max_body_size 10G;
+    ．．．．
+    &amp;#125;
+    ．．．．．．．．．
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不過筆者並沒有使用到 NGINX，此解顯然並非這次遇到的問題&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;Cloudflare-緩存問題&#34;&gt;&lt;a href=&#34;#Cloudflare-緩存問題&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 緩存問題&#34;&gt;&lt;/a&gt;Cloudflare 緩存問題&lt;/h2&gt;&lt;p&gt;爬文發現有人提到可能是 Cloudflare 緩存的問題&lt;/p&gt;
+&lt;p&gt;在 Rule -&amp;gt; Page Rules -&amp;gt; Create Page Rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/N8gi01N.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;之後再到 Caching -&amp;gt; Cache Rules -&amp;gt; Create rule&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/TAkvVl3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定完後再上傳，成功迴避掉 413 問題!&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;新的問題&#34;&gt;&lt;a href=&#34;#新的問題&#34; class=&#34;headerlink&#34; title=&#34;新的問題&#34;&gt;&lt;/a&gt;新的問題&lt;/h1&gt;&lt;p&gt;甜美的日子沒過多久&lt;br&gt;雖然照著上述配置後，不會再出現 413 了，但..&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/hHjLAns.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;馬上就遇到新的錯誤了 QQ…&lt;/p&gt;
+&lt;p&gt;這個問題問 google 大神也沒甚麼好辦法&lt;br&gt;沒辦法囉，只好再次自己動手檢查&lt;/p&gt;
+&lt;h2 id=&#34;測試過程&#34;&gt;&lt;a href=&#34;#測試過程&#34; class=&#34;headerlink&#34; title=&#34;測試過程&#34;&gt;&lt;/a&gt;測試過程&lt;/h2&gt;&lt;p&gt;Error Log 只寫了網路問題，偶而會提示&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;quot;message&amp;quot;:&amp;quot;A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received&amp;quot;&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;猜測是 Cloudflare 提早關閉了連線&lt;/p&gt;
+&lt;p&gt;有趣的是只要同時下載檔案，上傳不會失敗&lt;/p&gt;
+&lt;p&gt;開啟 Cloudflare Development Mode ，上傳失敗&lt;/p&gt;
+&lt;h2 id=&#34;Cloudflare-免費版限制&#34;&gt;&lt;a href=&#34;#Cloudflare-免費版限制&#34; class=&#34;headerlink&#34; title=&#34;Cloudflare 免費版限制&#34;&gt;&lt;/a&gt;Cloudflare 免費版限制&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/lm8M9jc.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare 免費版用戶上傳檔案時，有著 100MB 的上限&lt;/p&gt;
+&lt;p&gt;Alist 僅支援單檔上傳&lt;br&gt;&lt;a href=&#34;https://github.com/alist-org/alist/issues/5176&#34;&gt;github issue&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;想來或許就是在這關上卡住了&lt;/p&gt;
+&lt;p&gt;如開發者所說， Alist 的上傳存在一定的缺陷&lt;/p&gt;
+&lt;p&gt;就算不使用 Cloudflare，直連上傳過大的檔案也有機會失敗&lt;/p&gt;
+&lt;p&gt;好在除此之外功能正常，頂多不透過網頁，自行額外實現上傳方法即可(Ex:webdav&amp;#x2F;ftp&amp;#x2F;nasGui&amp;#x2F;local..)&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;p&gt;文章參考:&lt;br&gt;&lt;a href=&#34;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&#34;&gt;https://lanwp.org/12-cloudreve-nextcloud-alist-and-cloudflare_cdn/&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="Alist" />
+        <category term="Cloudflare" />
+        <updated>2023-09-11T10:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/09/06/alist-started/</id>
+        <title>Alist 好用的自建雲端分享</title>
+        <link rel="alternate" href="https://smilin.net/2023/09/06/alist-started/"/>
+        <content type="html">&lt;p&gt;隨著 GOOGLE &amp;#x2F; ONEDRIVE 等空間限制增多&lt;/p&gt;
+&lt;p&gt;筆者轉為使用自架雲端方案一段時間，其中特別中意 Alist 的畫面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/cwZF7fX.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;高自定義的 UI，強大的用戶管理&lt;br&gt;最重要的是在目錄下默認讀取 readme.md 做介紹！&lt;/p&gt;
+&lt;p&gt;整理雲端檔案，最常遇到的難題&lt;br&gt;就是多年後很難輕易在一堆檔案中找到自己需要的資料&lt;/p&gt;
+&lt;p&gt;除此以外還支援&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元數據(載入特定目錄會跳出的訊息)&lt;/li&gt;
+&lt;li&gt;文件搜索&lt;/li&gt;
+&lt;li&gt;雲端掛載(GD&amp;#x2F;OD&amp;#x2F;MEGA&amp;#x2F;還有一堆..)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用 Alist 不僅能讓雲端變得美觀，還能很輕鬆的管理文件&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;Alist-官方文檔&#34;&gt;&lt;a href=&#34;#Alist-官方文檔&#34; class=&#34;headerlink&#34; title=&#34;Alist 官方文檔&#34;&gt;&lt;/a&gt;&lt;a href=&#34;https://alist.nn.ci/zh/&#34;&gt;Alist 官方文檔&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/pbxhpkZ.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;從文檔首頁可以感受到，Alist 有著強大的功能&lt;/p&gt;
+&lt;p&gt;因為支援中文，在閱讀文檔時不會遇到障礙&lt;/p&gt;
+&lt;h2 id=&#34;環境建置&#34;&gt;&lt;a href=&#34;#環境建置&#34; class=&#34;headerlink&#34; title=&#34;環境建置&#34;&gt;&lt;/a&gt;環境建置&lt;/h2&gt;&lt;p&gt;筆者使用 Docker 運行 Alist&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull xhofe/alist:v3.13.2
+
+docker run -d --restart=always -v &amp;#123;你的本機目錄&amp;#125;:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name=&amp;quot;alist&amp;quot; xhofe/alist:v3.13.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;記得將上方的 {你的本機目錄} 替換成你的環境&lt;/p&gt;
+&lt;p&gt;Container run 起後使用這段指令查看預設帳號密碼&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker exec -it alist ./alist admin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/sKMQUPf.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/wvAH9Od.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;登入成功後我們會回到首頁，這裡目前甚麼都沒有&lt;/p&gt;
+&lt;p&gt;在網址後方加入 @manage 進入控制台&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/8ziYJ8B.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這邊先將管理員帳密改成你好記的樣子&lt;/p&gt;
+&lt;p&gt;在存儲可以添加需要加入到 Alist 的空間&lt;br&gt;從基本的本地環境到雲端都可以放在 Alist 管理&lt;/p&gt;
+&lt;p&gt;設置雲端掛載時記得根據 Alist 版本，查看對應的文檔，留意任何留言，記得備份~&lt;/p&gt;
+&lt;p&gt;筆者這邊以本地環境做示範&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;首先到設定 {你的本機目錄} 的地方，創建一個資料夾&lt;/p&gt;
+&lt;p&gt;這會做為未來我們掛載本地檔案的路徑&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/FKzeLks.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;驅動選擇 本地存儲&lt;/li&gt;
+&lt;li&gt;掛載路徑 &amp;#x2F;{資料夾名稱}&lt;/li&gt;
+&lt;li&gt;根資料夾路徑 &amp;#x2F;opt&amp;#x2F;alist&amp;#x2F;data&amp;#x2F;{資料夾名稱}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/oCqbTCR.png&#34; alt=&#34;7&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://i.imgur.com/mOr53lK.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;設定完大致如上&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/ZimHdEW.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
+&lt;p&gt;回首頁看就會有空間了!&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;實用-CSS&#34;&gt;&lt;a href=&#34;#實用-CSS&#34; class=&#34;headerlink&#34; title=&#34;實用 CSS&#34;&gt;&lt;/a&gt;實用 CSS&lt;/h2&gt;&lt;p&gt;Alist 後台的 “設置” ，可以調整絕大多數的 UI 畫面&lt;br&gt;不過如果想自定義一些細節，推薦使用 CSS 達成&lt;/p&gt;
+&lt;p&gt;設置 -&amp;gt; 全域設定 -&amp;gt; 自定義頭部&lt;/p&gt;
+&lt;p&gt;可以在這做自定義 CSS 的添加&lt;br&gt;以下提供一些不錯的樣式&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h3 id=&#34;去除網站圖標與搜索&#34;&gt;&lt;a href=&#34;#去除網站圖標與搜索&#34; class=&#34;headerlink&#34; title=&#34;去除網站圖標與搜索&#34;&gt;&lt;/a&gt;去除網站圖標與搜索&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iiOacaA-css &amp;#123;display: none!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;站點公告去除-X-關閉按鈕&#34;&gt;&lt;a href=&#34;#站點公告去除-X-關閉按鈕&#34; class=&#34;headerlink&#34; title=&#34;站點公告去除 X 關閉按鈕&#34;&gt;&lt;/a&gt;站點公告去除 X 關閉按鈕&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.notify-render .hope-close-button&amp;#123;display: none;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用背景圖-亮色背景-GIF-可用&#34;&gt;&lt;a href=&#34;#使用背景圖-亮色背景-GIF-可用&#34; class=&#34;headerlink&#34; title=&#34;使用背景圖(亮色背景)(GIF 可用)&#34;&gt;&lt;/a&gt;使用背景圖(亮色背景)(GIF 可用)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-ui-light&amp;#123;background-image: url(&amp;quot;&amp;quot;)!important;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用背景圖-暗色背景-GIF-可用&#34;&gt;&lt;a href=&#34;#使用背景圖-暗色背景-GIF-可用&#34; class=&#34;headerlink&#34; title=&#34;使用背景圖(暗色背景)(GIF 可用)&#34;&gt;&lt;/a&gt;使用背景圖(暗色背景)(GIF 可用)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-ui-dark &amp;#123;background-image: url(&amp;quot;&amp;quot;) !important;background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position-x:center;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;列表改透明-亮色背景&#34;&gt;&lt;a href=&#34;#列表改透明-亮色背景&#34; class=&#34;headerlink&#34; title=&#34;列表改透明(亮色背景)&#34;&gt;&lt;/a&gt;列表改透明(亮色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css&amp;#123;background-color: rgba(255, 255, 255, 0.5) !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;列表改透明-暗色背景&#34;&gt;&lt;a href=&#34;#列表改透明-暗色背景&#34; class=&#34;headerlink&#34; title=&#34;列表改透明(暗色背景)&#34;&gt;&lt;/a&gt;列表改透明(暗色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css&amp;#123;background-color:rgb(0 0 0 / 50%) !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;元信息改透明-亮色背景&#34;&gt;&lt;a href=&#34;#元信息改透明-亮色背景&#34; class=&#34;headerlink&#34; title=&#34;元信息改透明(亮色背景)&#34;&gt;&lt;/a&gt;元信息改透明(亮色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-c-PJLV.hope-c-PJLV-ikSuVsl-css&amp;#123;background-color: rgba(255, 255, 255, 0.5)!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;元信息改透明-暗色背景&#34;&gt;&lt;a href=&#34;#元信息改透明-暗色背景&#34; class=&#34;headerlink&#34; title=&#34;元信息改透明(暗色背景)&#34;&gt;&lt;/a&gt;元信息改透明(暗色背景)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-c-PJLV.hope-c-PJLV-iiuDLME-css&amp;#123;background-color:rgb(0 0 0 / 50%)!important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;去除尾頁&#34;&gt;&lt;a href=&#34;#去除尾頁&#34; class=&#34;headerlink&#34; title=&#34;去除尾頁&#34;&gt;&lt;/a&gt;去除尾頁&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.footer &amp;#123;display: none !important;&amp;#125;]&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;移除下載選項&#34;&gt;&lt;a href=&#34;#移除下載選項&#34; class=&#34;headerlink&#34; title=&#34;移除下載選項&#34;&gt;&lt;/a&gt;移除下載選項&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;style&amp;gt;.hope-select__trigger.hope-c-kvTTWD.hope-c-huZphZ.hope-c-kvTTWD-hYRNAb-variant-filled.hope-c-kvTTWD-gfwxhr-size-md.hope-c-huZphZ-cIGthf-cv.hope-c-PJLV.hope-c-PJLV-ijSQbqe-css&amp;#123;display: none !important;&amp;#125;&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;br&gt;
+
+&lt;p&gt;推薦一些網站:&lt;br&gt;&lt;a href=&#34;https://anwen-anyi.github.io/&#34;&gt;Alist 魔改代碼分享&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://telegra.ph/AList-UI-01-11&#34;&gt;CSS 參考&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="Alist" />
+        <updated>2023-09-06T02:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/06/01/discordJs14-1/</id>
+        <title>discord.js 升上 14 版，架構說明</title>
+        <link rel="alternate" href="https://smilin.net/2023/06/01/discordJs14-1/"/>
+        <content type="html">&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/AliceZero/tree/v14&#34;&gt;github 連結&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;從 2021 年，discord.js 升上 13 版&lt;br&gt;heroku 改成收費&lt;br&gt;youtube 不喜歡 discord 蹭他們的服務&lt;br&gt;音樂機器人相繼關閉 yt 服務&lt;br&gt;12 版許多功能時常報錯&lt;br&gt;discord.js 升上 14 版..&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;期間不管是工作又或是休假時，都很希望能升級以前寫的機器人&lt;br&gt;不斷想重構出更好維護的程式架構，也一再推翻之前的程式&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;終於..！在最近 Alice 也正式升上了 discord.js 14.11.0 版本&lt;br&gt;不會總是因為舊版本不支援而爆炸啦！(誤)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/M6hj8wU.jpg&#34; alt=&#34;levelUp!&#34;&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;安裝套件&#34;&gt;&lt;a href=&#34;#安裝套件&#34; class=&#34;headerlink&#34; title=&#34;安裝套件&#34;&gt;&lt;/a&gt;安裝套件&lt;/h2&gt;&lt;p&gt;必備&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js v16.9.0 或以上&lt;/li&gt;
+&lt;li&gt;Discord.js v14.11.0&lt;br&gt;discord.js 核心套件&lt;pre&gt;&lt;code&gt;npm install discord.js@14.11.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;dotenv v16.0.3&lt;br&gt;讀取 .env ，即 token 的套件&lt;pre&gt;&lt;code&gt;npm install dotenv@16.0.3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;點我展開BDB(baseDiscordBot.js)所需套件&lt;/summary&gt;
+
+&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@discordjs&amp;#x2F;builders v1.3.0&lt;br&gt;discord.js 提供的類別產生器類型&lt;pre&gt;&lt;code&gt;npm install @discordjs/builders@1.3.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;details&gt;
+&lt;summary&gt;點我展開音樂系統所需套件&lt;/summary&gt;
+
+&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;@discordjs&amp;#x2F;voice v0.16.0&lt;br&gt;控制 discord 語音的核心套件&lt;br&gt;p.s.使用舊版本極度容易出現問題，如果播放過程發生 bug 可以先檢查 voice 是不是最新版&lt;pre&gt;&lt;code&gt;npm install @discordjs/voice@0.16.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;@discordjs&amp;#x2F;opus v0.9.0&lt;br&gt;Opus 編碼器&lt;pre&gt;&lt;code&gt;npm install @discordjs/opus@0.9.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;ffmpeg-static v5.1.0&lt;br&gt;ffmpeg 轉碼器&lt;pre&gt;&lt;code&gt;npm install ffmpeg-static@5.1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;libsodium-wrappers v0.7.11&lt;br&gt;串流加密工具&lt;pre&gt;&lt;code&gt;npm install libsodium-wrappers@0.7.11
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;play-dl v1.9.6&lt;br&gt; 串流套件，取代 ytdl-core&lt;pre&gt;&lt;code&gt;npm install play-dl@1.9.6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;details&gt;
+&lt;summary&gt;點我展開Render託管推薦套件&lt;/summary&gt;
+
+&lt;br&gt;
+
+&lt;ul&gt;
+&lt;li&gt;axios v1.4.0&lt;br&gt;打 http 使用的套件&lt;pre&gt;&lt;code&gt;npm install axios@1.4.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;node-schedule v2.1.0&lt;br&gt;定時任務套件&lt;pre&gt;&lt;code&gt;npm node-schedule@2.1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&#34;前置動作&#34;&gt;&lt;a href=&#34;#前置動作&#34; class=&#34;headerlink&#34; title=&#34;前置動作&#34;&gt;&lt;/a&gt;前置動作&lt;/h2&gt;&lt;p&gt;如果是舊版 discord bot ，要先去 &lt;a href=&#34;https://discord.com/developers/applications&#34;&gt;discordDeveloper&lt;/a&gt;&lt;br&gt;選中自己的 bot 後，選擇左邊 Bot 選項，然後將這邊的開關都打開&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/GoIc5Ld.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;這是一些限制機器人存取特定資訊的開關，默認是關閉的，如果沒有打開，就算在程式中要求存取權，也是拿不到這些資訊的喔！&lt;/p&gt;
+&lt;p&gt;之後在專案根目錄創建一個 &lt;code&gt;.env&lt;/code&gt; 檔案，性質類似於以前教學中的 &lt;code&gt;auth.json&lt;/code&gt;&lt;br&gt;差別在於，放在 &lt;code&gt;Environment&lt;/code&gt; 的參數意味著參數不該被公開，不會在任何的公開場合獲得此類 value (例如 github)，僅在執行專案時會被注入&lt;/p&gt;
+&lt;h3 id=&#34;env-預覽&#34;&gt;&lt;a href=&#34;#env-預覽&#34; class=&#34;headerlink&#34; title=&#34;.env 預覽&#34;&gt;&lt;/a&gt;.env 預覽&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;TOKEN=&amp;quot;your bot token&amp;quot;
+MASTER_ID=&amp;quot;your client ID&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;專案結構&#34;&gt;&lt;a href=&#34;#專案結構&#34; class=&#34;headerlink&#34; title=&#34;專案結構&#34;&gt;&lt;/a&gt;專案結構&lt;/h2&gt;&lt;br&gt;
+
+&lt;details&gt;
+&lt;summary&gt;點我展開專案結構&lt;/summary&gt;
+
+&lt;p&gt;AliceZero&amp;#x2F;&lt;br&gt;├─ baseJS&amp;#x2F;&lt;br&gt;│ 　　 ├ BaseDiscordBot.js&lt;br&gt;│ 　　 ├ CatchF.js&lt;br&gt;│ 　　 ├ CronTask.js&lt;br&gt;│ 　　 ├ HealthCheck.js&lt;br&gt;├─ manager&amp;#x2F;&lt;br&gt;│ 　　 ├ buttonManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ commands&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpNowQueue.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpPause.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpPlay.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpPlayFirst.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpResume.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpSkip.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpSleep.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpTrpgDice.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ helpTrpgSort.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ myKiritoSkillNicename.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ myKiritoSkillSkill.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ myKiritoSkillStatus.js&lt;br&gt;│ 　　 ├ 　　 ├ buttonC.js&lt;br&gt;│ 　　 ├ 　　 ├ buttonM.js&lt;br&gt;│ 　　 ├ 　　 ├ buttonType.json&lt;br&gt;│ 　　 ├ componentManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ componentM.js&lt;br&gt;│ 　　 ├ embedManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ embedC.js&lt;br&gt;│ 　　 ├ messageManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ messageC.js&lt;br&gt;│ 　　 ├ 　　 ├ messageM.js&lt;br&gt;│ 　　 ├ 　　 ├ messagePrefix.json&lt;br&gt;│ 　　 ├ 　　 ├ messageUpdateM.js&lt;br&gt;│ 　　 ├ 　　 ├ nineData.js&lt;br&gt;│ 　　 ├ musicManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ musicC.js&lt;br&gt;│ 　　 ├ 　　 ├ musicM.js&lt;br&gt;│ 　　 ├ mykiritoManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ requests&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ boss.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ level.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ skill.js&lt;br&gt;│ 　　 ├ 　　 ├ myKiritoC.js&lt;br&gt;│ 　　 ├ 　　 ├ myKiritoM.js&lt;br&gt;│ 　　 ├ selectMenuManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ commands&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ help.js&lt;br&gt;│ 　　 ├ 　　 ├ selectMenuC.js&lt;br&gt;│ 　　 ├ 　　 ├ selectMenuM.js&lt;br&gt;│ 　　 ├ slashManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ commands&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ help.js&lt;br&gt;│ 　　 ├ 　　 ├ 　　 ├ m.js&lt;br&gt;│ 　　 ├ 　　 ├ slashM.js&lt;br&gt;│ 　　 ├ trpgManager&amp;#x2F;&lt;br&gt;│ 　　 ├ 　　 ├ trpgC.js&lt;br&gt;│ 　　 ├ 　　 ├ trpgM.js&lt;br&gt;├─ .env&lt;br&gt;├─ alice.js&lt;br&gt;├─ package.json&lt;br&gt;├─ package-lock.json&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;br&gt;
+
+&lt;p&gt;因為這篇不是教學，不會一個個講解，大概說明一下各 Manager 的作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BaseDiscordBot.js&lt;br&gt;從登入 token 到訊息傳送&lt;br&gt;與 discord.js 的任何交互都在這，唯一引用 discord.js 的地方&lt;br&gt;好處是當 discord.js 改版時只要更改 BDB 即可&lt;br&gt;壞處是其他地方的邏輯可能會比較難以理解，都需要點進 BDB 查看&lt;/li&gt;
+&lt;li&gt;CatchF.js&lt;br&gt;自定義的 log 工具，改這裡就可以一次更改所有的 log style&lt;/li&gt;
+&lt;li&gt;CronTask.js&lt;br&gt;託管平台用到的工具&lt;/li&gt;
+&lt;li&gt;HealthCheck.js&lt;br&gt;同上&lt;/li&gt;
+&lt;li&gt;alice.js&lt;br&gt;&lt;code&gt;npm start&lt;/code&gt; 的執行檔，敘述了啟動時會執行的內容&lt;/li&gt;
+&lt;li&gt;slashManager&lt;br&gt;discord.js 13 版以後新增的斜線指令，包含其註冊與監聽的方法都寫在這&lt;br&gt;commands 可以看出這個 bot 目前有多少指令(本次範例來說有 &lt;code&gt;help&lt;/code&gt; 跟 &lt;code&gt;m&lt;/code&gt; 指令)&lt;/li&gt;
+&lt;li&gt;messageManager&lt;br&gt;傳統 bot 對文字訊息回應的主要行為，&lt;code&gt;messageUpdate&lt;/code&gt; 訊息更新觸發的行為也放在這&lt;/li&gt;
+&lt;li&gt;selectMenuManager&lt;br&gt;菜單組件，commands 可以看出這個 bot 目前有多少菜單組件&lt;/li&gt;
+&lt;li&gt;buttonManager&lt;br&gt;按鈕組件，commands 可以看出這個 bot 目前有多少按鈕組件&lt;/li&gt;
+&lt;li&gt;embedManager&lt;br&gt;嵌入式訊息組件，&lt;code&gt;@discordjs/builders&lt;/code&gt; 有著 &lt;code&gt;EmbedBuilder&lt;/code&gt; 這個 embed 產生器&lt;br&gt;避免往後的更新要改一堆地方，在 BDB 中被繼承完才給 embedManager 使用&lt;/li&gt;
+&lt;li&gt;componentManager&lt;br&gt;組件管理器，當訊息非單純的文字訊息，有使用到 菜單 &amp;#x2F; 按鈕 &amp;#x2F; 嵌入訊息 任一組件時，會從這裡拿&lt;/li&gt;
+&lt;li&gt;musicManager&lt;br&gt;音樂相關邏輯，musicM 負責定義邏輯，musicC 實例實際內容，與 &lt;code&gt;play-dl&lt;/code&gt; 等套件互動&lt;/li&gt;
+&lt;li&gt;trpgManager&lt;br&gt;派對系統，目前只會骰骰子，而且 code 還是從舊版直接搬過來的..&lt;/li&gt;
+&lt;li&gt;mykiritoManager&lt;br&gt;攻略組系統，提供 mykirito 大群的資訊查詢，雖然很久沒更新，但仍然還有人在使用，所以也更新過來了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/AliceZero/tree/v14&#34;&gt;github 連結&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;現在的架構算是終於確定下來，以後會在這個架構上繼續更新&lt;br&gt;不過畢竟是 side project ，架構中有些地方整理的比較草率&lt;br&gt;如果之後寫教學，會重新寫一個 bot 的&lt;/p&gt;
+&lt;p&gt;看到這裡的朋友，如果在寫 bot ，但苦於不知該如何下手的話&lt;br&gt;這裡推薦可以看看 &lt;a href=&#34;https://b-l-u-e-b-e-r-r-y.github.io/post/DiscordBot03/&#34;&gt;藍莓大大&lt;/a&gt; 的文章&lt;br&gt;淺顯以懂，最後甚至是給了乾貨，可以直接載了拿去用~&lt;/p&gt;
+&lt;p&gt;或是使用 &lt;a href=&#34;https://github.com/Mr-Smilin/BaseDiscordBot&#34;&gt;我的 BDB&lt;/a&gt;&lt;br&gt;除了像是 mykirito 這種比較偏門的功能，其他 alice 會的指令都會慢慢更新在 BDB 專案上，可以自由取用~&lt;/p&gt;
+&lt;p&gt;感謝看到這裡的你^^!&lt;/p&gt;
+</content>
+        <category term="node.js" />
+        <category term="bot" />
+        <category term="discord" />
+        <category term="discord.js" />
+        <updated>2023-06-01T12:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2023/03/17/goodbyeNalocal/</id>
+        <title>blog 網址搬遷 &amp; github改名</title>
+        <link rel="alternate" href="https://smilin.net/2023/03/17/goodbyeNalocal/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/1EqvZfv.png&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;再見-Nalocal&#34;&gt;&lt;a href=&#34;#再見-Nalocal&#34; class=&#34;headerlink&#34; title=&#34;再見 Nalocal&#34;&gt;&lt;/a&gt;再見 Nalocal&lt;/h2&gt;&lt;p&gt;最初使用 Nalocal，做為 Github 上使用的名字&lt;/p&gt;
+&lt;p&gt;想著這個名字的發音還挺順口的，近似於貓咪的喵叫聲&lt;/p&gt;
+&lt;p&gt;拆開來看的話有非本地，支持雲端概念存在的好名字..&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;&lt;strong&gt;不過我的名字實在太多啦!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 FB 上叫做漣漪，網名叫微笑，換個論壇又會有別的名字&lt;/p&gt;
+&lt;p&gt;而且對於名字是否順口好記，也是近期挺在意的事情&lt;/p&gt;
+&lt;p&gt;經營 blog，似乎逐漸從原本單純的樣貌，變成必需慎重考慮該如何營造的一個個人品牌了&lt;/p&gt;
+&lt;br&gt;
+
+&lt;p&gt;所以，趁此機會一併更改了網域，github page 提供的免費網域終究存在侷限&lt;/p&gt;
+&lt;p&gt;雖然替換初期會有點痛苦，往後也算是重新經營了&lt;/p&gt;
+&lt;p&gt;但我想這會是必要的，也希望以後我能堅持多寫些文章，添加柴火。&lt;/p&gt;
+</content>
+        <category term="日記" />
+        <updated>2023-03-17T06:30:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2022/11/01/bdb3/</id>
+        <title>BDB更新日誌#3</title>
+        <link rel="alternate" href="https://smilin.net/2022/11/01/bdb3/"/>
+        <content type="html">&lt;h2 id=&#34;主要更新&#34;&gt;&lt;a href=&#34;#主要更新&#34; class=&#34;headerlink&#34; title=&#34;主要更新&#34;&gt;&lt;/a&gt;主要更新&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;DiscordJSmySelf 更名為 BaseDiscordBot&lt;/li&gt;
+&lt;li&gt;discord.js 的所有參考都塞進 BaseDiscordBot&lt;/li&gt;
+&lt;li&gt;斜線 &amp;#x2F; 選項 &amp;#x2F; 按鈕 &amp;#x2F; 菜單 框架完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;次要更新&#34;&gt;&lt;a href=&#34;#次要更新&#34; class=&#34;headerlink&#34; title=&#34;次要更新&#34;&gt;&lt;/a&gt;次要更新&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;env 更新&lt;/li&gt;
+&lt;li&gt;readMe 更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;github&#34;&gt;&lt;a href=&#34;#github&#34; class=&#34;headerlink&#34; title=&#34;github&#34;&gt;&lt;/a&gt;github&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/BaseDiscordBot/tree/v14.6.0&#34;&gt;github 頁面&lt;/a&gt;&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;一些話&#34;&gt;&lt;a href=&#34;#一些話&#34; class=&#34;headerlink&#34; title=&#34;一些話&#34;&gt;&lt;/a&gt;一些話&lt;/h2&gt;&lt;br&gt;
+嗨，昨天才見面呢  
+最近比較閒，忽然就可以比較常更新日誌了
+
+&lt;p&gt;其實原本有點懶得寫，但 BDB 目前的狀態，跟之前相比算是有了非常大的改變&lt;br&gt;所以就稍微紀錄一下，雖然、大概、沒人看就是了 xD ~~&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;主要更新說明&#34;&gt;&lt;a href=&#34;#主要更新說明&#34; class=&#34;headerlink&#34; title=&#34;主要更新說明&#34;&gt;&lt;/a&gt;主要更新說明&lt;/h3&gt;  &lt;br&gt;
+首先，最重要的就是，DBD 的核心文件做了一次更名啦 ~~ &lt;br&gt; 
+筆者實在是對命名很不在行，原本的想法很單純，想寫一套屬於我的翻譯文件  &lt;br&gt;
+用來翻譯 discord.js 的 API ，這樣以後 discord.js 改版的時候，就不用再把原有的邏輯拆掉重組了  
+  &lt;br&gt;&lt;br&gt;
+新的名字與專案相同，也算是重新確立了本專案的方向 (啪嘰啪嘰~)  
+  
+  &lt;br&gt;
+  
+&lt;p&gt;雖然認真的朋友應該早就看出來了，其實筆者的程式水平並不怎樣呢，也難怪會當受薪階級了 (x)&lt;br&gt;不過筆者也沒有因此放棄，目標一直都是在程式的道路上磨練，所以相較於以往，對程式的理解還是有提高的喔&lt;/p&gt;
+&lt;p&gt;這次花了些時間整理，正式將所有與 discord.js 有關的 import 都塞入 BDB 內了&lt;br&gt;也就是以後使用 BDB，就真正可以做到換一個檔案 -&amp;gt; 升級完畢，的這種事情了 ~~&lt;br&gt;雖然只是初衷一般的事情，也是最近稍微閒下來才終於可以整理好啊..感覺審視了一次自己的作業效率阿 (汗)&lt;/p&gt;
+  &lt;br&gt;
+
+&lt;p&gt;以及相比前兩個比較小咖，但也算是主要更新的&lt;br&gt;discord.js 13 版引入，14 版改過一次實例方式的各種功能都做出框架了&lt;br&gt;雖然沒能在 13 版時就做出來有點遺憾，但筆者對目前的框架很有自信，相信等 15 版出來的時候，這些 code 也會很容易維護吧！&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;次要更新說明&#34;&gt;&lt;a href=&#34;#次要更新說明&#34; class=&#34;headerlink&#34; title=&#34;次要更新說明&#34;&gt;&lt;/a&gt;次要更新說明&lt;/h3&gt;  &lt;br&gt;
+在env的部分加上了 `MASTER_ID`，並沒有實際功能&lt;br&gt;    
+更多是用於 DEBUG，或是往後要開一些只有自己能用的開發人員指令時可以使用  
+  
+  &lt;br&gt;
+  
+&lt;p&gt;因為更新內容眾多， readMe 也做了一次更新，改了不少，但還是缺很多東西，只交代了最基本的內容&lt;br&gt;畢竟使用 BDB 相當於重新認識一種 API ，未來想開一份專屬於 BDB 的文檔&lt;br&gt;不知道還要多久就是了，請大家等等我囉 xD ~&lt;/p&gt;
+&lt;br&gt;
+</content>
+        <category term="node.js" />
+        <category term="bot" />
+        <category term="discord" />
+        <category term="discord.js" />
+        <category term="教學" />
+        <updated>2022-11-01T10:00:00.000Z</updated>
+    </entry>
+</feed>

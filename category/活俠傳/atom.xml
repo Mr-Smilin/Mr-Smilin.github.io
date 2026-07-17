@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://smilin.net</id>
+    <title>貓謎工坊 • Posts by &#34;活俠傳&#34; category</title>
+    <link href="https://smilin.net" />
+    <updated>2026-07-17T07:00:00.000Z</updated>
+    <category term="node.js" />
+    <category term="bot" />
+    <category term="discord" />
+    <category term="discord.js" />
+    <category term="教學" />
+    <category term="12th鐵人賽" />
+    <category term="vitepress" />
+    <category term="algolia" />
+    <category term="活俠傳" />
+    <category term="Alist" />
+    <category term="Cloudflare" />
+    <category term="日記" />
+    <category term="docker" />
+    <category term="Legend of Mortal" />
+    <category term="wiki" />
+    <category term="javascript" />
+    <category term="hexo" />
+    <category term="fluid" />
+    <category term="getamped" />
+    <category term="遊戲" />
+    <category term="github" />
+    <category term="CI/CD" />
+    <category term="heroku" />
+    <category term="render" />
+    <category term="render.com" />
+    <category term="icarus" />
+    <category term="Live2D" />
+    <category term="彈射世界" />
+    <category term="腳本" />
+    <category term="Rust" />
+    <category term="addtoany" />
+    <entry>
+        <id>https://smilin.net/2026/07/17/jp-lom/</id>
+        <title>活俠傳 wiki 日文版上線！</title>
+        <link rel="alternate" href="https://smilin.net/2026/07/17/jp-lom/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/01.jpg&#34; alt=&#34;封面&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki/ja/&#34;&gt;LoM-wiki 日文版網址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;梅線要上啦我好興奮呀梅線要上啦我好興奮呀梅線要上啦我好興奮呀(拖走)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;嗨嗨，上次見面還是在上次，大家好久不見了&lt;br&gt;大型更新前夕，活俠傳在日文圈爆火，日本也成了唐門薪火傳遞之處&lt;br&gt;這次發文不為別的，是來跟各位捎一聲好消息&lt;/p&gt;
+&lt;p&gt;活俠傳wiki日文版翻譯於本日正式上線！！(感謝 NEXTAltair 開發)&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;日文版更新&#34;&gt;&lt;a href=&#34;#日文版更新&#34; class=&#34;headerlink&#34; title=&#34;日文版更新&#34;&gt;&lt;/a&gt;日文版更新&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/02.png&#34; alt=&#34;wiki首頁&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/LoM-wiki/pull/243&#34;&gt;pr內容&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;目前日文版由 NEXTAltair 以活俠傳日文化 MOD 字典為輔，透過 ai 翻譯而成&lt;br&gt;總共 509 頁，我們這兩天有大致閱讀一下，確認沒有大問題才更新&lt;/p&gt;
+&lt;p&gt;但仍不排除存在語意問題，因為文本真的很龐大，實在不是一朝一夕可以認真校對的&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;關於未來更新的文本同步&#34;&gt;&lt;a href=&#34;#關於未來更新的文本同步&#34; class=&#34;headerlink&#34; title=&#34;關於未來更新的文本同步&#34;&gt;&lt;/a&gt;關於未來更新的文本同步&lt;/h1&gt;&lt;p&gt;其實早在日文版，這邊就有製作過英文版的多語系wiki&lt;br&gt;當時就有發現，wiki持續更新的話，多語系維護的開銷也是一大問題&lt;/p&gt;
+&lt;p&gt;這邊正在著手計畫開發定時比對差異與同步的 ai 工程，以此來保證基本的更新作業&lt;br&gt;原本是打算透過這個工程來完善日文版，沒想到有人先做了，所以說唐門弟子人人都有著赤誠之心&lt;/p&gt;
+&lt;p&gt;總之日後也會想辦法讓中文的更新同步到多語系上面的，&lt;br&gt;語意可能難免有些問題，屆時都非常歡迎直接在論壇留言提出&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;關於大型更新&#34;&gt;&lt;a href=&#34;#關於大型更新&#34; class=&#34;headerlink&#34; title=&#34;關於大型更新&#34;&gt;&lt;/a&gt;關於大型更新&lt;/h1&gt;&lt;p&gt;以下比較傾向於筆者個人的想法，如果感到不適，十分不好意思&lt;/p&gt;
+&lt;p&gt;活俠傳準備要迎來大型更新，說不高興那肯定是騙人的&lt;br&gt;更何況筆者本來就是梅毒患者，這個世界線已經盼了好久&lt;/p&gt;
+&lt;p&gt;就如同大家所知，活俠傳是一款文字遊戲，說文字就是活俠傳的魂也毫不誇張&lt;br&gt;這樣的遊戲，我認為是需要經過時間打磨的，而成品也值得我花錢去支持他&lt;/p&gt;
+&lt;p&gt;然而事實是，本次更新距離上次只隔了一年，雖然我知道這對於大部分玩家，包括我而言都是十分漫長的，&lt;br&gt;但理性上我仍然願意給鳥熊更多時間，只為求保證文本品質，不愧對於活俠傳，乃至其中人物的形形色色。&lt;/p&gt;
+&lt;p&gt;再來是價格的部分，相信許多人跟我一樣，對於活俠傳的更新，是十分願意掏錢購買的&lt;br&gt;然而活俠傳的兩次大型更新都是做為免費更新推出，想來這是源自於鳥熊最初的承諾&lt;/p&gt;
+&lt;p&gt;不過就算更新是免費的，鳥熊也有在嘗試透過各種管道維持經濟&lt;br&gt;從幾次活俠傳線下週邊的人潮來看，看的出來有許多的唐門弟子都願意花錢支持鳥熊&lt;br&gt;真的是很美好的景象&lt;/p&gt;
+&lt;br&gt;
+
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;身為唐門弟子，因為機緣巧合與一腔熱血，跟許多人一同建立了活俠傳的 wiki ，並維護，&lt;br&gt;有認識的，有不認識的，&lt;br&gt;他們或許是在 wiki 上面評論分享知識，或許是親自下來編輯，&lt;br&gt;許多的人在上面無償貢獻著自己的熱愛，&lt;br&gt;我希望這份 wiki 能幫助到需要他的大俠，&lt;br&gt;也希望大家將 wiki 分享出去，讓 wiki 被更多需要他的人看到。&lt;/p&gt;
+&lt;p&gt;至今 wiki 仍歡迎大俠加入共筆&lt;br&gt;我們有完整的教學資源，有任何不懂的也可以隨時到Discord群組發問討論、聊天；&lt;/p&gt;
+&lt;p&gt;不求功利，不忘初心，&lt;br&gt;我們絕對需要你的那份熱忱，歡迎大俠加入共筆。&lt;/p&gt;
+</content>
+        <category term="活俠傳" />
+        <category term="Legend of Mortal" />
+        <category term="wiki" />
+        <updated>2026-07-17T07:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://smilin.net/2025/08/29/diary-about-lom/</id>
+        <title>關於活俠傳wiki至今與現狀</title>
+        <link rel="alternate" href="https://smilin.net/2025/08/29/diary-about-lom/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/01.jpg&#34; alt=&#34;封面&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安安，我微笑&lt;/p&gt;
+&lt;p&gt;活俠傳近期大型更新，混世魔王重出江湖，醜俠們終得解藥。&lt;/p&gt;
+&lt;p&gt;雖然我自己六日才有時間玩，趁著這個時間，想跟更多人介紹這遊戲的 wiki 網站。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;br&gt;
+
+&lt;h1 id=&#34;緣起&#34;&gt;&lt;a href=&#34;#緣起&#34; class=&#34;headerlink&#34; title=&#34;緣起&#34;&gt;&lt;/a&gt;緣起&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/02.jpg&#34; alt=&#34;wiki首頁&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://forum.gamer.com.tw/C.php?bsn=73317&amp;snA=1453&#34;&gt;【討論】活俠傳有 wiki 嗎？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2024 年 07 月 01 日，基於一個小小的疑問，巴哈上的幾個人一同建立了 wiki 網站&lt;/p&gt;
+&lt;p&gt;期間陸續有許多人加入，裡面有許多人共編的心血，&lt;br&gt;網站內容有轉載也有原創，採用 CC BY-NC-SA-4.0 Licence，確保編輯者的權益。&lt;/p&gt;
+&lt;p&gt;截至 2025&amp;#x2F;08&amp;#x2F;29，共有 15 位夥伴在 LoM-wiki 上貢獻自己的經驗與見聞。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/03.jpg&#34; alt=&#34;貢獻者們&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;近期更新&#34;&gt;&lt;a href=&#34;#近期更新&#34; class=&#34;headerlink&#34; title=&#34;近期更新&#34;&gt;&lt;/a&gt;近期更新&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/04.jpg&#34; alt=&#34;推送紀錄&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加了各種鳥熊在粉專透露的設定(例如角色年齡)&lt;/li&gt;
+&lt;li&gt;避免未來文本混淆，對於默認留學的文本提前加註”崆峒派”(如有遺漏歡迎直接在留言板回報)&lt;/li&gt;
+&lt;li&gt;添加了 90%的英文文本頁面，目前大部份可正常瀏覽&lt;/li&gt;
+&lt;li&gt;添加丹藥效果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;關於開銷&#34;&gt;&lt;a href=&#34;#關於開銷&#34; class=&#34;headerlink&#34; title=&#34;關於開銷&#34;&gt;&lt;/a&gt;關於開銷&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/diaryAboutLom/05.jpg&#34; alt=&#34;開銷紀錄&#34;&gt;&lt;/p&gt;
+&lt;p&gt;wiki 的設計初衷，圍繞著長時間免費部屬為核心設計必要的技術棧，&lt;br&gt;儘管如此，維持 wiki 每個月的成本開銷大約是 25 美元。&lt;/p&gt;
+&lt;p&gt;原因是花費在留言板的資料庫成本上，前後花了 350 美元左右，&lt;br&gt;搜尋引擎原本也是要錢的，但因為我們自己搞爬蟲製作深度 searchMap，節省了不少開銷。&lt;/p&gt;
+&lt;p&gt;說這些並不是要賣慘或怎樣的，&lt;br&gt;只是想趁這個機會，好好敘述 LoM-wiki 的狀況給大家知道，&lt;br&gt;不管是查資料還是共筆，LoM-wiki 免費開放給需要他的大俠，&lt;br&gt;抱持著這份初衷，未來也是如此。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h1 id=&#34;結語&#34;&gt;&lt;a href=&#34;#結語&#34; class=&#34;headerlink&#34; title=&#34;結語&#34;&gt;&lt;/a&gt;結語&lt;/h1&gt;&lt;p&gt;如果你偶然到訪，歡迎坐坐，在這裡可以任意查詢你要的資料，&lt;br&gt;若發現內容存在出入，也請務必不吝於在留言板提供您的所知。&lt;/p&gt;
+&lt;p&gt;如果想加入我們，那更好了！&lt;br&gt;因為遊戲更新，wiki 勢必會有許多需要打點更新的地方，&lt;br&gt;我們的文檔需要翻新，英文文檔也缺人整理字典檔跟鳥熊討論…&lt;/p&gt;
+&lt;p&gt;編輯文檔可以直接在頁面上找到編輯按鈕，&lt;br&gt;我們有&lt;a href=&#34;https://smilin.net/LoM-wiki/develop/1-start.html&#34;&gt;完整的教學資源&lt;/a&gt;，有任何不懂的也可以隨時到&lt;a href=&#34;https://discord.gg/P4kePy6qmc&#34;&gt;Discord 群組&lt;/a&gt;發問討論、聊天；&lt;/p&gt;
+&lt;p&gt;不求功利，不忘初心，&lt;br&gt;我們絕對需要你的那份熱忱，歡迎大俠加入共筆。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki&#34;&gt;LoM-wiki 網址&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki/develop/1-start.html&#34;&gt;協作教學起點&lt;/a&gt;&lt;br&gt;&lt;a href=&#34;https://discord.gg/P4kePy6qmc&#34;&gt;Discord&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="活俠傳" />
+        <category term="Legend of Mortal" />
+        <category term="wiki" />
+        <updated>2025-08-29T07:00:00.000Z</updated>
+    </entry>
+</feed>
