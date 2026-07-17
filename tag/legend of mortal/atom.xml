@@ -11,15 +11,15 @@
     <category term="教學" />
     <category term="12th鐵人賽" />
     <category term="日記" />
-    <category term="Alist" />
     <category term="vitepress" />
     <category term="algolia" />
     <category term="活俠傳" />
-    <category term="docker" />
+    <category term="Alist" />
     <category term="Cloudflare" />
-    <category term="javascript" />
+    <category term="docker" />
     <category term="Legend of Mortal" />
     <category term="wiki" />
+    <category term="javascript" />
     <category term="hexo" />
     <category term="fluid" />
     <category term="getamped" />
@@ -39,7 +39,7 @@
         <id>https://smilin.net/2026/07/17/jp-lom/</id>
         <title>活俠傳 wiki 日文版上線！</title>
         <link rel="alternate" href="https://smilin.net/2026/07/17/jp-lom/"/>
-        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/01.jpg&#34; alt=&#34;封面&#34;&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/001.jpg&#34; alt=&#34;封面&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://smilin.net/LoM-wiki/ja/&#34;&gt;LoM-wiki 日文版網址&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;梅線要上啦我好興奮呀梅線要上啦我好興奮呀梅線要上啦我好興奮呀(拖走)&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;嗨嗨，上次見面還是在上次，大家好久不見了&lt;br&gt;大型更新前夕，活俠傳在日文圈爆火，日本也成了唐門薪火傳遞之處&lt;br&gt;這次發文不為別的，是來跟各位捎一聲好消息&lt;/p&gt;
@@ -48,7 +48,7 @@
 
 &lt;br&gt;
 
-&lt;h1 id=&#34;日文版更新&#34;&gt;&lt;a href=&#34;#日文版更新&#34; class=&#34;headerlink&#34; title=&#34;日文版更新&#34;&gt;&lt;/a&gt;日文版更新&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/02.png&#34; alt=&#34;wiki首頁&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;日文版更新&#34;&gt;&lt;a href=&#34;#日文版更新&#34; class=&#34;headerlink&#34; title=&#34;日文版更新&#34;&gt;&lt;/a&gt;日文版更新&lt;/h1&gt;&lt;p&gt;&lt;img src=&#34;/img/post/jpLom/002.png&#34; alt=&#34;wiki首頁&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/Mr-Smilin/LoM-wiki/pull/243&#34;&gt;pr內容&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;目前日文版由 NEXTAltair 以活俠傳日文化 MOD 字典為輔，透過 ai 翻譯而成&lt;br&gt;總共 509 頁，我們這兩天有大致閱讀一下，確認沒有大問題才更新&lt;/p&gt;
 &lt;p&gt;但仍不排除存在語意問題，因為文本真的很龐大，實在不是一朝一夕可以認真校對的&lt;/p&gt;
